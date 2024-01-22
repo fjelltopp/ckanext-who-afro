@@ -1,0 +1,91 @@
+scheming_version: 2
+dataset_type: dataset
+about: A customized dataset schema for WHO AFRO CKAN deployment
+about_url: http://github.com/ckan/ckanext-scheming
+
+
+dataset_fields:
+
+- field_name: title
+  label: Title
+  preset: title
+  form_placeholder: eg. A descriptive title
+
+- field_name: name
+  label: URL
+  preset: dataset_slug
+  form_placeholder: eg. my-dataset
+
+- field_name: notes
+  label: Description
+  form_snippet: markdown.html
+  form_placeholder: eg. Some useful notes about the data
+
+- field_name: program_area
+  label: Program Area
+  preset: select
+  choices:
+  - value: Sexual and Reproductive Health
+    label: Sexual and Reproductive Health
+  - value: HIV & TB
+    label: HIV & TB
+  - value: Mental Health and Psychosocial Support
+    label: Mental Health and Psychosocial Support
+  - value: E-Health
+    label: E-Health
+  - value: Family Medicine
+    label: Family Medicine
+
+- field_name: tag_string
+  label: Tags
+  preset: tag_string_autocomplete
+  form_placeholder: eg. economy, mental health, government
+
+- field_name: license_id
+  label: License
+  form_snippet: license.html
+  help_text: License definitions and additional information can be found at http://opendefinition.org/
+
+- field_name: maintainer
+  label: Maintainer
+  user_field: fullname
+  form_snippet: user.html
+
+- field_name: maintainer_email
+  label: Maintainer Email
+  user_field: email
+  form_snippet: user.html
+  display_snippet: email.html
+
+- field_name: owner_org
+  label: Organization
+  preset: dataset_organization
+
+- field_name: private
+  label: Visibility
+  help_text: Restrict access
+  help_inline: true
+  preset: select
+  choices:
+  - value: false
+    label: Public
+  - value: true
+    label: Private
+  validators: boolean_validator
+  output_validators: boolean_validator
+
+
+resource_fields:
+
+- field_name: name
+  label: Name
+  form_placeholder: eg. Malawi HTC Scale Up Plan
+
+- field_name: description
+  label: Description
+  form_snippet: markdown.html
+  form_placeholder: Some useful notes about the data
+
+- field_name: format
+  label: Format
+  preset: resource_format_autocomplete
