@@ -21,7 +21,6 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultPermissionLabels):
     plugins.implements(plugins.IResourceController, inherit=True)
     plugins.implements(plugins.IActions)
     plugins.implements(plugins.IValidators)
-    plugins.implements(plugins.IConfigDeclaration)
     plugins.implements(plugins.IPackageController, inherit=True)
 
     # ITemplateHelpers
