@@ -84,7 +84,7 @@ setup(
     # pip to create the appropriate form of executable for the target platform.
     entry_points='''
         [ckan.plugins]
-        who_afro=ckanext.who_afro.plugin:WHOAfroPlugin
+        who_afro=ckanext.who_afro.plugin:WHOAFROPlugin
 
         [babel.extractors]
         ckan = ckan.lib.extract:extract_ckan
