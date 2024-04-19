@@ -4,6 +4,7 @@ who-afro-theme:
   contents:
     - css/inter.css
     - css/who-afro.css
+    - css/promoted-plus.css
 
 FileInputComponentStyles:
     contents:
