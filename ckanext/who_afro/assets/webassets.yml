@@ -2,7 +2,7 @@ who-afro-theme:
   filter: cssrewrite
   output: who-afro/%(version)s-who-afro.css
   contents:
-    - css/inter.css
+    - css/source-sans-3VF.css
     - css/who-afro.css
     - css/promoted-plus.css
 
