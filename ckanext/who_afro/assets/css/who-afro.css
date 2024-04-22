@@ -532,9 +532,9 @@ p.small {
 .promoted .big-search-form .lens-btn, .promoted .big-search-form .lens-btn:hover{
     border-color: var(--primary-navy) thin solid;
     height:  50px;
-    padding: 0 10% 0 20%;
     background-color: var(--primary-navy) !important;
-    width: 148px;
+    padding-left: 32px;
+    padding-right: 32px;
     border-radius: 0 8px 8px 0 !important;
 }
 
