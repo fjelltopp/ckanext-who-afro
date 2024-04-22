@@ -18,7 +18,7 @@
     <div class="recently-updated">
         <div class="container">
             <h2>{{_('Featured data')}}</h2>
-            <h3><span>{{ _('Recently updated') }}</span><span><a class="view-all-btn" href="{{ h.url_for('/dataset') }}">See all</a></span></h3>
+            <h3><span>{{ _('Recently updated') }}</span><span><a class="view-all-btn" href="{{ h.url_for('/dataset') }}">{{ _('See all') }}</a></span></h3>
             {% snippet 'home/snippets/recently_updated.html', packages=h.get_featured_datasets(), origin='homepage' %}
         </div>
     </div>
