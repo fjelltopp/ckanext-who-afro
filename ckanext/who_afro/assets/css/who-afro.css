@@ -466,13 +466,18 @@ p.small {
     color: #d86422;
 }
 
-.promoted {
+.promoted, .promoted-home {
     font-style: normal;
     font-size:  18px;
 }
 
 .promoted-container {
     margin: 64px 0 0;
+}
+
+.promoted .container {
+    padding-top: 64px;
+    padding-bottom: 64px;
 }
 
 .promoted-left {
@@ -490,7 +495,7 @@ p.small {
 }
 
 @media only screen and (min-width: 992px) {
-    .promoted {
+    .promoted-home {
         min-height: 556px;
     }
     .promoted-right {
