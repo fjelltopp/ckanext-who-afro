@@ -655,6 +655,10 @@ p.small {
     padding: 64px 0px;
 }
 
+.insights .container{
+    padding: 0;
+}
+
 @media only screen and (min-width: 992px) {
     .insights {
         height: 1016px;
@@ -764,13 +768,18 @@ p.small {
 }
 
 @media only screen and (min-width: 992px) {
+    .insight-square:first-child {
+        margin-right: 24px;
+        margin-left: 12px;
+        width: calc(33.3% - 36px) ;
+    }
     .insight-square {
         margin-right: 24px;
-        width: calc(33% - 16px);
+        width: calc(33.3% - 24px) ;
     }
     .insight-square:last-child {
         margin-right: 0;
-        width: calc(33% - 8px);
+        width: calc(33.3%);
     }
 
 }
