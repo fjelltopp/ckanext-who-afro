@@ -46,10 +46,32 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultPermissionLabels):
 
     # IFacets
     def dataset_facets(self, facet_dict, package_type):
-        new_fd = OrderedDict()
-        new_fd['program_area'] = plugins.toolkit._('Program Areas')
-        new_fd['tags'] = plugins.toolkit._('Tags')
-        return new_fd
+        new_facet_dict = OrderedDict()
+        new_facet_dict['groups'] = facet_dict['groups']
+        new_facet_dict['program_area'] = plugins.toolkit._('Program Areas')
+        new_facet_dict['country'] = plugins.toolkit._('Countries')
+        new_facet_dict['tags'] = plugins.toolkit._('Keywords')
+        new_facet_dict['res_format'] = plugins.toolkit._('Formats')
+        new_facet_dict['organization'] = facet_dict['organization']
+        return new_facet_dict
+
+    def group_facets(self, facet_dict, group_type, package_type):
+        new_facet_dict = OrderedDict()
+        new_facet_dict['program_area'] = plugins.toolkit._('Program Areas')
+        new_facet_dict['country'] = plugins.toolkit._('Countries')
+        new_facet_dict['tags'] = plugins.toolkit._('Keywords')
+        new_facet_dict['res_format'] = plugins.toolkit._('Formats')
+        new_facet_dict['organization'] = facet_dict['organization']
+        return new_facet_dict
+
+    def organization_facets(self, facet_dict, organization_type, package_type):
+        new_facet_dict = OrderedDict()
+        new_facet_dict['groups'] = facet_dict['groups']
+        new_facet_dict['program_area'] = plugins.toolkit._('Program Areas')
+        new_facet_dict['country'] = plugins.toolkit._('Countries')
+        new_facet_dict['tags'] = plugins.toolkit._('Keywords')
+        new_facet_dict['res_format'] = plugins.toolkit._('Formats')
+        return new_facet_dict
 
     # IResourceController
     def before_resource_create(self, context, resource):
