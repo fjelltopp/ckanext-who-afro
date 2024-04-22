@@ -46,7 +46,7 @@
 
 @media (max-width: 1920px) {
     .plus-bottom-right {
-        left: calc(100% - 300px);
+        left: calc(100% - 200px);
     }
 }
 
