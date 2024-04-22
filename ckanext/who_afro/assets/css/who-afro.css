@@ -905,7 +905,11 @@ a.tag:hover  {
     margin-bottom: 20px;
 }
 
-.dataset-item{
+.dataset-item {
+    list-style:  none;
+}
+
+.welcome-to-home > .dataset-item {
     list-style:  none;
     border: var(--primary-navy) solid 1px;
     border-radius: 8px;
