@@ -69,13 +69,6 @@
     }
 }
 
-
-@media (max-width: 1024px) {
-    .plus {
-        display: none;
-    }
-}
-
 .number-with-arrows {
     position: relative;
     display: flex;
