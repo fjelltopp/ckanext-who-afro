@@ -294,6 +294,12 @@ p.small {
     overflow: hidden;
 }
 
+.promoted-container {
+    background-color: var(--primary-navy);
+    position: relative;
+    z-index: 999;
+}
+
 #NavbarBrandingContainer {
     position:absolute;
     top:5px;
