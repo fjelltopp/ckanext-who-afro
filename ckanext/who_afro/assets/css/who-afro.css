@@ -1,6 +1,5 @@
 /* This file overwrites css from the base ckan theme */
 
-/* WAC-26 default values */
 :root {
     --primary-navy: #00205C;
     --secondary-who-blue: #008dc9;
@@ -10,7 +9,6 @@
     --neutral-light-grey: #E6E7E8;
 }
 
-/* WAC - 26 */
 a {
   color: var(--primary-navy);
 }
@@ -304,7 +302,6 @@ p.small {
 
 #NavbarLogo {
     display:  inline-block;
-    /* WAC-26 #2 */
     height: 64px;
     padding-right: 19px;
 }
@@ -423,10 +420,8 @@ p.small {
 .account-masthead {
   height: var(--account-masthead-height);
   background: var(--primary-navy) ;
-    /* WAC26 #1 background color change*/
 }
 
-/* WAC26 #1 Locales button*/
 .account-masthead .account ul li a {
     font-style: normal;
     font-weight: 400;
@@ -438,7 +433,6 @@ p.small {
     line-height: var(--account-masthead-height);
 }
 
-/* WAC26 #1 Locales button*/
 .account-masthead .account ul li a[selected="selected"] {
     background-color: var(--secondary-who-blue);
 }
@@ -489,7 +483,6 @@ p.small {
     padding-right: 32px;
 }
 
-/* WAC-26 Promoted size management */
 @media only screen and (min-width: 992px) {
     .promoted {
         min-height: 556px;
@@ -1317,7 +1310,6 @@ a.tag:hover  {
     padding: 10px 0px;
 }
 
-/* WAC-26 #3 */
 .description {
     color: var(--who-blue-ten-percent);
     font-size: 16px;
@@ -1332,7 +1324,6 @@ p.learn-more a {
     font-weight: 700;
 }
 
-/* WAC-26 Footer */
 .footer-search-section div h2 {
     font-size: 18px;
     color: white;
