@@ -127,3 +127,9 @@ def lower_formatter(input):
 
 def month_formatter(month):
     return datetime.strptime(month, "%Y-%m").strftime("%b %Y")
+
+
+def get_most_viewed_datasets():
+    most_viewed = logic.get_action('package_search')(
+        data_dict={'q': '*:*', 'sort': 'views_total desc', 'rows': 3})['results']
+    return most_viewed[:3]

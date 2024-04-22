@@ -1344,3 +1344,7 @@ p.learn-more a {
 .footer-search-section {
     margin-bottom: 64px;
 }
+
+.recently-updated .container {
+    margin-top: 64px;
+}
