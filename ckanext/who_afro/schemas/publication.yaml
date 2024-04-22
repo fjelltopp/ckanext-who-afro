@@ -1,5 +1,5 @@
 scheming_version: 2
-dataset_type: dataset
+dataset_type: publication
 about: A customized dataset schema for WHO AFRO CKAN deployment
 about_url: http://github.com/ckan/ckanext-scheming
 
@@ -25,33 +25,33 @@ dataset_fields:
   label: Program Area
   preset: multiple_select
   choices:
-  - value: Sexual and Reproductive Health
-    label: srh
-  - value: HIV
-    label: hiv
-  - value: Tuberculosis
-    label: tb
-  - value: Universal Health Coverage
-    label: ucn
-  - value: Malaria
-    label: malaria
-  - value: Anti-Microbial Resistance
-    label: amr
-  - value: One Health
-    label: onehealth
+  - value: srh
+    label: Sexual and Reproductive Health
+  - value: hiv
+    label: HIV
+  - value: tb
+    label: Tuberculosis
+  - value: ucn
+    label: Universal Health Coverage
+  - value: malaria
+    label: Malaria
+  - value: amr
+    label: Anti-Microbial Resistance
+  - value: onehealth
+    label: One Health
 
 - field_name: country
   label: Country
   preset: multiple_select
   choices:
-  - value: Angola
-    label: AGO
-  - value: Bostwana
-    label: BWA
-  - value: Côte d'Ivoire
-    label: CIV
-  - value: Democratic Republic Of Congo
-    label: COD
+  - value: AGO
+    label: Angola
+  - value: BWA
+    label: Bostwana
+  - value: CIV
+    label: Côte d'Ivoire
+  - value: COD
+    label: Democratic Republic Of Congo
 
 - field_name: tag_string
   label: Tags
