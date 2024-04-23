@@ -738,14 +738,8 @@ p.small {
 }
 
 .data-hub-stats {
-    margin-left: 24px;
-    width: calc(50% - 24px);
+    margin-top: 48px;
     height: 374px;
-}
-
-.insight-small-rect:last-child {
-    margin-left: 24px;
-    width: calc(50% - 24px);
 }
 
 .insight-small-rect p:first-child {
@@ -753,6 +747,35 @@ p.small {
     font-weight: 700;
     font-size: 18px;
     line-height: 24px;
+}
+
+@media only screen and (min-width: 991px) {
+    .data-hub-stats {
+        margin-top: 0;
+        margin-left: 24px;
+        width: calc(50% - 24px);
+        height: 374px;
+    }
+}
+
+@media only screen and (min-width: 560px) {
+    .insight-small-rect:last-child {
+        margin-left: 24px;
+        width: calc(50% - 24px);
+    }
+}
+
+@media only screen and (max-width: 559px) {
+    .data-hub-stats H3 {
+        margin-top:24px;
+    }
+    .insight-small-rect:last-child {
+        margin-top: 24px;
+    }
+    .insights .container {
+        min-height: 1650px;
+    }
+
 }
 
 .number-with-arrows span {
