@@ -659,14 +659,8 @@ p.small {
     padding: 64px 0px;
 }
 
-.insights .container{
-    padding: 0;
-}
-
-@media only screen and (min-width: 992px) {
-    .insights {
-        height: 1016px;
-    }
+.insight-row, .data-hub-stats .row {
+    --bs-gutter-x: 0;
 }
 
 .insights H2 {
@@ -690,8 +684,7 @@ p.small {
 
 .insight-square {
     background-color: white;
-    padding-top: 12px;
-    padding-left: 16px;
+    padding: 16px;
     border-radius: 8px;
     min-height: 297px;
     margin-bottom: 48px;
@@ -734,7 +727,7 @@ p.small {
     background-color: white;
     padding: 16px;
     border-radius: 8px;
-    min-height: 351px;
+    height: 354px;
 }
 
 .insight-small-rect {
@@ -747,6 +740,7 @@ p.small {
 .data-hub-stats {
     margin-left: 24px;
     width: calc(50% - 24px);
+    height: 374px;
 }
 
 .insight-small-rect:last-child {
@@ -771,21 +765,17 @@ p.small {
     margin-bottom:  24px;
 }
 
-@media only screen and (min-width: 992px) {
-    .insight-square:first-child {
-        margin-right: 24px;
-        margin-left: 12px;
-        width: calc(33.3% - 36px) ;
-    }
-    .insight-square {
-        margin-right: 24px;
-        width: calc(33.3% - 24px) ;
-    }
-    .insight-square:last-child {
-        margin-right: 0;
-        width: calc(33.3%);
-    }
-
+.insight-square:first-child {
+    margin-right: 24px;
+    width: calc(33.3% - 24px) ;
+}
+.insight-square:nth-child(2) {
+    margin-right: 24px;
+    width: calc(33.3% - 24px) ;
+}
+.insight-square:last-child {
+    margin-right: 0;
+    width: calc(33.3%);
 }
 
 .category-box {
