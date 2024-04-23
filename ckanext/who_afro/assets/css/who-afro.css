@@ -1200,6 +1200,19 @@ a.tag:hover  {
     margin-bottom: 0px;
 }
 
+.desc-mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 990px) {
+    .desc-mobile {
+        display: block;
+    }
+    .desc-large {
+        display: none;
+    }
+}
+
 .site-footer .desc a,
 .site-footer .desc a:hover {
     color: #FFFFFF;
@@ -1215,6 +1228,11 @@ a.tag:hover  {
     .site-footer .list-unstyled li {
         display: inline-block;
     }
+}
+
+.footer-logo {
+    max-width: 156px;
+    height: auto;
 }
 
 .navbar-toggle {
