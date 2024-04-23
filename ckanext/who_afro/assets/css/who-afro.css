@@ -361,13 +361,17 @@ p.small {
 }
 
 .navbar-light .navbar-toggler {
-    background: #008dc9;
+    background: white;
     border: none;
     font-size: 20px;
     padding: 5px 10px;
     position:absolute;
     top:25px;
     right: 0px;
+}
+
+.fa-bars {
+    color: var(--primary-navy) !important;
 }
 
 .masthead .main-navbar .navbar-nav > li > a
@@ -381,11 +385,38 @@ p.small {
     order: 1;
     flex-grow: 0;
     background-color: transparent;
-    padding: 10px 0px;
+    padding: 5px 0px;
     margin-left: 30px;
-
-
 }
+
+@media only screen and (max-width: 990px) {
+    .masthead .main-navbar .navbar-nav > li > a {
+        margin-left: 0;
+    }
+    .lens-btn {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        background: none;
+        outline: none;
+        border-top: 1px solid var(--who-blue-ten-percent);
+        border-bottom: 1px solid var(--who-blue-ten-percent);
+        border-left: none;
+        border-right: 1px solid var(--who-blue-ten-percent);
+
+    }
+    #field-giant-search {
+        border-top: 1px solid var(--who-blue-ten-percent);
+        border-bottom: 1px solid var(--who-blue-ten-percent);
+        border-right: none;
+        border-left: 1px solid var(--who-blue-ten-percent);
+    }
+
+    .lens-btn .search-label{
+        display: none;
+    }
+}
+
+
 
 .masthead .main-navbar .navbar-nav li a:hover,
 .masthead .main-navbar .navbar-nav li a:focus,
@@ -481,7 +512,7 @@ p.small {
 }
 
 .promoted-left {
-    margin-top: 63px;
+    margin-top: 5%;
 }
 
 .promoted-right {
@@ -492,6 +523,14 @@ p.small {
     border-radius: 8px;
     padding-left: 32px;
     padding-right: 32px;
+}
+
+@media only screen and (max-width: 991px) {
+    .promoted-right {
+        margin-bottom: 64px;
+        margin-top: 32px;
+        padding-bottom: 32px;
+    }
 }
 
 @media only screen and (min-width: 992px) {
@@ -1103,7 +1142,6 @@ a.tag:hover  {
     padding-top: 20px;
     padding-bottom: 25px;
     border-bottom: none;
-    border-top: 1px dashed #dddddd;
 }
 
 .site-footer {
