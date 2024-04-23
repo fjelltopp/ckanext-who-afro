@@ -441,7 +441,7 @@ p.small {
 }
 
 .site-search .btn-search .fa-search {
-    color: #008dc9;
+    color: var(--primary-navy);
     font-size: 20px;
     position:  absolute;
     top: 0px;
