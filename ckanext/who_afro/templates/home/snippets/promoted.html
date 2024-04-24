@@ -30,12 +30,12 @@
             </div>
 
             <div class="search-section">
-                <p>{{ _('Find data by program') }}</p>
+                <p>{{ _('Find data by programme') }}</p>
                 <div class="search-options">
                     <ul>
-                        <li class="criterion"><a href="{{ url_for('dataset.search', program_area='hiv') }}">{{ _('HIV') }}</a></li>
-                        <li class="criterion"><a href="{{ url_for('dataset.search', program_area='srh') }}">{{ _('SRH') }}</a></li>
-                        <li class="criterion"><a href="{{ url_for('dataset.search', program_area='malaria') }}">{{ _('Malaria') }}</a></li>
+                        <li class="criterion"><a href="{{ url_for('dataset.search', programme='hiv') }}">{{ _('HIV') }}</a></li>
+                        <li class="criterion"><a href="{{ url_for('dataset.search', programme='srh') }}">{{ _('SRH') }}</a></li>
+                        <li class="criterion"><a href="{{ url_for('dataset.search', programme='malaria') }}">{{ _('Malaria') }}</a></li>
                         <li><a href="{{ url_for('dataset.search') }}">{{ _('See more') }}</a></li>
                     </ul>
                 </div>

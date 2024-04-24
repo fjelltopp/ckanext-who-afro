@@ -22,8 +22,8 @@ dataset_fields:
   form_snippet: markdown.html
   form_placeholder: eg. Some useful notes about the data
 
-- field_name: program_area
-  label: Program Area
+- field_name: programme
+  label: Programme
   preset: multiple_select
   choices:
   - value: srh
