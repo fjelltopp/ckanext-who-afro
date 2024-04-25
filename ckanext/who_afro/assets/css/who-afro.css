@@ -1426,7 +1426,7 @@ a.tag:hover  {
     padding: 10px 0px;
 }
 
-.description {
+.promoted-home .promoted-left .description {
     color: var(--who-blue-ten-percent);
     font-size: 16px;
     font-weight: 400;
