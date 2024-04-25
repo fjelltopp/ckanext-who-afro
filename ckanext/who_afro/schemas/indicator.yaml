@@ -23,36 +23,10 @@ dataset_fields:
   form_placeholder: eg. Some useful notes about the data
 
 - field_name: programme
-  label: Programme
-  preset: multiple_select
-  choices:
-  - value: srh
-    label: Sexual and Reproductive Health
-  - value: hiv
-    label: HIV
-  - value: tb
-    label: Tuberculosis
-  - value: ucn
-    label: Universal Health Coverage
-  - value: malaria
-    label: Malaria
-  - value: amr
-    label: Anti-Microbial Resistance
-  - value: onehealth
-    label: One Health
+  preset: programme
 
 - field_name: country
-  label: Country
-  preset: multiple_select
-  choices:
-  - value: AGO
-    label: Angola
-  - value: BWA
-    label: Bostwana
-  - value: CIV
-    label: Côte d'Ivoire
-  - value: COD
-    label: Democratic Republic Of Congo
+  preset: country
 
 - field_name: tag_string
   label: Tags
