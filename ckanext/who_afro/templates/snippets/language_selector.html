@@ -1,6 +1,4 @@
 {% set current_lang = request.environ.CKAN_LANG %}
-<form class="lang-select" action="{% url_for 'util.internal_redirect' %}" data-module="select-switch" method="POST">
-  {{ h.csrf_input() }} 
   <nav class="account not-authed">
     <ul class="list-unstyled">
       {% for locale in h.get_available_locales() %}
@@ -12,7 +10,3 @@
       {% endfor %}
     </ul>
   </nav>
-  <button class="btn btn-default d-none " type="submit">{{ _('Go') }}</button>
-</form>
-
-
