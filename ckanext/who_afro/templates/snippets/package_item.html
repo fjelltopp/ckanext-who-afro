@@ -4,7 +4,7 @@
 
     {{ super() }}
     <div class="modified">
-        {{_('Modified')}} {{ h.time_ago_from_timestamp(package.metadata_modified) }}, {{ h.get_user_from_id(package.creator_user_id) }}
+        {{_('Modified')}} {{ h.time_ago_from_timestamp(package.metadata_modified) }}, {{ h.get_last_modifier(package.id) }}
     </div>
 
 {% endblock %}
