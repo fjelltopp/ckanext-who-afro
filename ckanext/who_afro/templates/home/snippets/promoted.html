@@ -21,22 +21,22 @@
                 <p>{{ _('Find data by type') }}</p>
                 <div class="search-options">
                     <ul>
-                        <li class="criterion"><a href="#">{{ _('Indicators') }}</a></li>
-                        <li class="criterion"><a href="#">{{ _('Data sources') }}</a></li>
-                        <li class="criterion"><a href="#">{{ _('Publications') }}</a></li>
-                        <li><a href="#">{{ _('See more') }}</a></li>
+                        <li class="criterion"><a href="{{ url_for('group.read', id='indicators') }}">{{ _('Indicators') }}</a></li>
+                        <li class="criterion"><a href="{{ url_for('group.read', id='sources') }}">{{ _('Data sources') }}</a></li>
+                        <li class="criterion"><a href="{{ url_for('group.read', id='publications') }}">{{ _('Publications') }}</a></li>
+                        <li><a href="{{ url_for('group.index') }}">{{ _('See more') }}</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="search-section">
-                <p>{{ _('Find data by program') }}</p>
+                <p>{{ _('Find data by programme') }}</p>
                 <div class="search-options">
                     <ul>
-                        <li class="criterion"><a href="#">{{ _('HIV') }}</a></li>
-                        <li class="criterion"><a href="#">{{ _('SRH') }}</a></li>
-                        <li class="criterion"><a href="#">{{ _('Malaria') }}</a></li>
-                        <li><a href="#">{{ _('See more') }}</a></li>
+                        <li class="criterion"><a href="{{ url_for('dataset.search', programme='hiv') }}">{{ _('HIV') }}</a></li>
+                        <li class="criterion"><a href="{{ url_for('dataset.search', programme='srh') }}">{{ _('SRH') }}</a></li>
+                        <li class="criterion"><a href="{{ url_for('dataset.search', programme='malaria') }}">{{ _('Malaria') }}</a></li>
+                        <li><a href="{{ url_for('dataset.search') }}">{{ _('See more') }}</a></li>
                     </ul>
                 </div>
             </div>
@@ -45,16 +45,16 @@
                 <p>{{ _('Find data by country') }}</p>
                 <div class="search-options">
                     <ul>
-                        <li class="criterion"><a href="#">{{ _('Country 1') }}</a></li>
-                        <li class="criterion"><a href="#">{{ _('Country 2') }}</a></li>
-                        <li class="criterion"><a href="#">{{ _('Country 3') }}</a></li>
-                        <li><a href="#">{{ _('See more') }}</a></li>
+                        <li class="criterion"><a href="{{ url_for('dataset.search', country='AGO') }}">{{ _('Angola') }}</a></li>
+                        <li class="criterion"><a href="{{ url_for('dataset.search', country='BWA') }}">{{ _('Botswana') }}</a></li>
+                        <li class="criterion"><a href="{{ url_for('dataset.search', country='COD') }}">{{ _('Côte d\'Ivoire') }}</a></li>
+                        <li><a href="{{ url_for('dataset.search') }}">{{ _('See more') }}</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="search-section">
-                <a href="#" class="all-criteria">{{ _('View and filter all data') }}</a>
+                <a href="{{ url_for('dataset.search') }}" class="all-criteria">{{ _('View and filter all data') }}</a>
             </div>
 
         </div>

@@ -1,4 +1,5 @@
 import logging
+import json
 from collections import OrderedDict
 import ckanext.blob_storage.helpers as blobstorage_helpers
 import ckan.lib.uploader as uploader
@@ -46,10 +47,32 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultPermissionLabels):
 
     # IFacets
     def dataset_facets(self, facet_dict, package_type):
-        new_fd = OrderedDict()
-        new_fd['program_area'] = plugins.toolkit._('Program Areas')
-        new_fd['tags'] = plugins.toolkit._('Tags')
-        return new_fd
+        new_facet_dict = OrderedDict()
+        new_facet_dict['groups'] = facet_dict['groups']
+        new_facet_dict['programme'] = plugins.toolkit._('Programmes')
+        new_facet_dict['country'] = plugins.toolkit._('Countries')
+        new_facet_dict['tags'] = plugins.toolkit._('Keywords')
+        new_facet_dict['res_format'] = plugins.toolkit._('Formats')
+        new_facet_dict['organization'] = facet_dict['organization']
+        return new_facet_dict
+
+    def group_facets(self, facet_dict, group_type, package_type):
+        new_facet_dict = OrderedDict()
+        new_facet_dict['programme'] = plugins.toolkit._('Programmes')
+        new_facet_dict['country'] = plugins.toolkit._('Countries')
+        new_facet_dict['tags'] = plugins.toolkit._('Keywords')
+        new_facet_dict['res_format'] = plugins.toolkit._('Formats')
+        new_facet_dict['organization'] = facet_dict['organization']
+        return new_facet_dict
+
+    def organization_facets(self, facet_dict, organization_type, package_type):
+        new_facet_dict = OrderedDict()
+        new_facet_dict['groups'] = facet_dict['groups']
+        new_facet_dict['programme'] = plugins.toolkit._('Programmes')
+        new_facet_dict['country'] = plugins.toolkit._('Countries')
+        new_facet_dict['tags'] = plugins.toolkit._('Keywords')
+        new_facet_dict['res_format'] = plugins.toolkit._('Formats')
+        return new_facet_dict
 
     # IResourceController
     def before_resource_create(self, context, resource):
@@ -95,3 +118,7 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultPermissionLabels):
         if data_dict.get('private'):
             who_afro_upload.add_activity(context, data_dict, "new")
 
+    def before_dataset_index(self, data_dict):
+        data_dict['programme'] = json.loads(data_dict['programme'])
+        data_dict['country'] = json.loads(data_dict['country'])
+        return data_dict
