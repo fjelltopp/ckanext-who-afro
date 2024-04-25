@@ -13,6 +13,10 @@ a {
   color: var(--primary-navy);
 }
 
+#NavbarBrandingContainer a:hover {
+    text-decoration: none; /* overwrites default */
+}
+
 a:hover {
   color: var(--primary-navy);
   text-decoration: underline;
