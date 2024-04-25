@@ -37,7 +37,8 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultPermissionLabels):
             'get_user_obj': who_afro_helpers.get_user_obj,
             'month_formatter': who_afro_helpers.month_formatter,
             'get_most_viewed_datasets': who_afro_helpers.get_most_viewed_datasets,
-            'get_last_modifier': who_afro_helpers.get_last_modifier
+            'get_last_modifier': who_afro_helpers.get_last_modifier,
+            'format_locale': who_afro_helpers.format_locale
         }
 
     # IConfigurer

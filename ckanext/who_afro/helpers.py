@@ -140,3 +140,8 @@ def get_last_modifier(package_id):
         data_dict={'id': package_id}
     )
     return get_user_from_id(package_activity[0]['user_id'])
+
+
+def format_locale(locale):
+    locale_name = locale.display_name if locale.display_name is not None else locale.english_name
+    return locale_name.replace(' (Portugal)', '').capitalize()
