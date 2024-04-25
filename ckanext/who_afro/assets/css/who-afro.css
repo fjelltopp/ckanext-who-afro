@@ -1031,8 +1031,9 @@ a.tag:hover  {
     padding-top: 64px;
 }
 
+/* opacity is not working (background of parent is heavier), the new color is factored from original rgba values by 0.1 */
 .subscribe .highlight-box {
-    background: var(--primary-navy);
+    background-color: rgba(25, 54, 108, 1);
     border-radius: 4px;
     padding: 36px;
 
