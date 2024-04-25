@@ -159,14 +159,6 @@ a.thumbnail.active {
   background-color: #008dc9;
 }
 
-.masthead {
-  background: #008dc9 url("../../../base/images/bg.png");
-}
-
-.site-footer {
-  background: #008dc9 url("../../../base/images/bg.png");
-}
-
 .popover-followee .nav li a i {
   background-color: #008dc9;
 }
@@ -181,10 +173,6 @@ a.thumbnail.active {
 
 .resource-view-list.reordering li.ui-sortable-helper .handle {
   border-color: #008dc9;
-}
-
-body {
-  background: #008dc9 url("../../../base/images/bg.png");
 }
 
 @media (max-width: 991px) {
@@ -1044,7 +1032,7 @@ a.tag:hover  {
 }
 
 .subscribe .highlight-box {
-    background: #19366c;
+    background: var(--primary-navy);
     border-radius: 4px;
     padding: 36px;
 
@@ -1153,8 +1141,9 @@ a.tag:hover  {
 }
 
 .site-footer {
-    background-color: var(--primary-navy);
+    background: var(--primary-navy);
     width: 100%;
+    padding: 0;
 }
 
 .site-footer .list-unstyled {
