@@ -7,13 +7,17 @@
   <a href="{{ h.url_for('home.index') }}">
       <img
         id="NavbarLogo"
-        src="{{ h.url_for_static_or_external(g.site_logo) }}"
+        src="/images/who-african-region.png"
         alt="{{ g.site_title }}"
         title="{{ g.site_title }}"
       />
+        <img
+        id="LogoBorder"
+        src="/images/logo_partial_border.png"
+        alt=""
+        />
     <div id="NavbarHeadingContainer">
-        <div><h1 class="title">The Data & Research Hub</h1></div>
-        <div><h1 class="subtitle">WHO African Regional Office</h1></div>
+        <div><h1 class="title">The Health Data Hub</h1></div>
     </div>
   </a>
 </div>
@@ -26,24 +30,43 @@
         {% snippet 'snippets/search_input.html', placeholder='Search' %}
     </div>
 
-    {{ h.build_nav_main(
-        ('dataset.search', _('Datasets')),
-        ('group.index', _('Categories')),
-        ('user.index', _('Users'))
-         ) }}
+    {% if c.userobj %}
+        {{ h.build_nav_main(
+            ('home.about', _('About')),
+            ('dataset.search', _('Find Data')),
+            ('home.index', _('Insights')),
+            ('user.edit', _('Manage account'))
+             ) }}
+    {% else %}
+        {{ h.build_nav_main(
+            ('home.about', _('About')),
+            ('dataset.search', _('Find Data')),
+            ('home.index', _('Insights')),
+            ('user.login', _('Log in'))
+             ) }}
+    {% endif %}
+
 {% endblock %}
 
 {% block header_site_search %}
         <form class="section site-search simple-input" action="{% url_for dataset_type ~ '.search' %}" method="get">
           <div class="field">
             <label for="field-sitewide-search">{% block header_site_search_label %}{{ h.humanize_entity_type('package', dataset_type, 'search_placeholder') or _('Search Datasets...') }}{% endblock %}</label>
-            <input id="field-sitewide-search" type="text" class="form-control" name="q" placeholder="{{ _('Search') }}" aria-label="{{ h.humanize_entity_type('package', dataset_type, 'search_placeholder') or _('Search datasets...') }}"/>
+            <input id="field-sitewide-search" type="text" class="form-control" name="q" placeholder="{{ _('Search data') }}" aria-label="{{ h.humanize_entity_type('package', dataset_type, 'search_placeholder') or _('Search datasets...') }}"/>
             <button class="btn-search" type="submit" aria-label="{{ _('Submit') }}"><i class="fa fa-search"></i></button>
           </div>
         </form>
       {% endblock %}
 
+
+{% block header_account_container_content %}
+    {% snippet "snippets/language_selector.html" %}
+{% endblock %}
+
+
 {% block header_wrapper %}
+
   {{ super() }}
+
   <div class="fluid-white-bar"></div>
 {% endblock %}

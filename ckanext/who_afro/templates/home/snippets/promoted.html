@@ -2,15 +2,65 @@
 {% set placeholder = _('E.g. environment') %}
 {% set stats = h.get_site_statistics() %}
 
-<div class="promoted col-xs-12 col-sm-9 col-lg-7" >
-    <p class="subtitle">{{_('WHO African Regional Office')}}</p>
-    <h1 class="headline">{{_('The Data & Research Hub')}}</h1>
-    <p class="description">{{_('A platform for the WHO African Regional Office (AFRO) to archive datasets and documentation for analysis and dissemination across internal and external partners.')}}</p>
-    <h2>{{ _('Search {0} datasets:').format(h.SI_number_span(stats.dataset_count)) }}</h2>
-    <div class="row">
-        <div class="col-xs-12 col-sm-10 col-md-7 col-lg-6">
-            {% snippet 'snippets/search_input.html' %}
+<div class="promoted promoted-home col-xs-12 col-sm-12 col-lg-12" >
+    <div class="promoted-container row">
+        <div class="promoted-left col-lg-5 col-xs-12 col-sm-12">
+            <p class="subtitle">{{_('WHO AFRO Health Data Hub')}}</p>
+            <h1 class="headline">{{_('A regional repository  for health data')}}</h1>
+            <p class="description">{{_('The WHO AFRO Health Data Hub is a platform to store datasets and share information with internal and external partners. Our goal is to establish a source of truth to enable staff, researchers and the public to access relevant data quickly.')}}</p>
+            <p class="learn-more"><a href="{{ h.url_for('home.about') }}">{{ _('Learn more about the Data Hub') }}</a></p>
+        </div>
+        <div class="separator col-lg-1 d-none d-lg-block">
+        </div>
+        <div class="promoted-right col-lg-6 col-xs-12 col-sm-12">
+            <div class="search-section">
+            <h2>{{ _('Search data') }}</h2>
+            {% snippet 'snippets/search_input.html', placeholder='Search' %}
+            </div>
+            <div class="search-section">
+                <p>{{ _('Find data by type') }}</p>
+                <div class="search-options">
+                    <ul>
+                        <li class="criterion"><a href="{{ url_for('group.read', id='indicators') }}">{{ _('Indicators') }}</a></li>
+                        <li class="criterion"><a href="{{ url_for('group.read', id='sources') }}">{{ _('Data sources') }}</a></li>
+                        <li class="criterion"><a href="{{ url_for('group.read', id='publications') }}">{{ _('Publications') }}</a></li>
+                        <li><a href="{{ url_for('group.index') }}">{{ _('See more') }}</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="search-section">
+                <p>{{ _('Find data by programme') }}</p>
+                <div class="search-options">
+                    <ul>
+                        <li class="criterion"><a href="{{ url_for('dataset.search', programme='hiv') }}">{{ _('HIV') }}</a></li>
+                        <li class="criterion"><a href="{{ url_for('dataset.search', programme='srh') }}">{{ _('SRH') }}</a></li>
+                        <li class="criterion"><a href="{{ url_for('dataset.search', programme='malaria') }}">{{ _('Malaria') }}</a></li>
+                        <li><a href="{{ url_for('dataset.search') }}">{{ _('See more') }}</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="search-section">
+                <p>{{ _('Find data by country') }}</p>
+                <div class="search-options">
+                    <ul>
+                        <li class="criterion"><a href="{{ url_for('dataset.search', country='AGO') }}">{{ _('Angola') }}</a></li>
+                        <li class="criterion"><a href="{{ url_for('dataset.search', country='BWA') }}">{{ _('Botswana') }}</a></li>
+                        <li class="criterion"><a href="{{ url_for('dataset.search', country='COD') }}">{{ _('Côte d\'Ivoire') }}</a></li>
+                        <li><a href="{{ url_for('dataset.search') }}">{{ _('See more') }}</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="search-section">
+                <a href="{{ url_for('dataset.search') }}" class="all-criteria">{{ _('View and filter all data') }}</a>
+            </div>
+
         </div>
     </div>
-    <p>{{_('Or')}} <a class="small" href="{{ h.url_for('/group/') }}">{{_('find data by category')}}</a></p>
+
+
+
+
 </div>

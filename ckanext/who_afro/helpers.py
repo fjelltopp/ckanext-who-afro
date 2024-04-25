@@ -127,3 +127,21 @@ def lower_formatter(input):
 
 def month_formatter(month):
     return datetime.strptime(month, "%Y-%m").strftime("%b %Y")
+
+
+def get_recently_updated_datasets():
+    recently_updated = logic.get_action('package_search')(
+        data_dict={'q': '*:*', 'sort': 'metadata_modified desc', 'rows': 3})['results']
+    return recently_updated[:3]
+
+
+def get_last_modifier(package_id):
+    package_activity = logic.get_action('package_activity_list')(
+        data_dict={'id': package_id}
+    )
+    return get_user_from_id(package_activity[0]['user_id'])
+
+
+def format_locale(locale):
+    locale_name = locale.display_name if locale.display_name is not None else locale.english_name
+    return locale_name.replace(' (Portugal)', '').capitalize()

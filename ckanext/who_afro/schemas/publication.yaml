@@ -1,6 +1,6 @@
 scheming_version: 2
-dataset_type: dataset
-name: General Data
+dataset_type: publication
+name: Publication
 about: A customized dataset schema for WHO AFRO CKAN deployment
 about_url: http://github.com/ckan/ckanext-scheming
 
