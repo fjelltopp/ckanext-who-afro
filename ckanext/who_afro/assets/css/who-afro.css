@@ -3,6 +3,7 @@
 :root {
     --primary-navy: #00205C;
     --secondary-who-blue: #008dc9;
+    --who-blue-65-percent: #79B5E3;
     --account-masthead-height: 32px;
     --masthead-menu-padding-top: -3px;
     --who-blue-ten-percent: #DDEFF9;
@@ -579,7 +580,12 @@ p.small {
     background-color: var(--primary-navy) !important;
     padding-left: 32px;
     padding-right: 32px;
-    border-radius: 0 8px 8px 0 !important;
+    border-radius: 0 4px 4px 0 !important;
+}
+
+.form-control {
+    border: var(--who-blue-65-percent) solid 1px;
+    border-radius: 4px;
 }
 
 .form-control:focus {
