@@ -6,6 +6,7 @@
     --who-blue-65-percent: #79B5E3;
     --account-masthead-height: 32px;
     --masthead-menu-padding-top: -3px;
+    --who-blue-25-percent: #C9DDF3;
     --who-blue-ten-percent: #DDEFF9;
     --neutral-light-grey: #E6E7E8;
 }
@@ -1070,6 +1071,17 @@ a.tag:hover  {
 
 .dataset-item:last-of-type {
     border-bottom: var(--primary-navy) solid 1px;
+}
+
+@media only screen and (max-width: 991px) {
+    .homepage-package-list > .dataset-item {
+        border: none;
+        border-radius: 0;
+        padding: 24px;
+    }
+    .dataset-item:last-of-type {
+        border-bottom: var(--who-blue-25-percent) solid 1px;
+    }
 }
 
 .subscribe {
