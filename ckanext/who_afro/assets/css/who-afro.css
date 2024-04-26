@@ -1259,17 +1259,27 @@ a.tag:hover  {
 
 .btn{
   padding:  10px 40px;
+  /*font-weight: 700;*/
+  /*font-size: 16px;*/
+  /*line-height: 24px;*/
 }
 
 .btn-primary,
-.btn-danger {
-  background-color: #008dc9;
-  border-color: #008dc9;
+.btn-success,
+.btn-default {
+  background-color: var(--primary-navy);
+  border: var(--primary-navy) solid 1px;
   color: #fff;
-
 }
 
+.btn-danger {
+    background-color: white;
+    border-color: var(--primary-navy) solid 1px;
+    color: var(--primary-navy);
+}
 
+.btn-light:hover,
+.btn-default:hover,
 .btn-primary:hover,
 .btn-danger:hover,
 .btn-primary:active,
@@ -1285,9 +1295,9 @@ a.tag:hover  {
 .btn-primary:active.focus,
 .btn-primary.active.focus,
 .open > .dropdown-toggle.btn-primary.focus  {
-  color: #fff;
-  background-color: #d86422;
-  border-color: #d86422;
+  color: var(--primary-navy);
+  background-color: var(--who-blue-ten-percent) !important;  /* to overwrite default */
+  border-color: var(--who-blue-ten-percent);
 }
 
 .btn-xs{
@@ -1458,9 +1468,14 @@ p.learn-more a {
 
 .footer-search-section  .lens-btn {
     background-color: var(--who-blue-ten-percent) !important;
+    border: var(--who-blue-ten-percent) solid 1px;
     border-radius: 0 4px 4px 0;
     padding-left: 36px;
     padding-right: 36px;
+}
+
+.footer-search-section #field-giant-search:focus {
+    border: 0;
 }
 
 .footer-search-section  .lens-btn .search-label{
