@@ -37,6 +37,14 @@
     height: 492px;
 }
 
+.plus-top-right {
+    position: absolute;
+    top: 35px;
+    left: calc(95%);
+    width: 120px;
+    height: 120px;
+}
+
 .plus-bottom-right {
     position: absolute;
     top: 211px;

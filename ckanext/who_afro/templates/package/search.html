@@ -21,13 +21,16 @@
 {%- block content %}
     <div role="main">
         <div class="promoted-background ">
-            {% snippet 'home/snippets/promoted_plus.html' %}
-            <div class="promoted">
-                <div class="container">
-                    <p class="subtitle">Home / </p>
-                    <h1 class="headline">Datasets</h1>
+            {% snippet 'package/snippets/promoted_plus.html' %}
+            <div class="container">
+                <div class="promoted">
+                    <div class="promoted-container container">
+                        <p class="subtitle">Home / </p>
+                        <h1 class="headline">Datasets</h1>
+                    </div>
                 </div>
             </div>
+
         </div>
 
     {{super() }}
