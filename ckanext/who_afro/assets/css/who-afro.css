@@ -395,7 +395,7 @@ p.small {
     .masthead .main-navbar .navbar-nav > li > a {
         margin-left: 0;
     }
-    .lens-btn {
+    .promoted-right .lens-btn {
         padding-left: 12px !important;
         padding-right: 12px !important;
         background: none;
@@ -1459,6 +1459,12 @@ p.learn-more a {
 .footer-search-section  .lens-btn {
     background-color: var(--who-blue-ten-percent) !important;
     border-radius: 0 4px 4px 0;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.footer-search-section  .lens-btn .search-label{
+    display: block;
 }
 
 .footer-search-section .search-label {
