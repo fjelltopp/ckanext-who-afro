@@ -1459,8 +1459,8 @@ p.learn-more a {
 .footer-search-section  .lens-btn {
     background-color: var(--who-blue-ten-percent) !important;
     border-radius: 0 4px 4px 0;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 36px;
+    padding-right: 36px;
 }
 
 .footer-search-section  .lens-btn .search-label{
