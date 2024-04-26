@@ -1079,7 +1079,7 @@ a.tag:hover  {
         border-radius: 0;
         padding: 24px;
     }
-    .dataset-item:last-of-type {
+    .homepage-package-list > .dataset-item:last-of-type {
         border-bottom: var(--who-blue-25-percent) solid 1px;
     }
 }
