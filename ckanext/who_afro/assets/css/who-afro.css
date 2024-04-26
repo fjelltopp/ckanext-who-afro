@@ -1036,12 +1036,12 @@ a.tag:hover  {
     margin-bottom: 0px;
 }
 
-.dataset-content .modified{
+.dataset-content .modified {
     font-weight: 400;
     font-size: 12px;
     line-height: 20px;
     color: var(--primary-navy);
-    margin-bottom: 12px;
+    padding-bottom: 12px;
 }
 
 .dataset-content div:last-child {
