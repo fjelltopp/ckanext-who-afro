@@ -1477,6 +1477,11 @@ p.learn-more a {
     margin-bottom: 64px;
 }
 
+.footer-search-section .lens-btn {
+    border-left-color: var(--who-blue-ten-percent);
+    color: var(--primary-navy);
+}
+
 .recently-updated .container {
     margin-top: 64px;
 }
