@@ -400,17 +400,13 @@ p.small {
         padding-right: 12px !important;
         background: none;
         outline: none;
-        border-top: 1px solid var(--who-blue-ten-percent);
-        border-bottom: 1px solid var(--who-blue-ten-percent);
+        border: 1px solid var(--who-blue-ten-percent);
         border-left: none;
-        border-right: 1px solid var(--who-blue-ten-percent);
 
     }
     #field-giant-search {
-        border-top: 1px solid var(--who-blue-ten-percent);
-        border-bottom: 1px solid var(--who-blue-ten-percent);
+        border: 1px solid var(--who-blue-ten-percent);
         border-right: none;
-        border-left: 1px solid var(--who-blue-ten-percent);
     }
 
     .lens-btn .search-label{
@@ -581,10 +577,10 @@ p.small {
 .promoted .big-search-form .lens-btn, .promoted .big-search-form .lens-btn:hover{
     border-color: var(--primary-navy) thin solid;
     height:  50px;
-    background-color: var(--primary-navy) !important;
+    background-color: var(--primary-navy);
     padding-left: 32px;
     padding-right: 32px;
-    border-radius: 0 4px 4px 0 !important;
+    border-radius: 0 4px 4px 0;
 }
 
 .form-control {
@@ -618,7 +614,6 @@ p.small {
 
 .input-group-btn {
     text-align: center;
-    border-radius: 0 10px 10px 0 !important;
     margin-bottom: 0;
 }
 
@@ -688,6 +683,7 @@ p.small {
 
 .search-form {
   padding-bottom: 0; /* to remove search form default padding */
+  border-bottom: 0;
 }
 
 
@@ -1460,8 +1456,9 @@ p.learn-more a {
     font-weight: 700;
 }
 
-.footer-search-section .lens-btn {
+.footer-search-section  .lens-btn {
     background-color: var(--who-blue-ten-percent);
+    border-radius: 0 4px 4px 0;
 }
 
 .footer-search-section .search-label {
