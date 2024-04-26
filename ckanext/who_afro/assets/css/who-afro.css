@@ -1035,7 +1035,6 @@ a.tag:hover  {
 
 .subscribe {
     background-color: var(--primary-navy);
-    height: 332px;
 }
 
 .subscribe .container {
@@ -1458,6 +1457,10 @@ p.learn-more a {
     color: var(--who-blue-ten-percent);
     text-decoration: underline;
     font-weight: 700;
+}
+
+.footer-search-section {
+    padding-top: 64px;
 }
 
 .footer-search-section div h2 {
