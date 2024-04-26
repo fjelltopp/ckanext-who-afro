@@ -423,7 +423,7 @@ p.small {
 .masthead .main-navbar ul li:focus a,
 .masthead .main-navbar ul li.active a
 {
-    color: #d86422;
+    color: var(--who-blue-65-percent);
     background-color: transparent;
 
 }
