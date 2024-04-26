@@ -9,6 +9,7 @@
     --who-blue-25-percent: #C9DDF3;
     --who-blue-ten-percent: #DDEFF9;
     --neutral-light-grey: #E6E7E8;
+    --A11ygrey: #757575;
 }
 
 a {
@@ -1009,19 +1010,22 @@ a.tag:hover  {
     list-style:  none;
 }
 
-.homepage-package-list > .dataset-item {
+.homepage-package-list .dataset-item {
     list-style:  none;
     border: var(--primary-navy) solid 1px;
     border-radius: 8px;
     padding: 24px;
 }
 
-.dataset-content .dataset-heading{
+.dataset-content .dataset-heading {
     font-weight: 700;
     font-size: 18px;
     line-height: 24px;
-    color: var(--primary-navy);
     margin:  10px 0px;
+}
+
+.homepage-package-list .dataset-content .dataset-heading {
+    color: var(--primary-navy);
 }
 
 .dataset-content .author {
@@ -1031,6 +1035,7 @@ a.tag:hover  {
     color: #212121;
     margin-bottom: 0px;
 }
+
 .dataset-content .modified{
     font-weight: 400;
     font-size: 12px;
@@ -1039,11 +1044,26 @@ a.tag:hover  {
     margin-bottom: 12px;
 }
 
+.dataset-content div:last-child {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: var(--primary-navy);
+}
+
+
 .dataset-content div {
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    color: var(--primary-navy);
+    margin: 0;
+}
+
+.homepage-package-list .dataset-content div {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
     margin: 0;
 }
 
@@ -1063,10 +1083,6 @@ a.tag:hover  {
 
 .recently-updated .view-all-btn:hover {
     text-decoration: none;
-}
-
-.dataset-resources.list-unstyled {
-    padding-bottom: 24px;
 }
 
 @media only screen and (max-width: 991px) {
