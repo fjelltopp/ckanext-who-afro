@@ -544,6 +544,10 @@ p.small {
     }
 }
 
+.promoted-right div.search-section:last-child {
+    margin-bottom: 32px;
+}
+
 .promoted h1{
     font-weight: 700;
     letter-spacing: -0.03em;
