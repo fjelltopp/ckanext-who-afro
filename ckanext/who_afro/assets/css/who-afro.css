@@ -574,10 +574,10 @@ p.small {
     margin-bottom: 0;
 }
 
-.promoted .big-search-form .lens-btn, .promoted .big-search-form .lens-btn:hover{
-    border-color: var(--primary-navy) thin solid;
+.promoted .big-search-form .lens-btn, .promoted .big-search-form .lens-btn:hover {
+    border-color: var(--primary-navy) thin solid !important;
     height:  50px;
-    background-color: var(--primary-navy);
+    background-color: var(--primary-navy) !important;
     padding-left: 32px;
     padding-right: 32px;
     border-radius: 0 4px 4px 0;
@@ -1457,7 +1457,7 @@ p.learn-more a {
 }
 
 .footer-search-section  .lens-btn {
-    background-color: var(--who-blue-ten-percent);
+    background-color: var(--who-blue-ten-percent) !important;
     border-radius: 0 4px 4px 0;
 }
 
