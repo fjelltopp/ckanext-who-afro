@@ -1268,7 +1268,6 @@ a.tag:hover  {
 
 .site-footer .desc {
     color: #FFFFFF;
-    margin-top: 16px;
     margin-bottom: 0px;
 }
 
@@ -1276,12 +1275,30 @@ a.tag:hover  {
     display: none;
 }
 
-@media only screen and (max-width: 990px) {
+.desc-tablet {
+    margin-top: 0;
+    display: none;
+}
+
+
+@media only screen and (max-width: 575px) {
     .desc-mobile {
         display: block;
     }
     .desc-large {
         display: none;
+    }
+    .desc-tablet {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .desc-wide {
+        display: none;
+    }
+    .desc-tablet {
+        display: block;
     }
 }
 
