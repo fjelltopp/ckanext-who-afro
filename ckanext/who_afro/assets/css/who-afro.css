@@ -1568,5 +1568,8 @@ p.learn-more a {
     margin-top: 64px;
 }
 
-
+#dataset-search-form .input-group-btn:last-child > .btn {
+    z-index: 0;
+    border-radius: 0 4px 4px 0;
+}
 
