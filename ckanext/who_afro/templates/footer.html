@@ -17,10 +17,10 @@
         <div class="desc-large">
               <ul class="list-unstyled">
                 {% block footer_links %}
-                    <li><a href="{{ h.url_for('/organization') }}">{{ _('Teams') }}</a></li>
-                    <li><a href="{{ h.url_for('/user/login') }}">{{ _('Account login') }}</a></li>
-                    <li><a href="#" target="_blank">{{ _('Terms and conditions') }}</a><br />
-                    <li><a href="http://docs.ckan.org/en/2.10/api/" target="_blank">{{ _('API Docs') }}</a></li>
+                    <li><a class="footer-link" href="{{ h.url_for('/organization') }}">{{ _('Teams') }}</a></li>
+                    <li><a class="footer-link" href="{{ h.url_for('/user/login') }}">{{ _('Account login') }}</a></li>
+                    <li><a class="footer-link" href="#" target="_blank">{{ _('Terms and conditions') }}</a><br />
+                    <li><a class="footer-link" href="http://docs.ckan.org/en/2.10/api/" target="_blank">{{ _('API Docs') }}</a></li>
                     <li>
                       <span class="desc desc-wide">{% trans %}© WHO 2024. An open source <a class="hide-text" target="_blank" href="https://ckan.org/">
                 CKAN</a> project, built by <a class="hide-text" target="_blank" href="https://fjelltopp.org">Fjelltopp</a>{% endtrans %}</span>
@@ -33,10 +33,10 @@
 
 
         <div class="desc-mobile">
-            <p><a href="{{ h.url_for('/organization') }}">{{ _('Teams') }}</a></p>
-            <p><a href="{{ h.url_for('/user/login') }}">{{ _('Account login') }}</a></p>
-            <p><a href="#" target="_blank">{{ _('Terms and conditions') }}</a><br />
-            <p><a href="http://docs.ckan.org/en/2.10/api/" target="_blank">{{ _('API Docs') }}</a></p>
+            <p><a class="footer-link" href="{{ h.url_for('/organization') }}">{{ _('Teams') }}</a></p>
+            <p><a class="footer-link" href="{{ h.url_for('/user/login') }}">{{ _('Account login') }}</a></p>
+            <p><a class="footer-link" href="#" target="_blank">{{ _('Terms and conditions') }}</a><br />
+            <p><a class="footer-link" href="http://docs.ckan.org/en/2.10/api/" target="_blank">{{ _('API Docs') }}</a></p>
           <p class="desc desc-mobile">{% trans %}© WHO 2024. An open source <a class="hide-text" target="_blank" href="https://ckan.org/">
             CKAN</a> project, built by <a class="hide-text" target="_blank" href="https://fjelltopp.org">Fjelltopp</a>{% endtrans %}</p>
         </div>

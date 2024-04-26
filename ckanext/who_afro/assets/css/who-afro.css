@@ -1301,7 +1301,11 @@ a.tag:hover  {
         display: block;
     }
 }
+.site-footer .list-unstyled li a {
+    color: var(--who-blue-25-percent) !important;
+}
 
+a.footer-link:hover,
 .site-footer .desc a,
 .site-footer .desc a:hover {
     color: #FFFFFF;
