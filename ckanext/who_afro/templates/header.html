@@ -34,14 +34,14 @@
         {{ h.build_nav_main(
             ('home.about', _('About')),
             ('dataset.search', _('Find Data')),
-            ('home.index', _('Insights')),
+            ('insights.index', _('Insights')),
             ('user.edit', _('Manage account'))
              ) }}
     {% else %}
         {{ h.build_nav_main(
             ('home.about', _('About')),
             ('dataset.search', _('Find Data')),
-            ('home.index', _('Insights')),
+            ('insights.index', _('Insights')),
             ('user.login', _('Log in'))
              ) }}
     {% endif %}
