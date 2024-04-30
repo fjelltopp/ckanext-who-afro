@@ -615,19 +615,25 @@ p.small {
     margin-bottom: 0;
 }
 
-.promoted .big-search-form .lens-btn {
+.promoted .big-search-form .lens-btn,
+.promoted .big-search-form .lens-btn:hover,
+.insights .insight-row .search-section .big-search-form .lens-btn,
+.insights .insight-row .search-section .big-search-form .lens-btn:hover {
+    border-color: var(--primary-navy) thin 1px !important;
+    color: var(--primary-navy) !important;
     height:  50px;
     padding-left: 32px;
     padding-right: 32px;
     border-radius: 0 4px 4px 0;
 }
 
-.promoted .big-search-form .lens-btn:hover {
-    border-color: var(--primary-navy) thin 1px !important;
-    color: var(--primary-navy) !important;
+.promoted .big-search-form .fa-search, .insights .insight-row .search-section .big-search-form .fa-search{
+    font-size:  20px;
+    color: #FFFFFF;
+    margin-right: 2px;
 }
 
-.promoted .big-search-form .lens-btn span.search-label {
+.promoted .big-search-form .lens-btn span.search-label, .insights .insight-row .search-section .big-search-form .lens-btn span.search-label{
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
@@ -649,7 +655,7 @@ p.small {
                     1px 1px 1px rgba(0, 32, 92, 1);
 }
 
-.promoted .big-search-form input{
+.promoted .big-search-form input, .insights .insight-row .search-section .big-search-form input{
     height:  50px;
     border-color: #FFF;
 }
@@ -659,11 +665,11 @@ p.small {
     margin-bottom: 0;
 }
 
-.promoted .search-section {
+.promoted .search-section, .insights .insight-row .search-section {
     margin-top:28px;
 }
 
-.promoted-right h2:first-child, .promoted .search-section p:first-child {
+.promoted-right h2:first-child, .promoted .search-section p:first-child, .insights .insight-row .search-section p:first-child {
     color: var(--primary-navy);
     font-size: 18px;
     font-weight: 700;
@@ -876,11 +882,7 @@ p.small {
     margin-bottom:  24px;
 }
 
-.insight-square:first-child {
-    margin-right: 24px;
-    width: calc(33.3% - 24px) ;
-}
-.insight-square:nth-child(2) {
+.insight-square {
     margin-right: 24px;
     width: calc(33.3% - 24px) ;
 }

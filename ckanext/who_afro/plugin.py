@@ -9,6 +9,7 @@ import ckanext.who_afro.actions as who_afro_actions
 import ckanext.who_afro.upload as who_afro_upload
 import ckanext.who_afro.validators as who_afro_validators
 import ckanext.who_afro.helpers as who_afro_helpers
+import ckanext.who_afro.blueprints as who_afro_blueprints
 from ckan.lib.plugins import DefaultPermissionLabels
 
 log = logging.getLogger(__name__)
@@ -23,6 +24,7 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultPermissionLabels):
     plugins.implements(plugins.IActions)
     plugins.implements(plugins.IValidators)
     plugins.implements(plugins.IPackageController, inherit=True)
+    plugins.implements(plugins.IBlueprint)
 
     # ITemplateHelpers
     def get_helpers(self):
@@ -124,3 +126,7 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultPermissionLabels):
         data_dict['programme'] = json.loads(data_dict['programme'])
         data_dict['country'] = json.loads(data_dict['country'])
         return data_dict
+
+    def get_blueprint(self):
+        log.info(f"Registering the following blueprints: {who_afro_blueprints.get_blueprints()}")
+        return who_afro_blueprints.get_blueprints()
