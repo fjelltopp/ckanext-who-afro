@@ -6,13 +6,23 @@ who-afro-theme:
     - css/who-afro.css
     - css/promoted-plus.css
 
+FrictionlessJS:
+  filters: rjsmin
+  contents:
+    - frictionless-js.js
+  output: who-afro/%(version)s_Frictionless.js
+
 FileInputComponentStyles:
     contents:
         - css/FileInputComponent.css
+    filters: cssmin
     output: who-afro/%(version)s_FileInputComponent.css
 
 FileInputComponentScripts:
+    filters: rjsmin
     contents:
-        - frictionless-js.js
         - build/FileInputComponent.js
+    extra:
+      preload:
+        - ckanext-who-afro/FrictionlessJS
     output: who-afro/%(version)s_FileInputComponent.js
