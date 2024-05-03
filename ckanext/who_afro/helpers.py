@@ -93,7 +93,7 @@ def get_all_groups():
 
 def get_featured_datasets():
     featured_datasets = logic.get_action('package_search')(
-        data_dict={'fq': 'tags:featured', 'sort': 'metadata_modified desc', 'rows': 3})['results']
+        data_dict={'fq': 'tags:Featured', 'sort': 'metadata_modified desc', 'rows': 3})['results']
     recently_updated = logic.get_action('package_search')(
         data_dict={'q': '*:*', 'sort': 'metadata_modified desc', 'rows': 3})['results']
     datasets = featured_datasets + recently_updated
