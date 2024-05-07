@@ -10,14 +10,14 @@
                 <div class="promoted">
                     <div class="container">
                         <p class="subtitle">Home / </p>
-                        <h1 class="headline">Categories</h1>
+                        <h1 class="headline">Data Types</h1>
                     </div>
                 </div>
             </div>
             <div class="document-categories">
                 <div class="container">
                     {% if h.check_access('group_create') %}
-                        {% link_for _('Add Categories'), named_route=group_type+'.new', class_='btn btn-primary add-category', icon='plus-square' %}
+                        {% link_for _('Add Data Types'), named_route=group_type+'.new', class_='btn btn-primary add-category', icon='plus-square' %}
                     {% endif %}
                     {% block groups_list %}
                       {{ super () }}
