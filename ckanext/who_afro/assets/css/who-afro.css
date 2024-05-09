@@ -940,6 +940,7 @@ p.small {
     right: 10px;
 }
 
+/* tags margin */
 .dataset-resources {
     list-style-type: none;
     padding-left: 0;
@@ -971,6 +972,7 @@ p.small {
     text-decoration: none;
     border-radius: 4px;
 }
+/* end tags margin */
 
 a.tag,
 a.tag:hover  {
