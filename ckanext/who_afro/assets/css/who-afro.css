@@ -940,22 +940,36 @@ p.small {
     right: 10px;
 }
 
-.dataset-resources li{
+.dataset-resources {
+    list-style-type: none;
+    padding-left: 0;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.dataset-resources li {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     padding: 2px 6px;
     background: var(--who-blue-ten-percent);
     border-radius: 4px;
+    margin-left: 0;
     margin-right: 10px;
     margin-bottom: 24px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    border:  none;
+    border: none;
 }
 
 .dataset-resources li a.badge,
-.dataset-resources li a.badge:hover{
-    background-color:  transparent;
+.dataset-resources li a.badge:hover {
+    display: inline-block;
+    background-color: transparent;
     color: var(--secondary-who-blue);
-    padding:  0px;
+    text-decoration: none;
+    border-radius: 4px;
 }
 
 a.tag,
