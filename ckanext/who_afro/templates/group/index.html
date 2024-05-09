@@ -1,5 +1,7 @@
 {% ckan_extends %}
 
+{% block subtitle %}{{ h.humanize_entity_type('group', group_type, 'page title') or _('Data Types') }}{% endblock %}
+
 {% block content %}
     <div class="categories layout-{{ homepage_style }}">
         <div id="content" class="container">

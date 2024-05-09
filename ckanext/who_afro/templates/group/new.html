@@ -1,5 +1,7 @@
 {% ckan_extends %}
 
+{% block subtitle %}{{ h.humanize_entity_type('group', group_type, 'page title') or _('Create a Data Type') }}{% endblock %}
+
 {% block page_heading %}{{ _('Create a Data Type') }}{% endblock %}
 
 {% block breadcrumb_content %}
