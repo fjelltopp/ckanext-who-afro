@@ -867,6 +867,10 @@ p.small {
     .data-hub-stats H3 {
         margin-top: 0;
     }
+
+    .insights {
+        padding-bottom: 0;
+    }
     .insight-small-rect:last-child {
         margin-top: 24px;
     }
