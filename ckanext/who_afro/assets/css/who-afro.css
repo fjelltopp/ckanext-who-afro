@@ -751,7 +751,7 @@ p.small {
     line-height: 19px;
 }
 
-.insights{
+.insights {
     min-height: 484px;
     background: var(--who-blue-ten-percent);
     padding: 48px 0;
@@ -863,13 +863,24 @@ p.small {
     }
 }
 
+.recently-updated .container {
+    margin-top: 64px;
+}
+
 @media only screen and (max-width: 559px) {
     .data-hub-stats H3 {
         margin-top: 0;
     }
+    .data-hub-stats {
+        margin-top: 32px;
+    }
+    .recently-updated .container {
+        margin-top: 32px;
+    }
 
     .insights {
         padding-bottom: 0;
+        padding-top: 32px;
     }
     .insight-small-rect:last-child {
         margin-top: 24px;
@@ -1021,6 +1032,13 @@ a.tag:hover  {
 .recently-updated H3 {
     margin-top: 48px;
     margin-bottom: 24px;
+}
+
+@media only screen and (max-width: 559px) {
+    .recently-updated H3 {
+        margin-top: 32px;
+        margin-bottom: 24px;
+    }
 }
 
 .recently-updated {
@@ -1619,10 +1637,6 @@ p.learn-more a {
         display: none;
 
     }
-}
-
-.recently-updated .container {
-    margin-top: 64px;
 }
 
 #dataset-search-form .input-group-btn:last-child > .btn {
