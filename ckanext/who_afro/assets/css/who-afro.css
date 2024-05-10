@@ -754,7 +754,7 @@ p.small {
 .insights{
     min-height: 484px;
     background: var(--who-blue-ten-percent);
-    padding: 64px 0px;
+    padding: 48px 0;
 }
 
 .insight-row, .data-hub-stats .row {
