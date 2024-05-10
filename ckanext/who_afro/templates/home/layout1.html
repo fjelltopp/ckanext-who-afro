@@ -9,18 +9,20 @@
                 {% endblock %}
             </div>
         </div>
-    <div class="insights">
-        <div class="container">
-        {% snippet 'home/snippets/insights.html' %}
+        <div class="insights">
+            <div class="container">
+            {% snippet 'home/snippets/insights.html' %}
+            </div>
+        </div>
+        <div class="after-insights"></div>
+
+        <div class="recently-updated">
+            <div class="container">
+                <h3><span>{{ _('Featured Datasets') }}</span><span><a class="view-all-btn" href="{{ h.url_for('/dataset') }}">{{ _('See all') }}</a></span></h3>
+                {% snippet 'home/snippets/recently_updated.html', packages=h.get_featured_datasets(), origin='homepage' %}
+                <h3><span>{{ _('Recently Updated Datasets') }}</span><span><a class="view-all-btn" href="{{ h.url_for('/dataset') }}">{{ _('See all') }}</a></span></h3>
+                {% snippet 'home/snippets/recently_updated.html', packages=h.get_recently_updated_datasets(), origin='homepage' %}
+            </div>
         </div>
     </div>
-    </div>
-    <div class="recently-updated">
-        <div class="container">
-            <h3><span>{{ _('Featured Datasets') }}</span><span><a class="view-all-btn" href="{{ h.url_for('/dataset') }}">{{ _('See all') }}</a></span></h3>
-            {% snippet 'home/snippets/recently_updated.html', packages=h.get_featured_datasets(), origin='homepage' %}
-            <h3><span>{{ _('Recently Updated Datasets') }}</span><span><a class="view-all-btn" href="{{ h.url_for('/dataset') }}">{{ _('See all') }}</a></span></h3>
-            {% snippet 'home/snippets/recently_updated.html', packages=h.get_recently_updated_datasets(), origin='homepage' %}
-        </div>
-    </div>
-</div>
+</div>c
