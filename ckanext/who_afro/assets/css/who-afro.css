@@ -865,7 +865,7 @@ p.small {
 
 @media only screen and (max-width: 559px) {
     .data-hub-stats H3 {
-        margin-top:24px;
+        margin-top: 0;
     }
     .insight-small-rect:last-child {
         margin-top: 24px;
