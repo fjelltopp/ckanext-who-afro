@@ -917,10 +917,6 @@ p.small {
         margin-bottom: 32px;
         width: 100%;
     }
-
-    .insight-square:last-child {
-        margin-bottom: 48px;
-    }
 }
 
 .category-box {
