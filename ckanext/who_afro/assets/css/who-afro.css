@@ -786,6 +786,8 @@ p.small {
     border-radius: 8px;
     min-height: 297px;
     margin-bottom: 48px;
+    margin-right: 24px;
+    width: calc(33.3% - 24px) ;
 }
 
 
@@ -901,13 +903,20 @@ p.small {
     margin-bottom:  24px;
 }
 
-.insight-square {
-    margin-right: 24px;
-    width: calc(33.3% - 24px) ;
-}
 .insight-square:last-child {
     margin-right: 0;
     width: calc(33.3%);
+}
+
+@media only screen and (max-width: 559px) {
+    .row.insight-row {
+        display: block;
+    }
+    .insight-square, .insight-square:last-child {
+        margin-right: 0;
+        margin-bottom: 32px;
+        width: 100%;
+    }
 }
 
 .category-box {
