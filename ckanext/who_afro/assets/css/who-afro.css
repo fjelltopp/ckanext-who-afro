@@ -1146,6 +1146,24 @@ a.tag:hover  {
     text-decoration: none;
 }
 
+.recently-updated-datasets {
+    display: none;
+}
+
+@media only screen and (max-width: 415px) {
+    .no-row {
+        display: none;
+    }
+    .recently-updated-datasets {
+        display: flex;
+        --bs-gutter-x: 0;
+    }
+    .recently-updated-datasets a {
+        margin-top: 6px;
+        width: 90px;
+    }
+}
+
 @media only screen and (max-width: 769px) {
     .homepage-package-list > .dataset-item {
         border: none;
