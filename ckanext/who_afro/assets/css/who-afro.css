@@ -856,7 +856,7 @@ p.small {
     }
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 576px) {
     .insight-small-rect:last-child {
         margin-left: 24px;
         width: calc(50% - 24px);
@@ -867,7 +867,7 @@ p.small {
     margin-top: 64px;
 }
 
-@media only screen and (max-width: 559px) {
+@media only screen and (max-width: 576px) {
     .data-hub-stats H3 {
         margin-top: 0;
     }
