@@ -867,7 +867,7 @@ p.small {
     margin-top: 64px;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575px) {
     .data-hub-stats H3 {
         margin-top: 0;
     }
@@ -908,6 +908,17 @@ p.small {
 .insight-square:last-child {
     margin-right: 0;
     width: calc(33.3%);
+}
+
+@media only screen and (max-width: 576px) {
+    /*    .row.insight-row {*/
+    /*    display: block;*/
+    /*}*/
+    /*.insight-square, .insight-square:last-child {*/
+    /*    margin-right: 0;*/
+    /*    margin-bottom: 32px;*/
+    /*    width: 100%;*/
+    /*}*/
 }
 
 .category-box {
