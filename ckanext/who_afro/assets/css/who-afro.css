@@ -786,8 +786,6 @@ p.small {
     border-radius: 8px;
     min-height: 297px;
     margin-bottom: 48px;
-    margin-right: 24px;
-    width: calc(33.3% - 24px) ;
 }
 
 
@@ -858,7 +856,7 @@ p.small {
     }
 }
 
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 560px) {
     .insight-small-rect:last-child {
         margin-left: 24px;
         width: calc(50% - 24px);
@@ -869,7 +867,7 @@ p.small {
     margin-top: 64px;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 559px) {
     .data-hub-stats H3 {
         margin-top: 0;
     }
@@ -887,10 +885,8 @@ p.small {
     .insight-small-rect:last-child {
         margin-top: 24px;
     }
-    .after-insights {
-        padding-top: 85%;
-        background: var(--who-blue-ten-percent);
-        min-height: 418px;
+    .insights .container {
+        min-height: 1750px;
     }
 
 }
@@ -905,20 +901,13 @@ p.small {
     margin-bottom:  24px;
 }
 
+.insight-square {
+    margin-right: 24px;
+    width: calc(33.3% - 24px) ;
+}
 .insight-square:last-child {
     margin-right: 0;
     width: calc(33.3%);
-}
-
-@media only screen and (max-width: 559px) {
-    .row.insight-row {
-        display: block;
-    }
-    .insight-square, .insight-square:last-child {
-        margin-right: 0;
-        margin-bottom: 32px;
-        width: 100%;
-    }
 }
 
 .category-box {
