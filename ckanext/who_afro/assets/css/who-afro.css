@@ -1081,6 +1081,7 @@ a.tag:hover  {
     border: var(--primary-navy) solid 1px;
     border-radius: 8px;
     padding: 24px;
+    height: 100%;
 }
 
 .dataset-content .dataset-heading {
