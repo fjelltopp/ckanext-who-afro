@@ -1330,6 +1330,9 @@ a.tag:hover  {
     top: 0;
 }
 
+.site-footer .container {
+    padding-bottom: 24px;
+}
 
 .footer-links img {
     width:  100%;
