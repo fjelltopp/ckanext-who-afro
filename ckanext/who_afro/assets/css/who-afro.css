@@ -1292,7 +1292,7 @@ a.tag:hover  {
 
 .mobile-menu .search-form {
     margin-top: 70px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     padding-top: 20px;
     padding-bottom: 25px;
     border-bottom: none;
@@ -1678,7 +1678,6 @@ p.learn-more a {
     }
     .footer-search-section div:first-child {
         display: none;
-
     }
 }
 
@@ -1705,5 +1704,9 @@ p.learn-more a {
     .mobile-menu .search-form {
         margin-top: 83px;
     }
+}
+
+.big-search-form .search-form {
+    margin-bottom: 0;
 }
 
