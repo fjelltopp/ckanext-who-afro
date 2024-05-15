@@ -542,7 +542,13 @@ p.small {
 }
 
 .promoted-home .promoted-container {
-    margin: 64px 0 0;
+    margin: 64px 0;
+}
+
+@media only screen and (max-width: 991px) {
+    .promoted-home .promoted-container {
+        margin: 2rem 0;
+    }
 }
 
 .promoted .container {
@@ -573,9 +579,6 @@ p.small {
 }
 
 @media only screen and (min-width: 992px) {
-    .promoted-home {
-        min-height: 556px;
-    }
     .promoted-right {
         min-height: 428px;
     }
