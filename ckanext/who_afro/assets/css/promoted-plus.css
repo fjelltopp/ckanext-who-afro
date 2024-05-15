@@ -37,6 +37,32 @@
     height: 492px;
 }
 
+@media (max-width: 1920px) {
+    .plus-bottom-left {
+        left: calc(0% - 319px);
+    }
+}
+
+@media (max-width: 1600px) {
+    .plus-bottom-left {
+        left: calc(0% - 250px);
+    }
+}
+
+@media (max-width: 1440px) {
+    .plus-bottom-left {
+        left: calc(0% - 200px);
+    }
+}
+
+
+@media (max-width: 1280px) {
+    .plus-bottom-right {
+        left: calc(0% - 150px);
+    }
+}
+
+
 .plus-top-right {
     position: absolute;
     top: 35px;
