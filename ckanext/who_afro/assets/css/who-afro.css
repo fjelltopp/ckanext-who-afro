@@ -339,12 +339,6 @@ p.small {
     overflow: hidden;
 }
 
-.promoted-container {
-    background-color: var(--primary-navy);
-    position: relative;
-    z-index: 2;
-}
-
 #NavbarBrandingContainer {
     position:absolute;
     top: 8px;
@@ -698,17 +692,18 @@ p.small {
 .search-options ul li.criterion {
     display: inline-flex;
     align-items: center;
-    margin-right: 12px;
     background-color: #FFFFFF;
     padding: 6px;
     height: 20px;
     border-radius: 4px;
     box-shadow: 0px 8px 24px 0px #0000000A;
+
 }
 
 .search-options ul li {
     display: inline-flex;
     align-items: center;
+    margin: 5px;
 }
 
 .search-options ul li.criterion a {
@@ -1372,7 +1367,7 @@ a.tag:hover  {
 }
 
 .site-footer .desc {
-    color: #FFFFFF;
+    color: var(--who-blue-25-percent);
     margin-bottom: 0px;
 }
 
