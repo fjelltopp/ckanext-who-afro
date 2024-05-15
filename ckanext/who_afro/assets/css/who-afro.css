@@ -899,7 +899,7 @@ p.small {
 
 }
 
-.number-with-arrows span {
+.number span {
     color: var(--primary-navy);
     font-weight: 400;
     font-size: 36px;

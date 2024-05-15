@@ -102,25 +102,10 @@
     }
 }
 
-.number-with-arrows {
+.number {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     padding-right: 5px;
-}
-
-.arrows {
-    position: absolute;
-    right: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: none;
-    flex-direction: column;
-}
-
-.arrows .arrow {
-    width: 15px;
-    height: 15px;
-    object-fit: contain;
 }
