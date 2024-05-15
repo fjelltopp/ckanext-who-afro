@@ -1046,7 +1046,7 @@ a.tag:hover  {
     margin-top: 64px;
 }
 
-.recently-updated H3 span:first-child {
+.recently-updated H3 {
     color: var(--primary-navy);
     font-weight: 400;
     font-size: 28px;
@@ -1054,13 +1054,14 @@ a.tag:hover  {
 
 }
 
-.recently-updated H3 {
-    margin-top: 32px;
+.recently-updated-title{
+    margin-top: 48px;
     margin-bottom: 24px;
+    position: relative;
 }
 
 @media only screen and (max-width: 559px) {
-    .recently-updated H3 {
+    .recently-updated{
         margin-top: 32px;
         margin-bottom: 24px;
     }
@@ -1141,7 +1142,7 @@ a.tag:hover  {
 }
 
 .recently-updated .view-all-btn {
-
+    display: inline-block;
     padding: 6px 16px;
     height: 36px;
     font-weight: 700;
@@ -1151,7 +1152,16 @@ a.tag:hover  {
     color: var(--primary-navy);
     background: var(--who-blue-ten-percent);
     border-radius: 4px;
-    float: right;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+@media only screen and (max-width: 415px) {
+    .recently-updated .view-all-btn {
+        margin-top: 10px;
+        position: static;
+    }
 }
 
 .recently-updated .view-all-btn:hover {
