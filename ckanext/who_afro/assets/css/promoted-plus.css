@@ -31,7 +31,8 @@
 
 .plus-bottom-left {
     position: absolute;
-    top: 197px;
+    top: 300px;
+    left: -80px;
     width: 492px;
     height: 492px;
 }
@@ -39,20 +40,20 @@
 
 @media (max-width: 1600px) {
     .plus-bottom-left {
-        left: calc(0% - 300px);
+        left: calc(0% - 120px);
     }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1430px) {
     .plus-bottom-left {
-        left: calc(0% - 280px);
+        left: calc(0% - 170px);
     }
 }
 
 
-@media (max-width: 1280px) {
+@media (max-width: 1320px) {
     .plus-bottom-left {
-        left: calc(0% - 150px);
+        left: calc(0% - 70px);
     }
 }
 
