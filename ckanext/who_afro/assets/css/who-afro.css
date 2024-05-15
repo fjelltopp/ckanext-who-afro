@@ -647,21 +647,23 @@ p.small {
     margin-right: 2px;
 }
 
-.form-control {
-    border: var(--who-blue-65-percent) solid 1px;
+.insights .insight-row .search-section .big-search-form input{
+    height:  50px;
+    border-color: #FFF;
+}
+
+
+.promoted .big-search-form input, .form-control {
+    border: var(--who-blue-25-percent) solid 1px;
     border-radius: 4px;
+    outline: none;
+    height: auto;
 }
 
 .form-control:focus {
     border: var(--primary-navy) solid 1px;
     box-shadow: inset 1px 1px 1px rgba(0, 32, 92, 1),
                     1px 1px 1px rgba(0, 32, 92, 1);
-}
-
-.promoted .big-search-form input,
-.insights .insight-row .search-section .big-search-form input{
-    height:  50px;
-    border-color: #FFF;
 }
 
 .input-group-btn {
