@@ -1331,8 +1331,9 @@ a.tag:hover  {
 }
 
 .site-footer .container {
-    padding-bottom: 24px;
+    padding-bottom: 32px;
 }
+
 
 .footer-links img {
     width:  100%;
@@ -1679,6 +1680,9 @@ p.learn-more a {
     .footer-search-section div:first-child {
         display: none;
     }
+    .site-footer .container {
+    padding-bottom: 24px;
+}
 }
 
 #dataset-search-form .input-group-btn:last-child > .btn {
