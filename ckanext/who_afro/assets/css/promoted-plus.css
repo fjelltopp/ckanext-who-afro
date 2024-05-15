@@ -36,11 +36,6 @@
     height: 492px;
 }
 
-@media (max-width: 3000px) {
-    .plus-bottom-left {
-        left: calc(0% - 419px);
-    }
-}
 
 @media (max-width: 1600px) {
     .plus-bottom-left {
