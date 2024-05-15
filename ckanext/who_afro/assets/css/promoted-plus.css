@@ -32,32 +32,31 @@
 .plus-bottom-left {
     position: absolute;
     top: 197px;
-    left: -319px;
     width: 492px;
     height: 492px;
 }
 
-@media (max-width: 1920px) {
+@media (max-width: 3000px) {
     .plus-bottom-left {
-        left: calc(0% - 319px);
+        left: calc(0% - 419px);
     }
 }
 
 @media (max-width: 1600px) {
     .plus-bottom-left {
-        left: calc(0% - 250px);
+        left: calc(0% - 300px);
     }
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1400px) {
     .plus-bottom-left {
-        left: calc(0% - 200px);
+        left: calc(0% - 280px);
     }
 }
 
 
 @media (max-width: 1280px) {
-    .plus-bottom-right {
+    .plus-bottom-left {
         left: calc(0% - 150px);
     }
 }
@@ -78,7 +77,7 @@
     height: 236px;
 }
 
-@media (max-width: 1920px) {
+@media (max-width: 3000px) {
     .plus-bottom-right {
         left: calc(100% - 200px);
     }
