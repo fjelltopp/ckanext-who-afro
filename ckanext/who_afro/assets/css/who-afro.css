@@ -1720,3 +1720,11 @@ p.learn-more a {
     margin-bottom: 0;
 }
 
+.promoted-container .promoted-left .promoted-left-text {
+    background-color: var(--primary-navy);
+    position: relative;
+    z-index: 2;
+    padding: 10px;
+    top: -10px;
+    left: -10px;
+}
