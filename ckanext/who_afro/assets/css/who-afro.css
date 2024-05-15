@@ -1650,8 +1650,9 @@ p.learn-more a {
     padding-right: 36px;
 }
 
-.footer-search-section #field-giant-search:focus {
-    border: 0;
+.footer-search-section #field-giant-search, .footer-search-section #field-giant-search:focus {
+    outline: none;
+    border: none;
 }
 
 .footer-search-section  .lens-btn .search-label{
