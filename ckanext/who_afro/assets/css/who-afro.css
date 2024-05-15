@@ -607,6 +607,7 @@ p.small {
     line-height: 24px;
     color: var(--who-blue-ten-percent);
     margin-bottom:  15px;
+    letter-spacing: 0;
 }
 
 .promoted .big-search-form {
