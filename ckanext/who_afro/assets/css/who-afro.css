@@ -1173,7 +1173,7 @@ a.tag:hover  {
     .homepage-package-list > .dataset-item {
         border: none;
         border-radius: 0;
-        padding: 24px;
+        /*padding: 24px;*/
     }
     .homepage-package-list > .dataset-item:last-of-type {
         border-bottom: var(--who-blue-25-percent) solid 1px;
@@ -1685,5 +1685,19 @@ p.learn-more a {
 #dataset-search-form .input-group-btn:last-child > .btn {
     z-index: 0;
     border-radius: 0 4px 4px 0;
+}
+
+/* mobile design for containers */
+@media only screen and (max-width: 767px) {
+    .container {
+        width: 100%;
+        padding-right: var(--bs-gutter-x, 1.5rem);
+        padding-left: var(--bs-gutter-x, 1.5rem);
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .homepage-package-list .dataset-item {
+        padding: 12px 0;
+    }
 }
 
