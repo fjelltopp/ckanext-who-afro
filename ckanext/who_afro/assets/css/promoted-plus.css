@@ -90,7 +90,7 @@
     right: 5px;
     top: 50%;
     transform: translateY(-50%);
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 
