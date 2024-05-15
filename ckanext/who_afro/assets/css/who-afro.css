@@ -1728,3 +1728,7 @@ p.learn-more a {
     top: -10px;
     left: -10px;
 }
+
+.promoted-right {
+    z-index: 2;
+}
