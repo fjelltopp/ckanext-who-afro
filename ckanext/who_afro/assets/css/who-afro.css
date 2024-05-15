@@ -1701,3 +1701,9 @@ p.learn-more a {
     }
 }
 
+@media only screen and (max-width: 407px) {
+    .mobile-menu .search-form {
+        margin-top: 83px;
+    }
+}
+
