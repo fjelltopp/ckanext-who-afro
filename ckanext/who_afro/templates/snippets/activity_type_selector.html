@@ -1,0 +1,13 @@
+<div id="activity_types_filter" style="margin-bottom: 15px;" data-module="activity-stream">
+  <label for="activity_types_filter_select">Activity type</label>
+  <select id="activity_types_filter_select">
+    <option {% if not activity_types %}selected{% endif %} data-url="{{ h.url_for(blueprint, id=id) }}">
+      {{ _('All activity types') }}
+    </option>
+    {% for type_ in activity_types %}
+      <option {% if activity_type == type_ %}selected{% endif %} data-url="{{ h.url_for(blueprint, id=id, activity_type=type_) }}">
+        {{ type_ | replace('group', 'category') }}
+      </option>
+    {% endfor %}
+  </select>
+</div>
