@@ -1,0 +1,3 @@
+{% ckan_extends %}
+
+{% block subtitle %}{{ _('Manage') }} {{ g.template_title_delimiter }} {{ group_dict.display_name }} {{ g.template_title_delimiter }} {{ h.humanize_entity_type('group', group_type, 'page title') or _('Categories') }}{% endblock %}
