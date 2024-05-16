@@ -2,6 +2,7 @@ import ckan.logic as logic
 import ckan.model as model
 from ckan.common import c, request, is_flask_request, g
 from datetime import datetime, timedelta
+import re
 
 
 def get_user_obj(field=""):
@@ -145,3 +146,13 @@ def get_last_modifier(package_id):
 def format_locale(locale):
     locale_name = locale.display_name if locale.display_name is not None else locale.english_name
     return locale_name.replace(' (Portugal)', '').capitalize()
+
+
+def substitute_word(text):
+    replacements = [
+        {'old': 'group', 'new': 'category'}
+    ]
+    for word in replacements:
+        pattern = re.compile(r'\b' + re.escape(word['old']) + r'\b', re.IGNORECASE)
+        text = pattern.sub(word['new'], text)
+    return text.capitalize()

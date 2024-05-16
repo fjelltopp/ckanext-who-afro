@@ -40,7 +40,8 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultPermissionLabels):
             'month_formatter': who_afro_helpers.month_formatter,
             'get_recently_updated_datasets': who_afro_helpers.get_recently_updated_datasets,
             'get_last_modifier': who_afro_helpers.get_last_modifier,
-            'format_locale': who_afro_helpers.format_locale
+            'format_locale': who_afro_helpers.format_locale,
+            'substitute_word': who_afro_helpers.substitute_word
         }
 
     # IConfigurer
