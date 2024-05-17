@@ -1,0 +1,12 @@
+{% ckan_extends %}
+
+{% set title = h.humanize_entity_type('organization', group_type, 'create title') or _('Create a Team')%}
+
+{% block page_heading %}{{ _('Create a Team') }}{% endblock %}
+
+{% block subtitle %}{{ _('Create a Team') }}{% endblock %}
+
+{% block breadcrumb_content %}
+  <li>{{ h.nav_link(h.humanize_entity_type('organization', group_type, 'breadcrumb') or _('Teams'), named_route=group_type+'.index') }}</li>
+  <li class="active">{{ h.nav_link(_('Create a Team'), named_route=group_type+'.new') }}</li>
+{% endblock %}
