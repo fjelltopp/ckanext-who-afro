@@ -1434,7 +1434,6 @@ a.footer-link:hover,
 
 .add-category {
     margin-bottom: 32px;
-    margin-top: 64px;
 }
 
 
@@ -1739,4 +1738,14 @@ p.learn-more a {
 
 .promoted-right {
     z-index: 2;
+}
+
+.document-categories .container {
+    padding-top: 64px;
+}
+
+@media only screen and (max-width: 767px) {
+    .document-categories .container {
+        padding-top: 32px;
+    }
 }
