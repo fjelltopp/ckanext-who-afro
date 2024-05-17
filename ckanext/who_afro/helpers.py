@@ -148,11 +148,14 @@ def format_locale(locale):
     return locale_name.replace(' (Portugal)', '').capitalize()
 
 
-def substitute_word(text):
+def substitute_group_or_org(text, capitalize=False):
     replacements = [
         {'old': 'group', 'new': 'category'}
     ]
     for word in replacements:
         pattern = re.compile(r'\b' + re.escape(word['old']) + r'\b', re.IGNORECASE)
         text = pattern.sub(word['new'], text)
-    return text.capitalize()
+
+    if capitalize:
+        text = text.capitalize()
+    return text

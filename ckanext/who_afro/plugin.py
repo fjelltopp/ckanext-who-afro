@@ -41,7 +41,7 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultPermissionLabels):
             'get_recently_updated_datasets': who_afro_helpers.get_recently_updated_datasets,
             'get_last_modifier': who_afro_helpers.get_last_modifier,
             'format_locale': who_afro_helpers.format_locale,
-            'substitute_word': who_afro_helpers.substitute_word
+            'substitute_group_or_org': who_afro_helpers.substitute_group_or_org
         }
 
     # IConfigurer
