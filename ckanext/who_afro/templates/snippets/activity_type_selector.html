@@ -6,7 +6,7 @@
     </option>
     {% for type_ in activity_types %}
       <option {% if activity_type == type_ %}selected{% endif %} data-url="{{ h.url_for(blueprint, id=id, activity_type=type_) }}">
-        {{ type_ | replace('group', 'category') }}
+        {{ h.substitute_group_or_org(type_) }}
       </option>
     {% endfor %}
   </select>
