@@ -1,0 +1,17 @@
+{% ckan_extends %}
+
+{% block subtitle %}{{ h.humanize_entity_type('organization', group_type, 'page title') or _('Teams') }}{% endblock %}
+
+{% block breadcrumb_content %}
+  <li class="active">{% link_for h.humanize_entity_type('organization', group_type, 'breadcrumb') or _('Teams'), named_route=group_type+'.index' %}</li>
+{% endblock %}
+
+{% block page_primary_action %}
+  {% if h.check_access('organization_create') %}
+    {% link_for h.humanize_entity_type('organization', group_type, 'add link') or _('Add Team'), named_route=group_type ~ '.new', class_='btn btn-primary', icon='plus-square' %}
+  {% endif %}
+{% endblock %}
+
+{% block organizations_search_form %}
+{% snippet 'snippets/search_form.html', form_id='organization-search-form', type=group_type, query=q, sorting_selected=sort_by_selected, count=page.item_count, placeholder=h.humanize_entity_type('organization', group_type, 'search placeholder') or _('Search teams...'), show_empty=request.args, no_bottom_border=true if page.items, sorting = [(_('Name Ascending'), 'title asc'), (_('Name Descending'), 'title desc')] %}
+{% endblock %}
