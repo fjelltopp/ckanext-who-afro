@@ -43,7 +43,7 @@
             {% endif %}
         </p>
         {% else %}
-        <p class="module-content empty">{{ _('There are no {facet_type} that match this search').format(facet_type=title) }}</p>
+        <p class="module-content empty">{{ _('There are no {facet_type} that match this search').format(facet_type=h.substitute_group_or_org(title, capitalize=True)) }}</p>
         {% endif %}
     {% endwith %}
 {% endblock %}
