@@ -1,0 +1,14 @@
+{% ckan_extends %}
+
+{% block info %}
+  <div class="module module-narrow module-shallow context-info">
+    {% if has_context_title %}
+      <h2 class="module-heading"><i class="fa fa-building"></i> {{ h.humanize_entity_type('organization', organization.type, 'sidebar label') or _('Team') }}</h2>
+    {% endif %}
+    <section class="module-content">
+      {% block inner %}
+        {{ super() }}
+      {% endblock %}
+    </section>
+  </div>
+  {% endblock %}
