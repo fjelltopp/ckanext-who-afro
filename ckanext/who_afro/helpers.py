@@ -154,8 +154,6 @@ def substitute_group_or_org(text, capitalize=False):
     ]
     for word in replacements:
         pattern = re.compile(r'\b' + re.escape(word['old']) + r'\b', re.IGNORECASE)
-        text = pattern.sub(word['new'], text)
-
-    if capitalize:
-        text = text.capitalize()
+        new_text = word['new'].capitalize() if capitalize else word['new']
+        text = pattern.sub(new_text, text)
     return text
