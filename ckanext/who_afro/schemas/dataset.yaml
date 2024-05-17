@@ -50,7 +50,7 @@ dataset_fields:
   display_snippet: email.html
 
 - field_name: owner_org
-  label: Organization
+  label: Team
   preset: dataset_organization
 
 - field_name: private
