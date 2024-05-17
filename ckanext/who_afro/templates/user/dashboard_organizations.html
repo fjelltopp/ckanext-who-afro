@@ -1,0 +1,7 @@
+{%  ckan_extends %}
+
+{% block page_primary_action %}
+  {% if h.check_access('organization_create') %}
+    {% link_for h.humanize_entity_type('organization', 'organization', 'add link') or _('Add Team'), named_route='organization' ~ '.new', class_="btn btn-primary", icon="plus-square" %}
+  {% endif %}
+{% endblock %}
