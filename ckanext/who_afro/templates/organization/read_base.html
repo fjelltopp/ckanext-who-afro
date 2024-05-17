@@ -1,0 +1,9 @@
+{% ckan_extends %}
+
+{% block subtitle %}{{ group_dict.display_name }} {{ g.template_title_delimiter }} {{ h.humanize_entity_type('organization', group_type, 'page title') or _('Teams') }}{% endblock %}
+
+
+{% block breadcrumb_content %}
+  <li>{% link_for h.humanize_entity_type('organization', group_type, 'breadcrumb') or _('Teams'), named_route=group_type+'.index' %}</li>
+  <li class="active">{% link_for group_dict.display_name|truncate(35), named_route=group_type+'.read', id=group_dict.name, title=group_dict.display_name %}</li>
+{% endblock %}
