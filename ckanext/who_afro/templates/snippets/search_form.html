@@ -6,11 +6,7 @@
         {% for field in facets.fields %}
           {% set search_facets_items = facets.search.get(field)['items'] if facets.search and field in facets.search else [] %}
           <span class="facet">
-          {% if 'groups' in facets.titles.get(field)|lower %}
-              Categories
-          {% else %}
-              {{ facets.titles.get(field) }}
-          {% endif %}
+          {{ h.substitute_group_or_org(facets.titles.get(field), capitalize=True) }}
           :</span>
           {% for value in facets.fields[field] %}
             <span class="filtered pill">

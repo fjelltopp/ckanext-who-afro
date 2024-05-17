@@ -150,7 +150,10 @@ def format_locale(locale):
 
 def substitute_group_or_org(text, capitalize=False):
     replacements = [
-        {'old': 'group', 'new': 'category'}
+        {'old': 'group', 'new': 'category'},
+        {'old': 'groups', 'new': 'categories'},
+        {'old': 'organization', 'new': 'team'},
+        {'old': 'organizations', 'new': 'teams'},
     ]
     for word in replacements:
         pattern = re.compile(r'\b' + re.escape(word['old']) + r'\b', re.IGNORECASE)
