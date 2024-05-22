@@ -1739,3 +1739,9 @@ p.learn-more a {
 .promoted-right {
     z-index: 2;
 }
+
+.maintenance-banner h3 {
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}

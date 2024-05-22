@@ -33,3 +33,8 @@
     {{ super() }}
 
 {% endblock %}
+
+{%- block header %}
+    {% snippet 'snippets/maintenance_banner.html', under_maintenance=True %}
+    {% include "header.html" %}
+{% endblock -%}
