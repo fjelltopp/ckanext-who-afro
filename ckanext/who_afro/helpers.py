@@ -187,8 +187,8 @@ def get_datahub_stats():
     result = logic.get_action('package_search')({}, data_dict)
     if 'facets' in result:
         if 'programme' in result['facets']:
-            stats['programmes'] = result['facets']['programme']
+            stats['programmes'] = len(result['facets']['programme'])
         if 'country' in result['facets']:
-            stats['countries'] = result['facets']['country']
+            stats['countries'] = len(result['facets']['country'])
 
     return stats
