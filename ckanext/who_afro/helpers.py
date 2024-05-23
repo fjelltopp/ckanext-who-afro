@@ -166,6 +166,7 @@ def get_datahub_stats():
     result = toolkit.get_action('package_search')({}, data_dict)
     stats['active_datasets_updated_for_current_week'] = result.get('count', 0)
 
+    stats['active_users'] = 0
     users_list = toolkit.get_action('user_list')({})
     active_users = len([user for user in users_list if user['state'] == 'active'])
     stats['active_users'] = active_users
