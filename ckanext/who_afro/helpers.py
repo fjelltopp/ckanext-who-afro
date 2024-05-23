@@ -149,7 +149,7 @@ def format_locale(locale):
 
 
 def get_datahub_stats():
-    # Get the first 3 data from helper
+    # Get the first 3 data from core helper
     stats = get_site_statistics()
 
     now = datetime.now()
