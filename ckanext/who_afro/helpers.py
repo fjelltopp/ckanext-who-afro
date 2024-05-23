@@ -1,7 +1,8 @@
-import ckan.logic as logic
 import ckan.model as model
 from ckan.common import c, request, is_flask_request, g
+from ckan.lib.helpers import get_site_statistics
 from datetime import datetime, timedelta
+from ckan.plugins import toolkit
 
 
 def get_user_obj(field=""):
@@ -16,7 +17,7 @@ def get_dataset_from_id(id, validate=False):
         'model': model, 'ignore_auth': True,
         'validate': validate, 'use_cache': False
     }
-    package_show_action = logic.get_action('package_show')
+    package_show_action = toolkit.get_action('package_show')
     return package_show_action(context, {'id': id})
 
 
@@ -87,21 +88,21 @@ def _facet_sort_function(facet_name, facet_items):
 
 
 def get_all_groups():
-    return logic.get_action('group_list')(
+    return toolkit.get_action('group_list')(
             data_dict={'sort': 'title asc', 'all_fields': True})
 
 
 def get_featured_datasets():
-    featured_datasets = logic.get_action('package_search')(
+    featured_datasets = toolkit.get_action('package_search')(
         data_dict={'fq': 'tags:Featured', 'sort': 'metadata_modified desc', 'rows': 3})['results']
-    recently_updated = logic.get_action('package_search')(
+    recently_updated = toolkit.get_action('package_search')(
         data_dict={'q': '*:*', 'sort': 'metadata_modified desc', 'rows': 3})['results']
     datasets = featured_datasets + recently_updated
     return datasets[:3]
 
 
 def get_user_from_id(userid):
-    user_show_action = logic.get_action('user_show')
+    user_show_action = toolkit.get_action('user_show')
     user_info = user_show_action({}, {"id": userid})
     return user_info['fullname']
 
@@ -130,13 +131,13 @@ def month_formatter(month):
 
 
 def get_recently_updated_datasets():
-    recently_updated = logic.get_action('package_search')(
+    recently_updated = toolkit.get_action('package_search')(
         data_dict={'q': '*:*', 'sort': 'metadata_modified desc', 'rows': 3})['results']
     return recently_updated[:3]
 
 
 def get_last_modifier(package_id):
-    package_activity = logic.get_action('package_activity_list')(
+    package_activity = toolkit.get_action('package_activity_list')(
         data_dict={'id': package_id}
     )
     return get_user_from_id(package_activity[0]['user_id'])
@@ -148,20 +149,8 @@ def format_locale(locale):
 
 
 def get_datahub_stats():
-    stats = {
-            'dataset_count': logic.get_action('package_search')({}, {"rows": 1})['count'],
-            'organization_count': len(logic.get_action('organization_list')({}, {})),
-            'programmes': 0,
-            'countries': 0
-         }
-
-    data_dict = {
-        'q': '*:*',
-        'fq': 'state:active',
-        'rows': 0
-    }
-    result = logic.get_action('package_search')({}, data_dict)
-    stats['active_datasets'] = result.get('count', 0)
+    # Get the first 3 data from helper
+    stats = get_site_statistics()
 
     now = datetime.now()
     start_of_week = now - timedelta(days=now.weekday())
@@ -174,10 +163,10 @@ def get_datahub_stats():
         'rows': 0
     }
 
-    result = logic.get_action('package_search')({}, data_dict)
-    stats['active_datasets_updated_this_week'] = result.get('count', 0)
+    result = toolkit.get_action('package_search')({}, data_dict)
+    stats['active_datasets_updated_for_current_week'] = result.get('count', 0)
 
-    users_list = logic.get_action('user_list')({})
+    users_list = toolkit.get_action('user_list')({})
     active_users = len([user for user in users_list if user['state'] == 'active'])
     stats['active_users'] = active_users
 
@@ -186,7 +175,10 @@ def get_datahub_stats():
         'facet': 'true',
         'facet.field': ['programme', 'country']
     }
-    result = logic.get_action('package_search')({}, data_dict)
+
+    stats['programmes'] = 0
+    stats['countries'] = 0
+    result = toolkit.get_action('package_search')({}, data_dict)
     if 'facets' in result:
         if 'programme' in result['facets']:
             stats['programmes'] = len(result['facets']['programme'])
