@@ -154,11 +154,11 @@ def get_datahub_stats():
 
     now = datetime.now()
     start_of_week = now - timedelta(days=now.weekday())
-    start_of_week_str = start_of_week.strftime('%Y-%m-%dT%H:%M:%SZ')
+    start_of_week_as_str = start_of_week.strftime('%Y-%m-%dT%H:%M:%SZ')
 
     data_dict = {
         'q': '*:*',
-        'fq': 'state:active AND metadata_modified:[{} TO NOW]'.format(start_of_week_str)
+        'fq': 'state:active AND metadata_modified:[{} TO NOW]'.format(start_of_week_as_str)
         ,
         'rows': 0
     }
