@@ -150,7 +150,9 @@ def format_locale(locale):
 def get_datahub_stats():
     stats = {
             'dataset_count': logic.get_action('package_search')({}, {"rows": 1})['count'],
-            'organization_count': len(logic.get_action('organization_list')({}, {}))
+            'organization_count': len(logic.get_action('organization_list')({}, {})),
+            'programmes': 0,
+            'countries': 0
          }
 
     data_dict = {
