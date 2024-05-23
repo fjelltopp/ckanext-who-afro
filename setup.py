@@ -95,10 +95,28 @@ setup(
     # message extraction at
     # http://babel.pocoo.org/docs/messages/#extraction-method-mapping-and-configuration
     message_extractors={
-        'ckanext': [
+        '../.minikubevenv': [
+            ('**/ckanext/blob_storage/templates/resource_2.8.html', 'ignore', None),
+            ('**/ckanext/scheming/2.8_templates/**', 'ignore', None),
+            ('*/src/**.py', 'python', None),
+            ('*/src/**.js', 'javascript', None),
+            ('*/src/**.html', 'ckan', None),
+        ],
+        '../ckan/ckan': [
             ('**.py', 'python', None),
             ('**.js', 'javascript', None),
-            ('**/templates/**.html', 'ckan', None),
+            ('**.html', 'ckan', None),
         ],
+        '../ckan/ckanext': [
+            ('**.py', 'python', None),
+            ('**.js', 'javascript', None),
+            ('**.html', 'ckan', None),
+        ],
+        'ckanext': [
+            ('**/node_modules/**', 'ignore', None),
+            ('**.py', 'python', None),
+            ('**.js', 'javascript', None),
+            ('**.html', 'ckan', None),
+        ]
     }
 )

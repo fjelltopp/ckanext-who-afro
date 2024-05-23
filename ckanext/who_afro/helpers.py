@@ -144,4 +144,6 @@ def get_last_modifier(package_id):
 
 def format_locale(locale):
     locale_name = locale.display_name if locale.display_name is not None else locale.english_name
-    return locale_name.replace(' (Portugal)', '').capitalize()
+    locale_name = locale_name.replace(' (Portugal)', '').capitalize()
+    locale_name = locale_name.replace(' (united kingdom)', '').capitalize()
+    return locale_name
