@@ -145,3 +145,50 @@ def get_last_modifier(package_id):
 def format_locale(locale):
     locale_name = locale.display_name if locale.display_name is not None else locale.english_name
     return locale_name.replace(' (Portugal)', '').capitalize()
+
+
+def get_datahub_stats():
+    stats = {
+            'dataset_count': logic.get_action('package_search')({}, {"rows": 1})['count'],
+            'organization_count': len(logic.get_action('organization_list')({}, {}))
+         }
+
+    data_dict = {
+        'q': '*:*',
+        'fq': 'state:active',
+        'rows': 0
+    }
+    result = logic.get_action('package_search')({}, data_dict)
+    stats['active_datasets'] = result.get('count', 0)
+
+    now = datetime.now()
+    start_of_week = now - timedelta(days=now.weekday())
+    start_of_week_str = start_of_week.strftime('%Y-%m-%dT%H:%M:%SZ')
+
+    data_dict = {
+        'q': '*:*',
+        'fq': 'state:active AND metadata_modified:[{} TO NOW]'.format(start_of_week_str)
+        ,
+        'rows': 0
+    }
+
+    result = logic.get_action('package_search')({}, data_dict)
+    stats['active_datasets_updated_this_week'] = result.get('count', 0)
+
+    users_list = logic.get_action('user_list')({})
+    active_users = len([user for user in users_list if user['state'] == 'active'])
+    stats['active_users'] = active_users
+
+    data_dict = {
+        'rows': 0,
+        'facet': 'true',
+        'facet.field': ['programme', 'country']
+    }
+    result = logic.get_action('package_search')({}, data_dict)
+    if 'facets' in result:
+        if 'programme' in result['facets']:
+            stats['programmes'] = result['facets']['programme']
+        if 'country' in result['facets']:
+            stats['countries'] = result['facets']['country']
+
+    return stats
