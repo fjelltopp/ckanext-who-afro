@@ -157,8 +157,7 @@ def get_datahub_stats():
 
     data_dict = {
         'q': '*:*',
-        'fq': 'state:active AND metadata_modified:[{} TO NOW]'.format(start_of_week_as_str)
-        ,
+        'fq': 'state:active AND metadata_modified:[{} TO NOW]'.format(start_of_week_as_str),
         'rows': 0
     }
 
