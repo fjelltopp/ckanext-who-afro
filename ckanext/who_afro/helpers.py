@@ -1,6 +1,5 @@
 import ckan.model as model
 from ckan.common import c, request, is_flask_request, g
-from ckan.lib.helpers import get_site_statistics
 from datetime import datetime, timedelta
 from ckan.plugins import toolkit
 
@@ -150,7 +149,7 @@ def format_locale(locale):
 
 def get_datahub_stats():
     # Get the first 3 data from core helper
-    stats = get_site_statistics()
+    stats = toolkit.h.get_site_statistics()
 
     now = datetime.now()
     start_of_week = now - timedelta(days=now.weekday())
