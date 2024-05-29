@@ -1,3 +1,4 @@
+            {% set stats = h.get_datahub_stats() %}
             <h2>{{_('Insights')}}</h2>
             <h3>{{ _('Triple billion progress') }}</h3>
             <div class="row insight-row col-lg-12 col-sm-12 col-xs-12">
@@ -50,14 +51,14 @@
                         <div class="insight-small-rect col-lg-6 col-sm-6 col-xs-12">
                             <p>{{ _('Total datasets') }}</p>
                             <div class="number">
-                                <span>XXXX</span>
+                                <span>{{ stats['dataset_count'] }}</span>
                             </div>
 
                         </div>
                         <div class="insight-small-rect col-lg-6 col-sm-6 col-xs-12">
                             <p>{{ _('Updated this week') }}</p>
                             <div class="number">
-                                <span>XXXX</span>
+                                <span>{{ stats['active_datasets_updated_for_current_week'] }}</span>
                             </div>
                         </div>
                     </div>
@@ -66,14 +67,14 @@
                         <div class="insight-small-rect col-lg-6 col-sm-6 col-xs-12">
                             <p>{{ _('Users') }}</p>
                             <div class="number">
-                                <span>XXXX</span>
+                                <span>{{ stats['active_users'] }}</span>
                             </div>
 
                         </div>
                         <div class="insight-small-rect col-lg-6 col-sm-6 col-xs-12">
                             <p>{{ _('Teams') }}</p>
                             <div class="number">
-                                <span>XXXX</span>
+                                <span>{{ stats['organization_count'] }}</span>
                             </div>
                         </div>
                     </div>
@@ -82,14 +83,14 @@
                         <div class="insight-small-rect col-lg-6 col-sm-6 col-xs-12">
                             <p>{{ _('Programmes') }}</p>
                             <div class="number">
-                                <span>XXXX</span>
+                                <span>{{ stats['programmes'] }}</span>
                             </div>
 
                         </div>
                         <div class="insight-small-rect col-lg-6 col-sm-6 col-xs-12">
                             <p>{{ _('Countries') }}</p>
                             <div class="number">
-                                <span>XXXX</span>
+                                <span>{{ stats['countries'] }}</span>
                             </div>
                         </div>
                     </div>
