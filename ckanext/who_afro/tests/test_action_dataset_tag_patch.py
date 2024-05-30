@@ -4,6 +4,8 @@ import ckan.tests.factories as factories
 from ckan.plugins import toolkit
 from ckan.tests.helpers import call_action
 
+import json
+
 
 @pytest.mark.usefixtures('clean_db', 'with_plugins')
 class TestDatasetTagPatch():
@@ -43,7 +45,11 @@ def create_dataset(tags_list, dataset_name):
         id="test-id" + dataset_name,
         owner_org=org['id'],
         tags=tags,
-        name=dataset_name
+        name=dataset_name,
+        extras=[
+            {'key': 'programme', 'value': json.dumps('programme')},
+            {'key': 'country', 'value': json.dumps('country')}
+        ]
     )
 
     return call_action('package_show', id=dataset['id'])
