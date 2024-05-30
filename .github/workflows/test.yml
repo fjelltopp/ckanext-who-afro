@@ -11,6 +11,8 @@ jobs:
     services:
       solr:
         image: ckan/ckan-solr:2.9-solr9
+        ports:
+          - 8983:8983
       postgres:
         image: ckan/ckan-postgres-dev:2.10
         env:
