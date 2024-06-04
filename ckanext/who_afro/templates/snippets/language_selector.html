@@ -1,12 +1,13 @@
 {% set current_lang = request.environ.CKAN_LANG %}
   <nav class="account not-authed">
-    <ul class="list-unstyled">
-      {% for locale in h.get_available_locales() %}
-        <li>
-          <a href="{% url_for h.current_url(), locale=locale.short_name %}" {% if locale.short_name == current_lang %}selected="selected"{% endif %}>
-          {{ h.format_locale(locale) }}
-        </a>
-        </li>
-      {% endfor %}
-    </ul>
+        <ul class="list-unstyled">
+            <li class="dev-banner"><a href="#">BETA - Site under development <span class="clickable">Learn more</span></a></li>
+          {% for locale in h.get_available_locales() %}
+            <li>
+              <a href="{% url_for h.current_url(), locale=locale.short_name %}" {% if locale.short_name == current_lang %}selected="selected"{% endif %}>
+              {{ h.format_locale(locale) }}
+            </a>
+            </li>
+          {% endfor %}
+        </ul>
   </nav>

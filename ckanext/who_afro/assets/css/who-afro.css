@@ -1739,3 +1739,32 @@ p.learn-more a {
 .promoted-right {
     z-index: 2;
 }
+
+.account-masthead .account {
+  float: left;
+}
+
+nav.account {
+    width: 100%;
+}
+
+nav.account ul.list-unstyled {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.dev-banner {
+    margin-right: auto;
+    background-color: var(--secondary-who-blue);
+    pointer-events: none;
+}
+
+.dev-banner a .clickable {
+    pointer-events: auto;
+    font-weight: 700;
+    text-decoration: underline;
+}
