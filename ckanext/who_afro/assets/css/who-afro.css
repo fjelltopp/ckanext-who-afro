@@ -1740,41 +1740,44 @@ p.learn-more a {
     z-index: 2;
 }
 
-.account-masthead .account {
-  float: left;
-}
+@media only screen and (min-width: 613px) {
 
-nav.account {
-    width: 100%;
-}
+    .account-masthead .account {
+        float: left;
+    }
 
-nav.account ul.list-unstyled {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
-}
+    nav.account {
+        width: 100%;
+    }
 
-.dev-banner {
-    margin-right: auto;
-    background-color: var(--secondary-who-blue);
-    pointer-events: none;
-}
+    nav.account ul.list-unstyled {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+    }
 
-ul li.dev-banner a {
-    margin-left: 0 !important;
-}
+    .dev-banner {
+        margin-right: auto;
+        background-color: var(--secondary-who-blue);
+        pointer-events: none;
+    }
 
-.dev-banner a .clickable {
-    margin-left: 6px;
-    pointer-events: auto;
-    font-weight: 700;
-    text-decoration: underline;
-}
+    ul li.dev-banner a {
+        margin-left: 0 !important;
+    }
 
-.dev-banner a img {
-    margin-right: 7px;
-    margin-top: -2px;
+    .dev-banner a .clickable {
+        margin-left: 6px;
+        pointer-events: auto;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    .dev-banner a img {
+        margin-right: 7px;
+        margin-top: -2px;
+    }
 }
