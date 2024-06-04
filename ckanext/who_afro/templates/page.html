@@ -1,6 +1,6 @@
 {% ckan_extends %}
 
-{% set still_under_development = True %}
+{% set under_development = True %}
 
 {% block content %}
     {% block promoted_toolbar %}
@@ -37,6 +37,6 @@
 {% endblock %}
 
 {%- block header %}
-    {% snippet 'snippets/dev_banner.html', still_under_development=still_under_development %}
+    {% snippet 'snippets/dev_banner.html', under_development=under_development %}
     {% include "header.html" %}
 {% endblock -%}
