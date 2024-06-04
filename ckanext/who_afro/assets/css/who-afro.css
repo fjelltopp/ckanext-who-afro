@@ -1764,7 +1764,13 @@ nav.account ul.list-unstyled {
 }
 
 .dev-banner a .clickable {
+    margin-left: 6px;
     pointer-events: auto;
     font-weight: 700;
     text-decoration: underline;
+}
+
+.dev-banner a img {
+    margin-right: 7px;
+    margin-top: -2px;
 }
