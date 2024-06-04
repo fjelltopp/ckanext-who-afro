@@ -94,6 +94,7 @@
           {"value": "tb", "label": "Tuberculosis"},
           {"value": "ucn", "label": "Universal Health Coverage"},
           {"value": "amr", "label": "Anti-Microbial Resistance"},
+          {"value": "vpd", "label": "Vaccine Preventable Diseases"},
           {"value": "onehealth", "label": "OneHealth"}
         ]
       }
