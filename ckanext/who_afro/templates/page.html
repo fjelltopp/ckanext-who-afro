@@ -33,3 +33,8 @@
     {{ super() }}
 
 {% endblock %}
+
+{%- block header %}
+    {% snippet 'snippets/dev_banner.html', still_under_development=True %}
+    {% include "header.html" %}
+{% endblock -%}

@@ -1740,16 +1740,54 @@ p.learn-more a {
     z-index: 2;
 }
 
+
+/* dev banner */
 .account-masthead .account ul li.dev-banner {
     display: none;
 }
 
+.dev-banner-mobile {
+    display: none;
+}
+
 @media only screen and (max-width: 612px) {
+
     .account-masthead .container {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100%;
+    }
+
+    .dev-banner-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        pointer-events: none;
+        background-color: white;
+        margin: 0;
+    }
+
+    .dev-banner-mobile a {
+        color: var(--secondary-who-blue);
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        text-decoration: none;
+    }
+
+    .dev-banner-mobile a .clickable {
+        margin-left: 6px;
+        pointer-events: auto;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    .dev-banner-mobile a img {
+        margin-right: 6px;
+        margin-top: -2px;
     }
 }
 
@@ -1798,3 +1836,4 @@ p.learn-more a {
         margin-top: -2px;
     }
 }
+/* dev banner */
