@@ -3,7 +3,7 @@
   <nav class="account not-authed">
         <ul class="list-unstyled">
             {% if still_under_development == True %}
-                <li class="dev-banner"><a href="#"><img src="/images/alert-circle.png" />BETA - Site under development<span class="clickable">Learn more</span></a></li>
+                <li class="dev-banner"><a href="#"><img src="/images/alert-circle.png" alt="alert"/>BETA - Site under development<span class="clickable">Learn more</span></a></li>
             {%  endif %}
           {% for locale in h.get_available_locales() %}
             <li>
