@@ -59,10 +59,20 @@
       {% endblock %}
 
 
+{% block header_account %}
+    <div class="account-masthead dev-banner-mobile">
+        <a href="#"><img src="/images/alert-circle-blue.png" alt="alert"/>BETA - Site under development<span class="clickable">Learn more</span></a>
+    </div>
+    <div class="account-masthead">
+        <div class="container">
+    {{ super() }}
+        </div>
+    </div>
+{% endblock %}
+
 {% block header_account_container_content %}
     {% snippet "snippets/language_selector.html" %}
 {% endblock %}
-
 
 {% block header_wrapper %}
 
