@@ -1763,6 +1763,10 @@ nav.account ul.list-unstyled {
     pointer-events: none;
 }
 
+ul li.dev-banner a {
+    margin-left: 0 !important;
+}
+
 .dev-banner a .clickable {
     margin-left: 6px;
     pointer-events: auto;
