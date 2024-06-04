@@ -1,7 +1,10 @@
 {% set current_lang = request.environ.CKAN_LANG %}
+{% set still_under_development = True %}
   <nav class="account not-authed">
         <ul class="list-unstyled">
-            <li class="dev-banner"><a href="#"><img src="/images/alert-circle.png" />BETA - Site under development<span class="clickable">Learn more</span></a></li>
+            {% if still_under_development == True %}
+                <li class="dev-banner"><a href="#"><img src="/images/alert-circle.png" />BETA - Site under development<span class="clickable">Learn more</span></a></li>
+            {%  endif %}
           {% for locale in h.get_available_locales() %}
             <li>
               <a href="{% url_for h.current_url(), locale=locale.short_name %}" {% if locale.short_name == current_lang %}selected="selected"{% endif %}>
