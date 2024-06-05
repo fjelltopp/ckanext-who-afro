@@ -30,21 +30,6 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultTranslation):
     # ITemplateHelpers
     def get_helpers(self):
         return {
-<<<<<<< Updated upstream
-            'max_resource_size': uploader.get_max_resource_size,
-            'get_dataset_from_id': who_afro_helpers.get_dataset_from_id,
-            'blob_storage_resource_filename': blobstorage_helpers.resource_filename,
-            'get_facet_items_dict': who_afro_helpers.get_facet_items_dict,
-            'get_all_groups': who_afro_helpers.get_all_groups,
-            'get_featured_datasets': who_afro_helpers.get_featured_datasets,
-            'get_user_from_id': who_afro_helpers.get_user_from_id,
-            'get_user_obj': who_afro_helpers.get_user_obj,
-            'month_formatter': who_afro_helpers.month_formatter,
-            'get_recently_updated_datasets': who_afro_helpers.get_recently_updated_datasets,
-            'get_last_modifier': who_afro_helpers.get_last_modifier,
-            'format_locale': who_afro_helpers.format_locale,
-            'get_datahub_stats': who_afro_helpers.get_datahub_stats
-=======
             "max_resource_size": uploader.get_max_resource_size,
             "get_dataset_from_id": who_afro_helpers.get_dataset_from_id,
             "blob_storage_resource_filename": blobstorage_helpers.resource_filename,
@@ -57,7 +42,7 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultTranslation):
             "get_recently_updated_datasets": who_afro_helpers.get_recently_updated_datasets,
             "get_last_modifier": who_afro_helpers.get_last_modifier,
             "format_locale": who_afro_helpers.format_locale,
->>>>>>> Stashed changes
+            "get_datahub_stats": who_afro_helpers.get_datahub_stats,
         }
 
     # IConfigurer
@@ -154,4 +139,4 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultTranslation):
 
     # ITranslation
     def i18n_domain(self):
-        return 'ckanext-who-afro'
+        return "ckanext-who-afro"

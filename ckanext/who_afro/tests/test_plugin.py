@@ -2,25 +2,24 @@ import pytest
 
 from ckan.tests import factories
 from ckan.tests.helpers import call_action
+from ckanext.who_afro.plugin import WHOAFROPlugin
 from ckanext.who_afro.tests import get_context
 
 
-@pytest.mark.usefixtures('clean_db', 'with_plugins')
-class TestPrivateDatasetActivities():
+@pytest.mark.usefixtures("clean_db", "with_plugins")
+class TestPrivateDatasetActivities:
 
     def test_activity_is_created_when_creating_private_dataset(self):
         user = factories.User()
         result = call_action(
-            'package_create',
-            get_context(user['name']),
+            "package_create",
+            get_context(user["name"]),
             name="updated-name",
             private=True,
-            owner_org=factories.Organization()['id']
+            owner_org=factories.Organization()["id"],
         )
         activity_stream = call_action(
-            'package_activity_list',
-            get_context(user['name']),
-            id=result['id']
+            "package_activity_list", get_context(user["name"]), id=result["id"]
         )
         assert len(activity_stream) == 1
 
@@ -28,19 +27,17 @@ class TestPrivateDatasetActivities():
         user = factories.User()
         private_dataset = factories.Dataset(
             private=True,
-            owner_org=factories.Organization()['id'],
-            creator_user_id=user['id']
+            owner_org=factories.Organization()["id"],
+            creator_user_id=user["id"],
         )
         call_action(
-            'package_patch',
-            get_context(user['name']),
-            id=private_dataset['id'],
-            name="updated-name"
+            "package_patch",
+            get_context(user["name"]),
+            id=private_dataset["id"],
+            name="updated-name",
         )
         activity_stream = call_action(
-            'package_activity_list',
-            get_context(user['name']),
-            id=private_dataset['id']
+            "package_activity_list", get_context(user["name"]), id=private_dataset["id"]
         )
         assert len(activity_stream) == 1
 
@@ -48,17 +45,25 @@ class TestPrivateDatasetActivities():
         user = factories.User()
         private_dataset = factories.Dataset(
             private=True,
-            owner_org=factories.Organization()['id'],
-            creator_user_id=user['id']
+            owner_org=factories.Organization()["id"],
+            creator_user_id=user["id"],
         )
         call_action(
-            'package_delete',
-            get_context(user['name']),
-            id=private_dataset['id']
+            "package_delete", get_context(user["name"]), id=private_dataset["id"]
         )
         activity_stream = call_action(
-            'package_activity_list',
-            get_context(user['name']),
-            id=private_dataset['id']
+            "package_activity_list", get_context(user["name"]), id=private_dataset["id"]
         )
         assert len(activity_stream) == 1
+
+    def test_before_dataset_index_loaded_object(self):
+        result = WHOAFROPlugin().before_dataset_index(
+            {"programme": ["foo", "bar"], "country": ["Egipt"]}
+        )
+        assert result == {"programme": ["foo", "bar"], "country": ["Egipt"]}
+
+    def test_before_dataset_index_string_object(self):
+        result = WHOAFROPlugin().before_dataset_index(
+            {"programme": '["foo", "bar"]', "country": '["Egipt"]'}
+        )
+        assert result == {"programme": ["foo", "bar"], "country": ["Egipt"]}
