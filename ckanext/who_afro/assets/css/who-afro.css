@@ -1827,7 +1827,7 @@ p.learn-more a {
         text-decoration: underline;
     }
 
-    .dev-banner-mobile a img {
+    .dev-banner-mobile a i {
         margin-right: 6px;
         margin-top: -2px;
     }
@@ -1874,9 +1874,41 @@ p.learn-more a {
         text-decoration: underline;
     }
 
-    .dev-banner a img {
-        margin-right: 7px;
-        margin-top: -2px;
-    }
 }
+
+.ckan-circle-exclamation {
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 16px;
+    font-size: 16px;
+    margin-right: 7px;
+    vertical-align: middle;
+    margin-top: -1px;
+}
+
+.ckan-circle-exclamation::before {
+    content: '!';
+    position: absolute;
+    top: 50%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    font-size: 10px;
+    line-height: 1;
+    font-weight: 900;
+}
+
+.ckan-circle-exclamation.white {
+    color: white;
+    border: 2px solid white;
+}
+
+.ckan-circle-exclamation.secondary-who-blue {
+    color: var(--secondary-who-blue);
+    border: 2px solid var(--secondary-who-blue);
+}
+
 /* dev banner */
