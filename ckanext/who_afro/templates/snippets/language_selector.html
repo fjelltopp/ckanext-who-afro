@@ -1,6 +1,11 @@
 {% set current_lang = request.environ.CKAN_LANG %}
 
-  <nav class="account not-authed">
+<div class="dev-banner-container">
+    <div class="dev-banner-mobile row">
+        <a href="#"><img src="/images/alert-circle-blue.png" alt="alert"/>BETA - Site under development<span class="clickable">Learn more</span></a>
+    </div>
+    <div class="row">
+          <nav class="account not-authed">
         <ul class="list-unstyled">
             <li class="dev-banner"><a href="#"><img src="/images/alert-circle.png" alt="alert"/>BETA - Site under development<span class="clickable">Learn more</span></a></li>
           {% for locale in h.get_available_locales() %}
@@ -12,3 +17,19 @@
           {% endfor %}
         </ul>
   </nav>
+    </div>
+
+</div>
+
+<nav class="account not-authed nav-for-large-screen">
+    <ul class="list-unstyled">
+        <li class="dev-banner"><a href="#"><img src="/images/alert-circle.png" alt="alert"/>BETA - Site under development<span class="clickable">Learn more</span></a></li>
+      {% for locale in h.get_available_locales() %}
+        <li>
+          <a href="{% url_for h.current_url(), locale=locale.short_name %}" {% if locale.short_name == current_lang %}selected="selected"{% endif %}>
+          {{ h.format_locale(locale) }}
+        </a>
+        </li>
+      {% endfor %}
+    </ul>
+</nav>

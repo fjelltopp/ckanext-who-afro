@@ -1747,6 +1747,10 @@ p.learn-more a {
     width: 100%;
 }
 
+.nav-for-large-screen {
+    display: block;
+}
+
 .account-masthead .account ul li.dev-banner {
     display: none;
 }
@@ -1765,6 +1769,10 @@ p.learn-more a {
         display: block;
     }
 
+    .nav-for-large-screen {
+        display: none;
+    }
+
     .account-masthead .container {
         display: flex;
         justify-content: center;
@@ -1772,10 +1780,6 @@ p.learn-more a {
         height: 100%;
         width: 100%;
         padding: 0;
-    }
-
-    nav.account {
-        width: 100%;
     }
 
     .list-unstyled {
