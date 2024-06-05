@@ -1742,6 +1742,11 @@ p.learn-more a {
 
 
 /* dev banner */
+.dev-banner-container {
+    display: none;
+    width: 100%;
+}
+
 .account-masthead .account ul li.dev-banner {
     display: none;
 }
@@ -1753,6 +1758,11 @@ p.learn-more a {
 @media only screen and (max-width: 612px) {
     .account-masthead {
         width: 100%;
+        height: 68px;
+    }
+
+    .dev-banner-container {
+        display: block;
     }
 
     .account-masthead .container {
@@ -1794,6 +1804,7 @@ p.learn-more a {
         pointer-events: none;
         background-color: white;
         margin: 0;
+        width: 100%;
     }
 
     .dev-banner-mobile a {
