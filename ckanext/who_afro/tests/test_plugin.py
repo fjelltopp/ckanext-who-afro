@@ -56,14 +56,18 @@ class TestPrivateDatasetActivities:
         )
         assert len(activity_stream) == 1
 
-    def test_before_dataset_index_loaded_object(self):
-        result = WHOAFROPlugin().before_dataset_index(
-            {"programme": ["foo", "bar"], "country": ["Egipt"]}
+    @pytest.mark.parametrize("input_data, expected_data", [
+        (
+            {"programme": ["foo", "bar"], "country": ["Egypt"]},
+            {"programme": ["foo", "bar"], "country": ["Egypt"]}
+        ),
+        (
+            {"programme": '["foo", "bar"]', "country": '["Egypt"]'},
+            {"programme": ["foo", "bar"], "country": ["Egypt"]}
         )
-        assert result == {"programme": ["foo", "bar"], "country": ["Egipt"]}
-
-    def test_before_dataset_index_string_object(self):
+    ])
+    def test_before_dataset_index(self, input_data, expected_data):
         result = WHOAFROPlugin().before_dataset_index(
-            {"programme": '["foo", "bar"]', "country": '["Egipt"]'}
+            input_data
         )
-        assert result == {"programme": ["foo", "bar"], "country": ["Egipt"]}
+        assert result == expected_data
