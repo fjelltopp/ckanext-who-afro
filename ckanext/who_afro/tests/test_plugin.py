@@ -7,19 +7,21 @@ from ckanext.who_afro.tests import get_context
 
 
 @pytest.mark.usefixtures('clean_db', 'with_plugins')
-class TestPrivateDatasetActivities:
+class TestPrivateDatasetActivities():
 
     def test_activity_is_created_when_creating_private_dataset(self):
         user = factories.User()
         result = call_action(
             'package_create',
             get_context(user['name']),
-            name='updated-name',
+            name="updated-name",
             private=True,
-            owner_org=factories.Organization()['id'],
+            owner_org=factories.Organization()['id']
         )
         activity_stream = call_action(
-            'package_activity_list', get_context(user['name']), id=result['id']
+            'package_activity_list',
+            get_context(user['name']),
+            id=result['id']
         )
         assert len(activity_stream) == 1
 
@@ -34,7 +36,7 @@ class TestPrivateDatasetActivities:
             'package_patch',
             get_context(user['name']),
             id=private_dataset['id'],
-            name='updated-name',
+            name="updated-name"
         )
         activity_stream = call_action(
             'package_activity_list',

@@ -141,9 +141,7 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultTranslation):
         return data_dict
 
     def get_blueprint(self):
-        log.info(
-            f'Registering the following blueprints: {who_afro_blueprints.get_blueprints()}'
-        )
+        log.info(f"Registering the following blueprints: {who_afro_blueprints.get_blueprints()}")
         return who_afro_blueprints.get_blueprints()
 
     # ITranslation
