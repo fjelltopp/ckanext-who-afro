@@ -1,6 +1,7 @@
 import logging
 import json
 from collections import OrderedDict
+from typing import Dict
 import ckanext.blob_storage.helpers as blobstorage_helpers
 import ckan.lib.uploader as uploader
 import ckan.plugins as plugins
@@ -124,9 +125,19 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultTranslation):
         if data_dict.get('private'):
             who_afro_upload.add_activity(context, data_dict, "new")
 
-    def before_dataset_index(self, data_dict):
-        data_dict['programme'] = json.loads(data_dict['programme'])
-        data_dict['country'] = json.loads(data_dict['country'])
+    def before_dataset_index(self, data_dict: Dict) -> Dict:
+        """Load custom multivalued fields as objects before solr indexing.
+
+        Args:
+            data_dict (Dict): input data
+
+        Returns:
+            Dict: Normalized input data
+        """
+        if isinstance(data_dict.get('programme'), str):
+            data_dict['programme'] = json.loads(data_dict['programme'])
+        if isinstance(data_dict.get('country'), str):
+            data_dict['country'] = json.loads(data_dict['country'])
         return data_dict
 
     def get_blueprint(self):

@@ -2,6 +2,7 @@ import pytest
 
 from ckan.tests import factories
 from ckan.tests.helpers import call_action
+from ckanext.who_afro.plugin import WHOAFROPlugin
 from ckanext.who_afro.tests import get_context
 
 
@@ -62,3 +63,21 @@ class TestPrivateDatasetActivities():
             id=private_dataset['id']
         )
         assert len(activity_stream) == 1
+
+
+class TestWHOAFROPlugin:
+    @pytest.mark.parametrize('input_data, expected_data', [
+        (
+            {'programme': ['foo', 'bar'], 'country': ['Egypt']},
+            {'programme': ['foo', 'bar'], 'country': ['Egypt']}
+        ),
+        (
+            {'programme': '["foo", "bar"]', 'country': '["Egypt"]'},
+            {'programme': ['foo', 'bar'], 'country': ['Egypt']}
+        )
+    ])
+    def test_before_dataset_index(self, input_data, expected_data):
+        result = WHOAFROPlugin().before_dataset_index(
+            input_data
+        )
+        assert result == expected_data
