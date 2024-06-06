@@ -23,7 +23,7 @@
 
 <nav class="account not-authed nav-for-large-screen">
     <ul class="list-unstyled">
-        <li class="dev-banner"><a href="#"><span class="ckan-circle-exclamation white"></span>BETA - Site under development<span class="clickable">Learn more</span></a></li>
+        <li class="dev-banner"><a href="{% url_for 'home.about' %}"><span class="ckan-circle-exclamation white"></span>BETA - Site under development<span class="clickable">Learn more</span></a></li>
       {% for locale in h.get_available_locales() %}
         <li>
           <a href="{% url_for h.current_url(), locale=locale.short_name %}" {% if locale.short_name == current_lang %}selected="selected"{% endif %}>
