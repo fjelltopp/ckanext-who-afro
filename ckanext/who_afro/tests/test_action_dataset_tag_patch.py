@@ -1,5 +1,4 @@
 import pytest
-
 import ckan.tests.factories as factories
 from ckan.plugins import toolkit
 from ckan.tests.helpers import call_action
@@ -43,7 +42,7 @@ def create_dataset(tags_list, dataset_name):
         id="test-id" + dataset_name,
         owner_org=org['id'],
         tags=tags,
-        name=dataset_name
+        name=dataset_name,
     )
 
     return call_action('package_show', id=dataset['id'])
