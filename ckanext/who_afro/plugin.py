@@ -43,14 +43,14 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultTranslation):
             'get_recently_updated_datasets': who_afro_helpers.get_recently_updated_datasets,
             'get_last_modifier': who_afro_helpers.get_last_modifier,
             'format_locale': who_afro_helpers.format_locale,
-            'get_datahub_stats': who_afro_helpers.get_datahub_stats,
+            'get_datahub_stats': who_afro_helpers.get_datahub_stats
         }
 
     # IConfigurer
     def update_config(self, config_):
-        toolkit.add_template_directory(config_, 'templates')
-        toolkit.add_public_directory(config_, 'public')
-        toolkit.add_resource('assets', 'who-afro')
+        toolkit.add_template_directory(config_, "templates")
+        toolkit.add_public_directory(config_, "public")
+        toolkit.add_resource("assets", "who-afro")
 
     # IFacets
     def dataset_facets(self, facet_dict, package_type):
@@ -106,7 +106,7 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultTranslation):
             'autogenerate_name_from_title': who_afro_validators.autogenerate_name_from_title,
             'autofill': who_afro_validators.autofill,
             'autogenerate': who_afro_validators.autogenerate,
-            'isomonth': who_afro_validators.isomonth,
+            'isomonth': who_afro_validators.isomonth
         }
 
     # IPackageContoller
@@ -115,15 +115,15 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultTranslation):
         if package_data.get('private'):
             package_data['state'] = 'deleted'
             context['package'].state = 'deleted'
-            who_afro_upload.add_activity(context, package_data, 'changed')
+            who_afro_upload.add_activity(context, package_data, "changed")
 
     def after_dataset_update(self, context, data_dict):
         if data_dict.get('private'):
-            who_afro_upload.add_activity(context, data_dict, 'changed')
+            who_afro_upload.add_activity(context, data_dict, "changed")
 
     def after_dataset_create(self, context, data_dict):
         if data_dict.get('private'):
-            who_afro_upload.add_activity(context, data_dict, 'new')
+            who_afro_upload.add_activity(context, data_dict, "new")
 
     def before_dataset_index(self, data_dict: Dict) -> Dict:
         """Load custom multivalued fields as objects before solr indexing.
