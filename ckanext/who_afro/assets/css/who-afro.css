@@ -1786,14 +1786,14 @@ p.learn-more a {
         padding: 0;
     }
 
-    .list-unstyled {
+    .dev-banner-container .list-unstyled {
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-    .list-unstyled li {
+    .dev-banner-container .list-unstyled li {
         width: 100%;
     }
 
