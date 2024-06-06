@@ -30,7 +30,7 @@ class TestPrivateDatasetActivities():
         private_dataset = factories.Dataset(
             private=True,
             owner_org=factories.Organization()['id'],
-            creator_user_id=user['id'],
+            creator_user_id=user['id']
         )
         call_action(
             'package_patch',
@@ -50,13 +50,17 @@ class TestPrivateDatasetActivities():
         private_dataset = factories.Dataset(
             private=True,
             owner_org=factories.Organization()['id'],
-            creator_user_id=user['id'],
+            creator_user_id=user['id']
         )
         call_action(
-            'package_delete', get_context(user['name']), id=private_dataset['id']
+            'package_delete',
+            get_context(user['name']),
+            id=private_dataset['id']
         )
         activity_stream = call_action(
-            'package_activity_list', get_context(user['name']), id=private_dataset['id']
+            'package_activity_list',
+            get_context(user['name']),
+            id=private_dataset['id']
         )
         assert len(activity_stream) == 1
 
