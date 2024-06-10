@@ -1915,4 +1915,7 @@ p.learn-more a {
     border: 2px solid var(--secondary-who-blue);
 }
 
-/* dev banner */
+.logout-button {
+    height: 70px;
+}
+
