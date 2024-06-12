@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-who-afro 0.0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-05-21 11:40+0000\n"
+"POT-Creation-Date: 2024-06-12 13:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -56,123 +56,6 @@ msgstr ""
 
 #: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-blob-storage/ckanext/blob_storage/download_handler.py:82
 msgid "File not found"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:62
-msgid "URI"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:63
-msgid "GUID"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:64
-msgid "Theme"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:65
-msgid "Identifier"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:66
-msgid "Alternate identifier"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:67
-msgid "Issued"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:68
-#: ckanext/who_afro/templates/snippets/package_item.html:7
-msgid "Modified"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:69
-msgid "Version notes"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:70
-#: ../ckan/ckan/templates-bs3/snippets/language_selector.html:3
-#: ../ckan/ckan/templates/snippets/language_selector.html:5
-msgid "Language"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:71
-msgid "Frequency"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:72
-msgid "Conforms to"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:73
-msgid "Spatial URI"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:74
-msgid "Start of temporal extent"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:75
-msgid "End of temporal extent"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:76
-msgid "Publisher URI"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:77
-msgid "Publisher name"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:78
-msgid "Publisher email"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:79
-msgid "Publisher URL"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:80
-msgid "Publisher type"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:81
-msgid "Contact name"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:82
-msgid "Contact email"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:83
-msgid "Contact URI"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:84
-msgid "Download URL"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:85
-msgid "Media type"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:86
-msgid "Size"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:87
-msgid "Rights"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:88
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-scheming/ckanext/scheming/templates/scheming/package/resource_read.html:44
-#: ../ckan/ckan/templates-bs3/package/resource_read.html:173
-#: ../ckan/ckan/templates-bs3/package/snippets/additional_info.html:74
-#: ../ckan/ckan/templates/package/resource_read.html:184
-#: ../ckan/ckan/templates/package/snippets/additional_info.html:74
-#: ../ckan/ckanext/datatablesview/templates/datatables/datatables_view.html:91
-msgid "Created"
 msgstr ""
 
 #: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-officedocs/ckanext/officedocs/plugin.py:20
@@ -309,8 +192,8 @@ msgstr ""
 #: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-scheming/ckanext/scheming/views.py:174
 #: ../ckan/ckan/views/dataset.py:548 ../ckan/ckan/views/dataset.py:734
 #: ../ckan/ckan/views/dataset.py:1185 ../ckan/ckan/views/group.py:857
-#: ../ckan/ckan/views/group.py:956 ../ckan/ckan/views/user.py:296
-#: ../ckan/ckan/views/user.py:433 ../ckan/ckan/views/user.py:807
+#: ../ckan/ckan/views/group.py:956 ../ckan/ckan/views/user.py:297
+#: ../ckan/ckan/views/user.py:434 ../ckan/ckan/views/user.py:810
 msgid "Integrity Error"
 msgstr ""
 
@@ -496,8 +379,8 @@ msgstr ""
 #: ../ckan/ckan/templates/package/resource_read.html:185
 #: ../ckan/ckan/templates/package/resource_read.html:189
 #: ../ckan/ckanext/activity/templates/snippets/stream.html:11
-#: ../ckan/ckanext/activity/templates/snippets/stream.html:18
-#: ../ckan/ckanext/activity/templates/snippets/stream.html:31
+#: ../ckan/ckanext/activity/templates/snippets/stream.html:19
+#: ../ckan/ckanext/activity/templates/snippets/stream.html:32
 #: ../ckan/ckanext/datatablesview/templates/datatables/datatables_view.html:92
 msgid "unknown"
 msgstr ""
@@ -507,6 +390,15 @@ msgstr ""
 #: ../ckan/ckan/templates/package/resource_read.html:180
 #: ../ckan/ckanext/datatablesview/templates/datatables/datatables_view.html:90
 msgid "Metadata last updated"
+msgstr ""
+
+#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-scheming/ckanext/scheming/templates/scheming/package/resource_read.html:44
+#: ../ckan/ckan/templates-bs3/package/resource_read.html:173
+#: ../ckan/ckan/templates-bs3/package/snippets/additional_info.html:74
+#: ../ckan/ckan/templates/package/resource_read.html:184
+#: ../ckan/ckan/templates/package/snippets/additional_info.html:74
+#: ../ckan/ckanext/datatablesview/templates/datatables/datatables_view.html:91
+msgid "Created"
 msgstr ""
 
 #: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-scheming/ckanext/scheming/templates/scheming/package/resource_read.html:50
@@ -1135,10 +1027,10 @@ msgstr ""
 
 #: ../ckan/ckan/logic/action/create.py:706 ../ckan/ckan/logic/action/delete.py:356
 #: ../ckan/ckan/logic/auth/update.py:200 ../ckan/ckan/views/dataset.py:1190
-#: ../ckan/ckan/views/group.py:559 ../ckan/ckan/views/user.py:69
-#: ../ckan/ckan/views/user.py:353 ../ckan/ckan/views/user.py:384
-#: ../ckan/ckan/views/user.py:447 ../ckan/ckan/views/user.py:747
-#: ../ckan/ckan/views/user.py:805 ../ckan/ckan/views/user.py:910
+#: ../ckan/ckan/views/group.py:559 ../ckan/ckan/views/user.py:70
+#: ../ckan/ckan/views/user.py:354 ../ckan/ckan/views/user.py:385
+#: ../ckan/ckan/views/user.py:448 ../ckan/ckan/views/user.py:750
+#: ../ckan/ckan/views/user.py:808 ../ckan/ckan/views/user.py:913
 msgid "User not found"
 msgstr ""
 
@@ -1151,35 +1043,35 @@ msgstr ""
 msgid "Trying to create an organization as a group"
 msgstr ""
 
-#: ../ckan/ckan/logic/action/create.py:1127
+#: ../ckan/ckan/logic/action/create.py:1129
 msgid "Error sending the invite email, the user was not created: {0}"
 msgstr ""
 
-#: ../ckan/ckan/logic/action/create.py:1248
-#: ../ckan/ckan/logic/action/create.py:1254
+#: ../ckan/ckan/logic/action/create.py:1250
+#: ../ckan/ckan/logic/action/create.py:1256
 msgid "You must be logged in to follow users"
 msgstr ""
 
-#: ../ckan/ckan/logic/action/create.py:1267
+#: ../ckan/ckan/logic/action/create.py:1269
 msgid "You cannot follow yourself"
 msgstr ""
 
-#: ../ckan/ckan/logic/action/create.py:1276
-#: ../ckan/ckan/logic/action/create.py:1334
-#: ../ckan/ckan/logic/action/create.py:1478
+#: ../ckan/ckan/logic/action/create.py:1278
+#: ../ckan/ckan/logic/action/create.py:1336
+#: ../ckan/ckan/logic/action/create.py:1480
 msgid "You are already following {0}"
 msgstr ""
 
-#: ../ckan/ckan/logic/action/create.py:1308
-#: ../ckan/ckan/logic/action/create.py:1315
+#: ../ckan/ckan/logic/action/create.py:1310
+#: ../ckan/ckan/logic/action/create.py:1317
 msgid "You must be logged in to follow a dataset."
 msgstr ""
 
-#: ../ckan/ckan/logic/action/create.py:1369 ../ckan/ckan/views/feed.py:227
+#: ../ckan/ckan/logic/action/create.py:1371 ../ckan/ckan/views/feed.py:227
 msgid "Organization not found"
 msgstr ""
 
-#: ../ckan/ckan/logic/action/create.py:1369 ../ckan/ckan/views/dataset.py:1047
+#: ../ckan/ckan/logic/action/create.py:1371 ../ckan/ckan/views/dataset.py:1047
 #: ../ckan/ckan/views/dataset.py:1064 ../ckan/ckan/views/feed.py:208
 #: ../ckan/ckan/views/group.py:406 ../ckan/ckan/views/group.py:441
 #: ../ckan/ckan/views/group.py:517 ../ckan/ckan/views/group.py:572
@@ -1190,12 +1082,12 @@ msgstr ""
 msgid "Group not found"
 msgstr ""
 
-#: ../ckan/ckan/logic/action/create.py:1375
+#: ../ckan/ckan/logic/action/create.py:1377
 msgid "User {username} does not exist."
 msgstr ""
 
-#: ../ckan/ckan/logic/action/create.py:1454
-#: ../ckan/ckan/logic/action/create.py:1461
+#: ../ckan/ckan/logic/action/create.py:1456
+#: ../ckan/ckan/logic/action/create.py:1463
 msgid "You must be logged in to follow a group."
 msgstr ""
 
@@ -1927,7 +1819,7 @@ msgstr ""
 #: ../ckan/ckan/templates/header.html:102
 #: ../ckan/ckan/templates/organization/bulk_process.html:22
 #: ../ckan/ckan/templates/organization/edit_base.html:16
-#: ../ckan/ckan/templates/organization/read_base.html:19
+#: ../ckan/ckan/templates/organization/read_base.html:18
 #: ../ckan/ckan/templates/package/snippets/new_package_breadcrumb.html:1
 #: ../ckan/ckan/templates/snippets/context/group.html:19
 #: ../ckan/ckan/templates/snippets/context/user.html:21
@@ -2008,6 +1900,7 @@ msgstr ""
 #: ../ckan/ckan/templates/home/about.html:6
 #: ../ckan/ckan/templates/home/about.html:16
 #: ../ckan/ckan/templates/organization/about.html:3
+#: ../ckan/ckan/templates/organization/read_base.html:19
 #: ../ckan/ckan/templates/user/edit_user_form.html:17
 #: ckanext/who_afro/templates/header.html:35
 #: ckanext/who_afro/templates/header.html:42
@@ -3087,10 +2980,6 @@ msgstr[1] ""
 msgid "Create an Organization"
 msgstr ""
 
-#: ../ckan/ckan/templates/organization/read_base.html:18
-msgid "Profile"
-msgstr ""
-
 #: ../ckan/ckan/templates-bs3/organization/snippets/feeds.html:2
 #: ../ckan/ckan/templates/organization/snippets/feeds.html:2
 msgid "Datasets in organization: {group}"
@@ -3944,6 +3833,11 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
+#: ../ckan/ckan/templates-bs3/snippets/language_selector.html:3
+#: ../ckan/ckan/templates/snippets/language_selector.html:5
+msgid "Language"
+msgstr ""
+
 #: ../ckan/ckan/templates-bs3/snippets/language_selector.html:11
 #: ../ckan/ckan/templates-bs3/snippets/search_form.html:42
 #: ../ckan/ckan/templates-bs3/snippets/simple_search.html:15
@@ -4177,7 +4071,7 @@ msgstr ""
 #: ../ckan/ckan/templates/user/read_base.html:6
 #: ../ckan/ckan/templates/user/read_base.html:9
 #: ../ckan/ckan/templates/user/snippets/user_search.html:2
-#: ckanext/who_afro/templates/home/snippets/insights.html:67
+#: ckanext/who_afro/templates/home/snippets/insights.html:68
 msgid "Users"
 msgstr ""
 
@@ -4284,7 +4178,7 @@ msgstr ""
 
 #: ../ckan/ckan/templates-bs3/user/edit_user_form.html:49
 #: ../ckan/ckan/templates/user/edit_user_form.html:49
-#: ../ckan/ckan/views/user.py:344
+#: ../ckan/ckan/views/user.py:345
 msgid "Sysadmin Password"
 msgstr ""
 
@@ -4295,7 +4189,7 @@ msgstr ""
 
 #: ../ckan/ckan/templates-bs3/user/edit_user_form.html:66
 #: ../ckan/ckan/templates/user/edit_user_form.html:66
-#: ../ckan/ckan/views/user.py:342
+#: ../ckan/ckan/views/user.py:343
 msgid "Old Password"
 msgstr ""
 
@@ -4671,15 +4565,15 @@ msgstr ""
 #: ../ckan/ckan/views/dashboard.py:25 ../ckan/ckan/views/dashboard.py:39
 #: ../ckan/ckan/views/dataset.py:222 ../ckan/ckan/views/feed.py:210
 #: ../ckan/ckan/views/feed.py:229 ../ckan/ckan/views/group.py:147
-#: ../ckan/ckan/views/user.py:71 ../ckan/ckan/views/user.py:100
-#: ../ckan/ckan/views/user.py:123 ../ckan/ckanext/activity/views.py:764
+#: ../ckan/ckan/views/user.py:72 ../ckan/ckan/views/user.py:101
+#: ../ckan/ckan/views/user.py:124 ../ckan/ckanext/activity/views.py:764
 #: ../ckan/ckanext/datapusher/views.py:60
 msgid "Not authorized to see this page"
 msgstr ""
 
 #: ../ckan/ckan/views/dataset.py:301 ../ckan/ckan/views/group.py:310
-#: ../ckan/ckan/views/home.py:76 ckanext/who_afro/plugin.py:59
-#: ckanext/who_afro/plugin.py:68 ckanext/who_afro/plugin.py:78
+#: ../ckan/ckan/views/home.py:76 ckanext/who_afro/plugin.py:62
+#: ckanext/who_afro/plugin.py:71 ckanext/who_afro/plugin.py:81
 msgid "Formats"
 msgstr ""
 
@@ -4744,12 +4638,12 @@ msgid "Dataset has been deleted."
 msgstr ""
 
 #: ../ckan/ckan/views/dataset.py:937 ../ckan/ckan/views/group.py:598
-#: ../ckan/ckan/views/user.py:837
+#: ../ckan/ckan/views/user.py:840
 msgid "You are now following {0}"
 msgstr ""
 
 #: ../ckan/ckan/views/dataset.py:968 ../ckan/ckan/views/group.py:624
-#: ../ckan/ckan/views/user.py:859
+#: ../ckan/ckan/views/user.py:862
 msgid "You are no longer following {0}"
 msgstr ""
 
@@ -4787,7 +4681,7 @@ msgstr ""
 msgid "Group member has been deleted."
 msgstr ""
 
-#: ../ckan/ckan/views/group.py:653 ../ckan/ckan/views/user.py:887
+#: ../ckan/ckan/views/group.py:653 ../ckan/ckan/views/user.py:890
 #, python-format
 msgid "Unauthorized to view followers %s"
 msgstr ""
@@ -4918,129 +4812,129 @@ msgstr ""
 msgid "View Type Not found"
 msgstr ""
 
-#: ../ckan/ckan/views/user.py:188
+#: ../ckan/ckan/views/user.py:189
 msgid "Unauthorized to view API tokens."
 msgstr ""
 
-#: ../ckan/ckan/views/user.py:222
+#: ../ckan/ckan/views/user.py:223
 msgid "Unauthorized to create API tokens."
 msgstr ""
 
-#: ../ckan/ckan/views/user.py:237
+#: ../ckan/ckan/views/user.py:238
 msgid ""
 "API Token created: <code style=\"word-break:break-all;\">{token}</code> "
 "{copy}<br>Make sure to copy it now, you won't be able to see it again!"
 msgstr ""
 
-#: ../ckan/ckan/views/user.py:253
+#: ../ckan/ckan/views/user.py:254
 msgid "Unauthorized to revoke API tokens."
 msgstr ""
 
-#: ../ckan/ckan/views/user.py:271
+#: ../ckan/ckan/views/user.py:272
 msgid "No user specified"
 msgstr ""
 
-#: ../ckan/ckan/views/user.py:278
+#: ../ckan/ckan/views/user.py:279
 msgid "Unauthorized to edit a user."
 msgstr ""
 
-#: ../ckan/ckan/views/user.py:340
+#: ../ckan/ckan/views/user.py:341
 msgid "Password entered was incorrect"
 msgstr ""
 
-#: ../ckan/ckan/views/user.py:342 ../ckan/ckan/views/user.py:344
+#: ../ckan/ckan/views/user.py:343 ../ckan/ckan/views/user.py:345
 msgid "incorrect password"
 msgstr ""
 
-#: ../ckan/ckan/views/user.py:351 ../ckan/ckan/views/user.py:382
-#: ../ckan/ckan/views/user.py:803
+#: ../ckan/ckan/views/user.py:352 ../ckan/ckan/views/user.py:383
+#: ../ckan/ckan/views/user.py:806
 #, python-format
 msgid "Unauthorized to edit user %s"
 msgstr ""
 
-#: ../ckan/ckan/views/user.py:364
+#: ../ckan/ckan/views/user.py:365
 msgid "Profile updated"
 msgstr ""
 
-#: ../ckan/ckan/views/user.py:418
+#: ../ckan/ckan/views/user.py:419
 msgid "Unauthorized to register as a user."
 msgstr ""
 
-#: ../ckan/ckan/views/user.py:438
+#: ../ckan/ckan/views/user.py:439
 msgid "Bad Captcha. Please try again."
 msgstr ""
 
-#: ../ckan/ckan/views/user.py:445
+#: ../ckan/ckan/views/user.py:446
 #, python-format
 msgid "Unauthorized to create user %s"
 msgstr ""
 
-#: ../ckan/ckan/views/user.py:458
+#: ../ckan/ckan/views/user.py:459
 #, python-format
 msgid ""
 "User \"%s\" is now registered but you are still logged in as \"%s\" from "
 "before"
 msgstr ""
 
-#: ../ckan/ckan/views/user.py:557
+#: ../ckan/ckan/views/user.py:558
 msgid "Login failed. Bad username or password."
 msgstr ""
 
-#: ../ckan/ckan/views/user.py:608
+#: ../ckan/ckan/views/user.py:609
 msgid "Unauthorized to delete user with id \"{user_id}\"."
 msgstr ""
 
-#: ../ckan/ckan/views/user.py:644
+#: ../ckan/ckan/views/user.py:645
 msgid "Unauthorized to request reset password."
 msgstr ""
 
-#: ../ckan/ckan/views/user.py:650
+#: ../ckan/ckan/views/user.py:651
 msgid "Email is required"
 msgstr ""
 
-#: ../ckan/ckan/views/user.py:710
+#: ../ckan/ckan/views/user.py:713
 msgid "Error sending the email. Try again later or contact an administrator for help"
 msgstr ""
 
-#: ../ckan/ckan/views/user.py:719
+#: ../ckan/ckan/views/user.py:722
 msgid ""
 "A reset link has been emailed to you (unless the account specified does not "
 "exist)"
 msgstr ""
 
-#: ../ckan/ckan/views/user.py:742
+#: ../ckan/ckan/views/user.py:745
 msgid "Unauthorized to reset password."
 msgstr ""
 
-#: ../ckan/ckan/views/user.py:751
+#: ../ckan/ckan/views/user.py:754
 msgid "Invalid reset key. Please try again."
 msgstr ""
 
-#: ../ckan/ckan/views/user.py:762
+#: ../ckan/ckan/views/user.py:765
 msgid "Your password must be 8 characters or longer."
 msgstr ""
 
-#: ../ckan/ckan/views/user.py:766
+#: ../ckan/ckan/views/user.py:769
 msgid "The passwords you entered do not match."
 msgstr ""
 
-#: ../ckan/ckan/views/user.py:769
+#: ../ckan/ckan/views/user.py:772
 msgid "You must provide a password"
 msgstr ""
 
-#: ../ckan/ckan/views/user.py:798
+#: ../ckan/ckan/views/user.py:801
 msgid "Your password has been reset."
 msgstr ""
 
-#: ../ckan/ckan/views/user.py:907
+#: ../ckan/ckan/views/user.py:910
 msgid "Not authorized to promote user to sysadmin"
 msgstr ""
 
-#: ../ckan/ckan/views/user.py:914
+#: ../ckan/ckan/views/user.py:917
 msgid "Promoted {} to sysadmin"
 msgstr ""
 
-#: ../ckan/ckan/views/user.py:919
+#: ../ckan/ckan/views/user.py:922
 msgid "Revoked sysadmin permission from {}"
 msgstr ""
 
@@ -6228,7 +6122,7 @@ msgid "Date"
 msgstr ""
 
 #: ../ckan/ckanext/stats/templates/ckanext/stats/index.html:18
-#: ckanext/who_afro/templates/home/snippets/insights.html:51
+#: ckanext/who_afro/templates/home/snippets/insights.html:52
 msgid "Total datasets"
 msgstr ""
 
@@ -6353,20 +6247,20 @@ msgid ""
 "'new_tag_name1', 'old_tag_name2': 'new_tag_name2'}"
 msgstr ""
 
-#: ckanext/who_afro/plugin.py:56 ckanext/who_afro/plugin.py:65
-#: ckanext/who_afro/plugin.py:75
-#: ckanext/who_afro/templates/home/snippets/insights.html:83
+#: ckanext/who_afro/plugin.py:59 ckanext/who_afro/plugin.py:68
+#: ckanext/who_afro/plugin.py:78
+#: ckanext/who_afro/templates/home/snippets/insights.html:84
 msgid "Programmes"
 msgstr ""
 
-#: ckanext/who_afro/plugin.py:57 ckanext/who_afro/plugin.py:66
-#: ckanext/who_afro/plugin.py:76
-#: ckanext/who_afro/templates/home/snippets/insights.html:90
+#: ckanext/who_afro/plugin.py:60 ckanext/who_afro/plugin.py:69
+#: ckanext/who_afro/plugin.py:79
+#: ckanext/who_afro/templates/home/snippets/insights.html:91
 msgid "Countries"
 msgstr ""
 
-#: ckanext/who_afro/plugin.py:58 ckanext/who_afro/plugin.py:67
-#: ckanext/who_afro/plugin.py:77
+#: ckanext/who_afro/plugin.py:61 ckanext/who_afro/plugin.py:70
+#: ckanext/who_afro/plugin.py:80
 msgid "Keywords"
 msgstr ""
 
@@ -6380,6 +6274,10 @@ msgstr ""
 
 #: ckanext/who_afro/assets/frictionless-js.js:19
 msgid ",m[42]="
+msgstr ""
+
+#: ckanext/who_afro/i18n/extra_translations.py:6
+msgid "Example extra translation string"
 msgstr ""
 
 #: ckanext/who_afro/react/components/FileInputComponent/src/App.js:86
@@ -6450,7 +6348,7 @@ msgstr ""
 
 #: ckanext/who_afro/templates/footer.html:20
 #: ckanext/who_afro/templates/footer.html:36
-#: ckanext/who_afro/templates/home/snippets/insights.html:74
+#: ckanext/who_afro/templates/home/snippets/insights.html:75
 msgid "Teams"
 msgstr ""
 
@@ -6480,7 +6378,7 @@ msgstr ""
 
 #: ckanext/who_afro/templates/header.html:37
 #: ckanext/who_afro/templates/header.html:44
-#: ckanext/who_afro/templates/home/snippets/insights.html:1
+#: ckanext/who_afro/templates/home/snippets/insights.html:2
 #: ckanext/who_afro/templates/insights/featured.html:17
 msgid "Insights"
 msgstr ""
@@ -6516,40 +6414,40 @@ msgstr ""
 msgid "Recently Updated Datasets"
 msgstr ""
 
-#: ckanext/who_afro/templates/home/snippets/insights.html:2
+#: ckanext/who_afro/templates/home/snippets/insights.html:3
 msgid "Triple billion progress"
 msgstr ""
 
-#: ckanext/who_afro/templates/home/snippets/insights.html:5
+#: ckanext/who_afro/templates/home/snippets/insights.html:6
 msgid "Healthier populations"
 msgstr ""
 
-#: ckanext/who_afro/templates/home/snippets/insights.html:15
+#: ckanext/who_afro/templates/home/snippets/insights.html:16
 msgid "Universal health coverage"
 msgstr ""
 
-#: ckanext/who_afro/templates/home/snippets/insights.html:25
+#: ckanext/who_afro/templates/home/snippets/insights.html:26
 msgid "Health emergencies protection"
 msgstr ""
 
-#: ckanext/who_afro/templates/home/snippets/insights.html:37
+#: ckanext/who_afro/templates/home/snippets/insights.html:38
 #: ckanext/who_afro/templates/home/snippets/promoted.html:26
 msgid "Indicators"
 msgstr ""
 
-#: ckanext/who_afro/templates/home/snippets/insights.html:39
+#: ckanext/who_afro/templates/home/snippets/insights.html:40
 msgid "Under-five mortality rate"
 msgstr ""
 
-#: ckanext/who_afro/templates/home/snippets/insights.html:39
+#: ckanext/who_afro/templates/home/snippets/insights.html:40
 msgid "(per 1000 live births)"
 msgstr ""
 
-#: ckanext/who_afro/templates/home/snippets/insights.html:48
+#: ckanext/who_afro/templates/home/snippets/insights.html:49
 msgid "Data hub stats"
 msgstr ""
 
-#: ckanext/who_afro/templates/home/snippets/insights.html:58
+#: ckanext/who_afro/templates/home/snippets/insights.html:59
 msgid "Updated this week"
 msgstr ""
 
@@ -6694,6 +6592,10 @@ msgstr ""
 
 #: ckanext/who_afro/templates/snippets/add_dataset.html:9
 msgid "General Data"
+msgstr ""
+
+#: ckanext/who_afro/templates/snippets/package_item.html:7
+msgid "Modified"
 msgstr ""
 
 #: ckanext/who_afro/templates/snippets/subscribe_to_updates.html:5
