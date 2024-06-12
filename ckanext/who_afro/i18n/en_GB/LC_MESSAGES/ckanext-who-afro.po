@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckan 2.10.2b0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-06-12 13:54+0000\n"
+"POT-Creation-Date: 2024-06-12 14:27+0000\n"
 "PO-Revision-Date: 2022-11-16 11:05+0000\n"
 "Last-Translator: Toavina A. <toavina@fjelltopp.org>, 2023\n"
 "Language: en_GB\n"
@@ -2743,7 +2743,7 @@ msgstr "Remove dataset from this category"
 #: ../ckan/ckan/templates-bs3/group/snippets/helper.html:15
 #: ../ckan/ckan/templates/group/snippets/helper.html:15
 msgid "What are Groups?"
-msgstr "What are Categorys?"
+msgstr "What are Categories?"
 
 #: ../ckan/ckan/templates-bs3/group/snippets/helper.html:19
 #: ../ckan/ckan/templates/group/snippets/helper.html:19
@@ -3091,7 +3091,7 @@ msgid ""
 "depending on their level of authorisation to create, edit and publish."
 msgstr ""
 " Teams are used to create, manage and publish collections of datasets. "
-"Users can have different roles within an Team, depending on their level "
+"Users can have different roles within a Team, depending on their level "
 "of authorisation to create, edit and publish. "
 
 #: ../ckan/ckan/templates-bs3/organization/snippets/organization_form.html:12
