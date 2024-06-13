@@ -1940,10 +1940,6 @@ p.learn-more a {
     padding: 0;
 }
 
-.logout-page .module h1 {
-    margin-bottom: 0;
-}
-
 .logout-page .module-content p {
     display: none;
 }
@@ -1959,6 +1955,7 @@ p.learn-more a {
     letter-spacing: -0.02em;
     text-align: left;
     color: var(--primary-navy);
+    margin-bottom: 24px;
 }
 
 .logout-options a.btn-primary,
