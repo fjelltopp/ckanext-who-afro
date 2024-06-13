@@ -7,33 +7,36 @@
 {% endblock %}
 
 {% block content %}
-<div role="main">
-    <div class="main hero">
-        <div class="promoted-background">
-            <div class="container">
-                <div class="promoted promoted-home col-xs-12 col-sm-12 col-lg-12" style="min-height: auto;">
-                    <div class="promoted-container row">
-                        <div class="promoted-left col-lg-12 col-xs-12 col-sm-12" style="padding-bottom:20px;">
-                            <h1 class="page-title">{{ _('Insights') }}</h1>
-                            <p>{{ _('WHO AFRO Health Data Hub insights are a collection of  high quality data analyses, visualisations and reported indicators for us in research and publications.') }}</p>
-                        </div>
-                    </div>
+<div role="main" class="insights-page">
+    <div class="promoted-background ">
+        <!-- Snippet package/snippets/promoted_plus.html start -->
+        <div class="plus plus-top-left"></div>
+        <div class="plus plus-top-right"></div>
+        <!-- Snippet package/snippets/promoted_plus.html end -->
+        <div class="container">
+            <div class="promoted promoted-home col-xs-12 col-sm-10 col-md-8 col-lg-6">
+                <div class="promoted-container">
+                    <p class="subtitle">Home / </p>
+                    <h1 class="page-title">{{ _('Insights') }}</h1>
+                    <p>{{ _('WHO AFRO Health Data Hub insights are a collection of  high quality data analyses, visualisations and reported indicators for us in research and publications.') }}</p>
                 </div>
             </div>
         </div>
-
-        <div class="container" style="padding-top: 50px;">
-            <h2>{{ _('Featured insight') }}</h1>
+    </div>
+    <div class="container featured-insight">
+        <div class="col-xs-12">
+            <h2>{{ _('Featured insight') }}</h2>
             <p>{{ _('This month\'s featured insight is our latest analysis of the 2030 WHO African Region Malaria reporting and the interactions of malaria rates with rainfall.') }}</p>
-            <div style="text-align: center;">
-                <iframe title="wmr2030" width="100%" height="480" src="https://app.powerbi.com/view?r=eyJrIjoiMTY3ZjliZWItMWEwYy00ZmE4LThhZjMtMTc3OGU3YWIyYTFkIiwidCI6ImYzZjkxOTM5LWU5YzgtNDJkNC1iMDY2LTc2Yzk2YTMxOGU0NiJ9" frameborder="0" allowFullScreen="true"></iframe>
+            <div class="featured-dashboard">
+                <iframe title="wmr2030" width="100%" height="100%" src="https://app.powerbi.com/view?r=eyJrIjoiN2RhYzNiMGUtYTU3Ny00NWU4LThjOTAtM2YwMWI3OTc3ODIxIiwidCI6ImYzZjkxOTM5LWU5YzgtNDJkNC1iMDY2LTc2Yzk2YTMxOGU0NiJ9" frameborder="0" allowFullScreen="true"></iframe>
             </div>
         </div>
     </div>
 
+
     <div class="insights">
         <div class="container">
-            <div class="row insight-row col-lg-12 col-sm-12 col-xs-12" style="margin-top:50px;">
+            <div class="row insight-row col-lg-12 col-sm-12 col-xs-12">
                 <div class="search-section">
                     <h2>{{ _('Search insights') }}</h2>
                     {% snippet 'snippets/search_input.html', placeholder='Search' %}
