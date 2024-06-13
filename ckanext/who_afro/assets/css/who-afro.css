@@ -1919,3 +1919,39 @@ p.learn-more a {
     height: 70px;
 }
 
+/* Authentication & user UI */
+.logout-page {
+    min-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+
+.logout-options h1 {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: var(--primary-navy);
+}
+
+.logout-options a.btn-primary,
+.logout-options a.btn-outline-dark {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+}
+
+.logout-options a.btn-outline-dark,
+.logout-options a.btn-outline-dark:hover {
+    margin-left: 16px;
+    border-color: var(--primary-navy);
+    color: var(--primary-navy);
+    background-color: white;
+}
+/* User profile*/
+
