@@ -1920,12 +1920,36 @@ p.learn-more a {
 }
 
 /* Authentication & user UI */
-.logout-page {
+.logout-page,
+.logout-page .wrapper,
+.logout-page .primary {
+    all: unset;
+    display: contents;
+}
+
+.logout-page #content {
+    padding-left: 12px;
     min-height: 0;
     padding-top: 0;
     padding-bottom: 0;
     margin-top: 64px;
     margin-bottom: 64px;
+}
+
+.logout-page .module .module-content {
+    padding: 0;
+}
+
+.logout-page .module h1 {
+    margin-bottom: 0;
+}
+
+.logout-page .module-content p {
+    display: none;
+}
+
+.logout-page .container .wrapper::before {
+    content: none;
 }
 
 .logout-options h1 {
@@ -1939,10 +1963,7 @@ p.learn-more a {
 
 .logout-options a.btn-primary,
 .logout-options a.btn-outline-dark {
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding: 12px 16px;
 
 }
 
