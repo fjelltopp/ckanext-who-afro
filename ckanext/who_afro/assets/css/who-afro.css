@@ -1971,5 +1971,25 @@ p.learn-more a {
     color: var(--primary-navy);
     background-color: white;
 }
+
+@media only screen and (max-width: 327px) {
+    .logout-options a.btn-primary,
+    .logout-options a.btn-outline-dark {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 12px;
+
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .logout-page #content {
+        padding-left: 30px;
+    }
+    .logout-options a.btn-primary,
+    .logout-options a.btn-outline-dark {
+        margin-left: 12px;
+    }
+}
 /* User profile*/
 
