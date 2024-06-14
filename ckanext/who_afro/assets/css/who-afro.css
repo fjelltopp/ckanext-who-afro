@@ -2002,8 +2002,9 @@ p.learn-more a {
     }
 }
 
-@media only screen and (min-width: 282px) {
 
+@media only screen and (min-width: 282px) {
+    /* Breadcrumb update */
     .promoted-breadcrumbs .toolbar .breadcrumb {
         position: absolute;
         bottom: 85px;
