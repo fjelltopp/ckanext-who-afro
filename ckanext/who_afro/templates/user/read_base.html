@@ -1,0 +1,15 @@
+{% ckan_extends %}
+
+
+{% block breadcrumb %}
+    {% if self.breadcrumb_content() | trim %}
+      <ol class="profile-page breadcrumb">
+        {% snippet 'snippets/home_breadcrumb_item.html' %}
+        {% block breadcrumb_content %}
+              <li><a href="#">{{ _('My account') }}</a></li>
+              <li class="active"><a>{{ _('My profile') }}</a></li>
+        {% endblock %}
+      </ol>
+    {% endif %}
+{% endblock %}
+

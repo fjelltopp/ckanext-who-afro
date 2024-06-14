@@ -15,7 +15,7 @@
       <ol class="profile-page breadcrumb">
         {% snippet 'snippets/home_breadcrumb_item.html' %}
         {% block breadcrumb_content %}
-          <li><a>{{ _('My account') }}</a></li>
+          <li><a href="#">{{ _('My account') }}</a></li>
           <li><a href="{{ h.url_for('user.read', id=user_dict.name) }}">{{ _('My profile') }}</a></li>
           <li class="active"><a>{{ _('Edit profile') }}</a></li>
         {% endblock %}
