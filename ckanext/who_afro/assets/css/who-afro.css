@@ -1991,5 +1991,9 @@ p.learn-more a {
         margin-left: 12px;
     }
 }
+
+.masthead {
+    border-bottom: var(--who-blue-65-percent) thin solid;
+}
 /* User profile*/
 
