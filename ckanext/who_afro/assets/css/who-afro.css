@@ -1920,7 +1920,13 @@ p.learn-more a {
 }
 
 /* Authentication & user UI */
-.logout-page,
+.logout-page {
+    border-top: var(--who-blue-65-percent) thin solid;
+    margin: 0;
+    padding: 0;
+    min-height: 0;
+}
+
 .logout-page .wrapper,
 .logout-page .primary {
     all: unset;
@@ -1990,10 +1996,6 @@ p.learn-more a {
     .logout-options a.btn-outline-dark {
         margin-left: 12px;
     }
-}
-
-.masthead {
-    border-bottom: var(--who-blue-65-percent) thin solid;
 }
 /* User profile*/
 
