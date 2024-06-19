@@ -1966,16 +1966,16 @@ p.learn-more a {
     padding-bottom: 24px;
 }
 
-.about p:first-child, .about p:last-child {
+.about p.sub, .about p.appendix {
     color: #505050;
     text-align: justify;
 }
 
-.about p:first-child {
-    margin-bottom: 20px;
+.about p.sub {
+    margin-bottom: 16px;
 }
 
-.about p:last-child {
+.about p.appendix {
     font-size: 14px;
 }
 
