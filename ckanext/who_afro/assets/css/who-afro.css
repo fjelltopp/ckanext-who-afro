@@ -1963,11 +1963,11 @@ p.learn-more a {
 .about ul {
     list-style-type: none;
     padding-left: 0;
-    padding-bottom: 24px;
+    padding-bottom: 12px;
 }
 
 .about p.sub, .about p.appendix {
-    color: #505050;
+    color: #000000;
     text-align: justify;
 }
 
@@ -1980,7 +1980,7 @@ p.learn-more a {
 }
 
 .about ul li {
-    padding-top: 24px;
+    padding-top: 12px;
     font-size: 16px;
     text-align: justify;
 }
