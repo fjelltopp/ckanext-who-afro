@@ -409,7 +409,7 @@ p.small {
     right: 0px;
 }
 
-.fa-bars {
+.navbar-toggler .fa-bars {
     color: var(--primary-navy) !important;
 }
 
@@ -1944,4 +1944,25 @@ p.learn-more a {
 
 .terms_and_conditions h2 {
     margin-top: 24px;
+
+.resource-view .resource-view-filters a.btn.btn-primary {
+    display: none;
+}
+
+.ckanext-datapreview > iframe {
+    min-height: 675px;
+}
+
+.caret {
+    display: inline-block;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-top: 4px solid;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+#dropdownDownloadFormat{
+    padding:10px;
 }
