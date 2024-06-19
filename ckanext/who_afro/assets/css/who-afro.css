@@ -1966,3 +1966,40 @@ p.learn-more a {
 #dropdownDownloadFormat{
     padding:10px;
 }
+
+/* about */
+.about {
+    padding: 16px;
+}
+
+.about ul {
+    list-style-type: none;
+    padding-left: 0;
+    padding-bottom: 12px;
+}
+
+.about p.sub, .about p.appendix {
+    color: #000000;
+    text-align: justify;
+}
+
+.about p.sub {
+    margin-bottom: 16px;
+}
+
+.about p.appendix {
+    font-size: 14px;
+}
+
+.about ul li {
+    padding-top: 12px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.about ul li strong {
+    font-weight: 900;
+    font-size: 16px;
+}
+/* about */
+
