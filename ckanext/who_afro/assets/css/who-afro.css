@@ -1954,3 +1954,40 @@ p.learn-more a {
 #dropdownDownloadFormat{
     padding:10px;
 }
+
+/* about */
+.about {
+    padding: 16px;
+}
+
+.about ul {
+    list-style-type: none;
+    padding-left: 0;
+    padding-bottom: 24px;
+}
+
+.about p:first-child, .about p:last-child {
+    color: #505050;
+    text-align: justify;
+}
+
+.about p:first-child {
+    margin-bottom: 20px;
+}
+
+.about p:last-child {
+    font-size: 14px;
+}
+
+.about ul li {
+    padding-top: 24px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.about ul li strong {
+    font-weight: 900;
+    font-size: 16px;
+}
+/* about */
+
