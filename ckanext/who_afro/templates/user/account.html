@@ -1,6 +1,5 @@
 {% extends "page.html" %}
 
-
 {% block breadcrumb %}
     {% if self.breadcrumb_content() | trim %}
       <ol class="profile-page breadcrumb">
@@ -11,3 +10,46 @@
       </ol>
     {% endif %}
 {% endblock %}
+
+{% block maintag %}
+<style>
+  .my-account-main .secondary {
+    content: none;
+    display: none;
+  }
+
+  .my-account-main .wrapper .primary {
+    width: 100%;
+    border: 0;
+  }
+
+  .my-account-main .wrapper:before {
+    border-right: 0;
+  }
+
+  .my-account-main .wrapper {
+      box-shadow: none;
+      border: 0;
+  }
+
+  .upper-content {
+    padding: 32px;
+    background-color: var(--who-blue-ten-percent);
+  }
+</style>
+<div class="my-account-main main">
+{% endblock %}
+
+{% block primary_content %}
+    <div class="upper-content">
+      <h1>My page content</h1>
+      <p>Some content for the page</p>
+    </div>
+    <div class="lower-content">
+
+    </div>
+
+{% endblock %}
+
+
+
