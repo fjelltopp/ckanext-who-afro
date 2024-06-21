@@ -36,7 +36,7 @@ def my_account():
     before = tk.request.args.get("before")
     after = tk.request.args.get("after")
 
-    limit = _get_activity_stream_limit()
+    limit = 4
 
     activity_stream = tk.h.dashboard_activity_stream(
         tk.g.userobj.id,
