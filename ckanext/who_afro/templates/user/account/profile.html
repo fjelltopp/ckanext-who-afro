@@ -16,7 +16,7 @@
                             <ul class="profile-left-info-details no-padding">
                                 <li>{{ user.fullname }}</li>
                                 <li>{{ user.email }}</li>
-                                <li><a href="#">{{ _('View / edit profile') }}</a></li>
+                                <li><a href="{{ h.url_for('user.read', id=user.name) }}" style="font-weight: 700">{{ _('View / edit profile') }}</a></li>
                             </ul>
                         </div>
                     </li>
