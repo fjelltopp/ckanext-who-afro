@@ -1,9 +1,5 @@
 {% extends "user/account/base.html" %}
 
-{% set user = h.get_user_obj() %}
-{% set dataset_type = h.default_package_type() %}
-{% set org_type = h.default_group_type('organization') %}
-{% set group_type = h.default_group_type('group') %}
 
 {% block subtitle %}{{ user.name }} {{ g.template_title_delimiter }} {{ _('Users') }}{% endblock %}
 
@@ -13,13 +9,15 @@
       <header class="module-content page-header hug">
       <ul class="nav nav-tabs">
           {{ h.build_nav_icon('account.index', _('Newsfeed')) }}
-          {{ h.build_nav_icon('dashboard.datasets', h.humanize_entity_type('package', dataset_type, 'my label') or _('My Datasets')) }}
-          {{ h.build_nav_icon('dashboard.organizations', h.humanize_entity_type('organization', org_type, 'my label') or _('My Organizations')) }}
-          {{ h.build_nav_icon('dashboard.groups', h.humanize_entity_type('group', group_type, 'my label') or _('My Groups')) }}
+          {{ h.build_nav_icon('dashboard.datasets', _('My datasets')) }}
+          {{ h.build_nav_icon('dashboard.organizations', _('My organizations')) }}
+          {{ h.build_nav_icon('dashboard.groups', _('My groups')) }}
       </ul>
       </header>
     <div class="module-content">
         <div class="page_primary_action">
+            {% snippet 'snippets/stream.html', activity_stream=activity_stream, id=user.id, object_type='user' %}
+            {% snippet 'snippets/pagination.html', newer_activities_url=newer_activities_url, older_activities_url=older_activities_url %}
         </div>
     </div>
   </article>

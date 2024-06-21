@@ -1,5 +1,10 @@
 {% extends "page.html" %}
 
+{% set activity_stream = h.recently_changed_packages_activity_stream(limit=4) %}
+{% set user = h.get_user_obj() %}
+{% set dataset_type = h.default_package_type() %}
+{% set org_type = h.default_group_type('organization') %}
+{% set group_type = h.default_group_type('group') %}
 
 {% block breadcrumb %}
     {% if self.breadcrumb_content() | trim %}
@@ -163,6 +168,9 @@
       border: var(--who-blue-65-percent) thin solid;
       padding: 36px 32px;
       border-top-color: transparent;
+  }
+  .page_primary_action ul {
+      display: block;
   }
 
 
