@@ -132,6 +132,32 @@
 {% block primary_content %}
     <div class="upper-content">
         {% block profile %}
+            <div class="row">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="user-basic-info">
+                        <ul class="profile-left-info">
+                            <li class="profile-pic">{{ h.user_image(user.id, size=64) }}</li>
+                            <li class="profile-info">
+                                <div>
+                                    <p>{{ _('Welcome') }} {{ user.name }}</p>
+                                    <ul class="profile-left-info-details no-padding">
+                                        <li>{{ user.fullname }}</li>
+                                        <li>{{ user.email }}</li>
+                                        <li><a href="{{ h.url_for('user.read', id=user.name) }}" style="font-weight: 700">{{ _('View / edit profile') }}</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12 right-content">
+                    <ul>
+                        <li><a href="#" style="text-decoration: underline;padding-right: 24px;">System admin settings</a></li>
+                        <li><a href="{{ h.url_for('user.logout') }}" class="logout-btn">Log out</a></li>
+                    </ul>
+                </div>
+
+            </div>
         {% endblock %}
     </div>
     <div class="lower-content">
