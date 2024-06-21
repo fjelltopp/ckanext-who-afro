@@ -14,21 +14,21 @@
 
 {% block maintag %}
 <style>
-  .my-account-main .secondary {
+  .secondary {
     content: none;
     display: none;
   }
 
-  .my-account-main .wrapper .primary {
+  .wrapper .primary {
     width: 100%;
     border: 0;
   }
 
-  .my-account-main .wrapper:before {
+  .wrapper:before {
     border-right: 0;
   }
 
-  .my-account-main .wrapper {
+  .wrapper {
       box-shadow: none;
       border: 0;
   }
@@ -77,7 +77,7 @@
   .profile-info div p, .profile-info div ul {
       margin: 4px;
   }
-  .my-account-main ul {
+  ul {
       list-style-type: none;
       padding: 0;
       display: flex;
@@ -120,13 +120,49 @@
       text-decoration: none;
       cursor: pointer;
   }
+  .page-header {
+      background-color: white;
+  }
+  header,
+  header ul.nav.nav-tabs {
+      width: 100%;
+  }
+  header ul.nav.nav-tabs li:first-child {
+      width: 25%;
+  }
+  header ul.nav.nav-tabs li:not(:first-child) {
+      width: 24%;
+      margin-left: 1%;
+  }
+  .module-content {
+      padding: 0;
+  }
+  .page-header .nav-tabs li.active a, .page-header .nav-tabs a:hover {
+      border: var(--who-blue-65-percent) thin solid;
+      border-bottom-color: transparent;
+  }
+  .nav-tabs .nav-link, .page-header .nav-tabs li a,
+  .nav-tabs .nav-link, .page-header .nav-tabs li a:hover {
+      background-color: var(--who-blue-ten-percent);
+  }
+  .nav-tabs,
+  .nav-tabs .nav-link, .page-header .nav-tabs li a {
+      border-bottom-color: var(--who-blue-65-percent);
+  }
+  .nav.nav-tabs li a {
+      color: var(--primary-navy);
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+        text-align: center;
+  }
 
 
-  .my-account-main * {
+  * {
  /*border: turquoise solid thin;*/
   }
 </style>
-<div class="my-account-main main col-md-12">
+<div class="main col-md-12">
 {% endblock %}
 
 {% block primary_content %}
