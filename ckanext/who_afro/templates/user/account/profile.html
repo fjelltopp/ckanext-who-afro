@@ -1,6 +1,33 @@
 {% extends "user/account/base.html" %}
 
+{% set user = h.get_user_obj() %}
+
+{% block subtitle %}{{ user.name }} {{ g.template_title_delimiter }} {{ _('Users') }}{% endblock %}
+
 {% block profile %}
-          <h1>My page content</h1>
-          <p>Some content for the page</p>
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <div class="user-basic-info">
+                <ul class="profile-left-info">
+                    <li class="profile-pic">{{ h.user_image(user.id, size=64) }}</li>
+                    <li class="profile-info">
+                        <div>
+                            <p>{{ _('Welcome') }} {{ user.name }}</p>
+                            <ul class="profile-left-info-details no-padding">
+                                <li>{{ user.fullname }}</li>
+                                <li>{{ user.email }}</li>
+                                <li><a href="#">{{ _('View / edit profile') }}</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            Right
+        </div>
+
+    </div>
 {% endblock %}

@@ -1,5 +1,6 @@
 {% extends "page.html" %}
 
+
 {% block breadcrumb %}
     {% if self.breadcrumb_content() | trim %}
       <ol class="profile-page breadcrumb">
@@ -37,9 +38,65 @@
     margin-bottom: 48px;
     padding: 32px;
     background-color: var(--who-blue-ten-percent);
+    border-radius: 4px 0 0 0;
+  }
+  .no-padding {
+      padding: 0;
+  }
+  .user-basic-info {
+      padding: 0;
+      width: 100%;
+  }
+  .profile-left-info {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      width: 100%;
+
+  }
+  .profile-info {
+      padding-left: 20px;
+  }
+  .profile-info p:first-child {
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 36px;
+        letter-spacing: -0.01em;
+        text-align: left;
+        color: var(--primary-navy);
+  }
+  .profile-pic {
+      width: 64px;
+      height: 64px;
+      border-radius: 2px 0 0 0;
+      border: white thin solid;
+  }
+  .profile-info {
+      height: 64px;
+  }
+  .profile-info div p, .profile-info div ul {
+      margin: 4px;
+  }
+  .profile-left-info-details {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      width: 100%;
+  }
+  .profile-left-info-details li:not(:first-child)::before {
+      content: '|';
+      color: var(--who-blue-65-percent);
+      margin-left: 16px;
+      margin-right: 16px;
+  }
+  .my-account-main * {
+ /*border: turquoise solid thin;*/
   }
 </style>
-<div class="my-account-main main">
+<div class="my-account-main main col-md-12">
 {% endblock %}
 
 {% block primary_content %}
