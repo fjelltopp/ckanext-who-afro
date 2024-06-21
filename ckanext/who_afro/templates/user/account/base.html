@@ -77,22 +77,50 @@
   .profile-info div p, .profile-info div ul {
       margin: 4px;
   }
-  .profile-left-info-details {
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
+  .my-account-main ul {
       list-style-type: none;
       padding: 0;
       display: flex;
-      width: 100%;
       color: var(--primary-navy);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+      margin-bottom: 0;
   }
+
   .profile-left-info-details li:not(:first-child)::before {
       content: '|';
       color: var(--who-blue-65-percent);
       margin-left: 16px;
       margin-right: 16px;
   }
+  .right-content {
+      width: 50%;
+  }
+  .right-content ul {
+      justify-content: flex-end;
+  }
+  .right-content ul li:nth-child(1) {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-right: 19px;
+  }
+  .right-content ul li a {
+      font-weight: 700;
+  }
+  .right-content ul li:nth-child(2) {
+      border: var(--primary-navy) thin solid;
+      border-radius: 4px;
+      padding: 12px 16px;
+  }
+
+  .right-content .logout-btn,
+  .right-content .logout-btn:hover {
+      text-decoration: none;
+      cursor: pointer;
+  }
+
+
   .my-account-main * {
  /*border: turquoise solid thin;*/
   }
