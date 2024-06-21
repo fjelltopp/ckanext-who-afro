@@ -12,9 +12,10 @@
   <article class="module">
       <header class="module-content page-header hug">
       <ul class="nav nav-tabs">
-          {{ h.build_nav_icon('dashboard.datasets', h.humanize_entity_type('package', dataset_type, 'my label') or _('My Datasets'), icon='sitemap') }}
-          {{ h.build_nav_icon('dashboard.organizations', h.humanize_entity_type('organization', org_type, 'my label') or _('My Organizations'), icon='building') }}
-          {{ h.build_nav_icon('dashboard.groups', h.humanize_entity_type('group', group_type, 'my label') or _('My Groups'), icon='users') }}
+          {{ h.build_nav_icon('account.index', _('Newsfeed')) }}
+          {{ h.build_nav_icon('dashboard.datasets', h.humanize_entity_type('package', dataset_type, 'my label') or _('My Datasets')) }}
+          {{ h.build_nav_icon('dashboard.organizations', h.humanize_entity_type('organization', org_type, 'my label') or _('My Organizations')) }}
+          {{ h.build_nav_icon('dashboard.groups', h.humanize_entity_type('group', group_type, 'my label') or _('My Groups')) }}
       </ul>
       </header>
     <div class="module-content">
