@@ -10,4 +10,4 @@ blueprint = Blueprint(
 
 @blueprint.get("/account", endpoint="index")
 def my_account():
-    return render_template("user/account.html")
+    return render_template("user/account/profile.html")

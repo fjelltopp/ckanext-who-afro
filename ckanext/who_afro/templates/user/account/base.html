@@ -33,6 +33,8 @@
   }
 
   .upper-content {
+    margin-top: 64px;
+    margin-bottom: 48px;
     padding: 32px;
     background-color: var(--who-blue-ten-percent);
   }
@@ -42,11 +44,12 @@
 
 {% block primary_content %}
     <div class="upper-content">
-      <h1>My page content</h1>
-      <p>Some content for the page</p>
+        {% block profile %}
+        {% endblock %}
     </div>
     <div class="lower-content">
-
+    {% block details %}
+    {% endblock %}
     </div>
 
 {% endblock %}
