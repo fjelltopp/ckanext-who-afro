@@ -20,20 +20,6 @@ def _get_context():
     )
 
 
-def _get_activities_urls(has_more, activity_stream, **kwargs):
-    if 'type' in kwargs and 'name' in kwargs:
-        args = {'type': kwargs['type'], 'name': kwargs['name']}
-    elif 'id' in kwargs:
-        args = {'id': kwargs['id']}
-    else:
-        return None, None
-
-    older_url = _get_older_activities_url(has_more, activity_stream, **args)
-    newer_url = _get_newer_activities_url(has_more, activity_stream, **args)
-
-    return older_url, newer_url
-
-
 def get_dashboard_activity_extra_vars():
     context = _get_context()
     data_dict: dict[str, Any] = {"user_obj": tk.g.userobj}
@@ -61,9 +47,9 @@ def get_dashboard_activity_extra_vars():
         else:
             activity_stream.pop()
 
-    older_activities_url, newer_activities_url = _get_activities_urls(has_more=has_more,
-                                                                      activity_stream=activity_stream, type=filter_type,
-                                                                      name=filter_id)
+    older_url = _get_older_activities_url(has_more, activity_stream, type=filter_type, name=filter_id)
+    newer_url = _get_newer_activities_url(has_more, activity_stream, type=filter_type, name=filter_id)
+
     extra_vars.update({
         "dashboard_activity_stream": activity_stream,
         "newer_activities_url": newer_activities_url,
@@ -110,9 +96,9 @@ def get_user_activity_extra_vars():
         else:
             activity_stream.pop()
 
-    older_activities_url, newer_activities_url = _get_activities_urls(has_more=has_more,
-                                                                      activity_stream=activity_stream,
-                                                                      id=id)
+    older_activities_url = _get_older_activities_url(has_more, activity_stream, id=id )
+    newer_activities_url = _get_newer_activities_url(has_more, activity_stream, id=id)
+
     extra_vars.update({
         "id": id,
         "activity_stream": activity_stream,
