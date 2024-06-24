@@ -1,9 +1,6 @@
-{% extends "page.html" %}
+{% extends "user/edit_base.html" %}
 
 {% set user = h.get_user_obj() %}
-{% set dataset_type = h.default_package_type() %}
-{% set org_type = h.default_group_type('organization') %}
-{% set group_type = h.default_group_type('group') %}
 
 {% block breadcrumb %}
     {% if self.breadcrumb_content() | trim %}
