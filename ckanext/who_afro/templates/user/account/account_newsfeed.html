@@ -16,6 +16,13 @@
       </header>
     <div class="module-content">
         <div class="page_primary_action">
+            <div class="details-top-label">
+                <span class="left">Activity from items that I’m following</span>
+                <span class="right">
+                    <span>Activity from:</span>
+                    <span> Everything</span>
+                </span>
+            </div>
             {% snippet 'snippets/stream.html', activity_stream=dashboard_activity_stream, id=user.id, object_type='user' %}
             {% snippet 'snippets/pagination.html', newer_activities_url=newer_activities_url, older_activities_url=older_activities_url %}
         </div>
