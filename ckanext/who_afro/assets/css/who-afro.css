@@ -930,7 +930,7 @@ p.small {
     }
 }
 
-.category-box {
+.group-box {
     background: #FFFFFF;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
     border-radius: 4px;
@@ -939,7 +939,7 @@ p.small {
     height:  110px;
 }
 
-.category-box .group-thumbnail {
+.group-box .group-thumbnail {
     float:  left;
     display: inline-block;
     vertical-align: middle;
@@ -947,18 +947,18 @@ p.small {
     margin-right: 20px;
 }
 
-.category-box .group-text {
+.group-box .group-text {
     vertical-align: middle;
     width:  100%;
 }
-.category-box .group-text .title{
+.group-box .group-text .title{
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
     color: #008dc9;
 }
 
-.category-box .group-text .desc{
+.group-box .group-text .desc{
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
@@ -967,7 +967,7 @@ p.small {
     height:  50px;
 }
 
-.category-box .btn-delete {
+.group-box .btn-delete {
     background: transparent;
     color: #008dc9;
     font-size: 20px;
@@ -1362,8 +1362,8 @@ a.tag:hover  {
 
 .homepage .main,
 .homepage .hero,
-.categories .main,
-.categories .hero{
+.groups .main,
+.groups .hero{
     padding: 0px;
 }
 
@@ -1433,7 +1433,7 @@ a.footer-link:hover,
     color: #008dc9;
 }
 
-.add-category{
+.add-group{
     margin-bottom: 32px;
 }
 
@@ -1944,6 +1944,7 @@ p.learn-more a {
 
 .terms_and_conditions h2 {
     margin-top: 24px;
+}
 
 .resource-view .resource-view-filters a.btn.btn-primary {
     display: none;
@@ -1967,7 +1968,6 @@ p.learn-more a {
     padding:10px;
 }
 
-/* about */
 .about {
     padding: 16px;
 }
@@ -2001,5 +2001,7 @@ p.learn-more a {
     font-weight: 900;
     font-size: 16px;
 }
-/* about */
 
+.groups-container{
+    padding: 20px;
+}

@@ -1,7 +1,7 @@
 {% ckan_extends %}
 
 {% block content %}
-    <div class="categories layout-{{ homepage_style }}">
+    <div class="groups layout-{{ homepage_style }}">
         <div id="content" class="container">
             {{ self.flash() }}
         </div>
@@ -14,10 +14,10 @@
                     </div>
                 </div>
             </div>
-            <div class="document-categories">
+            <div class="groups-container">
                 <div class="container">
                     {% if h.check_access('group_create') %}
-                        {% link_for _('Add Groups'), named_route=group_type+'.new', class_='btn btn-primary add-category', icon='plus-square' %}
+                        {% link_for _('Add Groups'), named_route=group_type+'.new', class_='btn btn-primary add-group', icon='plus-square' %}
                     {% endif %}
                     {% block groups_list %}
                       {{ super () }}
