@@ -17,16 +17,21 @@ blueprint = Blueprint(
     "account", __name__, url_prefix="/user"
 )
 
-
-@blueprint.get("/account", endpoint="index")
-def my_account():
-    context = cast(
+def _get_context():
+    return cast(
         Context,
         {
             "auth_user_obj": tk.g.userobj,
             "for_view": True,
         },
     )
+
+
+
+@blueprint.get("/account", endpoint="index")
+def my_account():
+    context = _get_context()
+
     data_dict: dict[str, Any] = {"user_obj": tk.g.userobj}
     extra_vars = _extra_template_variables(context, data_dict)
 
@@ -77,3 +82,69 @@ def my_account():
 
     return tk.render("user/account/account_newsfeed.html", extra_vars)
 
+
+@blueprint.route("/account/activity", endpoint="activity")
+def my_account_activity():
+    context = _get_context()
+
+    data_dict: dict[str, Any] = {
+        "id": tk.g.userobj.id,
+        "user_obj": tk.g.userobj,
+        "include_num_followers": True,
+    }
+    try:
+        tk.check_access("user_show", context, data_dict)
+    except tk.NotAuthorized:
+        tk.abort(403, tk._("Not authorized to see this page"))
+
+    extra_vars = _extra_template_variables(context, data_dict)
+
+    limit = _get_activity_stream_limit()
+
+    filter_type = tk.request.args.get("type", "")
+    filter_id = tk.request.args.get("name", "")
+    before = tk.request.args.get("before")
+    after = tk.request.args.get("after")
+
+    limit = _get_activity_stream_limit()
+
+    try:
+        activity_stream = tk.get_action(
+            "user_activity_list"
+        )(context, {
+            "id": extra_vars["user_dict"]["id"],
+            "before": before,
+            "after": after,
+            "limit": limit + 1,
+        })
+    except tk.ValidationError:
+        tk.abort(400)
+
+    has_more = len(activity_stream) > limit
+    # remove the extra item if exists
+    if has_more:
+        if after:
+            activity_stream.pop(0)
+        else:
+            activity_stream.pop()
+
+    older_activities_url = _get_older_activities_url(
+        has_more,
+        activity_stream,
+        id=id
+    )
+
+    newer_activities_url = _get_newer_activities_url(
+        has_more,
+        activity_stream,
+        id=id
+    )
+
+    extra_vars.update({
+        "id":  id,
+        "activity_stream": activity_stream,
+        "newer_activities_url": newer_activities_url,
+        "older_activities_url": older_activities_url
+    })
+
+    return tk.render("user/account/account_my_activity.html", extra_vars)
