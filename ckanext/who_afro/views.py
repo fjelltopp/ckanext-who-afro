@@ -25,7 +25,7 @@ def _get_activities_urls(has_more, activity_stream, **kwargs):
     elif 'id' in kwargs:
         args = {'id': kwargs['id']}
     else:
-        raise ValueError("Either 'type' and 'name' or 'id' must be provided")
+        return (None, None)
 
     older_url = _get_older_activities_url(has_more, activity_stream, **args)
     newer_url = _get_newer_activities_url(has_more, activity_stream, **args)
