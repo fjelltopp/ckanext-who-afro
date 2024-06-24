@@ -68,7 +68,6 @@ def my_account():
     )
 
     extra_vars.update({
-        "id": id,
         "dashboard_activity_stream": activity_stream,
         "newer_activities_url": newer_activities_url,
         "older_activities_url": older_activities_url
