@@ -30,7 +30,6 @@ def my_account():
     data_dict: dict[str, Any] = {"user_obj": tk.g.userobj}
     extra_vars = _extra_template_variables(context, data_dict)
 
-    tk.request.args.get("q", "")
     filter_type = tk.request.args.get("type", "")
     filter_id = tk.request.args.get("name", "")
     before = tk.request.args.get("before")
