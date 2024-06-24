@@ -17,7 +17,7 @@
         <div class="desc-large">
               <ul class="list-unstyled">
                 {% block footer_links %}
-                    <li><a class="footer-link" href="{{ h.url_for('/organization') }}">{{ _('Teams') }}</a></li>
+                    <li><a class="footer-link" href="{{ h.url_for('/organization') }}">{{ _('Organizations') }}</a></li>
                     <li><a class="footer-link" href="{{ h.url_for('/user/login') }}">{{ _('Account login') }}</a></li>
                     <li><a class="footer-link" href="{{ h.url_for('/terms/') }}" target="_blank">{{ _('Terms and conditions') }}</a><br />
                     <li><a class="footer-link" href="http://docs.ckan.org/en/2.10/api/" target="_blank">{{ _('API Docs') }}</a></li>
@@ -33,7 +33,7 @@
 
 
         <div class="desc-mobile">
-            <p><a class="footer-link" href="{{ h.url_for('/organization') }}">{{ _('Teams') }}</a></p>
+            <p><a class="footer-link" href="{{ h.url_for('/organization') }}">{{ _('Organizations') }}</a></p>
             <p><a class="footer-link" href="{{ h.url_for('/user/login') }}">{{ _('Account login') }}</a></p>
             <p><a class="footer-link" href="{{ h.url_for('/terms/') }}" target="_blank">{{ _('Terms and conditions') }}</a><br />
             <p><a class="footer-link" href="http://docs.ckan.org/en/2.10/api/" target="_blank">{{ _('API Docs') }}</a></p>
@@ -54,3 +54,4 @@
 
 {% block footer_lang %}
 {% endblock %}
+</div>

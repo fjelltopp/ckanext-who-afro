@@ -9,10 +9,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ckan 2.10.2b0\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-05-21 11:04+0000\n"
+"Report-Msgid-Bugs-To: info@fjelltopp.org\n"
+"POT-Creation-Date: 2024-06-20 10:28+0000\n"
 "PO-Revision-Date: 2022-11-16 11:05+0000\n"
-"Last-Translator: Andi Chandler <andi@gowling.com>, 2023\n"
+"Last-Translator: Toavina <toavina@fjelltopp.org>, 2024\n"
 "Language: en_GB\n"
 "Language-Team: English (United Kingdom) "
 "(https://app.transifex.com/okfn/teams/11162/en_GB/)\n"
@@ -61,123 +61,6 @@ msgstr "No download is available"
 #: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-blob-storage/ckanext/blob_storage/download_handler.py:82
 msgid "File not found"
 msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:62
-msgid "URI"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:63
-msgid "GUID"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:64
-msgid "Theme"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:65
-msgid "Identifier"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:66
-msgid "Alternate identifier"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:67
-msgid "Issued"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:68
-#: ckanext/who_afro/templates/snippets/package_item.html:7
-msgid "Modified"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:69
-msgid "Version notes"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:70
-#: ../ckan/ckan/templates-bs3/snippets/language_selector.html:3
-#: ../ckan/ckan/templates/snippets/language_selector.html:5
-msgid "Language"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:71
-msgid "Frequency"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:72
-msgid "Conforms to"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:73
-msgid "Spatial URI"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:74
-msgid "Start of temporal extent"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:75
-msgid "End of temporal extent"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:76
-msgid "Publisher URI"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:77
-msgid "Publisher name"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:78
-msgid "Publisher email"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:79
-msgid "Publisher URL"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:80
-msgid "Publisher type"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:81
-msgid "Contact name"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:82
-msgid "Contact email"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:83
-msgid "Contact URI"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:84
-msgid "Download URL"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:85
-msgid "Media type"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:86
-msgid "Size"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:87
-msgid "Rights"
-msgstr ""
-
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-dcat/ckanext/dcat/utils.py:88
-#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-scheming/ckanext/scheming/templates/scheming/package/resource_read.html:44
-#: ../ckan/ckan/templates-bs3/package/resource_read.html:173
-#: ../ckan/ckan/templates-bs3/package/snippets/additional_info.html:74
-#: ../ckan/ckan/templates/package/resource_read.html:184
-#: ../ckan/ckan/templates/package/snippets/additional_info.html:74
-#: ../ckan/ckanext/datatablesview/templates/datatables/datatables_view.html:91
-msgid "Created"
-msgstr "Created"
 
 #: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-officedocs/ckanext/officedocs/plugin.py:20
 msgid "Office Previewer"
@@ -315,8 +198,8 @@ msgstr "Dataset not found"
 #: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-scheming/ckanext/scheming/views.py:174
 #: ../ckan/ckan/views/dataset.py:548 ../ckan/ckan/views/dataset.py:734
 #: ../ckan/ckan/views/dataset.py:1185 ../ckan/ckan/views/group.py:857
-#: ../ckan/ckan/views/group.py:956 ../ckan/ckan/views/user.py:296
-#: ../ckan/ckan/views/user.py:433 ../ckan/ckan/views/user.py:807
+#: ../ckan/ckan/views/group.py:956 ../ckan/ckan/views/user.py:297
+#: ../ckan/ckan/views/user.py:434 ../ckan/ckan/views/user.py:810
 msgid "Integrity Error"
 msgstr "Integrity Error"
 
@@ -502,8 +385,8 @@ msgstr "Data last updated"
 #: ../ckan/ckan/templates/package/resource_read.html:185
 #: ../ckan/ckan/templates/package/resource_read.html:189
 #: ../ckan/ckanext/activity/templates/snippets/stream.html:11
-#: ../ckan/ckanext/activity/templates/snippets/stream.html:18
-#: ../ckan/ckanext/activity/templates/snippets/stream.html:31
+#: ../ckan/ckanext/activity/templates/snippets/stream.html:19
+#: ../ckan/ckanext/activity/templates/snippets/stream.html:32
 #: ../ckan/ckanext/datatablesview/templates/datatables/datatables_view.html:92
 msgid "unknown"
 msgstr "unknown"
@@ -514,6 +397,15 @@ msgstr "unknown"
 #: ../ckan/ckanext/datatablesview/templates/datatables/datatables_view.html:90
 msgid "Metadata last updated"
 msgstr "Metadata last updated"
+
+#: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-scheming/ckanext/scheming/templates/scheming/package/resource_read.html:44
+#: ../ckan/ckan/templates-bs3/package/resource_read.html:173
+#: ../ckan/ckan/templates-bs3/package/snippets/additional_info.html:74
+#: ../ckan/ckan/templates/package/resource_read.html:184
+#: ../ckan/ckan/templates/package/snippets/additional_info.html:74
+#: ../ckan/ckanext/datatablesview/templates/datatables/datatables_view.html:91
+msgid "Created"
+msgstr "Created"
 
 #: ../.minikubevenv/ckan-ALitmJXH/src/ckanext-scheming/ckanext/scheming/templates/scheming/package/resource_read.html:50
 #: ../ckan/ckan/templates-bs3/package/resource_read.html:177
@@ -572,6 +464,7 @@ msgstr ""
 msgid "The form contains invalid entries:"
 msgstr "The form contains invalid entries:"
 
+#: ../ckan/ckan/authz.py:244
 #, python-format
 msgid "Authorization function not found: %s"
 msgstr "Authorisation function not found: %s"
@@ -854,7 +747,6 @@ msgstr "User"
 #: ../ckan/ckan/templates/package/read_base.html:21
 #: ../ckan/ckan/tests/config/test_middleware.py:26
 #: ../ckan/ckanext/stats/templates/ckanext/stats/index.html:63
-#: ckanext/who_afro/templates/package/read_base.html:4
 msgid "Dataset"
 msgstr "Dataset"
 
@@ -1149,10 +1041,10 @@ msgstr "Role must be one of \"{}\""
 #: ../ckan/ckan/logic/action/create.py:706
 #: ../ckan/ckan/logic/action/delete.py:356
 #: ../ckan/ckan/logic/auth/update.py:200 ../ckan/ckan/views/dataset.py:1190
-#: ../ckan/ckan/views/group.py:559 ../ckan/ckan/views/user.py:69
-#: ../ckan/ckan/views/user.py:353 ../ckan/ckan/views/user.py:384
-#: ../ckan/ckan/views/user.py:447 ../ckan/ckan/views/user.py:747
-#: ../ckan/ckan/views/user.py:805 ../ckan/ckan/views/user.py:910
+#: ../ckan/ckan/views/group.py:559 ../ckan/ckan/views/user.py:70
+#: ../ckan/ckan/views/user.py:354 ../ckan/ckan/views/user.py:385
+#: ../ckan/ckan/views/user.py:448 ../ckan/ckan/views/user.py:750
+#: ../ckan/ckan/views/user.py:808 ../ckan/ckan/views/user.py:913
 msgid "User not found"
 msgstr "User not found"
 
@@ -1164,37 +1056,37 @@ msgstr "Dataset collaborators not enabled"
 
 #: ../ckan/ckan/logic/action/create.py:883
 msgid "Trying to create an organization as a group"
-msgstr "Trying to create an team as a category"
+msgstr "Trying to create a team as a category"
 
-#: ../ckan/ckan/logic/action/create.py:1127
+#: ../ckan/ckan/logic/action/create.py:1129
 msgid "Error sending the invite email, the user was not created: {0}"
 msgstr "Error sending the invite email, the user was not created: {0}"
 
-#: ../ckan/ckan/logic/action/create.py:1248
-#: ../ckan/ckan/logic/action/create.py:1254
+#: ../ckan/ckan/logic/action/create.py:1250
+#: ../ckan/ckan/logic/action/create.py:1256
 msgid "You must be logged in to follow users"
 msgstr "You must be logged in to follow users"
 
-#: ../ckan/ckan/logic/action/create.py:1267
+#: ../ckan/ckan/logic/action/create.py:1269
 msgid "You cannot follow yourself"
 msgstr "You cannot follow yourself"
 
-#: ../ckan/ckan/logic/action/create.py:1276
-#: ../ckan/ckan/logic/action/create.py:1334
-#: ../ckan/ckan/logic/action/create.py:1478
+#: ../ckan/ckan/logic/action/create.py:1278
+#: ../ckan/ckan/logic/action/create.py:1336
+#: ../ckan/ckan/logic/action/create.py:1480
 msgid "You are already following {0}"
 msgstr "You are already following {0}"
 
-#: ../ckan/ckan/logic/action/create.py:1308
-#: ../ckan/ckan/logic/action/create.py:1315
+#: ../ckan/ckan/logic/action/create.py:1310
+#: ../ckan/ckan/logic/action/create.py:1317
 msgid "You must be logged in to follow a dataset."
 msgstr "You must be logged in to follow a dataset."
 
-#: ../ckan/ckan/logic/action/create.py:1369 ../ckan/ckan/views/feed.py:227
+#: ../ckan/ckan/logic/action/create.py:1371 ../ckan/ckan/views/feed.py:227
 msgid "Organization not found"
 msgstr "Team not found"
 
-#: ../ckan/ckan/logic/action/create.py:1369 ../ckan/ckan/views/dataset.py:1047
+#: ../ckan/ckan/logic/action/create.py:1371 ../ckan/ckan/views/dataset.py:1047
 #: ../ckan/ckan/views/dataset.py:1064 ../ckan/ckan/views/feed.py:208
 #: ../ckan/ckan/views/group.py:406 ../ckan/ckan/views/group.py:441
 #: ../ckan/ckan/views/group.py:517 ../ckan/ckan/views/group.py:572
@@ -1205,12 +1097,12 @@ msgstr "Team not found"
 msgid "Group not found"
 msgstr "Category not found"
 
-#: ../ckan/ckan/logic/action/create.py:1375
+#: ../ckan/ckan/logic/action/create.py:1377
 msgid "User {username} does not exist."
 msgstr "User {username} does not exist."
 
-#: ../ckan/ckan/logic/action/create.py:1454
-#: ../ckan/ckan/logic/action/create.py:1461
+#: ../ckan/ckan/logic/action/create.py:1456
+#: ../ckan/ckan/logic/action/create.py:1463
 msgid "You must be logged in to follow a group."
 msgstr "You must be logged in to follow a category."
 
@@ -1296,7 +1188,7 @@ msgstr "User %s not authorised to create packages"
 #: ../ckan/ckan/logic/auth/create.py:36 ../ckan/ckan/logic/auth/update.py:57
 #, python-format
 msgid "User %s not authorized to edit these groups"
-msgstr "User %s not authorised to edit these categorys"
+msgstr "User %s not authorised to edit these categories"
 
 #: ../ckan/ckan/logic/auth/create.py:44
 #, python-format
@@ -1325,7 +1217,7 @@ msgstr "User %s not authorised to edit these packages"
 #: ../ckan/ckan/logic/auth/create.py:139
 #, python-format
 msgid "User %s not authorized to create groups"
-msgstr "User %s not authorised to create categorys"
+msgstr "User %s not authorised to create categories"
 
 #: ../ckan/ckan/logic/auth/create.py:150
 #, python-format
@@ -1962,7 +1854,7 @@ msgstr ""
 #: ../ckan/ckan/templates/header.html:102
 #: ../ckan/ckan/templates/organization/bulk_process.html:22
 #: ../ckan/ckan/templates/organization/edit_base.html:16
-#: ../ckan/ckan/templates/organization/read_base.html:19
+#: ../ckan/ckan/templates/organization/read_base.html:18
 #: ../ckan/ckan/templates/package/snippets/new_package_breadcrumb.html:1
 #: ../ckan/ckan/templates/snippets/context/group.html:19
 #: ../ckan/ckan/templates/snippets/context/user.html:21
@@ -1994,7 +1886,8 @@ msgstr "Datasets"
 #: ../ckan/ckan/templates/organization/read_base.html:7
 #: ../ckan/ckan/templates/package/base.html:16
 #: ../ckan/ckan/views/dataset.py:290 ../ckan/ckan/views/group.py:299
-#: ../ckan/ckan/views/home.py:65
+#: ../ckan/ckan/views/home.py:65 ckanext/who_afro/templates/footer.html:20
+#: ckanext/who_afro/templates/footer.html:36
 msgid "Organizations"
 msgstr "Teams"
 
@@ -2023,7 +1916,7 @@ msgstr "Teams"
 #: ../ckan/ckan/templates/package/group_list.html:7
 #: ../ckan/ckan/templates/package/read_base.html:22
 #: ../ckan/ckan/views/dataset.py:295 ../ckan/ckan/views/group.py:304
-#: ../ckan/ckan/views/home.py:70
+#: ../ckan/ckan/views/home.py:70 ckanext/who_afro/templates/group/index.html:13
 msgid "Groups"
 msgstr "Categories"
 
@@ -2045,6 +1938,7 @@ msgstr "Categories"
 #: ../ckan/ckan/templates/home/about.html:6
 #: ../ckan/ckan/templates/home/about.html:16
 #: ../ckan/ckan/templates/organization/about.html:3
+#: ../ckan/ckan/templates/organization/read_base.html:19
 #: ../ckan/ckan/templates/user/edit_user_form.html:17
 #: ckanext/who_afro/templates/header.html:35
 #: ckanext/who_afro/templates/header.html:42
@@ -2716,8 +2610,8 @@ msgid ""
 "organization members.</p> <p><strong>Member:</strong> Can add/remove "
 "datasets from groups</p>"
 msgstr ""
-" <p><strong>Admin:</strong> Can edit category information, as well as manage"
-" team members.</p> <p><strong>Member:</strong> Can add/remove "
+" <p><strong>Admin:</strong> Can edit category information, as well as "
+"manage team members.</p> <p><strong>Member:</strong> Can add/remove "
 "datasets from categories</p> "
 
 #: ../ckan/ckan/templates-bs3/group/new.html:3
@@ -2849,7 +2743,7 @@ msgstr "Remove dataset from this category"
 #: ../ckan/ckan/templates-bs3/group/snippets/helper.html:15
 #: ../ckan/ckan/templates/group/snippets/helper.html:15
 msgid "What are Groups?"
-msgstr "What are Categorys?"
+msgstr "What are Categories?"
 
 #: ../ckan/ckan/templates-bs3/group/snippets/helper.html:19
 #: ../ckan/ckan/templates/group/snippets/helper.html:19
@@ -2859,9 +2753,9 @@ msgid ""
 "on a particular theme, or as a very simple way to help people find and "
 "search your own published datasets."
 msgstr ""
-"You can use CKAN Categories to create and manage collections of datasets. "
-"This could be to catalogue datasets for a particular project or team, or "
-"on a particular theme, or as a very simple way to help people find and "
+"You can use CKAN Categories to create and manage collections of datasets."
+" This could be to catalogue datasets for a particular project or team, or"
+" on a particular theme, or as a very simple way to help people find and "
 "search your own published datasets. "
 
 #: ../ckan/ckan/templates-bs3/group/snippets/info.html:18
@@ -3163,10 +3057,9 @@ msgid ""
 " but not add new datasets.</p>"
 msgstr ""
 " <p><strong>Admin:</strong> Can add/edit and delete datasets, as well as "
-"manage team members.</p> <p><strong>Editor:</strong> Can add and "
-"edit datasets, but not manage team members.</p> "
-"<p><strong>Member:</strong> Can view the team's private datasets,"
-" but not add new datasets.</p> "
+"manage team members.</p> <p><strong>Editor:</strong> Can add and edit "
+"datasets, but not manage team members.</p> <p><strong>Member:</strong> "
+"Can view the team's private datasets, but not add new datasets.</p> "
 
 #: ../ckan/ckan/templates-bs3/organization/members.html:14
 #: ../ckan/ckan/templates/organization/members.html:14
@@ -3178,11 +3071,7 @@ msgstr[1] "{count} members"
 #: ../ckan/ckan/templates-bs3/organization/new.html:3
 #: ../ckan/ckan/templates/organization/new.html:3
 msgid "Create an Organization"
-msgstr "Create an Team"
-
-#: ../ckan/ckan/templates/organization/read_base.html:18
-msgid "Profile"
-msgstr ""
+msgstr "Create a Team"
 
 #: ../ckan/ckan/templates-bs3/organization/snippets/feeds.html:2
 #: ../ckan/ckan/templates/organization/snippets/feeds.html:2
@@ -3201,9 +3090,9 @@ msgid ""
 "datasets. Users can have different roles within an Organization, "
 "depending on their level of authorisation to create, edit and publish."
 msgstr ""
-" Teams are used to create, manage and publish collections of"
-" datasets. Users can have different roles within an Team, "
-"depending on their level of authorisation to create, edit and publish. "
+" Teams are used to create, manage and publish collections of datasets. "
+"Users can have different roles within a Team, depending on their level "
+"of authorisation to create, edit and publish. "
 
 #: ../ckan/ckan/templates-bs3/organization/snippets/organization_form.html:12
 #: ../ckan/ckan/templates/organization/snippets/organization_form.html:12
@@ -3222,9 +3111,8 @@ msgid ""
 " be performed while public or private datasets belong to this "
 "organization."
 msgstr ""
-"Are you sure you want to delete this Team? Note*: Deleting cannot"
-" be performed while public or private datasets belong to this "
-"team."
+"Are you sure you want to delete this Team? Note*: Deleting cannot be "
+"performed while public or private datasets belong to this team."
 
 #: ../ckan/ckan/templates-bs3/organization/snippets/organization_form.html:43
 #: ../ckan/ckan/templates/organization/snippets/organization_form.html:43
@@ -3263,9 +3151,9 @@ msgid ""
 "together with a description and other information, at a fixed URL. "
 "Datasets are what users see when searching for data."
 msgstr ""
-" A Dataset is a collection of data resources (such as files), "
-"together with a description and other information, at a fixed URL. "
-"Datasets are what users see when searching for data. "
+" A Dataset is a collection of data resources (such as files), together "
+"with a description and other information, at a fixed URL. Datasets are "
+"what users see when searching for data. "
 
 #: ../ckan/ckan/templates-bs3/package/confirm_delete.html:12
 #: ../ckan/ckan/templates/package/confirm_delete.html:12
@@ -3695,7 +3583,7 @@ msgstr "Last Updated"
 #: ../ckan/ckan/templates-bs3/package/snippets/cannot_create_package.html:10
 #: ../ckan/ckan/templates/package/snippets/cannot_create_package.html:10
 msgid "Before you can create a dataset you need to create an organization."
-msgstr "Before you can create a dataset you need to create an team."
+msgstr "Before you can create a dataset you need to create a team."
 
 #: ../ckan/ckan/templates-bs3/package/snippets/cannot_create_package.html:13
 #: ../ckan/ckan/templates/package/snippets/cannot_create_package.html:13
@@ -3712,9 +3600,7 @@ msgstr "There are no teams to which you can assign this dataset."
 msgid ""
 "Ask a system administrator to create an organization before you can "
 "continue."
-msgstr ""
-"Ask a system administrator to create an team before you can "
-"continue."
+msgstr "Ask a system administrator to create a team before you can continue."
 
 #: ../ckan/ckan/templates-bs3/package/snippets/package_basic_fields.html:6
 #: ../ckan/ckan/templates-bs3/package/snippets/view_form.html:8
@@ -4080,8 +3966,14 @@ msgstr "There are no {facet_type} that match this search"
 
 #: ../ckan/ckan/templates-bs3/snippets/home_breadcrumb_item.html:2
 #: ../ckan/ckan/templates/snippets/home_breadcrumb_item.html:2
+#: ckanext/who_afro/templates/group/index.html:12
 msgid "Home"
 msgstr "Home"
+
+#: ../ckan/ckan/templates-bs3/snippets/language_selector.html:3
+#: ../ckan/ckan/templates/snippets/language_selector.html:5
+msgid "Language"
+msgstr ""
 
 #: ../ckan/ckan/templates-bs3/snippets/language_selector.html:11
 #: ../ckan/ckan/templates-bs3/snippets/search_form.html:42
@@ -4291,7 +4183,6 @@ msgstr "You haven't created any datasets."
 #: ../ckan/ckan/templates/user/dashboard_groups.html:22
 #: ../ckan/ckan/templates/user/dashboard_organizations.html:23
 #: ../ckan/ckan/templates/user/read.html:22
-#: ckanext/who_afro/templates/user/dashboard_groups.html:22
 msgid "Create one now?"
 msgstr "Create one now?"
 
@@ -4319,7 +4210,7 @@ msgstr "You are not a member of any teams."
 #: ../ckan/ckan/templates/user/read_base.html:6
 #: ../ckan/ckan/templates/user/read_base.html:9
 #: ../ckan/ckan/templates/user/snippets/user_search.html:2
-#: ckanext/who_afro/templates/home/snippets/insights.html:67
+#: ckanext/who_afro/templates/home/snippets/insights.html:68
 msgid "Users"
 msgstr "Users"
 
@@ -4331,9 +4222,7 @@ msgstr "Account Info"
 #: ../ckan/ckan/templates-bs3/user/edit.html:19
 #: ../ckan/ckan/templates/user/edit.html:19
 msgid "Your profile lets other CKAN users know about who you are and what you do."
-msgstr ""
-" Your profile lets other users know about who you are and what you "
-"do. "
+msgstr " Your profile lets other users know about who you are and what you do. "
 
 #: ../ckan/ckan/templates-bs3/user/edit_user_form.html:10
 #: ../ckan/ckan/templates/user/edit_user_form.html:10
@@ -4430,7 +4319,7 @@ msgstr "Sysadmin password"
 
 #: ../ckan/ckan/templates-bs3/user/edit_user_form.html:49
 #: ../ckan/ckan/templates/user/edit_user_form.html:49
-#: ../ckan/ckan/views/user.py:344
+#: ../ckan/ckan/views/user.py:345
 msgid "Sysadmin Password"
 msgstr "Sysadmin Password"
 
@@ -4441,7 +4330,7 @@ msgstr "Change password"
 
 #: ../ckan/ckan/templates-bs3/user/edit_user_form.html:66
 #: ../ckan/ckan/templates/user/edit_user_form.html:66
-#: ../ckan/ckan/views/user.py:342
+#: ../ckan/ckan/views/user.py:343
 msgid "Old Password"
 msgstr "Old Password"
 
@@ -4819,15 +4708,15 @@ msgstr "Access denied"
 #: ../ckan/ckan/views/dashboard.py:25 ../ckan/ckan/views/dashboard.py:39
 #: ../ckan/ckan/views/dataset.py:222 ../ckan/ckan/views/feed.py:210
 #: ../ckan/ckan/views/feed.py:229 ../ckan/ckan/views/group.py:147
-#: ../ckan/ckan/views/user.py:71 ../ckan/ckan/views/user.py:100
-#: ../ckan/ckan/views/user.py:123 ../ckan/ckanext/activity/views.py:764
+#: ../ckan/ckan/views/user.py:72 ../ckan/ckan/views/user.py:101
+#: ../ckan/ckan/views/user.py:124 ../ckan/ckanext/activity/views.py:764
 #: ../ckan/ckanext/datapusher/views.py:60
 msgid "Not authorized to see this page"
 msgstr "Not authorised to see this page"
 
 #: ../ckan/ckan/views/dataset.py:301 ../ckan/ckan/views/group.py:310
-#: ../ckan/ckan/views/home.py:76 ckanext/who_afro/plugin.py:59
-#: ckanext/who_afro/plugin.py:68 ckanext/who_afro/plugin.py:78
+#: ../ckan/ckan/views/home.py:76 ckanext/who_afro/plugin.py:62
+#: ckanext/who_afro/plugin.py:71 ckanext/who_afro/plugin.py:81
 msgid "Formats"
 msgstr "Formats"
 
@@ -4892,12 +4781,12 @@ msgid "Dataset has been deleted."
 msgstr "Dataset has been deleted."
 
 #: ../ckan/ckan/views/dataset.py:937 ../ckan/ckan/views/group.py:598
-#: ../ckan/ckan/views/user.py:837
+#: ../ckan/ckan/views/user.py:840
 msgid "You are now following {0}"
 msgstr "You are now following {0}"
 
 #: ../ckan/ckan/views/dataset.py:968 ../ckan/ckan/views/group.py:624
-#: ../ckan/ckan/views/user.py:859
+#: ../ckan/ckan/views/user.py:862
 msgid "You are no longer following {0}"
 msgstr "You are no longer following {0}"
 
@@ -4935,7 +4824,7 @@ msgstr "Unauthorised to delete category %s members"
 msgid "Group member has been deleted."
 msgstr "Category member has been deleted."
 
-#: ../ckan/ckan/views/group.py:653 ../ckan/ckan/views/user.py:887
+#: ../ckan/ckan/views/group.py:653 ../ckan/ckan/views/user.py:890
 #, python-format
 msgid "Unauthorized to view followers %s"
 msgstr "Unauthorised to view followers %s"
@@ -5066,15 +4955,15 @@ msgstr "View not found"
 msgid "View Type Not found"
 msgstr "View Type Not found"
 
-#: ../ckan/ckan/views/user.py:188
+#: ../ckan/ckan/views/user.py:189
 msgid "Unauthorized to view API tokens."
 msgstr "Unauthorised to view API tokens."
 
-#: ../ckan/ckan/views/user.py:222
+#: ../ckan/ckan/views/user.py:223
 msgid "Unauthorized to create API tokens."
 msgstr "Unauthorised to create API tokens."
 
-#: ../ckan/ckan/views/user.py:237
+#: ../ckan/ckan/views/user.py:238
 msgid ""
 "API Token created: <code style=\"word-break:break-all;\">{token}</code> "
 "{copy}<br>Make sure to copy it now, you won't be able to see it again!"
@@ -5082,50 +4971,50 @@ msgstr ""
 "API Token created: <code style=\"word-break:break-all;\">{token}</code> "
 "{copy}<br>Make sure to copy it now, you won't be able to see it again!"
 
-#: ../ckan/ckan/views/user.py:253
+#: ../ckan/ckan/views/user.py:254
 msgid "Unauthorized to revoke API tokens."
 msgstr "Unauthorised to revoke API tokens."
 
-#: ../ckan/ckan/views/user.py:271
+#: ../ckan/ckan/views/user.py:272
 msgid "No user specified"
 msgstr "No user specified"
 
-#: ../ckan/ckan/views/user.py:278
+#: ../ckan/ckan/views/user.py:279
 msgid "Unauthorized to edit a user."
 msgstr "Unauthorised to edit a user."
 
-#: ../ckan/ckan/views/user.py:340
+#: ../ckan/ckan/views/user.py:341
 msgid "Password entered was incorrect"
 msgstr "Password entered was incorrect"
 
-#: ../ckan/ckan/views/user.py:342 ../ckan/ckan/views/user.py:344
+#: ../ckan/ckan/views/user.py:343 ../ckan/ckan/views/user.py:345
 msgid "incorrect password"
 msgstr "incorrect password"
 
-#: ../ckan/ckan/views/user.py:351 ../ckan/ckan/views/user.py:382
-#: ../ckan/ckan/views/user.py:803
+#: ../ckan/ckan/views/user.py:352 ../ckan/ckan/views/user.py:383
+#: ../ckan/ckan/views/user.py:806
 #, python-format
 msgid "Unauthorized to edit user %s"
 msgstr "Unauthorised to edit user %s"
 
-#: ../ckan/ckan/views/user.py:364
+#: ../ckan/ckan/views/user.py:365
 msgid "Profile updated"
 msgstr "Profile updated"
 
-#: ../ckan/ckan/views/user.py:418
+#: ../ckan/ckan/views/user.py:419
 msgid "Unauthorized to register as a user."
 msgstr "Unauthorised to register as a user."
 
-#: ../ckan/ckan/views/user.py:438
+#: ../ckan/ckan/views/user.py:439
 msgid "Bad Captcha. Please try again."
 msgstr "Bad Captcha. Please try again."
 
-#: ../ckan/ckan/views/user.py:445
+#: ../ckan/ckan/views/user.py:446
 #, python-format
 msgid "Unauthorized to create user %s"
 msgstr "Unauthorised to create user %s"
 
-#: ../ckan/ckan/views/user.py:458
+#: ../ckan/ckan/views/user.py:459
 #, python-format
 msgid ""
 "User \"%s\" is now registered but you are still logged in as \"%s\" from "
@@ -5134,23 +5023,23 @@ msgstr ""
 "User \"%s\" is now registered but you are still logged in as \"%s\" from "
 "before"
 
-#: ../ckan/ckan/views/user.py:557
+#: ../ckan/ckan/views/user.py:558
 msgid "Login failed. Bad username or password."
 msgstr "Login failed. Bad username or password."
 
-#: ../ckan/ckan/views/user.py:608
+#: ../ckan/ckan/views/user.py:609
 msgid "Unauthorized to delete user with id \"{user_id}\"."
 msgstr "Unauthorised to delete user with id \"{user_id}\"."
 
-#: ../ckan/ckan/views/user.py:644
+#: ../ckan/ckan/views/user.py:645
 msgid "Unauthorized to request reset password."
 msgstr "Unauthorised to request reset password."
 
-#: ../ckan/ckan/views/user.py:650
+#: ../ckan/ckan/views/user.py:651
 msgid "Email is required"
 msgstr "Email is required"
 
-#: ../ckan/ckan/views/user.py:710
+#: ../ckan/ckan/views/user.py:713
 msgid ""
 "Error sending the email. Try again later or contact an administrator for "
 "help"
@@ -5158,7 +5047,7 @@ msgstr ""
 "Error sending the email. Try again later or contact an administrator for "
 "help"
 
-#: ../ckan/ckan/views/user.py:719
+#: ../ckan/ckan/views/user.py:722
 msgid ""
 "A reset link has been emailed to you (unless the account specified does "
 "not exist)"
@@ -5166,39 +5055,39 @@ msgstr ""
 "A reset link has been emailed to you (unless the account specified does "
 "not exist)"
 
-#: ../ckan/ckan/views/user.py:742
+#: ../ckan/ckan/views/user.py:745
 msgid "Unauthorized to reset password."
 msgstr "Unauthorised to reset password."
 
-#: ../ckan/ckan/views/user.py:751
+#: ../ckan/ckan/views/user.py:754
 msgid "Invalid reset key. Please try again."
 msgstr "Invalid reset key. Please try again."
 
-#: ../ckan/ckan/views/user.py:762
+#: ../ckan/ckan/views/user.py:765
 msgid "Your password must be 8 characters or longer."
 msgstr "Your password must be 8 characters or longer."
 
-#: ../ckan/ckan/views/user.py:766
+#: ../ckan/ckan/views/user.py:769
 msgid "The passwords you entered do not match."
 msgstr "The passwords you entered do not match."
 
-#: ../ckan/ckan/views/user.py:769
+#: ../ckan/ckan/views/user.py:772
 msgid "You must provide a password"
 msgstr "You must provide a password"
 
-#: ../ckan/ckan/views/user.py:798
+#: ../ckan/ckan/views/user.py:801
 msgid "Your password has been reset."
 msgstr "Your password has been reset."
 
-#: ../ckan/ckan/views/user.py:907
+#: ../ckan/ckan/views/user.py:910
 msgid "Not authorized to promote user to sysadmin"
 msgstr "Not authorised to promote user to sysadmin"
 
-#: ../ckan/ckan/views/user.py:914
+#: ../ckan/ckan/views/user.py:917
 msgid "Promoted {} to sysadmin"
 msgstr "Promoted {} to sysadmin"
 
-#: ../ckan/ckan/views/user.py:919
+#: ../ckan/ckan/views/user.py:922
 msgid "Revoked sysadmin permission from {}"
 msgstr "Revoked sysadmin permission from {}"
 
@@ -5267,7 +5156,6 @@ msgstr[1] "Dashboard (%(num)d new items)"
 #: ../ckan/ckanext/activity/templates/user/activity_stream.html:3
 #: ../ckan/ckanext/activity/templates/user/activity_stream.html:8
 #: ../ckan/ckanext/activity/templates/user/read_base.html:5
-#: ckanext/who_afro/templates/package/read_base.html:6
 msgid "Activity Stream"
 msgstr "Activity Stream"
 
@@ -5635,9 +5523,7 @@ msgstr "Removed description from {pkg_link}"
 msgid ""
 "Moved {pkg_link} from organization {old_org_link} to organization "
 "{new_org_link}"
-msgstr ""
-"Moved {pkg_link} from team {old_org_link} to team "
-"{new_org_link}"
+msgstr "Moved {pkg_link} from team {old_org_link} to team {new_org_link}"
 
 #: ../ckan/ckanext/activity/templates/snippets/changes/org.html:13
 msgid "Removed {pkg_link} from organization {old_org_link}"
@@ -6451,7 +6337,7 @@ msgid "Date"
 msgstr "Date"
 
 #: ../ckan/ckanext/stats/templates/ckanext/stats/index.html:18
-#: ckanext/who_afro/templates/home/snippets/insights.html:51
+#: ckanext/who_afro/templates/home/snippets/insights.html:52
 msgid "Total datasets"
 msgstr "Total datasets"
 
@@ -6484,7 +6370,7 @@ msgstr "No edited datasets"
 #: ../ckan/ckanext/stats/templates/ckanext/stats/index.html:86
 #: ../ckan/ckanext/stats/templates/ckanext/stats/index.html:167
 msgid "Largest Groups"
-msgstr "Largest Groups"
+msgstr "Largest Categories"
 
 #: ../ckan/ckanext/stats/templates/ckanext/stats/index.html:92
 msgid "Number of datasets"
@@ -6492,7 +6378,7 @@ msgstr "Number of datasets"
 
 #: ../ckan/ckanext/stats/templates/ckanext/stats/index.html:109
 msgid "No groups"
-msgstr "No groups"
+msgstr "No categories"
 
 #: ../ckan/ckanext/stats/templates/ckanext/stats/index.html:114
 #: ../ckan/ckanext/stats/templates/ckanext/stats/index.html:168
@@ -6580,20 +6466,20 @@ msgid ""
 "'new_tag_name1', 'old_tag_name2': 'new_tag_name2'}"
 msgstr ""
 
-#: ckanext/who_afro/plugin.py:56 ckanext/who_afro/plugin.py:65
-#: ckanext/who_afro/plugin.py:75
-#: ckanext/who_afro/templates/home/snippets/insights.html:83
+#: ckanext/who_afro/plugin.py:59 ckanext/who_afro/plugin.py:68
+#: ckanext/who_afro/plugin.py:78
+#: ckanext/who_afro/templates/home/snippets/insights.html:84
 msgid "Programmes"
 msgstr ""
 
-#: ckanext/who_afro/plugin.py:57 ckanext/who_afro/plugin.py:66
-#: ckanext/who_afro/plugin.py:76
-#: ckanext/who_afro/templates/home/snippets/insights.html:90
+#: ckanext/who_afro/plugin.py:60 ckanext/who_afro/plugin.py:69
+#: ckanext/who_afro/plugin.py:79
+#: ckanext/who_afro/templates/home/snippets/insights.html:91
 msgid "Countries"
 msgstr ""
 
-#: ckanext/who_afro/plugin.py:58 ckanext/who_afro/plugin.py:67
-#: ckanext/who_afro/plugin.py:77
+#: ckanext/who_afro/plugin.py:61 ckanext/who_afro/plugin.py:70
+#: ckanext/who_afro/plugin.py:80
 msgid "Keywords"
 msgstr ""
 
@@ -6607,6 +6493,10 @@ msgstr ""
 
 #: ckanext/who_afro/assets/frictionless-js.js:19
 msgid ",m[42]="
+msgstr ""
+
+#: ckanext/who_afro/i18n/extra_translations.py:6
+msgid "Example extra translation string"
 msgstr ""
 
 #: ckanext/who_afro/react/components/FileInputComponent/src/App.js:86
@@ -6675,12 +6565,6 @@ msgstr ""
 msgid "Search all datasets"
 msgstr ""
 
-#: ckanext/who_afro/templates/footer.html:20
-#: ckanext/who_afro/templates/footer.html:36
-#: ckanext/who_afro/templates/home/snippets/insights.html:74
-msgid "Teams"
-msgstr ""
-
 #: ckanext/who_afro/templates/footer.html:21
 #: ckanext/who_afro/templates/footer.html:37
 msgid "Account login"
@@ -6688,6 +6572,8 @@ msgstr ""
 
 #: ckanext/who_afro/templates/footer.html:22
 #: ckanext/who_afro/templates/footer.html:38
+#: ckanext/who_afro/templates/home/terms.html:3
+#: ckanext/who_afro/templates/home/terms.html:6
 msgid "Terms and conditions"
 msgstr ""
 
@@ -6707,8 +6593,8 @@ msgstr ""
 
 #: ckanext/who_afro/templates/header.html:37
 #: ckanext/who_afro/templates/header.html:44
-#: ckanext/who_afro/templates/home/snippets/insights.html:1
-#: ckanext/who_afro/templates/insights/featured.html:17
+#: ckanext/who_afro/templates/home/snippets/insights.html:2
+#: ckanext/who_afro/templates/insights/featured.html:20
 msgid "Insights"
 msgstr ""
 
@@ -6717,18 +6603,9 @@ msgid "Manage account"
 msgstr ""
 
 #: ckanext/who_afro/templates/group/index.html:20
-msgid "Add Categories"
-msgstr ""
-
-#: ckanext/who_afro/templates/group/read_base.html:3
-msgid "Category"
-msgstr ""
-
-#: ckanext/who_afro/templates/group/read_base.html:6
-#: ckanext/who_afro/templates/package/group_list.html:5
-#: ckanext/who_afro/templates/package/read_base.html:5
-msgid "Categories"
-msgstr ""
+#| msgid "groups"
+msgid "Add Groups"
+msgstr "Add Categories"
 
 #: ckanext/who_afro/templates/home/layout1.html:22
 msgid "Featured Datasets"
@@ -6743,41 +6620,99 @@ msgstr ""
 msgid "Recently Updated Datasets"
 msgstr ""
 
-#: ckanext/who_afro/templates/home/snippets/insights.html:2
+#: ckanext/who_afro/templates/home/snippets/about_text.html:2
+msgid ""
+"<p class=\"sub\"><strong>This is a Beta-version of the WHO AFRO Regional "
+"Health Data Hub.</strong> It is still undergoing internal testing and has"
+" not been approved for public use.</p> <hr/> <ul> <li><strong>The "
+"programmatic purpose</strong> of the Regional Health Data Hub is to "
+"provide an integrated and harmonised view of all data systems and "
+"platforms across the WHO AFRO teams <sup>[1]</sup> and 47 countries in "
+"the Africa Region. This includes data systems concerning malaria, HIV, "
+"chronic diseases, maternal and child health, sexual reproductive health, "
+"diseases affecting women, and other health-related data.</li> "
+"<li><strong>As part of WHO's overarching mission</strong>, the regional "
+"Data Hub will use data to contribute to improved health outcomes for "
+"people living in 47 member countries. It will help identify and address "
+"issues that improve health programming and health inequalities.</li> "
+"<li><strong>The key output of the regional Data Hub</strong> is the "
+"creation of data sets and products specifically related to the health "
+"priorities, concerns, and emerging trends of different epidemics and "
+"related responses in the region. These data sets and products enable "
+"context driven data analysis, with varying formats and levels of "
+"complexity, intended to meet specific data needs by different users. "
+"These products add value to the existing data and information products "
+"already available, as well as demonstrate the culture of data use and/or "
+"lead the way of contextualised analysis.</li> </ul> <hr/> <p "
+"class=\"appendix\"><sup>[1]</sup> WHO AFRO teams: Assistant regional "
+"director’s office, Antimicrobial resistance, Data Analytics and Knowledge"
+" Management, Diagnostics and Laboratory Services, Research, Development, "
+"Science, Innovation and Digital Health and Service Delivery/Primary "
+"Health Care.</p>"
+msgstr ""
+
+#: ckanext/who_afro/templates/home/snippets/disclaimer.html:2
+msgid ""
+"<h2>Disclaimer</h2> <p>The designations and the presentation of the "
+"materials used across the data hub websites, including their respective "
+"citations, maps, and bibliography, do not imply the expression of any "
+"opinion whatsoever on the part of the World Health Organisation "
+"concerning the legal status of any country, territory, city or area or of"
+" its authorities, or concerning the delimitation of its frontiers or "
+"boundaries.</p> <p>Also, the boundaries and names shown and the "
+"designations used anywhere on this site do not imply official endorsement"
+" or acceptance by the World Health Organisation.</p> <p>Any information "
+"that may be contained anywhere on the data hub emanating from actions and"
+" decisions taken by States does not imply recognition by the World Health"
+" Organisation of the validity of the actions and decisions in question "
+"and is included without prejudice to the position of any Member State of "
+"the World Health Organisation African Region.</p> <p>All reasonable "
+"precautions have been taken by WHO to verify the information contained on"
+" this site. However, the published material is being distributed without "
+"warranty of any kind, either expressed or implied. The responsibility for"
+" the interpretation and use of the material lies with the reader. In no "
+"event shall WHO be liable for damages arising from its use.</p>"
+msgstr ""
+
+#: ckanext/who_afro/templates/home/snippets/insights.html:3
 msgid "Triple billion progress"
 msgstr ""
 
-#: ckanext/who_afro/templates/home/snippets/insights.html:5
+#: ckanext/who_afro/templates/home/snippets/insights.html:6
 msgid "Healthier populations"
 msgstr ""
 
-#: ckanext/who_afro/templates/home/snippets/insights.html:15
+#: ckanext/who_afro/templates/home/snippets/insights.html:16
 msgid "Universal health coverage"
 msgstr ""
 
-#: ckanext/who_afro/templates/home/snippets/insights.html:25
+#: ckanext/who_afro/templates/home/snippets/insights.html:26
 msgid "Health emergencies protection"
 msgstr ""
 
-#: ckanext/who_afro/templates/home/snippets/insights.html:37
+#: ckanext/who_afro/templates/home/snippets/insights.html:38
 #: ckanext/who_afro/templates/home/snippets/promoted.html:26
 msgid "Indicators"
 msgstr ""
 
-#: ckanext/who_afro/templates/home/snippets/insights.html:39
+#: ckanext/who_afro/templates/home/snippets/insights.html:40
 msgid "Under-five mortality rate"
 msgstr ""
 
-#: ckanext/who_afro/templates/home/snippets/insights.html:39
+#: ckanext/who_afro/templates/home/snippets/insights.html:40
 msgid "(per 1000 live births)"
 msgstr ""
 
-#: ckanext/who_afro/templates/home/snippets/insights.html:48
+#: ckanext/who_afro/templates/home/snippets/insights.html:49
 msgid "Data hub stats"
 msgstr ""
 
-#: ckanext/who_afro/templates/home/snippets/insights.html:58
+#: ckanext/who_afro/templates/home/snippets/insights.html:59
 msgid "Updated this week"
+msgstr ""
+
+#: ckanext/who_afro/templates/home/snippets/insights.html:75
+msgid "Teams"
 msgstr ""
 
 #: ckanext/who_afro/templates/home/snippets/promoted.html:9
@@ -6861,35 +6796,35 @@ msgstr ""
 msgid "Featured Insights"
 msgstr ""
 
-#: ckanext/who_afro/templates/insights/featured.html:18
+#: ckanext/who_afro/templates/insights/featured.html:21
 msgid ""
 "WHO AFRO Health Data Hub insights are a collection of  high quality data "
 "analyses, visualisations and reported indicators for us in research and "
 "publications."
 msgstr ""
 
-#: ckanext/who_afro/templates/insights/featured.html:26
+#: ckanext/who_afro/templates/insights/featured.html:28
 msgid "Featured insight"
 msgstr ""
 
-#: ckanext/who_afro/templates/insights/featured.html:27
+#: ckanext/who_afro/templates/insights/featured.html:29
 msgid ""
 "This month's featured insight is our latest analysis of the 2030 WHO "
 "African Region Malaria reporting and the interactions of malaria rates "
 "with rainfall."
 msgstr ""
 
-#: ckanext/who_afro/templates/insights/featured.html:38
+#: ckanext/who_afro/templates/insights/featured.html:41
 msgid "Search insights"
 msgstr ""
 
-#: ckanext/who_afro/templates/insights/featured.html:43
+#: ckanext/who_afro/templates/insights/featured.html:46
 msgid "Popular insights"
 msgstr ""
 
-#: ckanext/who_afro/templates/insights/featured.html:49
-#: ckanext/who_afro/templates/insights/featured.html:56
-#: ckanext/who_afro/templates/insights/featured.html:63
+#: ckanext/who_afro/templates/insights/featured.html:52
+#: ckanext/who_afro/templates/insights/featured.html:59
+#: ckanext/who_afro/templates/insights/featured.html:66
 msgid "See insight"
 msgstr ""
 
@@ -6903,18 +6838,6 @@ msgstr ""
 msgid "Aggregate Now"
 msgstr ""
 
-#: ckanext/who_afro/templates/package/group_list.html:15
-msgid "Associate this category with this dataset"
-msgstr ""
-
-#: ckanext/who_afro/templates/package/group_list.html:15
-msgid "Add to category"
-msgstr ""
-
-#: ckanext/who_afro/templates/package/group_list.html:25
-msgid "There are no categories associated with this dataset"
-msgstr "There are no categories associated with this dataset"
-
 #: ckanext/who_afro/templates/scheming/package/read.html:7
 #: ckanext/who_afro/templates/scheming/package/resource_read.html:8
 msgid "View as JSON"
@@ -6922,6 +6845,10 @@ msgstr ""
 
 #: ckanext/who_afro/templates/snippets/add_dataset.html:9
 msgid "General Data"
+msgstr ""
+
+#: ckanext/who_afro/templates/snippets/package_item.html:7
+msgid "Modified"
 msgstr ""
 
 #: ckanext/who_afro/templates/snippets/subscribe_to_updates.html:5
@@ -6941,18 +6868,6 @@ msgstr ""
 #: ckanext/who_afro/templates/snippets/subscribe_to_updates.html:12
 msgid "log in"
 msgstr ""
-
-#: ckanext/who_afro/templates/user/dashboard_groups.html:7
-msgid "Add Category"
-msgstr ""
-
-#: ckanext/who_afro/templates/user/dashboard_groups.html:12
-msgid "My Categories"
-msgstr ""
-
-#: ckanext/who_afro/templates/user/dashboard_groups.html:20
-msgid "You are not a member of any categories."
-msgstr "You are not a member of any categories."
 
 #~ msgid ""
 #~ "Dear %(user_name)s, You have been "
@@ -6999,4 +6914,106 @@ msgstr "You are not a member of any categories."
 
 #~ msgid "Reset your password - %(site_title)s"
 #~ msgstr "Reset your password - %(site_title)s"
+
+#~ msgid "URI"
+#~ msgstr ""
+
+#~ msgid "GUID"
+#~ msgstr ""
+
+#~ msgid "Theme"
+#~ msgstr ""
+
+#~ msgid "Identifier"
+#~ msgstr ""
+
+#~ msgid "Alternate identifier"
+#~ msgstr ""
+
+#~ msgid "Issued"
+#~ msgstr ""
+
+#~ msgid "Version notes"
+#~ msgstr ""
+
+#~ msgid "Frequency"
+#~ msgstr ""
+
+#~ msgid "Conforms to"
+#~ msgstr ""
+
+#~ msgid "Spatial URI"
+#~ msgstr ""
+
+#~ msgid "Start of temporal extent"
+#~ msgstr ""
+
+#~ msgid "End of temporal extent"
+#~ msgstr ""
+
+#~ msgid "Publisher URI"
+#~ msgstr ""
+
+#~ msgid "Publisher name"
+#~ msgstr ""
+
+#~ msgid "Publisher email"
+#~ msgstr ""
+
+#~ msgid "Publisher URL"
+#~ msgstr ""
+
+#~ msgid "Publisher type"
+#~ msgstr ""
+
+#~ msgid "Contact name"
+#~ msgstr ""
+
+#~ msgid "Contact email"
+#~ msgstr ""
+
+#~ msgid "Contact URI"
+#~ msgstr ""
+
+#~ msgid "Download URL"
+#~ msgstr ""
+
+#~ msgid "Media type"
+#~ msgstr ""
+
+#~ msgid "Size"
+#~ msgstr ""
+
+#~ msgid "Rights"
+#~ msgstr ""
+
+#~ msgid "Profile"
+#~ msgstr ""
+
+#~ msgid "Add Categories"
+#~ msgstr ""
+
+#~ msgid "Category"
+#~ msgstr ""
+
+#~ msgid "Categories"
+#~ msgstr ""
+
+#~ msgid "Associate this category with this dataset"
+#~ msgstr ""
+
+#~ msgid "Add to category"
+#~ msgstr ""
+
+#~ msgid "There are no categories associated with this dataset"
+#~ msgstr "There are no categories associated with this dataset"
+
+#~ msgid "Add Category"
+#~ msgstr ""
+
+#~ msgid "My Categories"
+#~ msgstr ""
+
+#~ msgid "You are not a member of any categories."
+#~ msgstr "You are not a member of any categories."
 
