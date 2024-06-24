@@ -17,6 +17,7 @@ blueprint = Blueprint(
     "account", __name__, url_prefix="/user"
 )
 
+
 def _get_context():
     return cast(
         Context,
@@ -26,6 +27,14 @@ def _get_context():
         },
     )
 
+
+def _get_activities_urls(has_more, activity_stream, type=None, name=None, id=None):
+    if name is not None and type is not None:
+        return (_get_older_activities_url(has_more, activity_stream, type=type, name=name),
+                _get_newer_activities_url(has_more, activity_stream, type=type, name=name))
+    elif id is not None:
+        return (_get_older_activities_url(has_more, activity_stream, id=id),
+                _get_newer_activities_url(has_more, activity_stream, id=id))
 
 
 @blueprint.get("/account", endpoint="index")
@@ -50,7 +59,6 @@ def my_account():
         before=before,
         after=after
     )
-
     has_more = len(activity_stream) > limit
     if has_more:
         if after:
@@ -58,26 +66,14 @@ def my_account():
         else:
             activity_stream.pop()
 
-    older_activities_url = _get_older_activities_url(
-        has_more,
-        activity_stream,
-        type=filter_type,
-        name=filter_id
-    )
-
-    newer_activities_url = _get_newer_activities_url(
-        has_more,
-        activity_stream,
-        type=filter_type,
-        name=filter_id
-    )
-
+    older_activities_url, newer_activities_url = _get_activities_urls(has_more=has_more,
+                                                                      activity_stream=activity_stream, type=filter_type,
+                                                                      name=filter_id)
     extra_vars.update({
         "dashboard_activity_stream": activity_stream,
         "newer_activities_url": newer_activities_url,
         "older_activities_url": older_activities_url
     })
-
     tk.get_action("dashboard_mark_activities_old")(context, {})
 
     return tk.render("user/account/account_newsfeed.html", extra_vars)
@@ -92,17 +88,8 @@ def my_account_activity():
         "user_obj": tk.g.userobj,
         "include_num_followers": True,
     }
-    try:
-        tk.check_access("user_show", context, data_dict)
-    except tk.NotAuthorized:
-        tk.abort(403, tk._("Not authorized to see this page"))
 
     extra_vars = _extra_template_variables(context, data_dict)
-
-    limit = _get_activity_stream_limit()
-
-    filter_type = tk.request.args.get("type", "")
-    filter_id = tk.request.args.get("name", "")
     before = tk.request.args.get("before")
     after = tk.request.args.get("after")
 
@@ -121,27 +108,18 @@ def my_account_activity():
         tk.abort(400)
 
     has_more = len(activity_stream) > limit
-    # remove the extra item if exists
+
     if has_more:
         if after:
             activity_stream.pop(0)
         else:
             activity_stream.pop()
 
-    older_activities_url = _get_older_activities_url(
-        has_more,
-        activity_stream,
-        id=id
-    )
-
-    newer_activities_url = _get_newer_activities_url(
-        has_more,
-        activity_stream,
-        id=id
-    )
-
+    older_activities_url, newer_activities_url = _get_activities_urls(has_more=has_more,
+                                                                      activity_stream=activity_stream,
+                                                                      id=id)
     extra_vars.update({
-        "id":  id,
+        "id": id,
         "activity_stream": activity_stream,
         "newer_activities_url": newer_activities_url,
         "older_activities_url": older_activities_url
