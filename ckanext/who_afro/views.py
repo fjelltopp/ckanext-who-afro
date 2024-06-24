@@ -19,18 +19,19 @@ def _get_context():
         },
     )
 
+
 def _get_activities_urls(has_more, activity_stream, **kwargs):
     if 'type' in kwargs and 'name' in kwargs:
         args = {'type': kwargs['type'], 'name': kwargs['name']}
     elif 'id' in kwargs:
         args = {'id': kwargs['id']}
     else:
-        return (None, None)
+        return None, None
 
     older_url = _get_older_activities_url(has_more, activity_stream, **args)
     newer_url = _get_newer_activities_url(has_more, activity_stream, **args)
 
-    return (older_url, newer_url)
+    return older_url, newer_url
 
 
 def get_dashboard_activity_extra_vars():
