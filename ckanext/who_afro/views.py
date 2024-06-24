@@ -47,8 +47,8 @@ def get_dashboard_activity_extra_vars():
         else:
             activity_stream.pop()
 
-    older_url = _get_older_activities_url(has_more, activity_stream, type=filter_type, name=filter_id)
-    newer_url = _get_newer_activities_url(has_more, activity_stream, type=filter_type, name=filter_id)
+    older_activities_url = _get_older_activities_url(has_more, activity_stream, type=filter_type, name=filter_id)
+    newer_activities_url = _get_newer_activities_url(has_more, activity_stream, type=filter_type, name=filter_id)
 
     extra_vars.update({
         "dashboard_activity_stream": activity_stream,
