@@ -99,7 +99,9 @@ def isomonth(field, schema):
             try:
                 month_formatter(data[key])
             except ValueError:
-                raise ValidationError({'name': [_('Month should be of the form yyyy-mm')]})
+                errors[key].append(
+                    _('Month should be of the form yyyy-mm')
+                )
     return validator
 
 
@@ -109,7 +111,7 @@ def language_validator(field, schema):
 
     def validator(key, data, errors, context):
         if data.get(key) and data.get(key) not in languages:
-            raise ValidationError({'language': [_(
-                f'Language of the dataset must be one of: {", ".join(languages)}'
-            )]})
+            errors[key].append(
+                _(f'Language of the dataset must be one of: {", ".join(languages)}')
+            )
     return validator
