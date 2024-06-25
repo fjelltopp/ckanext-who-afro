@@ -131,8 +131,7 @@
     background: var(--who-blue-65-percent);
 }
 
-.right-content .logout-btn a,
-.right-content .logout-btn a:hover {
+.right-content .logout-btn a {
     text-decoration: none;
 }
 
