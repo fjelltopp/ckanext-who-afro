@@ -5,7 +5,7 @@ from ckanext.who_afro.helpers import (
     month_formatter
 )
 from ckan.logic.validators import package_name_validator
-from ckan.plugins.toolkit import ValidationError, _
+from ckan.plugins.toolkit import ValidationError, _, h
 from string import ascii_lowercase
 from random import choice
 import copy
@@ -100,4 +100,16 @@ def isomonth(field, schema):
                 month_formatter(data[key])
             except ValueError:
                 raise ValidationError({'name': [_('Month should be of the form yyyy-mm')]})
+    return validator
+
+
+@scheming_validator
+def language_validator(field, schema):
+    languages = [locale.short_name for locale in h.get_available_locales()]
+
+    def validator(key, data, errors, context):
+        if data.get(key) and data.get(key) not in languages:
+            raise ValidationError({'language': [_(
+                f'Language of the dataset must be one of: {", ".join(languages)}'
+            )]})
     return validator

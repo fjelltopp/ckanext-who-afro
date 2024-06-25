@@ -1,0 +1,24 @@
+scheming_version: 2
+dataset_type: language-validator
+name: Language Validator
+about: A test schema to test the validator language_validator
+about_url: http://github.com/ckan/ckanext-scheming
+
+
+dataset_fields:
+
+- field_name: title
+  label: Projection Title
+  preset: title
+  form_placeholder: eg. A descriptive filename
+  validators: not_empty unicode_safe
+
+- field_name: language
+  label: Dataset Language
+  preset: language
+
+
+resource_fields:
+
+- field_name: name
+  label: Name

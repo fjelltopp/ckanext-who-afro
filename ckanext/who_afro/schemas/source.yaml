@@ -66,6 +66,9 @@ dataset_fields:
   validators: boolean_validator
   output_validators: boolean_validator
 
+- field_name: language
+  label: Dataset Language
+  preset: language
 
 resource_fields:
 
