@@ -127,8 +127,13 @@
 }
 
 .right-content .logout-btn:hover {
-  text-decoration: none;
-background: var(--who-blue-65-percent);
+    text-decoration: none;
+    background: var(--who-blue-65-percent);
+}
+
+.right-content .logout-btn a,
+.right-content .logout-btn a:hover {
+    text-decoration: none;
 }
 
 /* tabs */
