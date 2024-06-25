@@ -2005,3 +2005,82 @@ p.learn-more a {
 .groups-container{
     padding: 20px;
 }
+
+
+/* Authentication & user UI */
+.logout-page,
+.logout-page .wrapper,
+.logout-page .primary {
+    all: unset;
+    display: contents;
+}
+
+.logout-page #content {
+    padding-left: 12px;
+    min-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+
+.logout-page .module .module-content {
+    padding: 0;
+}
+
+.logout-page .module-content p {
+    display: none;
+}
+
+.logout-page .container .wrapper::before {
+    content: none;
+}
+
+.logout-options h1 {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: var(--primary-navy);
+    margin-bottom: 24px;
+}
+
+.logout-options a.btn-primary,
+.logout-options a.btn-outline-dark {
+    padding: 12px 16px;
+
+}
+
+.logout-options a.btn-outline-dark,
+.logout-options a.btn-outline-dark:hover {
+    margin-left: 16px;
+    border-color: var(--primary-navy);
+    color: var(--primary-navy);
+    background-color: white;
+}
+
+@media only screen and (max-width: 327px) {
+    .logout-options a.btn-primary,
+    .logout-options a.btn-outline-dark {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 12px;
+
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .logout-page #content {
+        padding-left: 30px;
+    }
+    .logout-options a.btn-primary,
+    .logout-options a.btn-outline-dark {
+        margin-left: 12px;
+    }
+}
+
+.masthead {
+    border-bottom: var(--who-blue-65-percent) thin solid;
+}
+/* User profile*/
