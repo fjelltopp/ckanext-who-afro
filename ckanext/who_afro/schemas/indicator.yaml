@@ -5,6 +5,13 @@ about: A customized dataset schema for WHO AFRO CKAN deployment
 about_url: http://github.com/ckan/ckanext-scheming
 
 
+scheming_version: 2
+dataset_type: dataset
+name: General Data
+about: A customized dataset schema for WHO AFRO CKAN deployment
+about_url: http://github.com/ckan/ckanext-scheming
+
+
 dataset_fields:
 
 - start_form_page:
@@ -15,47 +22,58 @@ dataset_fields:
   field_name: title
   label: Title
   preset: title
+  required: true
   form_placeholder: eg. A descriptive title
 
 - field_name: name
   label: URL
   preset: dataset_slug
+  required: true
   form_placeholder: eg. my-dataset
 
-- field_name: notes
-  label: Description
-  form_snippet: markdown.html
-  form_placeholder: eg. Some useful notes about the data
+- field_name: country
+  required: true
+  preset: country
+
+- field_name: programm
+  required: true
+  preset: programme
 
 - field_name: tag_string
+  required: true
   label: Tags
   preset: tag_string_autocomplete
   form_placeholder: eg. economy, mental health, government
 
 - field_name: maintainer
   label: Maintainer
+  required: true
   user_field: fullname
   form_snippet: user.html
 
 - field_name: maintainer_email
   label: Maintainer Email
+  required: true
   user_field: email
   form_snippet: user.html
   display_snippet: email.html
 
 - field_name: license_id
+  required: true
   label: License
   form_snippet: license.html
   help_text: License definitions and additional information can be found at http://opendefinition.org/
 
 - field_name: owner_org
+  required: true
   label: Organization
   preset: dataset_organization
 
 - field_name: private
   label: Visibility
   help_text: Restrict access
-  help_inline: true
+  help_inline: false
+  required: true
   preset: select
   choices:
   - value: false
@@ -69,15 +87,49 @@ dataset_fields:
     title: About the data
     description: Please provide as many details as possible to facilitate the reuse of the data.
 
-  field_name: programme
-  preset: programme
+  field_name: accrual_periodicity
+  label: Accrual Periodicity
+  form_placeholder: e.g. Annual
+  help_text: Indicate how frequently new data is collected and consolidated into this dataset.
 
-- field_name: country
-  preset: country
+- field_name: provenance
+  label: Provenance
+  form_placeholder: e.g. Country, Territory or Area Reported
+  help_text: Briefly describe where the data comes from.
+
+- field_name: temporal_start
+  label: Temporaral Start Date
+  preset: date
+  help_text: For time series data, this should be the earliest date reported in the data.
+
+- field_name: temporal_end
+  label: Temporaral End Date
+  preset: date
+  help_text: For time series data, this should be the latest data reported in the data. Leave blank if dataset has an indefinte end.
+
+- field_name: temporal_resolution
+  label: Temporaral Resolution
+  form_placeholder: eg. Daily or Every 2 weeks
+  help_text: For time series data, this should be the minimum temporal difference represented in the data.
+
+- field_name: spatial_resolution
+  label: Spatial Resolution
+  form_placeholder: eg. Admin Level 1 (national) or Point Level or 100m2
+  help_text: For spatial data, this should be the minimum spatial difference represented in the data.
 
 - field_name: language
   label: Dataset Language
   preset: language
+
+- field_name: notes
+  label: Description
+  form_snippet: markdown.html
+  form_placeholder: Please give any useful notes about how to navigate and use the data.
+
+- field_name: source
+  label: Source
+  form_snippet: markdown.html
+  form_placeholder: Give specific further details about how the data was sourced.
 
 
 resource_fields:
@@ -94,3 +146,4 @@ resource_fields:
 - field_name: format
   label: Format
   preset: resource_format_autocomplete
+
