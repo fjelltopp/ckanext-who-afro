@@ -28,7 +28,7 @@
       <table class="table table-striped table-bordered table-condensed">
       {%- for field in group_fields -%}
           <tr>
-            <th scope="row" class="dataset-label">{{
+            <th scope="row" class="dataset-label"  style="width:25%">{{
               h.scheming_language_text(field.label) }}</th>
             <td class="dataset-details"{%
               if field.display_property %} property="{{ field.display_property

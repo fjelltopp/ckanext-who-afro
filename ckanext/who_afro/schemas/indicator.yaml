@@ -25,12 +25,17 @@ dataset_fields:
   form_placeholder: eg. my-dataset
   display_group: Overview
 
+- field_name: notes
+  label: Description
+  form_snippet: markdown.html
+  form_placeholder: Please give a useful introduction to the dataset which will be shown straight after the title.
+
 - field_name: country
   required: true
   preset: country
   display_group: Overview
 
-- field_name: programm
+- field_name: programme
   required: true
   preset: programme
   display_group: Overview
@@ -41,11 +46,6 @@ dataset_fields:
   preset: tag_string_autocomplete
   form_placeholder: eg. economy, mental health, government
   display_group: Overview
-
-- field_name: notes
-  label: Description
-  form_snippet: markdown.html
-  form_placeholder: Please give any useful notes about how to navigate and use the data.
 
 - field_name: maintainer
   label: Maintainer
@@ -192,6 +192,11 @@ dataset_fields:
   form_placeholder: e.g. Negativity
   display_group: Indicator Details
 
+- field_name: preferred_semantic_value_type
+  label: Preferred Semantic Value Type
+  form_placeholder: e.g. Rate per 1000
+  display_group: Indicator Details
+
 - field_name: confidence_intervals
   label: Confidence Intervals
   preset: yes_no
@@ -208,6 +213,35 @@ dataset_fields:
   form_placeholder: e.g. Incomplete
   display_group: Indicator Details
 
+- field_name: method_of_measurement
+  form_snippet: markdown.html
+  label: Method of Measurement
+  form_placeholder: Please give details of how this indicator is measured.
+  display_group: Methodology
+
+- field_name: method_of_estimation_aggregates
+  label: Method of Estimation Aggregates
+  form_snippet: markdown.html
+  form_placeholder: Please share details about how sources were aggregated.
+  display_group: Methodology
+
+- field_name: process_of_validation
+  label: Process of Validation
+  form_snippet: markdown.html
+  form_placeholder: Please give details of how this indicator is validated
+  display_group: Methodology
+
+- field_name: rationale
+  label: Rationale
+  form_snippet: markdown.html
+  form_placeholder: Please share the rationale behind tracking this indicator.
+  display_group: Methodology
+
+- field_name: comments
+  label: Comments
+  form_snippet: markdown.html
+  form_placeholder: Please share any further relevant comments on the data
+  display_group: Methodology
 
 resource_fields:
 
