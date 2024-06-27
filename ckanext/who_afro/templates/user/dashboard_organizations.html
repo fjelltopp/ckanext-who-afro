@@ -1,11 +1,24 @@
 {% ckan_extends %}
 
+{% set organizations = h.organizations_available(permission='manage_group',
+    include_dataset_count=True) %}
+
+{% set org_count = organizations|length %}
+
 {% block page_primary_action %}
     <h2 class="page-heading mb-4 dashboard-team-heading">
-      <small class="text-muted fs-5">{{ _("Activity from items that I'm following") }}</small>
-      {% if h.check_access('organization_create') %}
+    {% if organizations %}
+        {% if org_count == 1 %}
+            <small class="text-muted fs-5">{{ _("You're part of one organization")}}</small>
+        {% else %}
+            <small class="text-muted fs-5">{{ _("You're part of {org_count} organizations").format(org_count=org_count) }}</small>
+        {% endif %}
+    {% else %}
+        <small class="text-muted fs-5">{{ _('You are not a member of any organizations.') }}</small>
+    {% endif %}
+    {% if h.check_access('organization_create') %}
         {% link_for _('Add Organization'), named_route='organization.new', class_="btn btn-primary dashboard-add-team-btn", icon="plus-square" %}
-      {% endif %}
+    {% endif %}
     </h2>
 
 {% endblock %}
