@@ -1,16 +1,6 @@
 {% ckan_extends %}
 
 
-{% block primary_content_inner %}
-  {% if user_dict.name == g.user %}
-  <div class="logout-button">
-    <a class="btn btn-primary pull-right" href="{{ h.url_for('user.logout') }}"><i class="fa fa-right-from-bracket"></i>Log Out </a>
-  </div>
-  {% endif %}
-  {{ super() }}
-{% endblock %}
-
-
 {% block breadcrumb %}
     {% if self.breadcrumb_content() | trim %}
       <ol class="profile-page breadcrumb">
@@ -22,6 +12,16 @@
         {% endblock %}
       </ol>
     {% endif %}
+{% endblock %}
+
+
+{% block primary_content_inner %}
+  {% if user_dict.name == g.user %}
+  <div class="logout-button">
+    <a class="btn btn-primary pull-right" href="{{ h.url_for('user.logout') }}"><i class="fa fa-right-from-bracket"></i>Log Out </a>
+  </div>
+  {% endif %}
+  {{ super() }}
 {% endblock %}
 
 
