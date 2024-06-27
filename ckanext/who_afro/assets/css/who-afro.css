@@ -2121,5 +2121,7 @@ p.learn-more a {
     line-height: 24px;
     text-decoration: underline;
 }
-
+.admin_page {
+    padding-top: 49px;
+}
 /* User profile*/
