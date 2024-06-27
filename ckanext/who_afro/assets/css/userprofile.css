@@ -5,8 +5,8 @@
 }
 
 .page-heading {
-      margin-top: 38px;
-      margin-bottom: 18px;
+      margin-top: 32px;
+      margin-bottom: 32px !important;
       color: var(--primary-navy);
   }
 

@@ -1,1 +1,11 @@
 {% ckan_extends %}
+
+{% block page_primary_action %}
+    <h2 class="page-heading mb-4 dashboard-team-heading">
+      <small class="text-muted fs-5">{{ _("Activity from items that I'm following") }}</small>
+      {% if h.check_access('organization_create') %}
+        {% link_for _('Add Organization'), named_route='organization.new', class_="btn btn-primary dashboard-add-team-btn", icon="plus-square" %}
+      {% endif %}
+    </h2>
+
+{% endblock %}
