@@ -63,10 +63,10 @@
                 <ul>
                     <li>
                         {% if c.userobj.sysadmin %}
-                            <a href="{{ h.url_for('admin.index') }}" style="text-decoration: underline;padding-right: 24px;">System admin settings</a>
+                            <a href="{{ h.url_for('admin.index') }}" style="text-decoration: underline;padding-right: 24px;">{{ _('System admin settings') }}</a>
                         {% endif %}
                     </li>
-                    <li class="logout-btn"><a href="{{ h.url_for('user.logout') }}">Log out</a></li>
+                    <li class="logout-btn"><a href="{{ h.url_for('user.logout') }}">{{ _('Log out') }}</a></li>
                 </ul>
             </div>
 
