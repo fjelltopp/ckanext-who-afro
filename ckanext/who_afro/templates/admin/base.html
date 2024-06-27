@@ -1,3 +1,17 @@
 {%  ckan_extends %}
 
+
+{% block breadcrumb %}
+    {% if self.breadcrumb_content() | trim %}
+      <ol class="profile-page breadcrumb">
+        {% snippet 'snippets/home_breadcrumb_item.html' %}
+        {% block breadcrumb_content %}
+              <li><a href="{{ h.url_for('userflow.index') }}">{{ _('My account') }}</a></li>
+              <li class="active"><a>{{ _('System admin settings') }}</a></li>
+        {% endblock %}
+      </ol>
+    {% endif %}
+{% endblock %}
+
+
 {% block maintag %}<div class="main admin_page">{% endblock %}
