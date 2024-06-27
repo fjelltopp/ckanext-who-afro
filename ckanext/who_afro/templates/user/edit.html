@@ -16,16 +16,6 @@
 {% endblock %}
 
 
-{% block primary_content_inner %}
-  {% if user_dict.name == g.user %}
-  <div class="logout-button">
-    <a class="btn btn-primary pull-right" href="{{ h.url_for('user.logout') }}"><i class="fa fa-right-from-bracket"></i>Log Out </a>
-  </div>
-  {% endif %}
-  {{ super() }}
-{% endblock %}
-
-
 {% block content_primary_nav %}
     {{ h.build_nav_icon('user.edit', _('Profile'), id=user.name, icon='user') }}
     {{ h.build_nav_icon('user.api_tokens', _('API Tokens'), id=user.name, icon='key') }}
