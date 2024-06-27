@@ -1,5 +1,6 @@
 {% ckan_extends %}
 
+{% set user = current_user %}
 
 {% block breadcrumb %}
     {% if self.breadcrumb_content() | trim %}
@@ -25,3 +26,7 @@
 {% endblock %}
 
 
+{% block content_primary_nav %}
+    {{ h.build_nav_icon('user.edit', _('Profile'), id=user.name, icon='user') }}
+    {{ h.build_nav_icon('user.api_tokens', _('API Tokens'), id=user.name, icon='key') }}
+{% endblock %}
