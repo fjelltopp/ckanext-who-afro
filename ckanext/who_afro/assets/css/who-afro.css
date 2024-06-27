@@ -2006,3 +2006,19 @@ p.learn-more a {
 .groups-container{
     padding: 20px;
 }
+
+.additional-info .scheming-group-title{
+    margin-top: 30px;
+}
+
+.resources h2, .additional-info h2{
+    border-bottom: 1px solid #ddd;
+}
+
+.resources .resource-list{
+    margin-top: 30px;
+}
+
+.page-header .nav-tabs li a{
+    color: var(--primary-navy);
+}

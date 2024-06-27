@@ -1,0 +1,42 @@
+{%- set exclude_fields = [
+    'id',
+    'title',
+    'name',
+    'notes',
+    'tag_string',
+    'license_id',
+    'owner_org',
+    ] -%}
+{%- set schema = h.scheming_get_dataset_schema(dataset_type) -%} 
+
+<section class="additional-info">
+  <h2 class="addition-info-title">{{ _('Metadata') }}</h2>
+
+  {%- for group in schema.dataset_fields|groupby('display_group', default="Overview")|reverse -%}
+    {%- set group_fields = [] -%}
+    {%- for field in group.list -%}
+      {%- if field.field_name not in exclude_fields
+          and field.display_snippet is not none
+          and pkg_dict.get(field.field_name) -%}
+        {%- do group_fields.append(field) -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- if group_fields != [] -%}
+      <h3 class="scheming-group-title">
+        {{ _(group.grouper) }}
+      </h3>
+      <table class="table table-striped table-bordered table-condensed">
+      {%- for field in group_fields -%}
+          <tr>
+            <th scope="row" class="dataset-label">{{
+              h.scheming_language_text(field.label) }}</th>
+            <td class="dataset-details"{%
+              if field.display_property %} property="{{ field.display_property
+              }}"{% endif %}>{%- snippet 'scheming/snippets/display_field.html',
+              field=field, data=pkg_dict, schema=schema -%}</td>
+          </tr>
+      {%- endfor -%}
+      </table>
+    {%- endif -%}
+  {% endfor %}
+</section>
