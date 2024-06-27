@@ -6,7 +6,7 @@ from ckanext.activity.views import dashboard
 log = logging.getLogger(__name__)
 
 blueprint = Blueprint(
-    "dashboard_index", __name__, url_prefix="/dashboard"
+    "userflow", __name__, url_prefix="/dashboard"
 )
 
 
