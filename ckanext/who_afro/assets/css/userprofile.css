@@ -316,4 +316,12 @@ header ul.nav.nav-tabs li:last-child {
     text-decoration: underline;
 }
 
+@media only screen and (max-width: 462px) {
+  #activity_page_buttons, #activity_page_buttons a.btn {
+    margin-top: 16px;
+    width: 100%;
+    }
+}
+
+
 
