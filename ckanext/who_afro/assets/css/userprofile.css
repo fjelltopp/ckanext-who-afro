@@ -226,10 +226,6 @@ header ul.nav.nav-tabs li:not(:first-child) {
     text-decoration: underline;
 }
 
-.dashboard-organisation-main .module-content {
-    padding-bottom: 32px;
-}
-
 .user-dashboard-main p.empty {
 
 }
