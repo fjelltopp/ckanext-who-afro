@@ -71,11 +71,11 @@
     text-align: left;
     color: var(--primary-navy);
 }
-.profile-pic {
+.profile-pic img {
   width: 64px;
   height: 64px;
-  border-radius: 2px 0 0 0;
-  border: white thin solid;
+  border-radius: 2px;
+  border: white 2px solid;
 }
 .profile-info {
   height: 64px;
@@ -146,9 +146,7 @@
     .right-content ul {
         justify-content: flex-end;
     }
-
 }
-
 
 .right-content .sysadmin-item a {
     padding-right: 0;
@@ -181,6 +179,10 @@
 
 .right-content .logout-btn a {
     text-decoration: none;
+}
+
+.profile-left-info-details li a {
+    text-decoration: underline;
 }
 
 /* tabs */
