@@ -116,6 +116,10 @@
     .profile-left-info {
       list-style-type: none;
     }
+    .user-dashboard-main h2.page-heading.mb-4,
+    .dashboard-organisation-main h2.page-heading.mb-4{
+        text-align: center;
+    }
 }
 
 @media only screen and (min-width: 992px) {
@@ -257,6 +261,21 @@ header ul.nav.nav-tabs li:last-child {
     }
     .nav.nav-tabs li a {
         text-align: left;
+    }
+    .dashboard-add-team-btn {
+        width: 100% !important;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+    .user-dashboard-main .pull-right {
+        float: none;
+        width: 100%;
+    }
+    .user-dashboard-main #followee-popover {
+        width: 100%;
+    }
+    .user-dashboard-main small.text-muted.fs-5 {
+        text-align: center;
     }
 }
 
