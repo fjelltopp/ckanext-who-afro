@@ -255,6 +255,9 @@ header ul.nav.nav-tabs li:last-child {
     header ul.nav.nav-tabs li:first-child {
         margin-left: 4px;
     }
+    .nav.nav-tabs li a {
+        text-align: left;
+    }
 }
 
 
