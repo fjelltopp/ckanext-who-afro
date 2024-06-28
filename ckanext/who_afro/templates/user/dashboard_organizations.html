@@ -22,3 +22,11 @@
     </h2>
 
 {% endblock %}
+
+{% block primary_content_inner %}
+  {% if organizations %}
+    <div class="wide">
+      {% snippet "user/snippets/dashboard_organization_list.html", organizations=organizations, show_capacity=True %}
+    </div>
+  {% endif %}
+{% endblock %}
