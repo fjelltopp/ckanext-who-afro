@@ -323,5 +323,19 @@ header ul.nav.nav-tabs li:last-child {
     }
 }
 
+/* header navbar */
+@media only screen and (min-width: 992px) {
+    .masthead .main-navbar ul li.active a {
+        color: var(--primary-navy) !important;
+    }
+
+    .masthead .main-navbar ul li:last-child a {
+        padding-bottom: 37px !important;
+        border-bottom: var(--secondary-who-blue) 3px solid;
+        border-radius: 0;
+        z-index: 0;
+    }
+}
+
 
 
