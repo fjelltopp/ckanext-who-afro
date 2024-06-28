@@ -142,6 +142,11 @@
         line-height: 24px;
       margin-bottom: 0;
     }
+
+    .right-content ul {
+        justify-content: flex-end;
+    }
+
 }
 
 
