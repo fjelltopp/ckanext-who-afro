@@ -86,7 +86,7 @@
 
 {% block primary_content_inner %}
         {% if request.path == '/dashboard/user_activity' %}
-          {% snippet 'snippets/stream.html', activity_stream=h.dashboard_activity_stream(user_id=user.name, filter_id=user.name), id=id, object_type='user' %}
+          {% snippet 'snippets/stream.html', activity_stream=h.dashboard_activity_stream(user_id=user.name, filter_id=user.name, filter_type="user"), id=id, object_type='user' %}
           {% snippet 'snippets/pagination.html', newer_activities_url=newer_activities_url, older_activities_url=older_activities_url %}
     {% else %}
         {{ super() }}
