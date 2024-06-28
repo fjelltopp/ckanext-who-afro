@@ -5,6 +5,7 @@
 
 {% set org_count = organizations|length %}
 
+
 {% block page_primary_action %}
     <h2 class="page-heading mb-4 dashboard-team-heading">
     {% if organizations %}
@@ -20,11 +21,10 @@
         {% link_for _('Add Organization'), named_route='organization.new', class_="btn btn-primary dashboard-add-team-btn" %}
     {% endif %}
     </h2>
-
 {% endblock %}
 
 {% block primary_content_inner %}
   {% if organizations %}
-      {% snippet "user/snippets/dashboard_organization_list.html", organizations=organizations, show_capacity=True %}
+      {% snippet "organization/snippets/organization_list.html", organizations=organizations, show_capacity=True %}
   {% endif %}
 {% endblock %}
