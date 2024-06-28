@@ -187,7 +187,7 @@ def get_datahub_stats():
     return stats
 
 
-def get_activity_stream_limit() -> int:
+def get_activity_stream_limit():
     base_limit = toolkit.config.get("ckan.activity_list_limit")
     max_limit = toolkit.config.get("ckan.activity_list_limit_max")
     return min(base_limit, max_limit)
