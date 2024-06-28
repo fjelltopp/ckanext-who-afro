@@ -2130,4 +2130,99 @@ p.learn-more a {
     float: right !important;
 }
 
+/* team list  in ckan/organization */
+.media-grid, .module-grid {
+    width: 100%;
+    display: grid !important;
+    row-gap: 24px;
+    column-gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    padding: 0;
+    margin: 0;
+    border: none;
+    list-style-type: none;
+    background: none;
+    height: calc(100% + 250px) !important;
+}
+
+.media-grid .media-image {
+    width: auto;
+    aspect-ratio: 9 / 4;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.media-item {
+    position: initial !important;
+    float: none;
+    background-color: white;
+    margin: 0;
+    width: 100%;
+    padding: 12px;
+    border: var(--who-blue-65-percent) thin solid;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.media-item:hover {
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.media-item a,
+.media-item a:active, .media-item a:hover {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    }
+
+.media-item h2 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.media-item .media-description {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 8px;
+}
+
+.media-item {
+    margin: auto 0 0;
+    padding-top: 10px;
+}
+
+.package-count {
+    border-radius: 4px;
+    background-color: var(--who-blue-ten-percent);
+    padding: 2px 6px 2px 6px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+    color: var(--secondary-who-blue);
+    text-transform: uppercase;
+    margin-right: 4px;
+
+}
+
+.org-owner {
+    border-radius: 4px;
+    background-color: var(--neutral-light-grey);
+    padding: 2px 6px 2px 6px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
 /* User profile*/
