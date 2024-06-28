@@ -230,3 +230,7 @@ header ul.nav.nav-tabs li:not(:first-child) {
     padding-bottom: 32px;
 }
 
+.user-dashboard-main p.empty {
+
+}
+

@@ -2126,7 +2126,7 @@ p.learn-more a {
     padding-top: 49px;
 }
 
-.dashboard-add-team-btn {
+.dashboard-add-team-btn, .dashboard-add-dataset-btn {
     float: right !important;
 }
 
