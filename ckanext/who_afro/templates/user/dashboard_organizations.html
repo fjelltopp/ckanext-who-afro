@@ -17,7 +17,7 @@
         <small class="text-muted fs-5">{{ _('You are not a member of any organizations.') }}</small>
     {% endif %}
     {% if h.check_access('organization_create') %}
-        {% link_for _('Add Organization'), named_route='organization.new', class_="btn btn-primary dashboard-add-team-btn", icon="plus-square" %}
+        {% link_for _('Add Organization'), named_route='organization.new', class_="btn btn-primary dashboard-add-team-btn" %}
     {% endif %}
     </h2>
 
