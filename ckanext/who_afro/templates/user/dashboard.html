@@ -44,7 +44,7 @@
 <div class="upper-content">
     {% block profile %}
         <div class="row">
-            <div class="col-md-6 col-sm-12 col-xs-12">
+            <div class="col-md-8 col-sm-12 col-xs-12 left-content">
                 <div class="user-basic-info">
                     <ul class="profile-left-info">
                         <li class="profile-pic">{{ h.user_image(user.id, size=64) }}</li>
@@ -61,11 +61,11 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-6 col-sm-12 col-xs-12 right-content">
+            <div class="col-md-4 col-sm-12 col-xs-12 right-content">
                 <ul>
-                    <li>
+                    <li class="sysadmin-item">
                         {% if c.userobj.sysadmin %}
-                            <a href="{{ h.url_for('admin.index') }}" style="text-decoration: underline;padding-right: 24px;">{{ _('System admin settings') }}</a>
+                            <a href="{{ h.url_for('admin.index') }}">{{ _('System admin settings') }}</a>
                         {% endif %}
                     </li>
                     <li class="logout-btn"><a href="{{ h.url_for('user.logout') }}">{{ _('Log out') }}</a></li>
