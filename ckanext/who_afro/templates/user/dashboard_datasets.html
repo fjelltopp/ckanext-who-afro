@@ -1,7 +1,7 @@
 {% ckan_extends %}
 
 {% block page_primary_action %}
-    <h2 class="page-heading mb-4 dashboard-team-heading">
+    <h2 class="page-heading mb-4">
     {% if not user_dict.datasets %}
         <small class="text-muted fs-5">{{ _("You haven’t created any datasets")}}</small>
         {% if h.check_access('package_create') %}
