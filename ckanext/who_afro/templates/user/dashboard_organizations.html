@@ -27,6 +27,6 @@
 {% block primary_content_inner %}
   {% if organizations %}
       {% snippet "organization/snippets/organization_list.html", organizations=organizations, show_capacity=True %}
-      <a class="show-all-org" href="{{ h.url_for('organization.index') }}">{{ _('See all organizations') }}</a>
   {% endif %}
+  <a class="show-all-org" href="{{ h.url_for('organization.index') }}">{{ _('See all organizations') }}</a>
 {% endblock %}

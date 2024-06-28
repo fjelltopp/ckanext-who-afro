@@ -219,7 +219,10 @@ header ul.nav.nav-tabs li:not(:first-child) {
     margin-bottom: 32px;
 }
 
-.show-all-org, .show-all-org:hover {
+.show-all-org,
+.show-all-org:hover,
+.show-all-pkg,
+.show-all-pkg:hover {
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;

@@ -17,4 +17,5 @@
   {% if user_dict.datasets %}
     {% snippet 'snippets/package_list.html', packages=user_dict.datasets %}
   {% endif %}
+  <a class="show-all-pkg" href="{{ h.url_for('dataset.search') }}">{{ _('See all datasets') }}</a>
 {% endblock %}
