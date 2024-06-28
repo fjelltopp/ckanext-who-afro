@@ -26,7 +26,7 @@
         {{ h.build_nav_icon('activity.dashboard', _('Newsfeed')) }}
         {{ h.build_nav_icon('dashboard.datasets', h.humanize_entity_type('package', dataset_type, 'my label') or _('My datasets')) }}
         {{ h.build_nav_icon('dashboard.organizations', h.humanize_entity_type('organization', org_type, 'my label') or _('My organizations')) }}
-        {{ h.build_nav_icon('dashboard.groups', h.humanize_entity_type('group', group_type, 'my label') or _('My activity')) }}
+        {{ h.build_nav_icon('dashboard_extension.user_activity', _('My activity')) }}
       {% endblock dashboard_nav_links %}
     </ul>
  {% endblock %}
@@ -74,4 +74,25 @@
     {% endblock %}
 </div>
 {% endblock %}
+
+
+{% block page_primary_action %}
+        {% if request.path == '/dashboard/user_activity' %}
+        <p></p>
+    {% else %}
+        {{ super() }}
+    {% endif %}
+{% endblock %}
+
+{% block primary_content_inner %}
+        {% if request.path == '/dashboard/user_activity' %}
+          {% snippet 'snippets/stream.html', activity_stream=h.dashboard_activity_stream(user_id=user.name, filter_id=user.name), id=id, object_type='user' %}
+          {% snippet 'snippets/pagination.html', newer_activities_url=newer_activities_url, older_activities_url=older_activities_url %}
+    {% else %}
+        {{ super() }}
+    {% endif %}
+{% endblock %}
+
+
+
 
