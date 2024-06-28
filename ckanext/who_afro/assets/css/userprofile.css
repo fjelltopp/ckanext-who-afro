@@ -206,10 +206,15 @@ header ul.nav.nav-tabs li:not(:first-child) {
     width: 100%;
 }
 
-article.module {
+.dashboard-organisation-main article.module {
     padding: 0;
+    margin-bottom: 115px;
 }
 
-.media-heading {
+.media-grid .media-heading {
     margin: 8px 0 0;
+}
+
+.dashboard-organisation-main .media-grid {
+    margin-bottom: 32px;
 }

@@ -2195,12 +2195,12 @@ p.learn-more a {
     margin-bottom: 8px;
 }
 
-.media-item {
+.media-grid .media-item {
     margin: auto 0 0;
     padding-top: 10px;
 }
 
-.package-count {
+.media-grid .package-count {
     border-radius: 4px;
     background-color: var(--who-blue-ten-percent);
     padding: 2px 6px 2px 6px;
@@ -2214,7 +2214,7 @@ p.learn-more a {
 
 }
 
-.org-owner {
+.media-grid .org-owner {
     border-radius: 4px;
     background-color: var(--neutral-light-grey);
     padding: 2px 6px 2px 6px;
