@@ -85,33 +85,8 @@
 {% endblock %}
 
 {% block primary_content_inner %}
-        {% if request.path == '/dashboard/user_activity' %}
-
-            {% set limit = 50 %}
-            {% set current_offset = request.args.get('offset', 0) | int %}
-            {% set older_offset = current_offset + limit %}
-            {% if current_offset - limit > 0 %}
-                {% set newer_offset = current_offset - limit %}
-            {% else %}
-                {% set newer_offset = 0 %}
-            {% endif %}
-
-            {% set activity_stream = h.dashboard_activity_stream(user_id=user.name, filter_id=user.name, filter_type="user", offset=current_offset, limit=limit) %}
-
-            {% if current_offset > 0 and older_offset > 0  %}
-                {% set newer_activities_url = h.url_for(request.path, offset=newer_offset, limit=limit) %}
-            {%  else %}
-                {% set newer_activities_url = None %}
-            {% endif %}
-
-            {%  if activity_stream | length >= limit %}
-                {% set older_activities_url = h.url_for(request.path, offset=older_offset, limit=limit) %}
-            {% else %}
-                {%  set older_activities_url = None %}
-            {% endif %}
-
-          {% snippet 'snippets/stream.html', activity_stream=activity_stream, id=id, object_type='user' %}
-          {% snippet 'snippets/pagination.html', newer_activities_url=newer_activities_url, older_activities_url=older_activities_url %}
+    {% if request.path == '/dashboard/user_activity' %}
+        {% snippet 'user/snippets/user_activity_stream.html', id=user.name, limit=h.get_activity_stream_limit() %}
     {% else %}
         {{ super() }}
     {% endif %}
