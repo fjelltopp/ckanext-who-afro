@@ -245,12 +245,26 @@ header ul.nav.nav-tabs li:last-child {
     text-align: center;
 }
 
+@media only screen and (max-width: 510px) {
+    header ul.nav.nav-tabs li,
+    header ul.nav.nav-tabs li:first-child,
+    header ul.nav.nav-tabs li:not(:first-child),
+    header ul.nav.nav-tabs li:last-child {
+        width: 100%;
+    }
+    header ul.nav.nav-tabs li:first-child {
+        margin-left: 4px;
+    }
+}
+
+
 .page-header.module-content {
     padding: 0;
     width: 100%;
 }
 
-.dashboard-organisation-main article.module {
+.dashboard-organisation-main article.module,
+.user-dashboard-main article.module{
     padding: 0;
     margin-bottom: 115px;
 }
