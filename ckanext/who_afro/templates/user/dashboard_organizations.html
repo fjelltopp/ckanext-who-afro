@@ -11,7 +11,7 @@
         {% if org_count == 1 %}
             <small class="text-muted fs-5">{{ _("You're part of one organization")}}</small>
         {% else %}
-            <small class="text-muted fs-5">{{ _("You're part of {org_count} organizations").format(org_count=org_count) }}</small>
+            <small class="text-muted fs-5">{{ _("You're part of {num} organizations").format(num=org_count) }}</small>
         {% endif %}
     {% else %}
         <small class="text-muted fs-5">{{ _('You are not a member of any organizations.') }}</small>
