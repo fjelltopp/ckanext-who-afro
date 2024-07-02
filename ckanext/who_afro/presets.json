@@ -22,14 +22,24 @@
         "validators": "isomonth"
       }
     }, {
+      "preset_name": "language",
+      "values": {
+        "form_snippet": "language.html",
+        "display_snippet": "language.html",
+        "validators": "scheming_required language_validator"
+      }
+    }, {
       "preset_name": "country",
       "values": {
         "form_snippet": "multiple_select.html",
-        "display_snippet": "multiple_choice.html",
-        "validators": "scheming_multiple_choice",
+        "display_snippet": "multiple_inline.html",
+        "separator": ", ",
+        "validators": "scheming_required scheming_multiple_choice",
         "output_validators": "scheming_multiple_choice_output",
-        "label": "Country",
+        "label": "Countries",
+        "select_size": "5",
         "choices": [
+          {"value": "AFRO", "label": "WHO African Region"},
           {"value": "AO", "label": "Angola"},
           {"value": "BF", "label": "Burkina Faso"},
           {"value": "BI", "label": "Burundi"},
@@ -83,10 +93,12 @@
       "preset_name": "programme",
       "values": {
         "form_snippet": "multiple_select.html",
-        "display_snippet": "multiple_choice.html",
-        "validators": "scheming_multiple_choice",
+        "display_snippet": "multiple_inline.html",
+        "validators": "scheming_required scheming_multiple_choice",
         "output_validators": "scheming_multiple_choice_output",
-        "label": "Programme",
+        "label": "Programmes",
+        "select_size": "5",
+        "separator": "; ",
         "choices": [
           {"value": "hiv", "label": "HIV"},
           {"value": "srh", "label": "SRH"},
@@ -96,6 +108,47 @@
           {"value": "amr", "label": "Anti-Microbial Resistance"},
           {"value": "vpd", "label": "Vaccine Preventable Diseases"},
           {"value": "onehealth", "label": "OneHealth"}
+        ]
+      }
+    }, {
+      "preset_name": "sustainable_development_goals",
+      "values": {
+        "form_snippet": "multiple_select.html",
+        "display_snippet": "multiple_inline.html",
+        "validators": "scheming_required scheming_multiple_choice",
+        "output_validators": "scheming_multiple_choice_output",
+        "label": "Programmes",
+        "select_size": "5",
+        "separator": "; ",
+        "choices": [
+          {"value": "1_poverty", "label": "(1) No Poverty"},
+          {"value": "2_hunger", "label": "(2) Zero Hunger"},
+          {"value": "3_health_wellbeing", "label": "(3) Good Health & Wellbeing"},
+          {"value": "4_education", "label": "(4) Quality Education"},
+          {"value": "5_gender_equality", "label": "(5) Gender Equality"},
+          {"value": "6_water_sanitation", "label": "(6) Clean Water & Sanitation"},
+          {"value": "7_vaccine_preventable_diseases", "label": "(7) Vaccine Preventable Diseases"},
+          {"value": "8_work_economy", "label": "(8) Decent Work & Economic Growth"},
+          {"value": "9_industry_innovation_infrastructure", "label": "(9) Industry Innovation & Infrastructure"},
+          {"value": "10_inequality", "label": "(10) Reduced Inequalities"},
+          {"value": "11_sustainable_cities_communities", "label": "(11) Sustainable Cities & Communities"},
+          {"value": "12_responsible_consumption_production", "label": "(10) Responsible Consumption & Production"},
+          {"value": "13_climate", "label": "(13) Climate Action"},
+          {"value": "14_life_below_water", "label": "(14) Life Below water"},
+          {"value": "15_life_on_land", "label": "(15) Life On Land"},
+          {"value": "16_peace_justice", "label": "(16) Peace, Justice & Strong Institutions"},
+          {"value": "17_partnership", "label": "(17) Partnership For The Goals"}
+        ]
+      }
+    }, {
+      "preset_name": "yes_no",
+      "values": {
+        "form_snippet": "select.html",
+        "display_snippet": "select.html",
+        "validators": "scheming_required scheming_choices",
+        "choices": [
+          {"value": "Yes", "label": "Yes"},
+          {"value": "No", "label": "No"}
         ]
       }
     }

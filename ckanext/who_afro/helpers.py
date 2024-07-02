@@ -185,3 +185,11 @@ def get_datahub_stats():
             stats['countries'] = len(result['facets']['country'])
 
     return stats
+
+def get_license(license_id):
+    license_list = toolkit.get_action('license_list')({}, {})
+    for license in license_list:
+        if license["id"] == license_id:
+            return license
+    else:
+        return {}

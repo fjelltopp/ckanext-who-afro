@@ -654,6 +654,14 @@ p.small {
     height: auto;
 }
 
+select.form-control{
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+}
+
 .form-control:focus {
     border: var(--primary-navy) solid 1px;
     box-shadow: inset 1px 1px 1px rgba(0, 32, 92, 1),
@@ -2004,4 +2012,20 @@ p.learn-more a {
 
 .groups-container{
     padding: 20px;
+}
+
+.additional-info .scheming-group-title{
+    margin-top: 30px;
+}
+
+.resources h2, .additional-info h2{
+    border-bottom: 1px solid #ddd;
+}
+
+.resources .resource-list{
+    margin-top: 30px;
+}
+
+.page-header .nav-tabs li a{
+    color: var(--primary-navy);
 }

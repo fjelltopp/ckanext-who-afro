@@ -5,7 +5,7 @@ from ckanext.who_afro.helpers import (
     month_formatter
 )
 from ckan.logic.validators import package_name_validator
-from ckan.plugins.toolkit import ValidationError, _
+from ckan.plugins.toolkit import ValidationError, _, h, get_validator
 from string import ascii_lowercase
 from random import choice
 import copy
@@ -93,11 +93,39 @@ def autofill(field, schema):
 
 
 @scheming_validator
+def who_license_autofill(field, schema):
+    field_value = field.get(u'field_value', field.get('default', ''))
+
+    def validator(key, data, errors, context):
+        private_dataset = get_validator('boolean_validator')(data.get(("private",), True), {})
+        if private_dataset:
+            data[key] = "who-closed"
+        else:
+            data[key] = "CC-BY-4.0"
+
+    return validator
+
+
+@scheming_validator
 def isomonth(field, schema):
     def validator(key, data, errors, context):
         if data.get(key):
             try:
                 month_formatter(data[key])
             except ValueError:
-                raise ValidationError({'name': [_('Month should be of the form yyyy-mm')]})
+                errors[key].append(
+                    _('Month should be of the form yyyy-mm')
+                )
+    return validator
+
+
+@scheming_validator
+def language_validator(field, schema):
+    languages = [locale.short_name for locale in h.get_available_locales()]
+
+    def validator(key, data, errors, context):
+        if data.get(key) and data.get(key) not in languages:
+            errors[key].append(
+                _(f'Language of the dataset must be one of: {", ".join(languages)}')
+            )
     return validator

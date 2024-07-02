@@ -1,0 +1,5 @@
+{%- for locale in h.get_available_locales() -%}
+    {%- if locale.short_name == data[field.field_name] -%}
+        {{h.format_locale(locale)}} ({{locale.short_name}})
+    {%- endif -%}
+{%- endfor -%}

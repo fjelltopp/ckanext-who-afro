@@ -1,0 +1,42 @@
+scheming_version: 2
+dataset_type: who-license-autofill-validator
+name: WHO License Autofill Validator
+about: A test schema to test the validator who_license_autofill
+about_url: http://github.com/ckan/ckanext-scheming
+
+
+dataset_fields:
+
+- field_name: title
+  label: Projection Title
+  preset: title
+  form_placeholder: eg. A descriptive filename
+  validators: not_empty unicode_safe
+
+- field_name: private
+  label: Visibility
+  help_text: Public data is published under the "CC BY 4.0" license, private data is only visible to designated collaborators and members of the above-specified team.
+  help_inline: false
+  required: true
+  preset: select
+  choices:
+  - value: false
+    label: Public
+  - value: true
+    label: Private
+  validators: boolean_validator
+  output_validators: boolean_validator
+  display_group: Access & Use
+
+- field_name: license_id
+  label: License
+  required: true
+  preset: preset_value
+  validators: who_license_autofill
+  display_group: Access & Use
+
+
+resource_fields:
+
+- field_name: name
+  label: Name
