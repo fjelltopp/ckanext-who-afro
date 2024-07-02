@@ -26,6 +26,7 @@ dataset_fields:
   display_group: Overview
 
 - field_name: notes
+  required: true
   label: Description
   form_snippet: markdown.html
   form_placeholder: Please give a useful introduction to the dataset which will be shown straight after the title.
@@ -62,14 +63,8 @@ dataset_fields:
   display_snippet: email.html
   display_group: Overview
 
-- field_name: license_id
-  required: true
-  label: License
-  form_snippet: license.html
-  help_text: License definitions and additional information can be found at http://opendefinition.org/
-  display_group: Access & Use
-
 - field_name: language
+  required: true
   label: Dataset Language
   preset: language
   display_group: Overview
@@ -82,7 +77,7 @@ dataset_fields:
 
 - field_name: private
   label: Visibility
-  help_text: Restrict access
+  help_text: Public data is published under the "CC BY 4.0" license, private data is only visible to designated collaborators and members of the above-specified team.
   help_inline: false
   required: true
   preset: select
@@ -95,36 +90,44 @@ dataset_fields:
   output_validators: boolean_validator
   display_group: Access & Use
 
+- field_name: license_id
+  label: License
+  required: true
+  preset: preset_value
+  validators: who_license_autofill
+  display_group: Access & Use
+
+
 - start_form_page:
     title: About the data
     description: Please provide as many details as possible to facilitate the reuse of the data.
 
   field_name: accrual_periodicity
-  label: Accrual Periodicity
+  label: Frequency of data collection
   form_placeholder: e.g. Annual
-  help_text: Indicate how frequently new data is collected and consolidated into this dataset.
+  help_text: Indicate how frequently new data is incorporated into this dataset.
   display_group: About the Data
 
 - field_name: provenance
   label: Provenance
-  form_placeholder: e.g. Country, Territory or Area Reported
-  help_text: Briefly describe where the data comes from.
+  form_placeholder: e.g. "Country reports" or "Household surveys"
+  help_text: Briefly describe where the data has come from.
   display_group: About the Data
 
 - field_name: temporal_start
-  label: Temporaral Start Date
+  label: Temporal Start Date
   preset: date
   help_text: For time series data, this should be the earliest date reported in the data.
   display_group: About the Data
 
 - field_name: temporal_end
-  label: Temporaral End Date
+  label: Temporal End Date
   preset: date
   help_text: For time series data, this should be the latest data reported in the data. Leave blank if dataset has an indefinte end.
   display_group: About the Data
 
 - field_name: temporal_resolution
-  label: Temporaral Resolution
+  label: Temporal Resolution
   form_placeholder: eg. Daily or Every 2 weeks
   help_text: For time series data, this should be the minimum temporal difference represented in the data.
   display_group: About the Data
@@ -242,6 +245,7 @@ dataset_fields:
   form_snippet: markdown.html
   form_placeholder: Please share any further relevant comments on the data
   display_group: Methodology
+
 
 resource_fields:
 
