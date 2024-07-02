@@ -17,32 +17,44 @@ dataset_fields:
   preset: title
   required: true
   form_placeholder: eg. A descriptive title
+  display_group: Overview
 
 - field_name: name
   label: URL
   preset: dataset_slug
   required: true
   form_placeholder: eg. my-dataset
+  display_group: Overview
+
+- field_name: notes
+  required: true
+  label: Description
+  form_snippet: markdown.html
+  form_placeholder: Please give a useful introduction to the dataset which will be shown straight after the title.
 
 - field_name: country
   required: true
   preset: country
+  display_group: Overview
 
-- field_name: programm
+- field_name: programme
   required: true
   preset: programme
+  display_group: Overview
 
 - field_name: tag_string
   required: true
   label: Tags
   preset: tag_string_autocomplete
   form_placeholder: eg. economy, mental health, government
+  display_group: Overview
 
 - field_name: maintainer
   label: Maintainer
   required: true
   user_field: fullname
   form_snippet: user.html
+  display_group: Overview
 
 - field_name: maintainer_email
   label: Maintainer Email
@@ -50,21 +62,23 @@ dataset_fields:
   user_field: email
   form_snippet: user.html
   display_snippet: email.html
+  display_group: Overview
 
-- field_name: license_id
+- field_name: language
   required: true
-  label: License
-  form_snippet: license.html
-  help_text: License definitions and additional information can be found at http://opendefinition.org/
+  label: Dataset Language
+  preset: language
+  display_group: Overview
 
 - field_name: owner_org
   required: true
   label: Organization
   preset: dataset_organization
+  display_group: Access & Use
 
 - field_name: private
   label: Visibility
-  help_text: Restrict access
+  help_text: Public data is published under the "CC BY 4.0" license, private data is only visible to designated collaborators and members of the above-specified team.
   help_inline: false
   required: true
   preset: select
@@ -75,54 +89,66 @@ dataset_fields:
     label: Private
   validators: boolean_validator
   output_validators: boolean_validator
+  display_group: Access & Use
+
+- field_name: license_id
+  label: License
+  required: true
+  preset: preset_value
+  validators: who_license_autofill
+  display_group: Access & Use
+
 
 - start_form_page:
     title: About the data
     description: Please provide as many details as possible to facilitate the reuse of the data.
 
   field_name: accrual_periodicity
-  label: Accrual Periodicity
+  label: Frequency of data collection
   form_placeholder: e.g. Annual
-  help_text: Indicate how frequently new data is collected and consolidated into this dataset.
+  help_text: Indicate how frequently new data is incorporated into this dataset.
+  display_group: About the Data
 
 - field_name: provenance
   label: Provenance
-  form_placeholder: e.g. Country, Territory or Area Reported
-  help_text: Briefly describe where the data comes from.
+  form_placeholder: e.g. "Country reports" or "Household surveys"
+  help_text: Briefly describe where the data has come from.
+  display_group: About the Data
 
 - field_name: temporal_start
-  label: Temporaral Start Date
+  label: Temporal Start Date
   preset: date
   help_text: For time series data, this should be the earliest date reported in the data.
+  display_group: About the Data
 
 - field_name: temporal_end
-  label: Temporaral End Date
+  label: Temporal End Date
   preset: date
   help_text: For time series data, this should be the latest data reported in the data. Leave blank if dataset has an indefinte end.
+  display_group: About the Data
 
 - field_name: temporal_resolution
-  label: Temporaral Resolution
+  label: Temporal Resolution
   form_placeholder: eg. Daily or Every 2 weeks
   help_text: For time series data, this should be the minimum temporal difference represented in the data.
+  display_group: About the Data
 
 - field_name: spatial_resolution
   label: Spatial Resolution
   form_placeholder: eg. Admin Level 1 (national) or Point Level or 100m2
   help_text: For spatial data, this should be the minimum spatial difference represented in the data.
-
-- field_name: language
-  label: Dataset Language
-  preset: language
-
-- field_name: notes
-  label: Description
-  form_snippet: markdown.html
-  form_placeholder: Please give any useful notes about how to navigate and use the data.
+  display_group: About the Data
 
 - field_name: source
   label: Source
   form_snippet: markdown.html
   form_placeholder: Give specific further details about how the data was sourced.
+  display_group: About the Data
+
+- field_name: sustainable_development_goals
+  label: Sustainable Development Goals
+  preset: sustainable_development_goals
+  display_group: About the Data
 
 
 resource_fields:
@@ -139,6 +165,3 @@ resource_fields:
 - field_name: format
   label: Format
   preset: resource_format_autocomplete
-
-
-
