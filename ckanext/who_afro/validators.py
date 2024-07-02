@@ -5,7 +5,7 @@ from ckanext.who_afro.helpers import (
     month_formatter
 )
 from ckan.logic.validators import package_name_validator
-from ckan.plugins.toolkit import ValidationError, _, h
+from ckan.plugins.toolkit import ValidationError, _, h, get_validator
 from string import ascii_lowercase
 from random import choice
 import copy
@@ -88,6 +88,20 @@ def autofill(field, schema):
     def validator(key, data, errors, context):
         if not data.get(key):
             data[key] = field_value
+
+    return validator
+
+
+@scheming_validator
+def who_license_autofill(field, schema):
+    field_value = field.get(u'field_value', field.get('default', ''))
+
+    def validator(key, data, errors, context):
+        private_dataset = get_validator('boolean_validator')(data.get(("private",), True), {})
+        if private_dataset:
+            data[key] = "who-closed"
+        else:
+            data[key] = "CC-BY-4.0"
 
     return validator
 

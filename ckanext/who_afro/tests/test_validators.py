@@ -124,3 +124,24 @@ class TestLanguageValidator(object):
     def test_rejects_invalid_languages(self, language):
         with pytest.raises(ValidationError, match="Language of the dataset must be"):
             assert self._create_dataset(language=language)
+
+
+@pytest.mark.usefixtures("clean_db", "clean_index", "with_plugins")
+class TestLicenseAutofillValidator(object):
+
+    def _create_dataset(self, **kwargs):
+        return call_action(
+            "package_create",
+            type="who-license-autofill-validator",
+            title="Test Dataset",
+            name="test-dataset",
+            **kwargs
+        )
+
+    def test_private_true(self):
+        dataset = self._create_dataset(private=True)
+        assert dataset['license_id'] == 'who-closed'
+
+    def test_private_false(self):
+        dataset = self._create_dataset(private=False)
+        assert dataset['license_id'] == 'CC-BY-4.0'

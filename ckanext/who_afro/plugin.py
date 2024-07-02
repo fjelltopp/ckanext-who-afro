@@ -107,7 +107,8 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultTranslation):
             'autofill': who_afro_validators.autofill,
             'autogenerate': who_afro_validators.autogenerate,
             'isomonth': who_afro_validators.isomonth,
-            'language_validator': who_afro_validators.language_validator
+            'language_validator': who_afro_validators.language_validator,
+            'who_license_autofill': who_afro_validators.who_license_autofill
         }
 
     # IPackageContoller
