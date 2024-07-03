@@ -17,7 +17,13 @@
     {% endif %}
 {% endblock %}
 
-{% block maintag %}<div class="main user-dashboard-main">{% endblock %}
+{% block maintag %}
+    {% if request.args.get("id", "") == 'newsfeed' %}
+        <div class="main user-dashboard-main">
+    {% else %}
+        <div class="main user-dashboard-activity">
+    {% endif %}
+{% endblock %}
 
 
 {% block page_header %}
@@ -25,10 +31,10 @@
   {% block content_primary_nav %}
     <ul class="nav nav-tabs">
       {% block dashboard_nav_links %}
-        {{ h.build_nav_icon('activity.dashboard', _('Newsfeed')) }}
+        {{ h.build_nav_icon('activity.dashboard', _('Newsfeed'), id="newsfeed") }}
         {{ h.build_nav_icon('dashboard.datasets', h.humanize_entity_type('package', dataset_type, 'my label') or _('My datasets')) }}
         {{ h.build_nav_icon('dashboard.organizations', h.humanize_entity_type('organization', org_type, 'my label') or _('My teams')) }}
-        {{ h.build_nav_icon('dashboard_extension.user_activity', _('My activity')) }}
+        {{ h.build_nav_icon('activity.dashboard', _('My activity'), type='user', name=user.name, id="user_activity") }}
       {% endblock dashboard_nav_links %}
     </ul>
  {% endblock %}
@@ -79,7 +85,7 @@
 
 
 {% block page_primary_action %}
-        {% if request.path == '/dashboard/user_activity' %}
+    {% if request.args.get("id", "") == 'user_activity' %}
         <p></p>
     {% else %}
         {{ super() }}
@@ -87,8 +93,9 @@
 {% endblock %}
 
 {% block primary_content_inner %}
-    {% if request.path == '/dashboard/user_activity' %}
-        {% snippet 'user/snippets/user_activity_stream.html', id=user.name, limit=h.get_activity_stream_limit() %}
+    {% if request.args.get("id", "") == 'user_activity' %}
+        {% snippet 'snippets/stream.html', activity_stream=dashboard_activity_stream, id=id, object_type='user' %}
+        {% snippet 'snippets/pagination.html', newer_activities_url=newer_activities_url, older_activities_url=older_activities_url %}
     {% else %}
         {{ super() }}
     {% endif %}

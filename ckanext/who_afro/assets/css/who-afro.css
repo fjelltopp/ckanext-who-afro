@@ -2225,4 +2225,17 @@ p.learn-more a {
     text-transform: uppercase;
 }
 
+/** tab active **/
+.user-dashboard-main .page-header .nav-tabs li:last-child.active a {
+    background-color: var(--who-blue-ten-percent);
+    border: 1px solid transparent;
+    border-bottom-color: var(--who-blue-65-percent);
+}
+
+.user-dashboard-activity  .page-header .nav-tabs li:first-child.active a {
+    background-color: var(--who-blue-ten-percent);
+    border: 1px solid transparent;
+    border-bottom-color: var(--who-blue-65-percent);
+}
+
 /* User profile*/
