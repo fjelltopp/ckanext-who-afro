@@ -1,11 +1,5 @@
 {% ckan_extends %}
 
-
-{% block styles %}
-    {{ super() }}
-    {% asset 'who-afro/user-profile' %}
-{% endblock %}
-
 {% block breadcrumb %}
     {% if self.breadcrumb_content() | trim %}
       <ol class="profile-page breadcrumb">
