@@ -13,12 +13,6 @@
     {% endif %}
 {% endblock %}
 
-{% block content_action %}
-  {% if h.check_access('user_update', user) %}
-    {% link_for _('Edit profile'), named_route='user.edit', id=user.name, class_='btn btn-default', icon='wrench' %}
-  {% endif %}
-{% endblock %}
-
 
 {% block content_primary_nav %}
   {{ h.build_nav_icon('user.read', h.humanize_entity_type('package', dataset_type, 'content tab') or _('Datasets'), id=user.name, icon='sitemap') }}
