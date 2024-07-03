@@ -2492,7 +2492,7 @@ p.learn-more a {
 }
 
 .user-profile-page .nav-tabs,
-.user-profile-page nav-tabs .nav-link, .page-header .nav-tabs li a {
+.user-profile-page .nav-tabs .nav-link, .page-header .nav-tabs li a {
     border-bottom-color: var(--who-blue-65-percent);
 }
 
@@ -2588,7 +2588,4 @@ p.learn-more a {
         z-index: 0;
     }
 }
-
-
-
 /* User profile*/
