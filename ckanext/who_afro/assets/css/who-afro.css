@@ -2505,11 +2505,8 @@ p.learn-more a {
 }
 
 @media only screen and (max-width: 510px) {
-    .user-profile-page header ul.nav.nav-tabs li,
-    .user-profile-page header ul.nav.nav-tabs li:first-child,
-    .user-profile-page header ul.nav.nav-tabs li:not(:first-child),
-    .user-profile-page header ul.nav.nav-tabs li:last-child {
-        width: 100%;
+    .user-profile-page header ul.nav.nav-tabs li {
+        width: 100% !important;
     }
     .user-profile-page header ul.nav.nav-tabs li:first-child {
         margin-left: 4px;
