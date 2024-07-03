@@ -2588,4 +2588,7 @@ p.learn-more a {
         z-index: 0;
     }
 }
+ol.profile-page.breadcrumb {
+    width: 100%;
+}
 /* User profile*/
