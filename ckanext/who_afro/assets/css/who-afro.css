@@ -2578,13 +2578,19 @@ p.learn-more a {
         color: var(--primary-navy) !important;
     }
 
-    .masthead .main-navbar ul li:last-child a {
+    .masthead .main-navbar ul li.active {
+        pointer-events: none;
+    }
+
+    .masthead .main-navbar ul li.active a {
         padding-bottom: 37px !important;
-        border-bottom: var(--secondary-who-blue) 3px solid;
+        border-bottom: var(--secondary-who-blue) 4px solid;
         border-radius: 0;
         z-index: 0;
     }
+
 }
+
 ol.profile-page.breadcrumb {
     width: 100%;
 }
