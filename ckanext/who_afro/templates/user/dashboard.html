@@ -12,10 +12,10 @@
 {% endblock %}
 
 {% block maintag %}
-    {% if request.args.get("id", "") == 'newsfeed' %}
-        <div class="main user-profile-page user-dashboard-main">
-    {% else %}
+    {% if request.args.get("id", "") == 'user_activity' %}
         <div class="main user-profile-page user-dashboard-activity">
+    {% else %}
+        <div class="main user-profile-page user-dashboard-main">
     {% endif %}
 {% endblock %}
 
@@ -25,7 +25,7 @@
   {% block content_primary_nav %}
     <ul class="nav nav-tabs">
       {% block dashboard_nav_links %}
-        {{ h.build_nav_icon('activity.dashboard', _('Newsfeed'), id="newsfeed") }}
+        {{ h.build_nav_icon('activity.dashboard', _('Newsfeed')) }}
         {{ h.build_nav_icon('dashboard.datasets', h.humanize_entity_type('package', dataset_type, 'my label') or _('My datasets')) }}
         {{ h.build_nav_icon('dashboard.organizations', h.humanize_entity_type('organization', org_type, 'my label') or _('My teams')) }}
         {{ h.build_nav_icon('activity.dashboard', _('My activity'), type='user', name=user.name, id="user_activity") }}
