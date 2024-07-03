@@ -2327,7 +2327,7 @@ p.learn-more a {
   height: 64px;
 }
 
-.user-profile-page .profile-info div p, .profile-info div ul {
+.user-profile-page .profile-info div p, .user-profile-page .profile-info div ul {
   margin: 4px;
 }
 
@@ -2481,18 +2481,18 @@ p.learn-more a {
     margin-left: 0.7%;
 }
 
-.user-profile-page .page-header .nav-tabs li.active a, .page-header .nav-tabs a:hover {
+.user-profile-page .page-header .nav-tabs li.active a, .user-profile-page .page-header .nav-tabs a:hover {
     border: var(--who-blue-65-percent) thin solid;
     border-bottom-color: transparent;
 }
 
-.user-profile-page .nav-tabs .nav-link, .page-header .nav-tabs li a,
-.user-profile-page .nav-tabs .nav-link, .page-header .nav-tabs li a:hover {
+.user-profile-page .nav-tabs .nav-link, .user-profile-page .page-header .nav-tabs li a,
+.user-profile-page .nav-tabs .nav-link, .user-profile-page .page-header .nav-tabs li a:hover {
     background-color: var(--who-blue-ten-percent);
 }
 
 .user-profile-page .nav-tabs,
-.user-profile-page .nav-tabs .nav-link, .page-header .nav-tabs li a {
+.user-profile-page .nav-tabs .nav-link, .user-profile-page .page-header .nav-tabs li a {
     border-bottom-color: var(--who-blue-65-percent);
 }
 
