@@ -7,18 +7,12 @@
         {% snippet 'snippets/search_input.html', placeholder='Search' %}
     </div>
 
-    {%  if request.path == '/dashboard/datasets' %}
-        {% set _path = 'dashboard.datasets' %}
-    {% elif request.path == '/dashboard/organizations' %}
-        {% set _path = 'dashboard.organizations' %}
-    {% endif %}
-
     {% if c.userobj %}
         {{ h.build_nav_main(
             ('home.about', _('About')),
             ('dataset.search', _('Find Data')),
             ('insights.index', _('Insights')),
-            (_path, _('My account'))
+            (request.endpoint, _('My account'))
              ) }}
     {% else %}
         {{ h.build_nav_main(
