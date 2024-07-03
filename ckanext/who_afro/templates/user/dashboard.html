@@ -19,9 +19,9 @@
 
 {% block maintag %}
     {% if request.args.get("id", "") == 'newsfeed' %}
-        <div class="main user-dashboard-main">
+        <div class="main user-profile-page user-dashboard-main">
     {% else %}
-        <div class="main user-dashboard-activity">
+        <div class="main user-profile-page user-dashboard-activity">
     {% endif %}
 {% endblock %}
 

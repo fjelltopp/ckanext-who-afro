@@ -2238,4 +2238,199 @@ p.learn-more a {
     border-bottom-color: var(--who-blue-65-percent);
 }
 
+/* user profile styles */
+.user-profile-page .module-content {
+    padding: 38px 32px;
+}
+
+.user-profile-page .page-heading {
+      margin-top: 32px;
+      margin-bottom: 32px !important;
+      color: var(--primary-navy);
+}
+
+.user-profile-page .page-heading small.text-muted.fs-5 {
+    color: var(--primary-navy) !important;
+    font-size: 28px !important;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: -0.01em;
+    text-align: left;
+}
+
+.user-profile-page #followee-popover {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    padding: 12px 16px;
+    border-radius: 4px;
+    border: var(--primary-navy) thin solid;
+    color: var(--primary-navy);
+    background: white;
+}
+
+.user-profile-page #followee-popover span:first-child {
+    font-weight: 700;
+}
+
+.user-profile-page #followee-popover strong {
+    font-weight: 400;
+}
+
+/* top content */
+
+.user-profile-page .upper-content {
+    margin-top: 64px;
+    margin-bottom: 48px;
+    padding: 32px;
+    background-color: var(--who-blue-ten-percent);
+    border-radius: 4px 0 0 0;
+}
+
+.user-profile-page .no-padding {
+    padding: 0;
+}
+
+.user-profile-page .user-basic-info {
+    padding: 0;
+    width: 100%;
+}
+
+.user-profile-page .profile-left-info {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    width: 100%;
+}
+
+.user-profile-page .profile-info {
+    padding-left: 20px;
+}
+
+.user-profile-page .profile-info p:first-child {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    color: var(--primary-navy);
+}
+
+.user-profile-page .profile-pic img {
+  width: 64px;
+  height: 64px;
+  border-radius: 2px;
+  border: white 2px solid;
+}
+
+.user-profile-page .profile-info {
+  height: 64px;
+}
+
+.user-profile-page .profile-info div p, .profile-info div ul {
+  margin: 4px;
+}
+
+.user-profile-page .right-content {
+    padding-right: 12px;
+    padding-left: 0;
+}
+
+.user-profile-page .upper-content ul {
+    list-style-type: none;
+}
+
+@media only screen and (max-width: 767px) {
+    .user-profile-page .right-content .logout-btn {
+        max-width: 40%;
+    }
+    .user-profile-page .right-content {
+       margin-top: 48px;
+    }
+    .user-profile-page .right-content ul {
+        padding-left: 87px;
+    }
+    .user-profile-page .profile-left-info-details {
+      justify-content: flex-start;
+    }
+    .user-profile-page .left-content {
+        padding-left: 0;
+    }
+
+    .user-profile-page .profile-left-info-details {
+      justify-content: flex-end;
+    }
+    .user-profile-page .profile-left-info {
+      list-style-type: none;
+    }
+    .user-profile-page .user-dashboard-main h2.page-heading.mb-4,
+    .user-profile-page .dashboard-organisation-main h2.page-heading.mb-4{
+        text-align: left;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .user-profile-page .profile-left-info-details {
+      justify-content: flex-end;
+    }
+    .user-profile-page .profile-left-info-details li:not(:first-child)::before {
+      content: '|';
+      color: var(--who-blue-65-percent);
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+    .user-profile-page .upper-content ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      color: var(--primary-navy);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+      margin-bottom: 0;
+    }
+
+    .user-profile-page .right-content ul {
+        justify-content: flex-end;
+    }
+}
+
+.user-profile-page .right-content .sysadmin-item a {
+    padding-right: 0;
+    text-decoration: underline;
+}
+
+.user-profile-page .right-content ul li:nth-child(1) {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-right: 19px;
+}
+.user-profile-page .right-content ul li a {
+  font-weight: 700;
+}
+.user-profile-page .right-content ul li:nth-child(2) {
+  border: var(--primary-navy) thin solid;
+  border-radius: 4px;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+.user-profile-page .right-content .logout-btn {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.user-profile-page .right-content .logout-btn:hover {
+    text-decoration: none;
+    background: var(--who-blue-65-percent);
+}
+
+.user-profile-page .right-content .logout-btn a {
+    text-decoration: none;
+}
+
+.user-profile-page .profile-left-info-details li a {
+    text-decoration: underline;
+}
+
 /* User profile*/
