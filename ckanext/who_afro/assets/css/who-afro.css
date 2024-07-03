@@ -2481,8 +2481,9 @@ p.learn-more a {
     margin-left: 0.7%;
 }
 
-.user-profile-page .page-header .nav-tabs li.active a, .user-profile-page .page-header .nav-tabs a:hover {
+.user-profile-page .page-header .nav-tabs li.active a {
     border: var(--who-blue-65-percent) thin solid;
+    background-color: white;
     border-bottom-color: transparent;
 }
 
