@@ -1,26 +1,189 @@
 /* user profile styles */
 
+.module-content {
+    padding: 38px 32px;
+}
 
+.page-heading {
+      margin-top: 32px;
+      margin-bottom: 32px !important;
+      color: var(--primary-navy);
+  }
 
+.page-heading small.text-muted.fs-5 {
+    color: var(--primary-navy) !important;
+    font-size: 28px !important;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: -0.01em;
+    text-align: left;
+}
 
+#followee-popover {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    padding: 12px 16px;
+    border-radius: 4px;
+    border: var(--primary-navy) thin solid;
+    color: var(--primary-navy);
+    background: white;
+  }
 
+#followee-popover span:first-child {
+    font-weight: 700;
+}
 
+#followee-popover strong {
+    font-weight: 400;
+}
 
+/* top content */
 
+.upper-content {
+    margin-top: 64px;
+    margin-bottom: 48px;
+    padding: 32px;
+    background-color: var(--who-blue-ten-percent);
+    border-radius: 4px 0 0 0;
+}
+.no-padding {
+    padding: 0;
+}
+.user-basic-info {
+    padding: 0;
+    width: 100%;
+}
+.profile-left-info {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    width: 100%;
+}
+.profile-info {
+    padding-left: 20px;
+}
+.profile-info p:first-child {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    color: var(--primary-navy);
+}
+.profile-pic img {
+  width: 64px;
+  height: 64px;
+  border-radius: 2px;
+  border: white 2px solid;
+}
+.profile-info {
+  height: 64px;
+}
+.profile-info div p, .profile-info div ul {
+  margin: 4px;
+}
 
+.right-content {
+    padding-right: 12px;
+    padding-left: 0;
+}
 
+.upper-content ul {
+    list-style-type: none;
+}
 
+@media only screen and (max-width: 767px) {
+    .right-content .logout-btn {
+        max-width: 40%;
+    }
+    .right-content {
+       margin-top: 48px;
+    }
+    .right-content ul {
+        padding-left: 87px;
+    }
+    .profile-left-info-details {
+      justify-content: flex-start;
+    }
+    .left-content {
+        padding-left: 0;
+    }
 
+    .profile-left-info-details {
+      justify-content: flex-end;
+    }
+    .profile-left-info {
+      list-style-type: none;
+    }
+    .user-dashboard-main h2.page-heading.mb-4,
+    .dashboard-organisation-main h2.page-heading.mb-4{
+        text-align: center;
+    }
+}
 
+@media only screen and (min-width: 992px) {
+    .profile-left-info-details {
+      justify-content: flex-end;
+    }
+    .profile-left-info-details li:not(:first-child)::before {
+      content: '|';
+      color: var(--who-blue-65-percent);
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+    .upper-content ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      color: var(--primary-navy);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+      margin-bottom: 0;
+    }
 
+    .right-content ul {
+        justify-content: flex-end;
+    }
+}
 
+.right-content .sysadmin-item a {
+    padding-right: 0;
+    text-decoration: underline;
+}
+.right-content ul li:nth-child(1) {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-right: 19px;
+}
+.right-content ul li a {
+  font-weight: 700;
+}
+.right-content ul li:nth-child(2) {
+  border: var(--primary-navy) thin solid;
+  border-radius: 4px;
+  padding: 12px 16px;
+  cursor: pointer;
+}
 
+.right-content .logout-btn {
+  text-decoration: none;
+  cursor: pointer;
+}
 
+.right-content .logout-btn:hover {
+    text-decoration: none;
+    background: var(--who-blue-65-percent);
+}
 
+.right-content .logout-btn a {
+    text-decoration: none;
+}
 
-
-
-
+.profile-left-info-details li a {
+    text-decoration: underline;
+}
 
 /* tabs */
 .secondary {
@@ -111,10 +274,6 @@ header ul.nav.nav-tabs li:last-child {
         margin-top: 16px;
         margin-bottom: 16px;
     }
-
-}
-
-@media only screen and (max-width: 545px) {
     .user-dashboard-main .pull-right {
         float: none;
         width: 100%;
@@ -177,6 +336,3 @@ header ul.nav.nav-tabs li:last-child {
         z-index: 0;
     }
 }
-
-
-

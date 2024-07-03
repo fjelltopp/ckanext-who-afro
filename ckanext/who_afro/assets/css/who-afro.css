@@ -2363,8 +2363,8 @@ p.learn-more a {
     .user-profile-page .profile-left-info {
       list-style-type: none;
     }
-    .user-profile-page .user-dashboard-main h2.page-heading.mb-4,
-    .user-profile-page .dashboard-organisation-main h2.page-heading.mb-4{
+    .user-dashboard-main h2.page-heading.mb-4,
+    .dashboard-organisation-main h2.page-heading.mb-4{
         text-align: left;
     }
 }
@@ -2432,5 +2432,163 @@ p.learn-more a {
 .user-profile-page .profile-left-info-details li a {
     text-decoration: underline;
 }
+
+/* tabs */
+.user-profile-page .secondary {
+    content: none;
+    display: none;
+}
+
+.user-profile-page .wrapper .primary {
+    width: 100%;
+    border: 0;
+}
+
+.user-profile-page .wrapper:before {
+    border-right: 0;
+}
+
+.user-profile-page .wrapper {
+    box-shadow: none;
+    border: 0;
+}
+
+.user-profile-page .page-header {
+    background-color: white;
+}
+
+.user-profile-page div.module-content {
+    border: var(--who-blue-65-percent) thin solid;
+    border-top: none;
+}
+
+.user-profile-page header,
+.user-profile-page header ul.nav.nav-tabs {
+    width: calc(100% + 1px);
+}
+
+.user-profile-page header ul.nav.nav-tabs li:first-child {
+    width: 25%;
+}
+
+.user-profile-page header ul.nav.nav-tabs li:not(:first-child) {
+    width: 24.3%;
+    margin-left: 0.7%;
+}
+
+.user-profile-page header ul.nav.nav-tabs li:last-child {
+    width: 24.3%;
+    margin-left: 0.7%;
+}
+
+.user-profile-page .page-header .nav-tabs li.active a, .page-header .nav-tabs a:hover {
+    border: var(--who-blue-65-percent) thin solid;
+    border-bottom-color: transparent;
+}
+
+.user-profile-page .nav-tabs .nav-link, .page-header .nav-tabs li a,
+.user-profile-page .nav-tabs .nav-link, .page-header .nav-tabs li a:hover {
+    background-color: var(--who-blue-ten-percent);
+}
+
+.user-profile-page .nav-tabs,
+.user-profile-page nav-tabs .nav-link, .page-header .nav-tabs li a {
+    border-bottom-color: var(--who-blue-65-percent);
+}
+
+.user-profile-page .nav.nav-tabs li a {
+    color: var(--primary-navy);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 510px) {
+    .user-profile-page header ul.nav.nav-tabs li,
+    .user-profile-page header ul.nav.nav-tabs li:first-child,
+    .user-profile-page header ul.nav.nav-tabs li:not(:first-child),
+    .user-profile-page header ul.nav.nav-tabs li:last-child {
+        width: 100%;
+    }
+    .user-profile-page header ul.nav.nav-tabs li:first-child {
+        margin-left: 4px;
+    }
+    .user-profile-page .nav.nav-tabs li a {
+        text-align: left;
+    }
+    .user-profile-page .dashboard-add-team-btn {
+        width: 100% !important;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+}
+
+@media only screen and (max-width: 545px) {
+    .user-dashboard-main .pull-right {
+        float: none;
+        width: 100%;
+    }
+    .user-dashboard-main #followee-popover {
+        width: 100%;
+    }
+    .user-dashboard-main small.text-muted.fs-5 {
+        text-align: center;
+    }
+}
+
+.user-profile-page .page-header.module-content {
+    padding: 0;
+    width: 100%;
+}
+
+.dashboard-organisation-main article.module,
+.user-dashboard-main article.module{
+    padding: 0;
+    margin-bottom: 115px;
+}
+
+.user-profile-page .media-grid .media-heading {
+    margin: 8px 0 0;
+}
+
+.dashboard-organisation-main .media-grid {
+    margin-bottom: 32px;
+}
+
+
+.user-profile-page .show-all-org,
+.user-profile-page .show-all-org:hover,
+.user-profile-page .show-all-pkg,
+.user-profile-page .show-all-pkg:hover {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 462px) {
+  .user-profile-page #activity_page_buttons, #activity_page_buttons a.btn {
+    margin-top: 16px;
+    width: 100%;
+    }
+}
+
+/* header navbar */
+@media only screen and (min-width: 992px) {
+    .masthead .main-navbar ul li.active a {
+        color: var(--primary-navy) !important;
+    }
+
+    .masthead .main-navbar ul li:last-child a {
+        padding-bottom: 37px !important;
+        border-bottom: var(--secondary-who-blue) 3px solid;
+        border-radius: 0;
+        z-index: 0;
+    }
+}
+
+
 
 /* User profile*/

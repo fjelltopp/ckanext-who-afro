@@ -6,12 +6,6 @@ who-afro-theme:
     - css/who-afro.css
     - css/promoted-plus.css
 
-user-profile:
-  filter: cssrewrite
-  output: who-afro/%(version)s-userprofile.css
-  contents:
-    - css/userprofile.css
-
 FileInputComponentStyles:
     contents:
         - css/FileInputComponent.css
