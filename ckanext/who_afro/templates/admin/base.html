@@ -1,5 +1,12 @@
 {% ckan_extends %}
 
+{% if not user_dict %}
+    {% set user_dict = h.get_user_obj() %}
+{% endif %}
+
+{%- block header %}
+    {% include "user/account_header.html" %}
+{% endblock -%}
 
 {% block breadcrumb %}
     {% if self.breadcrumb_content() | trim %}
