@@ -2551,7 +2551,7 @@ p.learn-more a {
 }
 
 .dashboard-organisation-main article.module,
-.user-dashboard-main article.module{
+.user-dashboard-main article.module {
     padding: 0;
     margin-bottom: 115px;
 }
@@ -2588,11 +2588,7 @@ p.learn-more a {
     .masthead .main-navbar ul li.active a {
         color: var(--primary-navy) !important;
     }
-
-    .masthead .main-navbar ul li.active {
-        pointer-events: none;
-    }
-
+    
     .masthead .main-navbar ul li.active.my_account {
         pointer-events: auto;
     }
