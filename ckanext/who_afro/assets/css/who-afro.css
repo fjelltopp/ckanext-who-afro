@@ -2124,8 +2124,17 @@ p.learn-more a {
     padding-top: 49px;
 }
 
+
 .dashboard-add-team-btn, .dashboard-add-dataset-btn {
     float: right !important;
+}
+
+@media only screen and (max-width: 583px) {
+.dashboard-add-team-btn, .dashboard-add-dataset-btn {
+    margin-bottom: 32px;
+    margin-top: 16px;
+    width: 100%;
+    }
 }
 
 /* team list  in ckan/organization */
@@ -2247,6 +2256,7 @@ p.learn-more a {
       color: var(--primary-navy);
 }
 
+/** activity section heading **/
 .user-profile-page .page-heading small.text-muted.fs-5 {
     color: var(--primary-navy) !important;
     font-size: 28px !important;
@@ -2276,7 +2286,6 @@ p.learn-more a {
 }
 
 /* top content */
-
 .user-profile-page .upper-content {
     margin-top: 64px;
     margin-bottom: 48px;
@@ -2325,7 +2334,8 @@ p.learn-more a {
   height: 64px;
 }
 
-.user-profile-page .profile-info div p, .user-profile-page .profile-info div ul {
+.user-profile-page .profile-info div p,
+.user-profile-page .profile-info div ul {
   margin: 4px;
 }
 
@@ -2491,7 +2501,8 @@ p.learn-more a {
 }
 
 .user-profile-page .nav-tabs,
-.user-profile-page .nav-tabs .nav-link, .user-profile-page .page-header .nav-tabs li a {
+.user-profile-page .nav-tabs .nav-link,
+.user-profile-page .page-header .nav-tabs li a {
     border-bottom-color: var(--who-blue-65-percent);
 }
 
@@ -2565,7 +2576,8 @@ p.learn-more a {
 }
 
 @media only screen and (max-width: 462px) {
-  .user-profile-page #activity_page_buttons, #activity_page_buttons a.btn {
+  .user-profile-page #activity_page_buttons,
+  #activity_page_buttons a.btn {
     margin-top: 16px;
     width: 100%;
     }
