@@ -4,6 +4,7 @@ name: General Data
 about: A customized dataset schema for WHO AFRO CKAN deployment
 about_url: http://github.com/ckan/ckanext-scheming
 
+dataset_fields:
 
 - start_form_page:
     title: General Metadata
