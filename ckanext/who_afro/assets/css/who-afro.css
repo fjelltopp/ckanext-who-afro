@@ -2029,3 +2029,41 @@ p.learn-more a {
 .page-header .nav-tabs li a{
     color: var(--primary-navy);
 }
+
+ul.country {
+    -moz-column-count: 3;
+    column-count: 3;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 30px;
+}
+
+ul.country li {
+    margin-bottom: 10px;
+    min-height: 70px;
+    display: flex;
+    page-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    break-inside: avoid;
+}
+
+ul.country li .views-field-field-flag {
+    float: left;
+    width: 20%;
+    margin-right: 5%;
+    width: 15%;
+    margin-right: 3%;
+}
+
+ul.country li .views-field-title {
+    float: left;
+    width: 75%;
+    line-height: 2.7;
+}
+
+ul.country li .views-field-field-flag img {
+    border: none !important;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
