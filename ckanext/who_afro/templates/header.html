@@ -33,6 +33,7 @@
     {% if c.userobj %}
         {{ h.build_nav_main(
             ('home.about', _('About')),
+            ('countries.index', _('Countries')),
             ('dataset.search', _('Find Data')),
             ('insights.index', _('Insights')),
             ('activity.dashboard', _('My account'))
@@ -40,6 +41,7 @@
     {% else %}
         {{ h.build_nav_main(
             ('home.about', _('About')),
+            ('countries.index', _('Countries')),
             ('dataset.search', _('Find Data')),
             ('insights.index', _('Insights')),
             ('user.login', _('Log in'))

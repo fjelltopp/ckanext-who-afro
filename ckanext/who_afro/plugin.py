@@ -45,6 +45,7 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultTranslation):
             'format_locale': who_afro_helpers.format_locale,
             'get_datahub_stats': who_afro_helpers.get_datahub_stats,
             'get_activity_stream_limit': who_afro_helpers.get_activity_stream_limit,
+            'get_license': who_afro_helpers.get_license
         }
 
     # IConfigurer
@@ -107,7 +108,9 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultTranslation):
             'autogenerate_name_from_title': who_afro_validators.autogenerate_name_from_title,
             'autofill': who_afro_validators.autofill,
             'autogenerate': who_afro_validators.autogenerate,
-            'isomonth': who_afro_validators.isomonth
+            'isomonth': who_afro_validators.isomonth,
+            'language_validator': who_afro_validators.language_validator,
+            'who_license_autofill': who_afro_validators.who_license_autofill
         }
 
     # IPackageContoller
