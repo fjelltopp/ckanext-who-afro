@@ -44,6 +44,7 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultTranslation):
             'get_last_modifier': who_afro_helpers.get_last_modifier,
             'format_locale': who_afro_helpers.format_locale,
             'get_datahub_stats': who_afro_helpers.get_datahub_stats,
+            'get_activity_stream_limit': who_afro_helpers.get_activity_stream_limit,
             'get_license': who_afro_helpers.get_license
         }
 
