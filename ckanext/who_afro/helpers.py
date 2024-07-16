@@ -201,3 +201,20 @@ def get_license(license_id):
     else:
         return {}
 
+
+def get_package_stats(package_id):
+    from sqlalchemy.sql import select, text
+    import ckan.model as model
+
+    connection = model.Session.connection()
+    count = connection.execute(
+        text(
+            """
+                SELECT visits_ever FROM package_stats
+                WHERE package_id = :package_id
+            """
+        ),
+        package_id=package_id,
+    ).fetchone()
+
+    return count and count[0] or 0
