@@ -46,7 +46,8 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultTranslation):
             'get_datahub_stats': who_afro_helpers.get_datahub_stats,
             'get_activity_stream_limit': who_afro_helpers.get_activity_stream_limit,
             'get_license': who_afro_helpers.get_license,
-            'get_package_stats': who_afro_helpers.get_package_stats
+            'get_package_stats': who_afro_helpers.get_package_stats,
+            'get_resource_stats': who_afro_helpers.get_resource_stats
         }
 
     # IConfigurer

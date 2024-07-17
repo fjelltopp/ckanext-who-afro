@@ -3,6 +3,8 @@ from ckan.common import c, request, is_flask_request, g
 from datetime import datetime, timedelta
 from ckan.plugins import toolkit
 
+from .utils.numerize import numerize
+
 
 def get_user_obj(field=""):
     """
@@ -208,13 +210,29 @@ def get_package_stats(package_id):
 
     connection = model.Session.connection()
     count = connection.execute(
-        text(
-            """
-                SELECT visits_ever FROM package_stats
-                WHERE package_id = :package_id
-            """
-        ),
+        text("""
+            SELECT visits_ever FROM package_stats
+            WHERE package_id = :package_id
+        """),
         package_id=package_id,
     ).fetchone()
 
-    return count and count[0] or 0
+    count = count and count[0] or 0
+    return numerize(count)
+
+
+def get_resource_stats(resource_id):
+    from sqlalchemy.sql import select, text
+    import ckan.model as model
+
+    connection = model.Session.connection()
+    count = connection.execute(
+        text("""
+            SELECT visits_ever FROM resource_stats
+            WHERE resource_id = :resource_id
+        """),
+        resource_id=resource_id,
+    ).fetchone()
+
+    count = count and count[0] or 0
+    return numerize(count)
