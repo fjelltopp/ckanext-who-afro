@@ -205,34 +205,10 @@ def get_license(license_id):
 
 
 def get_package_stats(package_id):
-    from sqlalchemy.sql import select, text
-    import ckan.model as model
-
-    connection = model.Session.connection()
-    count = connection.execute(
-        text("""
-            SELECT visits_ever FROM package_stats
-            WHERE package_id = :package_id
-        """),
-        package_id=package_id,
-    ).fetchone()
-
-    count = count and count[0] or 0
-    return numerize(count)
+    package_stat = toolkit.get_action('package_stats')({}, {'package_id': package_id})
+    return numerize(int(package_stat))
 
 
 def get_resource_stats(resource_id):
-    from sqlalchemy.sql import select, text
-    import ckan.model as model
-
-    connection = model.Session.connection()
-    count = connection.execute(
-        text("""
-            SELECT visits_ever FROM resource_stats
-            WHERE resource_id = :resource_id
-        """),
-        resource_id=resource_id,
-    ).fetchone()
-
-    count = count and count[0] or 0
-    return numerize(count)
+    resource_stat = toolkit.get_action('resource_stats')({}, {'resource_id': resource_id})
+    return numerize(int(resource_stat))
