@@ -3,8 +3,6 @@ from ckan.common import c, request, is_flask_request, g
 from datetime import datetime, timedelta
 from ckan.plugins import toolkit
 
-from .utils.numerize import numerize
-
 
 def get_user_obj(field=""):
     """
@@ -202,13 +200,3 @@ def get_license(license_id):
             return license
     else:
         return {}
-
-
-def get_package_stats(package_id):
-    package_stat = toolkit.get_action('package_stats')({}, {'package_id': package_id})
-    return numerize(int(package_stat))
-
-
-def get_resource_stats(resource_id):
-    resource_stat = toolkit.get_action('resource_stats')({}, {'resource_id': resource_id})
-    return numerize(int(resource_stat))
