@@ -200,3 +200,4 @@ def get_license(license_id):
             return license
     else:
         return {}
+
