@@ -1,8 +1,6 @@
 /* This file overwrites css from the base ckan theme */
 
 :root {
-    --primary-navy: #00205C;
-    --secondary-who-blue: #008dc9;
     --who-blue-65-percent: #79B5E3;
     --account-masthead-height: 32px;
     --masthead-menu-padding-top: -3px;
@@ -10,6 +8,10 @@
     --who-blue-ten-percent: #DDEFF9;
     --neutral-light-grey: #E6E7E8;
     --A11ygrey: #757575;
+
+    --who-blue-25-percent: #C9DDF3;
+    --primary-navy: #171B38;
+    --secondary-who-blue: #009ADE;
 }
 
 a {
@@ -489,7 +491,7 @@ p.small {
 
 .account-masthead {
   height: var(--account-masthead-height);
-  background: var(--primary-navy) ;
+  background: var(--who-blue-25-percent);
 }
 
 .account-masthead .account ul li a {
@@ -497,7 +499,7 @@ p.small {
     font-weight: 400;
     font-size: 14px;
     text-align: right;
-    color: #fff;
+    color: var(--primary-navy);
     padding-right: 12px;
     margin-left:  15px;
     line-height: var(--account-masthead-height);
@@ -505,6 +507,7 @@ p.small {
 
 .account-masthead .account ul li a[selected="selected"] {
     background-color: var(--secondary-who-blue);
+    color: white;
 }
 
 .account-masthead .account ul li:hover a[selected="selected"]:hover {
@@ -1871,7 +1874,6 @@ p.learn-more a {
 
     .dev-banner {
         margin-right: auto;
-        background-color: var(--secondary-who-blue);
         pointer-events: none;
     }
 
@@ -1914,8 +1916,8 @@ p.learn-more a {
 }
 
 .ckan-circle-exclamation.white {
-    color: white;
-    border: 2px solid white;
+    color: var(--primary-navy);
+    border: 2px solid var(--primary-navy);
 }
 
 .ckan-circle-exclamation.secondary-who-blue {
