@@ -343,7 +343,7 @@ p.small {
 
 #NavbarBrandingContainer {
     position:absolute;
-    top: 8px;
+    top: 10px;
     left: 0px;
 }
 
@@ -394,7 +394,7 @@ p.small {
 
 .masthead .navbar{
     margin-bottom: 0px;
-    min-height: 80px;
+    min-height: 104px;
 }
 
 .navbar-nav{
@@ -501,7 +501,7 @@ p.small {
     text-align: right;
     color: var(--primary-navy);
     padding-right: 12px;
-    margin-left:  15px;
+    padding-left: 12px;
     line-height: var(--account-masthead-height);
 }
 
@@ -1314,10 +1314,10 @@ a.tag:hover  {
 }
 
 .mobile-menu .search-form {
-    margin-top: 70px;
+    margin-top: 90px;
     margin-bottom: 0;
     padding-top: 20px;
-    padding-bottom: 25px;
+    padding-bottom: 20px;
     border-bottom: none;
 }
 
@@ -1879,6 +1879,7 @@ p.learn-more a {
 
     ul li.dev-banner a {
         margin-left: 0 !important;
+        padding-left: 0 !important;
     }
 
     .dev-banner a .clickable {

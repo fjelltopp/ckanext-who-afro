@@ -7,18 +7,23 @@
   <a href="{{ h.url_for('home.index') }}">
       <img
         id="NavbarLogo"
-        src="/images/who-african-region.png"
+        src="/images/august-14/logo-1.svg"
         alt="{{ g.site_title }}"
         title="{{ g.site_title }}"
       />
-        <img
+      <!-- <img
         id="LogoBorder"
         src="/images/logo_partial_border.png"
         alt=""
+      /> -->
+      <div id="NavbarHeadingContainer">
+        <img
+          id="NavbarLogo"
+          src="/images/august-14/logo-2.svg"
+          alt="{{ g.site_title }}"
+          title="{{ g.site_title }}"
         />
-    <div id="NavbarHeadingContainer">
-        <div><h1 class="title">The Health Data Hub</h1></div>
-    </div>
+      </div>
   </a>
 </div>
 {% endblock %}
@@ -32,17 +37,19 @@
 
     {% if c.userobj %}
         {{ h.build_nav_main(
-            ('home.about', _('About')),
             ('countries.index', _('Countries')),
-            ('dataset.search', _('Find Data')),
+            ('dataset.search', _('Indicators')),
+            ('dataset.search', _('Data sources')),
+            ('dataset.search', _('Data')),
             ('insights.index', _('Insights')),
             ('activity.dashboard', _('My account'))
              ) }}
     {% else %}
         {{ h.build_nav_main(
-            ('home.about', _('About')),
             ('countries.index', _('Countries')),
-            ('dataset.search', _('Find Data')),
+            ('dataset.search', _('Indicators')),
+            ('dataset.search', _('Data sources')),
+            ('dataset.search', _('Data')),
             ('insights.index', _('Insights')),
             ('user.login', _('Log in'))
              ) }}
