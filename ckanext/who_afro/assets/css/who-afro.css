@@ -201,12 +201,11 @@ body {
 }
 
 .promoted-left .headline {
-    font-size: 48px;
+    font-size: 28px;
     font-weight: 400;
-    line-height: 56px;
-    letter-spacing: -0.03em;
+    line-height: 36px;
+    letter-spacing: -1%;
     text-align: left;
-
 }
 
 
@@ -555,6 +554,7 @@ p.small {
 
 .promoted-left {
     margin-top: 5%;
+    padding-left: 0;
 }
 
 .promoted-right {
@@ -1648,7 +1648,7 @@ a.footer-link:hover,
     text-align: justify;
 }
 
-p.learn-more a {
+p.description a {
     font-size: 16px;
     color: var(--who-blue-ten-percent);
     text-decoration: underline;
@@ -1744,7 +1744,7 @@ p.learn-more a {
     position: relative;
     z-index: 2;
     padding: 10px;
-    top: -10px;
+    top: -40px;
     left: -10px;
 }
 
@@ -1752,6 +1752,141 @@ p.learn-more a {
     z-index: 2;
 }
 
+.promoted-goals {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1;
+    padding-left: 8.5px;
+    padding-right: 8.5px;
+    margin-top: 35px;
+}
+
+.promoted-goals > div[class^="col-lg-"] {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.promoted-goals > div[class^="col-lg-"] > div.goal-container {
+    width: 370.33px;
+    height: 370px;
+    border-radius: 4px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.promoted-goals > div[class^="col-lg-"] > div.goal-container > div {
+    display: flex;
+    position: absolute;
+    width: 371px;
+    height: 186px;
+    left: 0px;
+    bottom: 0px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.promoted-goals > div[class^="col-lg-"] > div.goal-container > div > a.description {
+    display: inline-flex;
+    align-self: flex-end;
+    flex-basis: 100%;
+    padding: 14px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    color: white;
+}
+
+.promoted-goals > div[class^="col-lg-"] > div.goal-container > div > a.description > i {
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -1%;
+    padding-right: 10px;
+}
+
+.promoted-goals > div[class^="col-lg-"] > div.goal-container > div > a.description > i.fa-arrow-right {
+    margin-left: auto;
+    padding-right: 7px;
+}
+
+#UniversalHealthCoverage {
+    background-image: url('/images/august-14/hero-col-1-bg.jpeg');
+}
+
+#UniversalHealthCoverage > div {
+    background: linear-gradient(180deg, rgba(0, 154, 222, 0) 0%, #009ADE 100%);
+}
+
+#HealthSecurity {
+    margin-left: 8px;
+    background-image: url('/images/august-14/hero-col-2-bg.jpeg');
+}
+
+#HealthSecurity > div {
+    background: linear-gradient(180deg, rgba(64, 171, 111, 0) 0%, #40AB6F 100%);
+}
+
+#HealthierPopulations {
+    margin-left: 16px;
+    background-image: url('/images/august-14/hero-col-3-bg.jpeg');
+}
+
+#HealthierPopulations > div {
+    background: linear-gradient(180deg, rgba(128, 188, 0, 0) 0%, #80BC00 100%);
+}
+
+/* Promoted quick access */
+.promoted-quick-access {
+    margin-left: auto;
+    z-index: 2;
+}
+
+.promoted-quick-access > h1.headline {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 56px;
+}
+
+.promoted-quick-access > ul.quick-access-links {
+    list-style: none;
+    margin: 25px 0 0;
+    padding: 0;
+}
+
+.promoted-quick-access > ul.quick-access-links > li {
+    clear: both;
+    padding: 15px 0;
+    border-image: linear-gradient(90deg, #171B38 0%, #009ADE 85%, #80BC00 100%) 5 0 0 0;
+    border-style: solid;
+}
+
+.promoted-quick-access > ul.quick-access-links > li:last-child {
+    padding-bottom: 15px;
+    border-image: linear-gradient(90deg, #171B38 0%, #009ADE 85%, #80BC00 100%) 5 0 5 0;
+    border-style: solid;
+}
+
+.promoted-quick-access > ul.quick-access-links > li > a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 36px;
+    display: inline-flex;
+    flex-basis: 100%;
+    width: 100%;
+}
+
+.promoted-quick-access > ul.quick-access-links > li > a > i {
+    padding-right: 10px;
+}
+
+.promoted-quick-access > ul.quick-access-links > li > a > img {
+    margin-left: auto;
+}
 
 /* dev banner */
 .dev-banner-container {
