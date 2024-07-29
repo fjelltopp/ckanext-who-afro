@@ -1,0 +1,17 @@
+{% set stats = h.get_datahub_stats() %}
+<h2 id="featured-data-title">{{_('Featured data')}}</h2>
+
+<div class="featured-data">
+    <div class="container">
+        <div class="featured-data-header">
+            <h3>{{ _('Most viewed/downloaded') }}</h3>
+            <a class="btn see-all-btn" href="{{ url_for('dataset.search', tags='Featured') }}">{{ _('See all') }}</a>
+        </div>
+        {% snippet 'home/snippets/recently_updated.html', packages=h.get_featured_datasets(), origin='homepage' %}
+        <div class="featured-data-header">
+            <h3>{{ _('Recently updated') }}</h3>
+            <a class="btn see-all-btn" href="{{ h.url_for('/dataset') }}">{{ _('See all') }}</a>
+        </div>
+        {% snippet 'home/snippets/recently_updated.html', packages=h.get_recently_updated_datasets(), origin='homepage' %}
+    </div>
+</div>
