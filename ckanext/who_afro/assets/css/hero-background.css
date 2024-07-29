@@ -23,3 +23,30 @@
     background-image: url('/images/august-14/hero-bg-center-left.svg');
     background-repeat: no-repeat;
 }
+
+.hero-bg.bottom-right {
+    position: absolute;
+    top: 1590px;
+    width: 1160px;
+    height: 672px;
+    background-image: url('/images/august-14/hero-bg-bottom-right.svg');
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 3000px) {
+    .hero-bg.bottom-right {
+        left: calc(100% - 475px);
+    }
+}
+
+@media (max-width: 1600px) {
+    .hero-bg.bottom-right {
+        left: calc(100% - 525px);
+    }
+}
+
+@media (max-width: 1440px) {
+    .hero-bg.bottom-right {
+        left: calc(100% - 475px);
+    }
+}
