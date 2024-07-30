@@ -50,3 +50,10 @@
         left: calc(100% - 475px);
     }
 }
+
+@media (max-width: 992px) {
+    .hero-bg.center-left,
+    .hero-bg.bottom-right {
+        display: none;
+    }
+}

@@ -24,3 +24,9 @@
         left: calc(100% - 600px);
     }
 }
+
+@media (max-width: 992px) {
+    .footer-bg.bottom-right {
+        display: none;
+    }
+}

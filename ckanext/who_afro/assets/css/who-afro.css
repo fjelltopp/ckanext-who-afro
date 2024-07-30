@@ -1763,6 +1763,12 @@ p.description a {
     margin-top: 35px;
 }
 
+@media (max-width: 992px) {
+    .promoted-goals {
+        margin-top: 0;
+    }
+}
+
 .promoted-goals > div[class^="col-lg-"] {
     padding-left: 0;
     padding-right: 0;
@@ -1775,7 +1781,14 @@ p.description a {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     position: relative;
+}
+
+@media (max-width: 992px) {
+    .promoted-goals > div[class^="col-lg-"] > div.goal-container {
+        margin-bottom: 32px;
+    }
 }
 
 .promoted-goals > div[class^="col-lg-"] > div.goal-container > div {
@@ -1819,11 +1832,18 @@ p.description a {
 
 #UniversalHealthCoverage > div {
     background: linear-gradient(180deg, rgba(0, 154, 222, 0) 0%, #009ADE 100%);
+    background-repeat: no-repeat;
 }
 
 #HealthSecurity {
     margin-left: 8px;
     background-image: url('/images/august-14/hero-col-2-bg.jpeg');
+}
+
+@media (max-width: 992px) {
+    #HealthSecurity {
+        margin-left: 0;
+    }
 }
 
 #HealthSecurity > div {
@@ -1833,6 +1853,12 @@ p.description a {
 #HealthierPopulations {
     margin-left: 16px;
     background-image: url('/images/august-14/hero-col-3-bg.jpeg');
+}
+
+@media (max-width: 992px) {
+    #HealthierPopulations {
+        margin-left: 0;
+    }
 }
 
 #HealthierPopulations > div {
@@ -1914,6 +1940,10 @@ p.description a {
     text-align: center;
 }
 
+@media (max-width: 992px) {
+
+}
+
 .promoted-progress > .promoted-progress-row > .promoted-progress-col > a {
     font-weight: 400;
     font-size: 24px;
@@ -1921,8 +1951,21 @@ p.description a {
     margin-bottom: 20px;
 }
 
+@media (max-width: 992px) {
+    .promoted-progress > .promoted-progress-row > .promoted-progress-col > a {
+        display: block;
+    }
+}
+
 .promoted-progress > .promoted-progress-row > .promoted-progress-col > img {
     margin-top: 20px;
+}
+
+@media (max-width: 992px) {
+    .promoted-progress > .promoted-progress-row > .promoted-progress-col > img {
+        display: inline-block;
+        margin-bottom: 32px;
+    }
 }
 
 .promoted-progress > .promoted-progress-row > .promoted-progress-col.insights-col {
@@ -1988,6 +2031,14 @@ p.description a {
     border: 0;
     background-color: white;
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.04);
+    padding: 24px;
+    border-radius: 8px;
+}
+
+@media (max-width: 992px) {
+    .featured-data .homepage-package-list {
+        margin-bottom: 32px;
+    }
 }
 
 .featured-data .homepage-package-list li.dataset-item > .dataset-content {
