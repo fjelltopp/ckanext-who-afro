@@ -6,63 +6,118 @@
     <div class="promoted-container row">
         <div class="promoted-left col-lg-5 col-xs-12 col-sm-12">
             <div class="promoted-left-text">
-                <p class="subtitle">{{_('WHO African Regional Health Data Hub')}}</p>
-                <h1 class="headline">{{_('A regional repository for health data')}}</h1>
-                <p class="description">{{_('This regional health data hub is a platform to store datasets and share information with internal and external partners. Our goal is to establish a source of truth to enable staff, researchers and the public to access relevant data quickly.')}}</p>
-                <p class="learn-more"><a href="{{ h.url_for('home.about') }}">{{ _('Learn more about the Data Hub') }}</a></p>
+                <p class="subtitle">
+                    <img
+                        src="/images/august-14/rhdh-logo-white.svg"
+                        alt="{{ _('Regional Health Data Hub') }}"
+                    />
+                </p>
+                <h1 class="headline">{{_('A regional ecosystem for health and health-related data')}}</h1>
+                <p class="description">
+                    {{_('This regional health data hub is a platform to store datasets and share information with internal and external partners. Our goal is to establish a source of truth to enable staff, researchers and the public to access relevant data quickly.')}}
+                    <a href="{{ h.url_for('home.about') }}">{{ _('Learn more') }}</a>
+                </p>
             </div>
         </div>
         <div class="separator col-lg-1 d-none d-lg-block">
         </div>
-        <div class="promoted-right col-lg-6 col-xs-12 col-sm-12">
-            <div class="search-section">
-            <h2>{{ _('Search data') }}</h2>
-            {% snippet 'snippets/search_input.html', placeholder='Search' %}
-            </div>
-            <div class="search-section">
-                <p>{{ _('Find data by type') }}</p>
-                <div class="search-options">
-                    <ul>
-                        <li class="criterion"><a href="{{ url_for('group.read', id='indicators') }}">{{ _('Indicators') }}</a></li>
-                        <li class="criterion"><a href="{{ url_for('group.read', id='sources') }}">{{ _('Data sources') }}</a></li>
-                        <li class="criterion"><a href="{{ url_for('group.read', id='publications') }}">{{ _('Publications') }}</a></li>
-                        <li><a href="{{ url_for('group.index') }}">{{ _('See more') }}</a></li>
-                    </ul>
+        <div class="promoted-goals row">
+            <div class="col-lg-4 col-xs-12 col-sm-12">
+                <div id="UniversalHealthCoverage" class="goal-container">
+                    <div>
+                        <a href="#" class="description">
+                            <i class="fa-solid fa-globe"></i> {{ _('Universal Health Coverage') }}
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-
-            <div class="search-section">
-                <p>{{ _('Find data by programme') }}</p>
-                <div class="search-options">
-                    <ul>
-                        <li class="criterion"><a href="{{ url_for('dataset.search', programme='hiv') }}">{{ _('HIV') }}</a></li>
-                        <li class="criterion"><a href="{{ url_for('dataset.search', programme='srh') }}">{{ _('SRH') }}</a></li>
-                        <li class="criterion"><a href="{{ url_for('dataset.search', programme='malaria') }}">{{ _('Malaria') }}</a></li>
-                        <li><a href="{{ url_for('dataset.search') }}">{{ _('See more') }}</a></li>
-                    </ul>
+            <div class="col-lg-4 col-xs-12 col-sm-12">
+                <div id="HealthSecurity" class="goal-container">
+                    <div>
+                        <a href="#" class="description">
+                            <i class="fa-solid fa-shield-heart"></i> {{ _('Health Security') }}
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-
-            <div class="search-section">
-                <p>{{ _('Find data by country') }}</p>
-                <div class="search-options">
-                    <ul>
-                        <li class="criterion"><a href="{{ url_for('dataset.search', country='AO') }}">{{ _('Angola') }}</a></li>
-                        <li class="criterion"><a href="{{ url_for('dataset.search', country='BW') }}">{{ _('Botswana') }}</a></li>
-                        <li class="criterion"><a href="{{ url_for('dataset.search', country='CI') }}">{{ _('Côte d\'Ivoire') }}</a></li>
-                        <li><a href="{{ url_for('dataset.search') }}">{{ _('See more') }}</a></li>
-                    </ul>
+            <div class="col-lg-4 col-xs-12 col-sm-12">
+                <div id="HealthierPopulations" class="goal-container">
+                    <div>
+                        <a href="#" class="description">
+                            <i class="fa-solid fa-users"></i> {{ _('Healthier Populations') }}
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-
-            <div class="search-section">
-                <a href="{{ url_for('dataset.search') }}" class="all-criteria">{{ _('View and filter all data') }}</a>
-            </div>
-
         </div>
     </div>
 
+    <div class="promoted-container row">
+        <div class="promoted-quick-access col-lg-6 col-xs-12 col-sm-12">
+            <h1 class="headline">
+                {{ _('Find and share critical') }} <br>
+                {{ _('health data, fast.') }}
+            </h1>
+            <ul class="quick-access-links">
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-earth-africa"></i> {{ _('Countries') }}
+                        <img src="/images/august-14/who-arrow-right-green.svg"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-gauge"></i> {{ _('Indicators') }}
+                        <img src="/images/august-14/who-arrow-right-green.svg"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-chart-column"></i> {{ _('Data sources') }}
+                        <img src="/images/august-14/who-arrow-right-green.svg"/>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
+    <div class="promoted-container row">
+        <div class="promoted-progress col-lg-12 col-xs-12 col-sm-12">
+            <h1>{{ _('Triple billion progress') }}</h1>
+            <div class="promoted-progress-row row">
+                <div class="promoted-progress-col col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                    <a href="#">{{ _('Universal health coverage') }}</a>
+                    <img
+                        src="/images/insight_img_2.png"
+                        alt="image"
+                    />
+                </div>
 
+                <div class="promoted-progress-col col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                    <a href="#">{{ _('Health emergencies protection') }}</a>
+                    <img
+                        src="/images/insight_img_3.png"
+                        alt="image"
+                    />
+                </div>
 
+                <div class="promoted-progress-col col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                    <a href="#">{{ _('Healthier populations') }}</a>
+                    <img
+                        src="/images/insight_img_1.png"
+                        alt="image"
+                    />
+                </div>
+
+                <div class="promoted-progress-col insights-col col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <a class="btn">
+                        {{ _('See other insights') }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

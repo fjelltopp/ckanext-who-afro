@@ -1,0 +1,32 @@
+.footer-bg.bottom-right {
+    position: absolute;
+    bottom: 200px;
+    width: 707px;
+    height: 712px;
+    background-image: url('/images/august-14/footer-bg-bottom-right.svg');
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 3000px) {
+    .footer-bg.bottom-right {
+        left: calc(100% - 600px);
+    }
+}
+
+@media (max-width: 1600px) {
+    .footer-bg.bottom-right {
+        left: calc(100% - 900px);
+    }
+}
+
+@media (max-width: 1440px) {
+    .footer-bg.bottom-right {
+        left: calc(100% - 600px);
+    }
+}
+
+@media (max-width: 992px) {
+    .footer-bg.bottom-right {
+        display: none;
+    }
+}

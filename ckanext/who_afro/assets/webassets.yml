@@ -5,6 +5,9 @@ who-afro-theme:
     - css/source-sans-3VF.css
     - css/who-afro.css
     - css/promoted-plus.css
+    - css/hero-background.css
+    - css/footer-background.css
+    - css/fontawesome.css
 
 FileInputComponentStyles:
     contents:

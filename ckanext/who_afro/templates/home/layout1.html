@@ -9,25 +9,10 @@
                 {% endblock %}
             </div>
         </div>
-    <div class="insights">
-        <div class="container">
-        {% snippet 'home/snippets/insights.html' %}
-        </div>
-    </div>
-    <div class="after-insights"></div>
-    </div>
-    <div class="recently-updated">
-        <div class="container">
-            <div class="recently-updated-title">
-                <h3>{{ _('Featured Datasets') }}</h3>
-                <a class="view-all-btn" href="{{ url_for('dataset.search', tags='Featured') }}">{{ _('See all') }}</a>
+        <div class="insights featured">
+            <div class="container">
+            {% snippet 'home/snippets/featured.html' %}
             </div>
-            {% snippet 'home/snippets/recently_updated.html', packages=h.get_featured_datasets(), origin='homepage' %}
-            <div class="recently-updated-title">
-                <h3>{{ _('Recently Updated Datasets') }}</h3>
-                <a class="view-all-btn" href="{{ h.url_for('/dataset') }}">{{ _('See all') }}</a>
-            </div>
-            {% snippet 'home/snippets/recently_updated.html', packages=h.get_recently_updated_datasets(), origin='homepage' %}
         </div>
     </div>
 </div>
