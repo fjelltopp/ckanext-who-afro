@@ -1,0 +1,35 @@
+{% extends "page.html" %}
+
+{% block subtitle %}
+{{ _('Data Sources') }}
+{%endblock subtitle%}
+
+{% block breadcrumb_content %}
+<li class="active">
+  {% link_for _('Data Sources'), named_route='sources.index' %}
+</li>
+{% endblock %}
+
+{% block content %}
+<div role="main" class="insights-page">
+  <div class="promoted-background">
+    <!-- Snippet package/snippets/promoted_plus.html start -->
+    <div class="plus plus-top-left"></div>
+    <div class="plus plus-top-right"></div>
+    <!-- Snippet package/snippets/promoted_plus.html end -->
+    <div class="container">
+      <div class="promoted promoted-home col-xs-12 col-sm-10 col-md-8 col-lg-6">
+        <div class="promoted-container">
+          <p class="subtitle">{{ _('Home') }} /</p>
+          <h1 class="page-title">{{ _('Data Sources') }}</h1>
+          <p>
+            {{ _('This data hub draws on a variety of different data sources whoes details are listed below.') }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="min-height:700px">
+  </div>
+</div>
+{% endblock content %}

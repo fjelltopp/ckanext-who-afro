@@ -30,24 +30,16 @@
         {% snippet 'snippets/search_input.html', placeholder='Search' %}
     </div>
 
+    {{ h.build_nav('countries.index', _('Countries'))}}
+    {{ h.build_nav('group.read', _('Indicators'), id='indicators', highlight_controllers="groupv")}}
+    {{ h.build_nav('sources.index', _('Sources'))}}
+    {{ h.build_nav('dataset.search', _('Data'))}}
+    {{ h.build_nav('insights.index', _('Insights'))}}
+
     {% if c.userobj %}
-        {{ h.build_nav_main(
-            ('countries.index', _('Countries')),
-            ('dataset.search', _('Indicators')),
-            ('dataset.search', _('Data sources')),
-            ('dataset.search', _('Data')),
-            ('insights.index', _('Insights')),
-            ('activity.dashboard', _('My account'))
-             ) }}
+        {{ h.build_nav('activity.dashboard', _('My account'))}}
     {% else %}
-        {{ h.build_nav_main(
-            ('countries.index', _('Countries')),
-            ('dataset.search', _('Indicators')),
-            ('dataset.search', _('Data sources')),
-            ('dataset.search', _('Data')),
-            ('insights.index', _('Insights')),
-            ('user.login', _('Log in'))
-             ) }}
+        {{ h.build_nav('user.login', _('Log in'))}}
     {% endif %}
 
 {% endblock %}
