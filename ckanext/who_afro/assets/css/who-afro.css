@@ -1908,7 +1908,9 @@ p.description a {
 }
 
 .promoted-quick-access > ul.quick-access-links > li > a > i {
-    padding-right: 10px;
+    display: inline-flex;
+    align-self: center;
+    padding-right: 20px;
 }
 
 .promoted-quick-access > ul.quick-access-links > li > a > img {
@@ -2008,7 +2010,7 @@ p.description a {
     display: inline-flex;
     flex-basis: 100%;
     width: 100%;
-    margin-top: 48px;
+    margin-top: 0;
     margin-bottom: 10px;
 }
 
@@ -2979,7 +2981,7 @@ footer.site-footer .data-hub-stats > .row > .insight-small-rect > div.number > s
     }
 
     .masthead .main-navbar ul li.active a {
-        padding-bottom: 37px !important;
+        padding-bottom: 47px !important;
         border-bottom: var(--secondary-who-blue) 4px solid;
         border-radius: 0;
         z-index: 0;
