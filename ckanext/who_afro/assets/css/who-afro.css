@@ -1999,7 +1999,7 @@ p.description a {
 }
 
 .insights.featured {
-    padding: 82px 0;
+    padding: 34px 0 82px;
 }
 
 .featured-data > div.container {
@@ -2010,7 +2010,7 @@ p.description a {
     display: inline-flex;
     flex-basis: 100%;
     width: 100%;
-    margin-top: 0;
+    margin-top: 48px;
     margin-bottom: 10px;
 }
 
