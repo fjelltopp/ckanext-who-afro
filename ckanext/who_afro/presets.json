@@ -108,6 +108,7 @@
           {"value": "amr", "label": "Anti-Microbial Resistance"},
           {"value": "vpd", "label": "Vaccine Preventable Diseases"},
           {"value": "onehealth", "label": "OneHealth"},
+          {"value": "idsr", "label": "Integrated Disease Surveillance and Reporting"},
           {"value": "other", "label": "Other"}
         ]
       }
