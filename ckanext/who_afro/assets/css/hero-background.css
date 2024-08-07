@@ -14,6 +14,16 @@
     background-image: url('/images/august-14/hero-bg-top-right.svg');
 }
 
+.hero-bg.data-page.top-right {
+    position: absolute;
+    top: -250px;
+    left: calc(47.5%);
+    width: 681px;
+    height: 789px;
+    background-image: url('/images/august-14/hero-bg-center-left.svg');
+    background-repeat: no-repeat;
+}
+
 .hero-bg.center-left {
     position: absolute;
     top: 800px;
