@@ -2186,6 +2186,46 @@ div.main.search .wrapper > aside.secondary section.module > h2.module-heading {
     width: 100%;
 }
 
+div.main.search .wrapper > aside.secondary section.module > h2.module-heading > .accordion-button {
+    padding: 0;
+    font-weight: 700;
+    box-shadow: none;
+}
+
+div.main.search .wrapper > aside.secondary section.module > h2.module-heading > .accordion-item {
+    border: 0;
+}
+
+div.main.search .wrapper > aside.secondary section.module > h2.module-heading > .accordion-item:first-of-type .accordion-button {
+    border: 0;
+}
+
+div.main.search .wrapper > aside.secondary section.module > h2.module-heading > .accordion-button:not(.collapsed) {
+    color: var(--primary-navy);
+    background-color: transparent;
+    box-shadow: none;
+}
+
+div.main.search .wrapper > aside.secondary section.module > h2.module-heading > .accordion-button::after {
+    background-image: none;
+    font-family: "Font Awesome 6 Free";
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    content: "\f106";
+    width: auto;
+    height: auto;
+}
+
+div.main.search .wrapper > aside.secondary section.module > h2.module-heading > .accordion-button:not(.collapsed)::after {
+    background-image: none;
+    font-family: "Font Awesome 6 Free";
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    content: "\f107";
+}
+
 div.main.search .wrapper > aside.secondary section.module > nav .nav-item {
     padding: 0;
 }
