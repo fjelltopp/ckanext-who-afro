@@ -1,20 +1,19 @@
 {% ckan_extends %}
 
+{%- if h.dataset_has_overview(package) -%}
+    {%- set dataset_url = h.url_for('overview.overview', dataset_id=package.name) -%}
+{%- else -%}
+    {%- set dataset_url = h.url_for('{}.read'.format(package.type), id=package.name) -%}
+{%- endif -%}
+
 {% block heading %}
-
-    {% if origin == 'homepage' %}
-        <h2 class="dataset-heading">
-            <a href="{{ h.url_for('%s.read' % package.type, id=package.name) }}" title="{{ title }}">
-                {{title|truncate(80)}}
-            </a>
-            <span class="badge">{{ package.type }}</span>
-        </h2>
-    {% else %}
-        {{ super() }}
-    {% endif %}
-
+    <h2 class="dataset-heading">
+        <a href="{{ dataset_url }}" title="{{ title }}">
+            {{title|truncate(80)}}
+        </a>
+        <span class="badge">{{ _(package.type) }}</span>
+    </h2>
     <div class="modified">
-        {{_('Modified')}} {{ h.time_ago_from_timestamp(package.metadata_modified) }}, {{ h.get_last_modifier(package.id) }} &middot; Downloads: {{ h.get_package_stats(package.id) }}
+        {{_('Modified')}} {{ h.time_ago_from_timestamp(package.metadata_modified) }}, {{ h.get_last_modifier(package.id) }} &middot; {{_('Downloads:')}} {{ h.get_package_stats(package.id) }}
     </div>
-
 {% endblock %}

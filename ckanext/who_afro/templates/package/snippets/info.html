@@ -1,0 +1,34 @@
+{% ckan_extends %}
+
+{% block package_info %}
+  {% if pkg %}
+    <section class="module module-narrow module-shallow">
+      <div class="module context-info">
+        <div class="module-content">
+          {% block package_info_inner %}
+            {% block nums %}
+              {% set num_followers = h.follow_count('dataset', pkg.id) %}
+              <div class="nums">
+                <dl>
+                  <dd data-module="followers-counter" data-module-id="{{ pkg.id }}" data-module-num_followers="{{ num_followers }}">{{ h.SI_number_span(num_followers) }}</dd>
+                </dl>
+              </div>
+              {% if g.user %}
+                <p class="small"> {{ _('Follow to see all updates made to this dataset added to your <a href="{}">newsfeed</a>').format(h.url_for('activity.dashboard')) }}</p>
+              {% else %}
+                <p class="small"> {{ _('Followers see all updates made to this dataset in their newsfeed.  You must be a registered user.') }}</p>
+              {% endif %}
+            {% endblock %}
+            {% block follow_button %}
+              {% if not hide_follow_button %}
+                <div class="follow_button">
+                  {{ h.follow_button('dataset', pkg.id) }}
+                </div>
+              {% endif %}
+            {% endblock %}
+          {% endblock %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+{% endblock %}

@@ -201,3 +201,6 @@ def get_license(license_id):
     else:
         return {}
 
+
+def dataset_has_overview(pkg_dict):
+    return pkg_dict.get('type', '') in ['indicator']
