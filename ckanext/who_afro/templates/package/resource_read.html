@@ -1,6 +1,20 @@
 {% ckan_extends %}
+{% block data_preview %}
+    {% asset 'who-afro/who-afro-dashboard-css' %}
+    <div id="who-afro-js"
+         data-datastore-path="http://127.0.0.1:5000/api/3/action/datastore_search"
+         data-resource-id="923e5799-9d4c-492a-bba4-76346a0e85a1"
+         data-resource-title="New HIV infections (per 1000 uninfected population)"
+         data-round-to-decimal-places="2"
+         data-labels='{ "segment": "Sex", "amount": "HIV infections per 1000 uninfected population", "noRowsWarning": "No data to display" }'
+         data-sexes='[ { "id": "TOTAL", "label": "Total", "color": "#171B38" }, { "id": "FEMALE", "label": "Female", "color": "#009ADE" }, { "id": "MALE", "label": "Male", "color": "#80BC00" } ]'
+         data-api-fields='{ "value": "RATE_PER_1000_N", "country": "GEO_NAME_SHORT", "segment": "DIM_SEX", "time_axis": "DIM_TIME" }'>
+    </div>
+    {% asset 'who-afro/who-afro-dashboard-js' %}
+    {{ super() }}
+{% endblock data_preview %}
 {% block secondary_content %}
-  {% block resources_list %}
-    {% snippet "package/snippets/resources.html", pkg=pkg, active=res.id, action='read', is_activity_archive=is_activity_archive %}
-  {% endblock %}
-{% endblock %}
+    {% block resources_list %}
+        {% snippet "package/snippets/resources.html", pkg=pkg, active=res.id, action='read', is_activity_archive=is_activity_archive %}
+    {% endblock resources_list %}
+{% endblock secondary_content %}
