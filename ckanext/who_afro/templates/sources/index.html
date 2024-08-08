@@ -1,16 +1,9 @@
-{% extends "page.html" %}
-
-{% block subtitle %}
-{{ _('Data Sources') }}
-{%endblock subtitle%}
-
-{% block breadcrumb_content %}
+{% extends "page.html" %} {% block subtitle %} {{ _('Data Sources') }}
+{%endblock subtitle%} {% block breadcrumb_content %}
 <li class="active">
   {% link_for _('Data Sources'), named_route='sources.index' %}
 </li>
-{% endblock %}
-
-{% block content %}
+{% endblock %} {% block content %}
 <div role="main" class="insights-page">
   <div class="promoted-background">
     <!-- Snippet package/snippets/promoted_plus.html start -->
@@ -23,13 +16,155 @@
           <p class="subtitle">{{ _('Home') }} /</p>
           <h1 class="page-title">{{ _('Data Sources') }}</h1>
           <p>
-            {{ _('This data hub draws on a variety of different data sources whoes details are listed below.') }}
+            {{ _('The WHO African Regional Health Data Hub integrates public health and related data from across the region and beyond. We draw on a variety of sources including the following data sources.') }}
           </p>
         </div>
       </div>
     </div>
   </div>
-  <div class="container" style="min-height:700px">
+  <div class="container">
+    <ul class="country">
+      <li>
+        <div class="views-field views-field-nothing">
+          <span class="field-content"><div id="a"></div></span>
+        </div>
+        <div class="views-field views-field-field-flag">
+          <div class="field-content">
+            <a href="https://ucndw.afro.who.int/"
+              ><img
+                loading="lazy"
+                src="/images/source-icons/dhis2.png"
+                alt="DHIS2 logo"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="views-field views-field-title">
+          <span class="field-content"
+            ><a href="https://ucndw.afro.who.int/"
+              >WHO AFRO UCN Data Warehouse</a
+            >
+          </span>
+        </div>
+      </li>
+      <li>
+        <div class="views-field views-field-nothing">
+          <span class="field-content"><div id="a"></div></span>
+        </div>
+        <div class="views-field views-field-field-flag">
+          <div class="field-content">
+            <a
+              href="https://idsr.afro.who.int/dhis-web-commons/security/login.action"
+              ><img
+                loading="lazy"
+                src="/images/source-icons/dhis2.png"
+                alt="DHIS2 logo"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="views-field views-field-title">
+          <span class="field-content"
+            ><a
+              href="https://idsr.afro.who.int/dhis-web-commons/security/login.action"
+              >WHO AFRO IDSR Centralised Data Platform</a
+            >
+          </span>
+        </div>
+      </li>
+      <li>
+        <div class="views-field views-field-nothing">
+          <span class="field-content"><div id="a"></div></span>
+        </div>
+        <div class="views-field views-field-field-flag">
+          <div class="field-content">
+            <a
+              href="https://extranet.who.int/dhis2/dhis-web-commons/security/login.action"
+              ><img
+                loading="lazy"
+                src="/images/source-icons/dhis2.png"
+                alt="DHIS2 logo"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="views-field views-field-title">
+          <span class="field-content"
+            ><a
+              href="https://extranet.who.int/dhis2/dhis-web-commons/security/login.action"
+              >WHO Integrated Data Platform - World Malaria Report</a
+            ></span
+          >
+        </div>
+      </li>
+      <li>
+        <div class="views-field views-field-nothing">
+          <span class="field-content"><div id="b"></div></span>
+        </div>
+        <div class="views-field views-field-field-flag">
+          <div class="field-content">
+            <a href="https://aho.afro.who.int/af"
+              ><img
+                loading="lazy"
+                src="/images/source-icons/iaho.png"
+                alt="iAHO logo"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="views-field views-field-title">
+          <span class="field-content"
+            ><a href="https://aho.afro.who.int/af"
+              >Integrated African Health Observatory (iAHO)</a
+            >
+          </span>
+        </div>
+      </li>
+      <li>
+        <div class="views-field views-field-nothing">
+          <span class="field-content"><div id="b"></div></span>
+        </div>
+        <div class="views-field views-field-field-flag">
+          <div class="field-content">
+            <a href="https://www.amrcountryprogress.org/"
+              ><img
+                loading="lazy"
+                src="/images/source-icons/website.png"
+                alt="website icon"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="views-field views-field-title">
+          <span class="field-content"
+            ><a href="https://www.amrcountryprogress.org/"
+              >Tripartite AMR Country Self-Assessment Survey (TrACSS)</a
+            >
+          </span>
+        </div>
+      </li>
+      <li>
+        <div class="views-field views-field-nothing">
+          <span class="field-content"><div id="b"></div></span>
+        </div>
+        <div class="views-field views-field-field-flag">
+          <div class="field-content">
+            <a href="https://data.who.int/"
+              ><img
+                loading="lazy"
+                src="/images/source-icons/who.png"
+                alt="website icon"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="views-field views-field-title">
+          <span class="field-content"
+            ><a href="https://data.who.int/">WHO Global Health Data Hub</a>
+          </span>
+        </div>
+      </li>
+    </ul>
   </div>
 </div>
 {% endblock content %}
