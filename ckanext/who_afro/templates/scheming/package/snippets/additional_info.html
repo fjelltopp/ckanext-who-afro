@@ -21,7 +21,24 @@
 
 <section class="additional-info">
   <h2 class="addition-info-title">{{ _('Metadata') }}</h2>
-
+  {% if pkg_dict.notes %}
+    <div id="dataset-description">
+      <h3 class="scheming-group-title">
+        {{ _('Description') }}
+      </h3>
+      <div class="notes embedded-content">
+        {{ h.render_markdown(h.get_translated(pkg_dict, 'notes')) }}
+      </div>
+    </div>
+  {% endif %}
+  {% if pkg_dict.tags %}
+    <h3 class="scheming-group-title">
+      {{ _('Tags / Keywords') }}
+    </h3>
+    <div class="tags">
+      {% snippet "package/snippets/tags.html", tags=pkg_dict.tags %}
+    </div>
+  {% endif %}
   {%- for group in schema.dataset_fields|groupby('display_group', default="Overview")|reverse -%}
     {%- set group_fields = [] -%}
     {%- for field in group.list -%}
