@@ -614,10 +614,10 @@ div[role=main]{
 }
 
 .promoted .subtitle {
-    font-weight: 700;
+    font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: var(--who-blue-ten-percent);
+    color: #FFF;
     margin-bottom:  15px;
     letter-spacing: 0;
 }
@@ -1039,19 +1039,20 @@ select.form-control{
 
 a.tag,
 a.tag:hover  {
-    padding: 2px 6px;
-    background: #fff1e9;
+    padding: 4px 10px;
+    background: var(--who-blue-ten-percent);
     border-radius: 4px;
     margin-right: 10px;
     margin-bottom: 24px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     border:  none;
-    color: #056839;
+    color: var(--primary-navy);
     box-shadow:  none;
 }
 
 .tag-list{
+    padding: 0px;
     background:  transparent;
     border:  none;
 }
@@ -1521,7 +1522,7 @@ a.footer-link:hover,
 }
 
 .promoted-breadcrumbs .toolbar{
-    height:  170px;
+    min-height:  280px;
 }
 
 .promoted-breadcrumbs .breadcrumb li{
@@ -3066,7 +3067,159 @@ ul.icon-list li .views-field-field-icon img {
     width: 50px;
 }
 
+<<<<<<< HEAD
 .other-insights-btn{
     margin-top: 20px;
     text-align: center;
 }
+=======
+.promoted-breadcrumbs > .container {
+    padding: 0px;
+}
+
+.promoted-breadcrumbs .toolbar{
+    width: 75%;
+    margin-bottom: 0px;
+    background: rgba(23,27,56,0);
+    background: linear-gradient(90deg, rgba(23,27,56,1) 0%, rgba(23,27,48,0.8547794117647058) 74%, rgba(23,27,56,0) 100%);
+}
+
+@media (max-width: 627px) {
+.promoted-breadcrumbs .toolbar {
+    width: 95%;
+  }
+}
+
+.promoted .headline a{
+    color: white;
+    font-weight: 400;
+    height: 36px;
+    line-height: 48px;
+}
+
+.promoted .badge{
+    background: var(--secondary-who-blue);
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.promoted .modified{
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.promoted-breadcrumbs .content_action{
+    position: absolute;
+    z-index: 1;
+    top: 64px;
+    right: -5px;
+}
+
+.promoted-background .nav-tabs{
+    position: relative;
+    display: block;
+    border-bottom: none;
+    padding: 0px 20px;
+}
+
+.promoted-background .nav-tabs li{
+    display: inline-block;
+    padding: 10px 40px;
+    background: var(--who-blue-ten-percent);
+    border-radius: 4px 4px 0 0;
+    margin-right: 2px;
+    border-bottom: 1px solid var(--primary-navy);
+    text-align: center;
+}
+
+.promoted-background .nav-tabs li.active{
+    background: #fff;
+    border-top: var(--secondary-who-blue) 4px solid;
+    border-bottom: 1px solid #FFF;
+}
+
+.dataset.promoted-background .nav-tabs li{
+    width: 25%;
+}
+
+.dataset.wrapper{
+    border: none;
+    box-shadow: none;
+}
+
+.dataset .primary{
+    padding: 0px;
+}
+
+.dataset .module-content{
+    padding: 30px 0px;
+}
+
+.dataset .additional-info .table{
+    margin: 20px 0px 40px;
+}
+
+.dataset .additional-info .table > :not(caption) > * > * {
+    padding: 1.5rem 1.5rem;
+    border: 0px;
+}
+
+.resource-item{
+    padding: 20px 20px 20px 80px;
+}
+
+.resource-item .btn-group {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.resource-item .format-label {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+}
+
+.resources .resource-list {
+    margin: 20px 0px 20px;
+}
+
+.dataset .read-more{
+    color: #FFF;
+    margin-left: 10px;
+    text-decoration:underline;
+}
+
+.dataset .tags{
+    margin: 20px 0px 0px;
+}
+
+.dataset .secondary{
+    margin-top: 60px;
+}
+
+.dataset .secondary img{
+    width:200px;
+}
+
+.dataset .secondary .read-more{
+    margin-left: 0px;
+}
+
+.dataset .secondary .context-info .nums {
+    margin: 0;
+    padding: 0;
+    border-top: None;
+}
+
+.dataset .secondary .small-heading {
+    display: block;
+    font-size: 15px;
+    font-weight: 300;
+    border-bottom: 1px solid #DDD;
+    display: inline-block;
+    padding-right:25px;
+    margin-bottom:20px;
+    padding-bottom: 5px;
+}
+>>>>>>> a1f2c9d (WAC-116 Jinja2 and CSS changes to reformat dataset read pages.)
