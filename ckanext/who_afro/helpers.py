@@ -204,3 +204,15 @@ def get_license(license_id):
 
 def dataset_has_overview(pkg_dict):
     return pkg_dict.get('type', '') in ['indicator']
+
+
+def get_indicator_name(resource_id):
+    try:
+        meta, fields = toolkit.get_action('datastore_info')({}, {'id': resource_id})
+        for field in fields:
+            if field['id'].endswith('_N') and field['type'] == 'numeric':
+                indicator_field = field['id']
+                break
+    except toolkit.ObjectNotFound:
+        return "Nothing found in the datastore for this indicator."
+    return indicator_field

@@ -1,5 +1,17 @@
 {% extends 'package/read_base.html' %}
 
 {% block primary_content %}
-{{pkg}}
+    {% asset 'who-afro/who-afro-dashboard-css' %}
+    {% set resource_id = pkg.resources[0].name %}
+    {% set indicator_field = h.get_indicator_name(resource_id) %}
+    <div id="who-afro-js"
+         data-datastore-path="http://127.0.0.1:5000/api/3/action/datastore_search"
+         data-resource-id="{{ resource_id }}"
+         data-resource-title="{{ pkg.title }}"
+         data-round-to-decimal-places="2"
+         data-labels='{ "segment": "Sex", "amount": "{{ pkg.title }}", "noRowsWarning": "No data to display" }'
+         data-sexes='[ { "id": "TOTAL", "label": "Total", "color": "#171B38" }, { "id": "FEMALE", "label": "Female", "color": "#009ADE" }, { "id": "MALE", "label": "Male", "color": "#80BC00" } ]'
+         data-api-fields='{ "value": "{{ indicator_field }}", "country": "GEO_NAME_SHORT", "segment": "DIM_SEX", "time_axis": "DIM_TIME" }'>
+    </div>
+    {% asset 'who-afro/who-afro-dashboard-js' %}
 {% endblock %}
