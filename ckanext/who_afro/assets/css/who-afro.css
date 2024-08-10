@@ -1934,7 +1934,6 @@ p.description a {
     background-color: white;
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.04);
     border-radius: 4px;
-    min-height: 672px;
     padding: 30px 29px;
 }
 
@@ -1991,6 +1990,10 @@ p.description a {
 .promoted-progress > .promoted-progress-row > .promoted-progress-col.insights-col > a.btn:focus,
 .promoted-progress > .promoted-progress-row > .promoted-progress-col.insights-col > a.btn:active {
     background-color: var(--secondary-who-blue);
+}
+
+.promoted-progress-row .promoted-dashboard {
+    padding: 30px 29px;
 }
 
 /* Featured data */
