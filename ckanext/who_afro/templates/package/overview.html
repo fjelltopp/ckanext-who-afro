@@ -2,10 +2,10 @@
 
 {% block primary_content %}
     {% asset 'who-afro/who-afro-dashboard-css' %}
-    {% set resource_id = pkg.resources[0].name %}
+    {% set resource_id = pkg.resources[0].id %}
     {% set indicator_field = h.get_indicator_name(resource_id) %}
     <div id="who-afro-js"
-         data-datastore-path="http://127.0.0.1:5000/api/3/action/datastore_search"
+         data-datastore-path="{{h.url_for('api.action', ver=3, logic_function='datastore_search')}}"
          data-resource-id="{{ resource_id }}"
          data-resource-title="{{ pkg.title }}"
          data-round-to-decimal-places="2"
