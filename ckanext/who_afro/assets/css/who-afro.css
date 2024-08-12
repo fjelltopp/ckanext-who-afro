@@ -338,6 +338,9 @@ p.small {
     display: inline-block !important;
 }
 
+div[role=main]{
+    min-height: 750px;
+}
 
 /* remove bar & replace with padding */
 .homepage [role=main] {
@@ -3026,15 +3029,15 @@ ol.profile-page.breadcrumb {
     color: var(--primary-navy);
 }
 
-ul.country {
+ul.icon-list {
     -moz-column-count: 3;
     column-count: 3;
     list-style: none;
     padding-left: 0;
-    margin-top: 30px;
+    margin-top: 70px;
 }
 
-ul.country li {
+ul.icon-list li {
     margin-bottom: 10px;
     min-height: 70px;
     display: flex;
@@ -3043,7 +3046,7 @@ ul.country li {
     break-inside: avoid;
 }
 
-ul.country li .views-field-field-flag {
+ul.icon-list li .views-field-field-icon {
     float: left;
     width: 20%;
     margin-right: 5%;
@@ -3051,13 +3054,12 @@ ul.country li .views-field-field-flag {
     margin-right: 3%;
 }
 
-ul.country li .views-field-title {
+ul.icon-list li .views-field-title {
     float: left;
     width: 75%;
-    line-height: 2.7;
 }
 
-ul.country li .views-field-field-flag img {
+ul.icon-list li .views-field-field-icon img {
     border: none !important;
     border-radius: 50%;
     height: 50px;
