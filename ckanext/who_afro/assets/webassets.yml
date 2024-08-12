@@ -23,9 +23,9 @@ FileInputComponentScripts:
 who-afro-dashboard-css:
     output: who-afro/%(version)s_who-afro-dashboard.css
     contents:
-        - build/who-afro-dashboard.css
+        - css/who-afro-dashboard.css
 
 who-afro-dashboard-js:
     output: who-afro/%(version)s_who-afro-dashboard.js
     contents:
-        - build/who-afro-dashboard.js
+        - who-afro-dashboard.js
