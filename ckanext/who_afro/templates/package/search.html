@@ -58,7 +58,7 @@
             </div>
         </div>
 
-    {{super() }}
+    {{ super() }}
 </div>
 {%  endblock %}
 
@@ -96,6 +96,7 @@
 {% endblock %}
 
 {% block form %}
+  {% snippet 'snippets/search_form.html', type=dataset_type, query=q, count=page.item_count, error=query_error %}
 {% endblock %}
 
 {% block package_search_results_api %}
