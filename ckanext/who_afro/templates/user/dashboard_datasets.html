@@ -1,9 +1,5 @@
 {% ckan_extends %}
 
-{%- block header %}
-    {% include "user/account_header.html" %}
-{% endblock -%}
-
 {% block page_primary_action %}
     <h2 class="page-heading mb-4">
     {% if not user_dict.datasets %}

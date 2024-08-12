@@ -1,9 +1,5 @@
 {% ckan_extends %}
 
-{%- block header %}
-    {% include "user/account_header.html" %}
-{% endblock -%}
-
 {% set organizations = h.organizations_available(permission='manage_group',
     include_dataset_count=True) %}
 
