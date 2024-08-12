@@ -3067,12 +3067,11 @@ ul.icon-list li .views-field-field-icon img {
     width: 50px;
 }
 
-<<<<<<< HEAD
 .other-insights-btn{
     margin-top: 20px;
     text-align: center;
 }
-=======
+
 .promoted-breadcrumbs > .container {
     padding: 0px;
 }
@@ -3222,4 +3221,12 @@ ul.icon-list li .views-field-field-icon img {
     margin-bottom:20px;
     padding-bottom: 5px;
 }
->>>>>>> a1f2c9d (WAC-116 Jinja2 and CSS changes to reformat dataset read pages.)
+
+#who-afro-js{
+    margin-bottom: 10px;
+}
+
+.overview-data-link{
+    text-align: right;
+    margin-bottom: 50px;
+}
