@@ -13,5 +13,13 @@
          data-sexes='[ { "id": "TOTAL", "label": "Total", "color": "#171B38" }, { "id": "FEMALE", "label": "Female", "color": "#009ADE" }, { "id": "MALE", "label": "Male", "color": "#80BC00" } ]'
          data-api-fields='{ "value": "{{ indicator_field }}", "country": "GEO_NAME_SHORT", "segment": "DIM_SEX", "time_axis": "DIM_TIME" }'>
     </div>
+    {% set url = h.url_for(pkg.type ~ '_resource.read', id=pkg.name, resource_id=resource_id) %}
+    <div class="overview-data-link small">
+        <a target="_blank"
+           href="{{url}}">
+          {{_('Preview / Download Dataset')}}
+        </a>
+    </div>
     {% asset 'who-afro/who-afro-dashboard-js' %}
+    {%- snippet "scheming/package/snippets/access_use.html", pkg_dict=pkg_dict -%}
 {% endblock %}
