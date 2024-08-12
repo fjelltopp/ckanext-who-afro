@@ -14,8 +14,16 @@
 			</h2>
 		    {% endblock %}
 		    {% block facet_list_items %}
-                {% with items = items or h.get_facet_items_dict(name, search_facets) %}
-                    {% if items %}
+			{% with items = items or h.get_facet_items_dict(name, search_facets) %}
+			    {% if items %}
+                    {% for item in items %}
+                        {% do item.update({'display_name': h.scheming_choices_label(scheming_choices, item.name)
+                        if scheming_choices else item.display_name}) %}
+                    {% endfor %}
+                    <div id="{{ title }}-collapse" class="accordion-collapse collapse show" aria-labelledby="{{ title }}-heading" data-bs-parent="#filters">
+                    <nav aria-label="{{ title }}">
+                        <input type="text" id="{{ title }}-search" onkeyup="filterFacets('{{ title }}', this.value);" placeholder="Search {{ title }}..">
+                        <ul class="list-unstyled nav nav-simple nav-facet" id="{{ title }}-list">
                         {% for item in items %}
                             {% do item.update({'display_name': h.scheming_choices_label(scheming_choices, item.name)
                             if scheming_choices else item.display_name}) %}
@@ -46,6 +54,25 @@
                 {% endwith %}
 		    {% endblock %}
 		</section>
+        <script>
+            function filterFacets(facetTitle, searchTerm) {
+              const input = document.getElementById(`${facetTitle}-search`);
+              const filter = searchTerm.toUpperCase();
+              const ul = document.getElementById(`${facetTitle}-list`);
+              const li = ul.getElementsByTagName('li');
+            
+              // Loop through all list items, and hide those who don't match the search query
+              for (i = 0; i < li.length; i++) {
+                const span = li[i].getElementsByClassName("item-label")[0];
+                const txtValue = span.textContent || span.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                  li[i].style.display = "";
+                } else {
+                  li[i].style.display = "none";
+                }
+              }
+            }
+        </script>
 	    {% endblock %}
 	{% endif %}
     {% endwith %}
