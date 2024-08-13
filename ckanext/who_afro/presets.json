@@ -109,6 +109,7 @@
           {"value": "vpd", "label": "Vaccine Preventable Diseases"},
           {"value": "onehealth", "label": "OneHealth"},
           {"value": "idsr", "label": "Integrated Disease Surveillance and Reporting"},
+          {"value": "climate", "label": "Climate Change, Health and Environment"},
           {"value": "other", "label": "Other"}
         ]
       }
