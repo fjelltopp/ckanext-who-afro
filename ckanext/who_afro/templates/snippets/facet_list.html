@@ -22,7 +22,8 @@
                     {% endfor %}
                     <div id="{{ title }}-collapse" class="accordion-collapse collapse show" aria-labelledby="{{ title }}-heading" data-bs-parent="#filters">
                     <nav aria-label="{{ title }}">
-                        <input type="text" id="{{ title }}-search" onkeyup="filterFacets('{{ title }}', this.value);" placeholder="Search {{ title }}..">
+                        <input type="text" class="form-control facets-search" id="{{ title }}-search" onkeyup="filterFacets('{{ title }}', this.value);" placeholder="Search {{ title | lower }}..">
+                        <button class="btn-search" type="submit" aria-label="Submit"><i class="fa fa-search"></i></button>
                         <ul class="list-unstyled nav nav-simple nav-facet" id="{{ title }}-list">
                         {% for item in items %}
                             {% do item.update({'display_name': h.scheming_choices_label(scheming_choices, item.name)
