@@ -11,7 +11,7 @@
         <a href="{{ dataset_url }}" title="{{ title }}">
             {{title|truncate(80)}}
         </a>
-        <span class="badge">{{ _(package.type) }}</span>
+        <span class="badge {{ package.type }}">{{ _(package.type) }}</span>
     </h2>
     <div class="modified">
         {{_('Modified')}} {{ h.time_ago_from_timestamp(package.metadata_modified) }}, {{ h.get_last_modifier(package.id) }} &middot; {{_('Downloads:')}} {{ h.get_package_stats(package.id) }}

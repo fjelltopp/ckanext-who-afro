@@ -67,3 +67,13 @@
     background-image: url(/images/august-14/DH-DataMerge-Graphic.svg);
     background-repeat: no-repeat;
 }
+
+.search .hero-bg.toolbar{
+    position: absolute;
+    top: -250px;
+    left: calc(47.5%);
+    width: 681px;
+    height: 789px;
+    background-image: url('/images/august-14/hero-bg-center-left.svg');
+    background-repeat: no-repeat;
+}
