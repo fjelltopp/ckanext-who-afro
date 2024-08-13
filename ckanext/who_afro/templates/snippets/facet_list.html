@@ -9,7 +9,7 @@
 		    {% block facet_list_heading %}
 			<h2 class="module-heading accordion-header" id="{{ title }}-heading">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#{{ title }}-collapse" aria-expanded="true" aria-controls="{{ title }}-collapse">
-                    {{ title }}
+                    <span>{{ title }}</span>
                 </button>
 			</h2>
 		    {% endblock %}
@@ -22,29 +22,37 @@
                     {% endfor %}
                     <div id="{{ title }}-collapse" class="accordion-collapse collapse show" aria-labelledby="{{ title }}-heading" data-bs-parent="#filters">
                     <nav aria-label="{{ title }}">
-                        <input type="text" id="{{ title }}-search" onkeyup="filterFacets('{{ title }}', this.value);" placeholder="Search {{ title }}..">
+                        <input type="text" class="form-control facets-search" id="{{ title }}-search" onkeyup="filterFacets('{{ title }}', this.value);" placeholder="Search {{ title | lower }}..">
+                        <button class="btn-search" type="submit" aria-label="Submit"><i class="fa fa-search"></i></button>
                         <ul class="list-unstyled nav nav-simple nav-facet" id="{{ title }}-list">
                         {% for item in items %}
-                            {% set href = h.remove_url_param(name, item.name, extras=extras, alternative_url=alternative_url) if item.active else h.add_url_param(new_params={name: item.name}, extras=extras, alternative_url=alternative_url) %}
-                            {% set label = label_function(item) if label_function else item.display_name %}
-                            {% set label_truncated = label|truncate(22) if not label_function else label %}
-                            {% set count = count_label(item['count']) if count_label else ('%d' % item['count']) %}
-                            <li class="nav-item {% if item.active %} active{% endif %}">
-                                <a href="{{ href }}" title="{{ label if label != label_truncated else '' }}">
-                                    <span class="item-label">{{ label_truncated }}</span>
-                                    <!-- <span class="hidden separator"> - </span> -->
-                                    <span class="item-count badge">{{ count }}</span>
-                                    {% if item.active %}<span class="facet-close">x</span>{% endif %}
-                                </a>
-                            </li>
+                            {% do item.update({'display_name': h.scheming_choices_label(scheming_choices, item.name)
+                            if scheming_choices else item.display_name}) %}
                         {% endfor %}
-                        </ul>
-                    </nav>
-                    </div>
-			    {% else %}
-				    <p class="module-content empty">{{ _('There are no {facet_type} that match this search').format(facet_type=title) }}</p>
-			    {% endif %}
-			{% endwith %}
+                        <div id="{{ title }}-collapse" class="accordion-collapse collapse show" aria-labelledby="{{ title }}-heading" data-bs-parent="#filters">
+                        <nav aria-label="{{ title }}">
+                            <ul class="list-unstyled nav nav-simple nav-facet">
+                            {% for item in items %}
+                                {% set href = h.remove_url_param(name, item.name, extras=extras, alternative_url=alternative_url) if item.active else h.add_url_param(new_params={name: item.name}, extras=extras, alternative_url=alternative_url) %}
+                                {% set label = label_function(item) if label_function else item.display_name %}
+                                {% set label_truncated = label|truncate(22) if not label_function else label %}
+                                {% set count = count_label(item['count']) if count_label else ('%d' % item['count']) %}
+                                <li class="nav-item {% if item.active %} active{% endif %}">
+                                    <a href="{{ href }}" title="{{ label if label != label_truncated else '' }}">
+                                        <span class="item-label">{{ label_truncated }}</span>
+                                        <!-- <span class="hidden separator"> - </span> -->
+                                        <span class="item-count badge">{{ count }}</span>
+                                        {% if item.active %}<span class="facet-close">x</span>{% endif %}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                            </ul>
+                        </nav>
+                        </div>
+                    {% else %}
+                        <p class="module-content empty">{{ _('There are no {facet_type} that match this search').format(facet_type=title) }}</p>
+                    {% endif %}
+                {% endwith %}
 		    {% endblock %}
 		</section>
         <script>

@@ -58,20 +58,20 @@
             </div>
         </div>
 
-    {{super() }}
+    {{ super() }}
 </div>
 {%  endblock %}
 
 
 {% block secondary_content %}
-  {% set sorting = [(_('Relevance'), 'relevance'), (_('Name Ascending'), 'name asc'), (_('Name Descending'), 'name desc')] %}
-
+  {% set sorting = [(_('Relevance'), 'score desc, metadata_modified desc'), (_('Name Ascending'), 'name asc'), (_('Name Descending'), 'name desc')] %}
+  {% set sorting_selected = request.args.get('sort') %}
   <div class="filters">
     <div>
       <h3>{{ _('Order by:') }}</h3>
       <div class="form-group control-order-by">
         <!-- <label for="field-order-by">{{ _('Order by') }}</label> -->
-        <select id="field-order-by" name="sort" class="form-control form-select">
+        <select id="field-order-by" name="sort" class="form-control form-select" onchange="setSort(this.value);">
           {% for label, value in sorting %}
             {% if label and value %}
               <option value="{{ value }}"{% if sorting_selected == value %} selected="selected"{% endif %}>{{ label }}</option>
@@ -93,9 +93,17 @@
     </div>
     <a class="close no-text hide-filters"><i class="fa fa-times-circle"></i><span class="text">close</span></a>
   </div>
+  <script>
+    const url = new URL(window.location.href);
+    function setSort(sort_value) {
+      url.searchParams.set('sort', sort_value);
+      window.location.href = url;
+    }
+  </script>
 {% endblock %}
 
 {% block form %}
+  {% snippet 'snippets/search_form.html', type=dataset_type, query=q, count=page.item_count, error=query_error %}
 {% endblock %}
 
 {% block package_search_results_api %}
