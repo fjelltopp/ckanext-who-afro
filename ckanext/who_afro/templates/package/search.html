@@ -9,6 +9,17 @@
 {% block maintag %}<div class="main search">{% endblock %}
 
 {% block promoted_toolbar %}
+<div class="promoted-background search">
+    {% snippet 'package/snippets/promoted_plus.html' %}
+    <div class="container">
+        <div class="promoted">
+            <div class="promoted-container container">
+                <p class="subtitle">{{ _('Home') }} / </p>
+                <h1 class="headline">{{ _('Data') }}</h1>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block page_primary_action %}
@@ -42,25 +53,6 @@
     </form>
   </div>
 {% endblock %}
-
-
-{%- block content %}
-    <div role="main">
-        <div class="promoted-background ">
-            {% snippet 'package/snippets/promoted_plus.html' %}
-            <div class="container">
-                <div class="promoted">
-                    <div class="promoted-container container">
-                        <p class="subtitle">{{ _('Home') }} / </p>
-                        <h1 class="headline">{{ _('Data') }}</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    {{ super() }}
-</div>
-{%  endblock %}
 
 
 {% block secondary_content %}
