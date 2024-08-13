@@ -64,8 +64,9 @@
             
               // Loop through all list items, and hide those who don't match the search query
               for (i = 0; i < li.length; i++) {
+                const a = li[i].getElementsByTagName('a')[0];
                 const span = li[i].getElementsByClassName("item-label")[0];
-                const txtValue = span.textContent || span.innerText;
+                const txtValue = a.getAttribute('title') || span.textContent || span.innerText;
                 if (txtValue.toUpperCase().indexOf(filter) > -1) {
                   li[i].style.display = "";
                 } else {
