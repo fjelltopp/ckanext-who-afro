@@ -3,6 +3,7 @@
 {% block content %}
     {% block promoted_toolbar %}
     <div class="promoted-background promoted-breadcrumbs">
+        {% snippet 'package/snippets/promoted_plus.html' %}
         <div class="container">
             <div class="toolbar" role="navigation" aria-label="{{ _('Breadcrumb') }}">
               {% block breadcrumb %}
@@ -13,6 +14,9 @@
                   </ol>
                 {% endif %}
               {% endblock %}
+            </div>
+            <div class="content_action">
+                {% block content_action %}{% endblock %}
             </div>
         </div>
     </div>

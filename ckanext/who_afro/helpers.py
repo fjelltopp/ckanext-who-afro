@@ -192,7 +192,7 @@ def get_activity_stream_limit():
     max_limit = toolkit.config.get("ckan.activity_list_limit_max")
     return min(base_limit, max_limit)
 
-  
+
 def get_license(license_id):
     license_list = toolkit.get_action('license_list')({}, {})
     for license in license_list:
@@ -201,3 +201,18 @@ def get_license(license_id):
     else:
         return {}
 
+
+def dataset_has_overview(pkg_dict):
+    return pkg_dict.get('type', '') in ['indicator']
+
+
+def get_indicator_name(resource_id):
+    try:
+        datastore_info = toolkit.get_action('datastore_info')({}, {'id': resource_id})
+        for field in datastore_info.get('fields', []):
+            if field['id'].endswith('_N') and field['type'] == 'numeric':
+                indicator_field = field['id']
+                break
+    except toolkit.ObjectNotFound:
+        return "Nothing found in the datastore for this indicator."
+    return indicator_field

@@ -1,0 +1,25 @@
+{% extends 'package/read_base.html' %}
+
+{% block primary_content %}
+    {% asset 'who-afro/who-afro-dashboard-css' %}
+    {% set resource_id = pkg.resources[0].id %}
+    {% set indicator_field = h.get_indicator_name(resource_id) %}
+    <div id="who-afro-js"
+         data-datastore-path="{{h.url_for('api.action', ver=3, logic_function='datastore_search')}}"
+         data-resource-id="{{ resource_id }}"
+         data-resource-title="{{ pkg.title }}"
+         data-round-to-decimal-places="2"
+         data-labels='{ "segment": "Sex", "amount": "{{ pkg.title }}", "noRowsWarning": "No data to display" }'
+         data-sexes='[ { "id": "TOTAL", "label": "Total", "color": "#171B38" }, { "id": "FEMALE", "label": "Female", "color": "#009ADE" }, { "id": "MALE", "label": "Male", "color": "#80BC00" } ]'
+         data-api-fields='{ "value": "{{ indicator_field }}", "country": "GEO_NAME_SHORT", "segment": "DIM_SEX", "time_axis": "DIM_TIME" }'>
+    </div>
+    {% set url = h.url_for(pkg.type ~ '_resource.read', id=pkg.name, resource_id=resource_id) %}
+    <div class="overview-data-link small">
+        <a target="_blank"
+           href="{{url}}">
+          {{_('Preview / Download Dataset')}}
+        </a>
+    </div>
+    {% asset 'who-afro/who-afro-dashboard-js' %}
+    {%- snippet "scheming/package/snippets/access_use.html", pkg_dict=pkg_dict -%}
+{% endblock %}
