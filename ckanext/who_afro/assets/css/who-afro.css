@@ -40,6 +40,18 @@ a:hover {
   background-color: #008dc9;
 }
 
+.btn-secondary {
+    color: #fff;
+    background-color: var(--secondary-who-blue) !important;
+    border: 1px solid var(--secondary-who-blue);
+}
+
+.btn-secondary:hover {
+    color: var(--secondary-who-blue);
+    background-color: var(--who-blue-ten-percent) !important;
+    border: 1px solid var(--who-blue-ten-percent);
+}
+
 fieldset[disabled] .btn-primary.focus {
   background-color: #008dc9;
 }
@@ -327,6 +339,9 @@ p.small {
     display: inline-block !important;
 }
 
+div[role=main]{
+    min-height: 750px;
+}
 
 /* remove bar & replace with padding */
 .homepage [role=main] {
@@ -1935,8 +1950,7 @@ p.description a {
     background-color: white;
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.04);
     border-radius: 4px;
-    min-height: 672px;
-    padding: 30px 29px;
+    padding: 0px;
 }
 
 .promoted-progress > .promoted-progress-row > .promoted-progress-col {
@@ -1992,6 +2006,10 @@ p.description a {
 .promoted-progress > .promoted-progress-row > .promoted-progress-col.insights-col > a.btn:focus,
 .promoted-progress > .promoted-progress-row > .promoted-progress-col.insights-col > a.btn:active {
     background-color: var(--secondary-who-blue);
+}
+
+.promoted-progress-row .promoted-dashboard {
+    padding: 15px;
 }
 
 /* Featured data */
@@ -3304,15 +3322,15 @@ ol.profile-page.breadcrumb {
     color: var(--primary-navy);
 }
 
-ul.country {
+ul.icon-list {
     -moz-column-count: 3;
     column-count: 3;
     list-style: none;
     padding-left: 0;
-    margin-top: 30px;
+    margin-top: 70px;
 }
 
-ul.country li {
+ul.icon-list li {
     margin-bottom: 10px;
     min-height: 70px;
     display: flex;
@@ -3321,7 +3339,7 @@ ul.country li {
     break-inside: avoid;
 }
 
-ul.country li .views-field-field-flag {
+ul.icon-list li .views-field-field-icon {
     float: left;
     width: 20%;
     margin-right: 5%;
@@ -3329,16 +3347,19 @@ ul.country li .views-field-field-flag {
     margin-right: 3%;
 }
 
-ul.country li .views-field-title {
+ul.icon-list li .views-field-title {
     float: left;
     width: 75%;
-    line-height: 2.7;
 }
 
-ul.country li .views-field-field-flag img {
+ul.icon-list li .views-field-field-icon img {
     border: none !important;
     border-radius: 50%;
     height: 50px;
     width: 50px;
 }
 
+.other-insights-btn{
+    margin-top: 20px;
+    text-align: center;
+}
