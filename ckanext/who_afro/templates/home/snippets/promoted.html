@@ -25,7 +25,7 @@
             <div class="col-lg-4 col-xs-12 col-sm-12">
                 <div id="UniversalHealthCoverage" class="goal-container">
                     <div>
-                        <a href="{{ h.url_for('dataset.search') }}" class="description">
+                        <a href="{{ h.url_for('dataset.search') + '?q=programme:(hiv%20OR%20malaria)' }}" class="description">
                             <i class="fa-solid fa-globe"></i> {{ _('Universal Health Coverage') }}
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
@@ -35,7 +35,7 @@
             <div class="col-lg-4 col-xs-12 col-sm-12">
                 <div id="HealthSecurity" class="goal-container">
                     <div>
-                        <a href="{{ h.url_for('dataset.search') }}" class="description">
+                        <a href="{{ h.url_for('dataset.search') + '?q=programme:(idsr%20OR%20amr)' }}" class="description">
                             <i class="fa-solid fa-shield-heart"></i> {{ _('Health Security') }}
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
@@ -45,7 +45,7 @@
             <div class="col-lg-4 col-xs-12 col-sm-12">
                 <div id="HealthierPopulations" class="goal-container">
                     <div>
-                        <a href="{{ h.url_for('dataset.search') }}" class="description">
+                        <a href="{{ h.url_for('dataset.search') + '?q=programme:(climate)' }}" class="description">
                             <i class="fa-solid fa-users"></i> {{ _('Healthier Populations') }}
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
