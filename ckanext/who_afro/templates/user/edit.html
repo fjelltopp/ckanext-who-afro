@@ -1,16 +1,8 @@
 {% ckan_extends %}
 
 {% block breadcrumb %}
-    {% if self.breadcrumb_content() | trim %}
-      <ol class="profile-page breadcrumb">
-        {% snippet 'snippets/home_breadcrumb_item.html' %}
-        {% block breadcrumb_content %}
-          <li><a href="{{ h.url_for('user.index') }}">{{ _('Users') }}</a></li>
-          <li><a href="{{ h.url_for('user.read', id=user_dict.name) }}">{{ user_dict.display_name }}</a></li>
-          <li class="active"><a href="#">{{ _('Manage') }}</a></li>
-        {% endblock %}
-      </ol>
-    {% endif %}
+  <p class="subtitle">{% link_for _('Home'), named_route='home.index' %} / {% link_for _('Users'), named_route='user.index' %} / {% link_for user_dict.display_name|truncate(35), named_route='user.read', id=user_dict.name %} /</p>
+  <h1 class="headline">{% link_for _('Edit User'), named_route='user.edit', id=user_dict.name %}</p>
 {% endblock %}
 
 
