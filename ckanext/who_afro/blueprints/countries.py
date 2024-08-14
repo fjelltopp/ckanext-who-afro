@@ -1,6 +1,7 @@
 import logging
 
-from flask import Blueprint, render_template
+from flask import Blueprint
+from ckan.plugins import toolkit
 
 log = logging.getLogger(__name__)
 
@@ -11,4 +12,12 @@ blueprint = Blueprint(
 
 @blueprint.get("/", endpoint="index")
 def featured_countries():
-    return render_template("countries/index.html")
+    return toolkit.render("countries/index.html")
+
+
+@blueprint.get("/<country_id>")
+def country(country_id=None):
+    return toolkit.render(
+        "countries/country.html",
+        {'country': country_id}
+    )

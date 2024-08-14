@@ -1,0 +1,35 @@
+{% extends "page.html" %}
+
+{% block subtitle %}
+{{ _('Countries') }}
+{%endblock subtitle%}
+
+{% block breadcrumb_content %}
+<li class="active">
+  {% link_for _('Countries'), named_route='countries.index' %}
+</li>
+{% endblock %}
+
+{% block content %}
+<div role="main" class="insights-page">
+  <div class="promoted-background">
+    {% snippet 'package/snippets/promoted_plus.html' %}
+    <div class="container">
+      <div class="promoted promoted-home col-xs-12 col-sm-10 col-md-8 col-lg-6">
+        <div class="promoted-container">
+          <p class="subtitle">{% link_for _('Home'), named_route='home.index' %} / {% link_for _('Countries'), named_route='countries.index' %}</p>
+          <h1 class="page-title">{{ country }}</h1>
+          <p>
+            {{ _('WHO African Region country members can access a collection of
+            high quality data analyses, visualisations and reported indicators
+            for their countries by clicking the links below.') }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+
+  </div>
+</div>
+{% endblock content %}
