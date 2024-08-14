@@ -1,7 +1,10 @@
+import re
 import logging
-
+import requests
+import csv
 from flask import Blueprint
 from ckan.plugins import toolkit
+
 
 log = logging.getLogger(__name__)
 
@@ -15,18 +18,47 @@ def featured_countries():
     return toolkit.render("countries/index.html")
 
 
+def _load_country_data(country_id: str) -> dict:
+    country_data_url = toolkit.config.get('country_data_url')
+    if not country_data_url:
+        raise toolkit.ObjectNotFound("No country data file url specified")
+    try:
+        if country_data_url.startswith('file://'):
+            with open(country_data_url.replace('file://', ''), 'r') as f:
+                reader = csv.DictReader(f)
+                country_data = {row['iso2_code']: row for row in reader}
+        else:
+            msg = f"Country data must be a local file - urls not yet supported {country_data_url}"
+            raise Exception(msg)
+    except requests.RequestException as e:
+        msg = "Couldn't get the country data file {}: {}".format(country_data_url, e)
+        raise Exception(msg)
+    except ValueError as e:
+        msg = "Couldn't parse the country data file {}: {}".format(country_data_url, e)
+        raise Exception(msg)
+    return country_data.get(country_id, {})
+
+
+def _extract_src(html_string, default_val):
+    src_pattern = r'src="([^"]+)"'
+    match = re.search(src_pattern, html_string)
+    return match.group(1) if match else default_val
+
+
 @blueprint.get("/<country_id>")
 def country(country_id=None):
+    country_data = _load_country_data(country_id)
+    default_val = "Unfound"
     template_vars = {
-        'iso2_code': 'DZ',
-        'name': 'Algeria',
-        'flag_url': '/images/country-flags/algeria.png',
-        'size_km2': '2381741 (2021)',
-        'demographic_growth_perc': '3.2 (2022)',
-        'population_size': '44903225 (2022)',
-        'uhc_dashboard': 'https://app.powerbi.com/view?r=eyJrIjoiYTQ5NjE1YmMtZmZiOC00NGYzLTkwYzMtMDczYjUzMGMwNzdmIiwidCI6ImY2MTBjMGI3LWJkMjQtNGIzOS04MTBiLTNkYzI4MGFmYjU5MCIsImMiOjh9',
-        'hse_dashboard': 'https://app.powerbi.com/view?r=eyJrIjoiNjNhMmYwYzEtODVmMC00OWQzLTkwZGItZjk2MDkxODAyZTBiIiwidCI6ImY2MTBjMGI3LWJkMjQtNGIzOS04MTBiLTNkYzI4MGFmYjU5MCIsImMiOjh9',
-        'hpop_dashboard': 'https://app.powerbi.com/view?r=eyJrIjoiYmUyMmE3ZTgtOWE5YS00M2U2LThkYTMtNzMzNjI3ZTEyNmUxIiwidCI6ImY2MTBjMGI3LWJkMjQtNGIzOS04MTBiLTNkYzI4MGFmYjU5MCIsImMiOjh9'
+        'iso2_code': country_data.get('iso2_code', default_val),
+        'name': country_data.get('name', default_val),
+        'flag_url': country_data.get('flag_url', default_val),
+        'size_km2': country_data.get('size_km2', default_val),
+        'demographic_growth_perc': country_data.get('demographic_growth_perc', default_val),
+        'population_size': country_data.get('population_size', default_val),
+        'uhc_dashboard': _extract_src(country_data.get('uhc_dashboard', ''), default_val),
+        'hse_dashboard': _extract_src(country_data.get('hse_dashboard', ''), default_val),
+        'hpop_dashboard': _extract_src(country_data.get('hpop_dashboard', ''), default_val)
     }
     return toolkit.render(
         "countries/country.html",
