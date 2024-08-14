@@ -1,15 +1,10 @@
 {% ckan_extends %}
 
 {% block breadcrumb %}
-    {% if self.breadcrumb_content() | trim %}
-      <ol class="profile-page breadcrumb">
-        {% snippet 'snippets/home_breadcrumb_item.html' %}
-        {% block breadcrumb_content %}
-          <li class="active"><a>{{ _('My account') }}</a></li>
-        {% endblock %}
-      </ol>
-    {% endif %}
+  <p class="subtitle"> {% link_for _('Home'), named_route='home.index' %} / </p>
+  <h1 class="headline">{% link_for _('My Account'), named_route='user.index' %}</p>
 {% endblock %}
+
 
 {% block maintag %}
     {% if request.args.get("id", "") == 'user_activity' %}

@@ -2,21 +2,26 @@
 
 {% block content %}
     {% block promoted_toolbar %}
-    <div class="promoted-background promoted-breadcrumbs">
+    <div class="promoted-background">
         {% snippet 'package/snippets/promoted_plus.html' %}
         <div class="container">
-            <div class="toolbar" role="navigation" aria-label="{{ _('Breadcrumb') }}">
-              {% block breadcrumb %}
-                {% if self.breadcrumb_content() | trim %}
-                  <ol class="breadcrumb">
-                    {% snippet 'snippets/home_breadcrumb_item.html' %}
-                    {% block breadcrumb_content %}{% endblock %}
-                  </ol>
-                {% endif %}
-              {% endblock %}
-            </div>
-            <div class="content_action">
-                {% block content_action %}{% endblock %}
+            <div class="promoted promoted-home col-xs-12 col-sm-10 col-md-8 col-lg-6">
+                <div class="promoted-container">
+                        {% block breadcrumb %}
+                            <div class="toolbar" role="navigation" aria-label="{{ _('Breadcrumb') }}">
+                            {% if self.breadcrumb_content() | trim %}
+                                <ol class="breadcrumb">
+                                    {% snippet 'snippets/home_breadcrumb_item.html' %}
+                                    {% block breadcrumb_content %}{% endblock %}
+                                </ol>
+                            {% endif %}
+                            </div>
+                        {% endblock %}
+                    </div>
+                    <div class="content_action">
+                        {% block content_action %}{% endblock %}
+                    </div>
+                </div>
             </div>
         </div>
     </div>

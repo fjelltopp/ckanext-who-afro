@@ -1,15 +1,8 @@
 {% ckan_extends %}
 
 {% block breadcrumb %}
-    {% if self.breadcrumb_content() | trim %}
-      <ol class="profile-page breadcrumb">
-        {% snippet 'snippets/home_breadcrumb_item.html' %}
-        {% block breadcrumb_content %}
-              {{ h.build_nav('user.index', _('Users')) }}
-              {{ h.build_nav('user.read', user.display_name|truncate(35), id=user.name) }}
-        {% endblock %}
-      </ol>
-    {% endif %}
+  <p class="subtitle">{{ _('Home') }} / {% link_for _('Users'), named_route='user.index' %}</p>
+  <h1 class="headline">{% link_for user.display_name|truncate(35), named_route='user.read', id=user.name %}</p>
 {% endblock %}
 
 

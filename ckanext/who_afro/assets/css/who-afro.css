@@ -614,13 +614,19 @@ div[role=main]{
     color: #FFFFFF;
 }
 
-.promoted .subtitle {
+.promoted .subtitle,
+.promoted .subtitle a,
+.promoted .subtitle a:hover {
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     color: #FFF;
     margin-bottom:  15px;
     letter-spacing: 0;
+}
+
+.promoted .subtitle a:hover {
+    text-decoration: underline;
 }
 
 .promoted .big-search-form {
@@ -1345,6 +1351,11 @@ a.tag:hover  {
     margin-bottom: -25px;
 }
 
+.site-footer .footer-subscribe-section{
+    margin-bottom: 64px;
+
+}
+
 .site-footer .list-unstyled {
     width: 100%;
     display: block;
@@ -1467,7 +1478,7 @@ a.footer-link:hover,
 
 
 .toolbar .breadcrumb a {
-    color: #505050;
+    color: #fff;
 }
 
 .btn{
@@ -2011,6 +2022,7 @@ p.description a {
 
 .promoted-progress-row .promoted-dashboard {
     padding: 15px;
+    aspect-ratio: 16 / 10;
 }
 
 /* Featured data */
@@ -2110,15 +2122,11 @@ footer.site-footer .footer-search-section .lens-btn {
 }
 
 footer.site-footer .subscribe > .container {
-    padding: 64px 0;
+    padding: 64px 0 0;
 }
 
 footer.site-footer .subscribe > .container > .highlight-box > .row > div:first-child {
     max-width: 100% !important;
-}
-
-footer.site-footer .empty-subscribe {
-    margin-top: 64px
 }
 
 footer.site-footer .data-hub-stats {
@@ -2280,6 +2288,7 @@ div.main.search .wrapper > aside.secondary section.module > h2.module-heading > 
 div.main.search .wrapper > aside.secondary section.module .nav-facet{
     max-height: 500px;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 div.main.search .wrapper > aside.secondary section.module > div > nav > input.facets-search {
@@ -3405,7 +3414,7 @@ ul.icon-list li .views-field-field-icon img {
     margin-bottom: 20px;
 }
 
-.promoted-breadcrumbs .content_action{
+.promoted-background .content_action{
     position: absolute;
     z-index: 1;
     top: 64px;
