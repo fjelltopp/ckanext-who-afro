@@ -7,6 +7,10 @@
     background-repeat: no-repeat;
 }
 
+.footer-bg.bottom-right.loggedin {
+    bottom: -25px;
+}
+
 @media (max-width: 3000px) {
     .footer-bg.bottom-right {
         left: calc(100% - 600px);
