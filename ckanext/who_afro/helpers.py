@@ -209,10 +209,14 @@ def dataset_has_overview(pkg_dict):
 def get_indicator_name(resource_id):
     try:
         datastore_info = toolkit.get_action('datastore_info')({}, {'id': resource_id})
-        for field in datastore_info.get('fields', []):
-            if field['id'].endswith('_N') and field['type'] == 'numeric':
-                indicator_field = field['id']
-                break
     except toolkit.ObjectNotFound:
         return "Nothing found in the datastore for this indicator."
+    
+    for field in datastore_info.get('fields', []):
+        if field['id'].endswith('_N') and field['type'] == 'numeric':
+            indicator_field = field['id']
+            break
+    else:
+        return "No indicator value found within the dataset"
+
     return indicator_field
