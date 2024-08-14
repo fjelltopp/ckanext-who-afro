@@ -2117,6 +2117,10 @@ footer.site-footer .subscribe > .container > .highlight-box > .row > div:first-c
     max-width: 100% !important;
 }
 
+footer.site-footer .empty-subscribe {
+    margin-top: 64px
+}
+
 footer.site-footer .data-hub-stats {
     margin-left: 0;
     height: auto;
