@@ -18,7 +18,7 @@
       <div class="promoted promoted-home col-xs-12 col-sm-10 col-md-8 col-lg-6">
         <div class="promoted-container">
           <p class="subtitle">{% link_for _('Home'), named_route='home.index' %} / {% link_for _('Countries'), named_route='countries.index' %}</p>
-          <h1 class="page-title">{{ country }}</h1>
+          <h1 class="page-title">{{ name }}</h1>
           <p>
             {{ _('WHO African Region country members can access a collection of
             high quality data analyses, visualisations and reported indicators
@@ -29,7 +29,15 @@
     </div>
   </div>
   <div class="container">
-
+    <p> Iso2 Code: {{ iso2_code }} </p>
+    <p> Name: {{ name }} </p>
+    <p> Flag URL: {{ flag_url }} </p>
+    <p> Size: {{ size_km2 }} </p>
+    <p> Demographic Growth: {{ demographic_growth_perc }} </p>
+    <p> Population Size: {{ population_size }} </p>
+    <p> UHC: {{ uhc_dashboard }} </p>
+    <p> HSE: {{ hse_dashboard }} </p>
+    <p> HPOP: {{ hpop_dashboard }} </p>
   </div>
 </div>
 {% endblock content %}
