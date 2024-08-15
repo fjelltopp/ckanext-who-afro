@@ -11,19 +11,36 @@
 {% endblock %}
 
 {% block content %}
-<div role="main" class="insights-page">
+<div role="main" class="countries">
   <div class="promoted-background">
     {% snippet 'package/snippets/promoted_plus.html' %}
     <div class="container">
       <div class="promoted promoted-home col-xs-12 col-sm-10 col-md-8 col-lg-6">
         <div class="promoted-container">
           <p class="subtitle">{% link_for _('Home'), named_route='home.index' %} / {% link_for _('Countries'), named_route='countries.index' %}</p>
-          <h1 class="page-title">{{ name }}</h1>
-          <p>
+          <h1 class="page-title">
+            <img class="flag-url" src="{{ flag_url }}" />
+            <span>{{ name }}</span>
+          </h1>
+          <ul class="country-data">
+            <li>
+              <span class="country-data-unit">{{ _('Country size (km<sup>2</sup>)') }}</span>
+              <span class="country-data-value"> {{ size_km2 }} </span>
+            </li>
+            <li>
+              <span class="country-data-unit">{{ _('Demographic growth (&percnt;)') }}</span>
+              <span class="country-data-value">{{ demographic_growth_perc }}</span>
+            </li>
+            <li>
+              <span class="country-data-unit">{{ _('Population size') }}</span>
+              <span class="country-data-value">{{ population_size }}</span>
+            </li>
+          </ul>
+          <!-- <p>
             {{ _('WHO African Region country members can access a collection of
             high quality data analyses, visualisations and reported indicators
             for their countries by clicking the links below.') }}
-          </p>
+          </p> -->
         </div>
       </div>
     </div>
