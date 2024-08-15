@@ -2223,12 +2223,6 @@ div.main.search .wrapper > aside.secondary > .filters #field-order-by {
     background-position: right 1.25rem center;
 }
 
-div.main.search .wrapper > aside.secondary > .indicators-filters .tags,
-div.main.search .wrapper > aside.secondary > .indicators-filters .res_format,
-div.main.search .wrapper > aside.secondary > .indicators-filters .organization {
-    display: none;
-}
-
 div.main.search .wrapper > aside.secondary section.module {
     background-color: white;
     border-radius: 4px;
