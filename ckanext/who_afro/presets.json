@@ -110,6 +110,11 @@
           {"value": "onehealth", "label": "OneHealth"},
           {"value": "idsr", "label": "Integrated Disease Surveillance and Reporting"},
           {"value": "climate", "label": "Climate Change, Health and Environment"},
+          {"value": "blood-pressure", "label": "Blood Pressure"},
+          {"value": "tobacco", "label": "Tobacco"},
+          {"value": "wash", "label": "Water, Sanitation and Hygiene (WASH)"},
+          {"value": "vid", "label": "Violence, Injuries and Disabilities (VID)"},
+          {"value": "ncd", "label": "Non-communicable Diseases (NCD)"},
           {"value": "other", "label": "Other"}
         ]
       }
