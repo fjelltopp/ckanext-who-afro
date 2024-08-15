@@ -3567,3 +3567,11 @@ ul.icon-list li .views-field-field-icon img {
     text-align: center;
     white-space: nowrap;
 }
+
+
+.main.indicators .secondary .module-narrow.res_format,
+.main.indicators .secondary .module-narrow.organization,
+.main.indicators .secondary .module-narrow.tags
+{
+    display: none;
+}
