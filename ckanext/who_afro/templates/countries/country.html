@@ -10,41 +10,54 @@
 </li>
 {% endblock %}
 
-{% block content %}
-<div role="main" class="countries">
-  <div class="promoted-background">
+{% block maintag %}
+<div class="main countries">
+{% endblock %}
+
+{% block promoted_toolbar %}
+<div class="countries dataset promoted-background promoted-breadcrumbs">
     {% snippet 'package/snippets/promoted_plus.html' %}
     <div class="container">
-      <div class="promoted promoted-home col-xs-12 col-sm-10 col-md-8 col-lg-6">
-        <div class="promoted-container">
-          <p class="subtitle">{% link_for _('Home'), named_route='home.index' %} / {% link_for _('Countries'), named_route='countries.index' %}</p>
-          <h1 class="page-title">
-            <img class="flag-url" src="{{ flag_url }}" />
-            <span>{{ name }}</span>
-          </h1>
-          <ul class="country-data">
-            <li>
-              <span class="country-data-unit">{{ _('Country size (km<sup>2</sup>)') }}</span>
-              <span class="country-data-value"> {{ size_km2 }} </span>
-            </li>
-            <li>
-              <span class="country-data-unit">{{ _('Demographic growth (&percnt;)') }}</span>
-              <span class="country-data-value">{{ demographic_growth_perc }}</span>
-            </li>
-            <li>
-              <span class="country-data-unit">{{ _('Population size') }}</span>
-              <span class="country-data-value">{{ population_size }}</span>
-            </li>
-          </ul>
-          <!-- <p>
-            {{ _('WHO African Region country members can access a collection of
-            high quality data analyses, visualisations and reported indicators
-            for their countries by clicking the links below.') }}
-          </p> -->
+        <div class="toolbar" role="navigation" aria-label="{{ _('Breadcrumb') }}">
+            <div class="container">
+                <div class="promoted promoted-home col-xs-12 col-sm-10 col-md-8 col-lg-6">
+                    <div class="promoted-container">
+                            <p class="subtitle">{% link_for _('Home'), named_route='home.index' %} / {% link_for _('Countries'), named_route='countries.index' %}</p>
+                        <h1 class="page-title">
+                            <img class="flag-url" src="{{ flag_url }}" />
+                            <span>{{ name }}</span>
+                        </h1>
+                        <ul class="country-data">
+                            <li>
+                              <span class="country-data-unit">{{ _('Country size (km<sup>2</sup>)') }}</span>
+                              <span class="country-data-value"> {{ size_km2 }} </span>
+                            </li>
+                            <li>
+                              <span class="country-data-unit">{{ _('Demographic growth (&percnt;)') }}</span>
+                              <span class="country-data-value">{{ demographic_growth_perc }}</span>
+                            </li>
+                            <li>
+                              <span class="country-data-unit">{{ _('Population size') }}</span>
+                              <span class="country-data-value">{{ population_size }}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+        <div class="content_action">
+            {% block content_action %}{% endblock %}
+        </div>
+        <ul class="nav nav-tabs">
+          {{ h.build_nav('countries.country_uhc', _('UHC'), country_id=iso2_code) }}
+          {{ h.build_nav('countries.country_hse', _('HSE'), country_id=iso2_code) }}
+          {{ h.build_nav('countries.country_hpop', _('HPOP'), country_id=iso2_code) }}
+        </ul>
     </div>
-  </div>
+</div>
+{% endblock %}
+
+{% block primary %}
   <div class="container">
     <p> Iso2 Code: {{ iso2_code }} </p>
     <p> Name: {{ name }} </p>
@@ -52,9 +65,10 @@
     <p> Size: {{ size_km2 }} </p>
     <p> Demographic Growth: {{ demographic_growth_perc }} </p>
     <p> Population Size: {{ population_size }} </p>
-    <p> UHC: {{ uhc_dashboard }} </p>
-    <p> HSE: {{ hse_dashboard }} </p>
-    <p> HPOP: {{ hpop_dashboard }} </p>
+    <p> Dashboard: {{ dashboard }} </p>
   </div>
 </div>
-{% endblock content %}
+{% endblock %}
+
+{% block secondary %}
+{% endblock %}

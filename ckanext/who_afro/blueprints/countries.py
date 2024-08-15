@@ -50,8 +50,7 @@ def _extract_src(html_string, default_val):
     return match.group(1) if match else default_val
 
 
-@blueprint.get("/<country_id>")
-def country(country_id=None):
+def country(country_id=None, dashboard_id='uhc'):
     country_data = _load_country_data()
     try:
         country_data = country_data[country_id]
@@ -59,6 +58,13 @@ def country(country_id=None):
         return toolkit.abort(
             404,
             toolkit._(f'Country data not found for {country_id}')
+        )
+    try:
+        dashboard = country_data[f'{dashboard_id}_dashboard']
+    except KeyError:
+        return toolkit.abort(
+            404,
+            toolkit._(f'Dashboard {dashboard_id} not found for {country_id}')
         )
     default_val = "Unfound"
     template_vars = {
@@ -68,11 +74,26 @@ def country(country_id=None):
         'size_km2': country_data.get('size_km2', default_val),
         'demographic_growth_perc': country_data.get('demographic_growth_perc', default_val),
         'population_size': country_data.get('population_size', default_val),
-        'uhc_dashboard': _extract_src(country_data.get('uhc_dashboard', ''), default_val),
-        'hse_dashboard': _extract_src(country_data.get('hse_dashboard', ''), default_val),
-        'hpop_dashboard': _extract_src(country_data.get('hpop_dashboard', ''), default_val)
+        'dashboard': _extract_src(dashboard, default_val),
     }
     return toolkit.render(
         "countries/country.html",
         template_vars
     )
+
+
+@blueprint.get("/<country_id>")
+@blueprint.get("/<country_id>/uhc")
+def country_uhc(country_id=None):
+    return country(country_id, 'uhc')
+
+
+@blueprint.get("/<country_id>/hse")
+def country_hse(country_id=None):
+    return country(country_id, 'hse')
+
+
+@blueprint.get("/<country_id>/hpop")
+def country_hpop(country_id=None):
+    return country(country_id, 'hpop')
+
