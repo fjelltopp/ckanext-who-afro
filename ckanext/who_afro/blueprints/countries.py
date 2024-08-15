@@ -35,12 +35,12 @@ def _load_country_data() -> dict:
             # response = requests.get(country_data_url, timeout=timeout)
             # reader = csv.DictReader(response.raw)
             # country_data = {row['iso2_code']: row for row in reader}
-    except requests.RequestException as e:
-        msg = "Couldn't get the country data file {}: {}".format(country_data_url, e)
-        raise Exception(msg)
-    except ValueError as e:
-        msg = "Couldn't parse the country data file {}: {}".format(country_data_url, e)
-        raise Exception(msg)
+    except (FileNotFoundError, requests.RequestException) as e:
+        msg = f"Couldn't get the country data file {country_data_url}: {e}"
+        raise toolkit.ObjectNotFound(msg)
+    except KeyError as e:
+        msg = f"Does the country data file include column {e}?"
+        raise KeyError(msg)
     return country_data
 
 
