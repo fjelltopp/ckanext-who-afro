@@ -5,7 +5,7 @@
     {% with items = items or h.get_facet_items_dict(name, search_facets) %}
 	{% if items or not hide_empty %}
 	    {% block facet_list_item %}
-		<section class="module module-narrow module-shallow accordion-item {{name}}">
+		<section class="module module-narrow module-shallow accordion-item {{ name }}">
 		    {% block facet_list_heading %}
 			<h2 class="module-heading accordion-header" id="{{ title }}-heading">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#{{ title }}-collapse" aria-expanded="true" aria-controls="{{ title }}-collapse">
