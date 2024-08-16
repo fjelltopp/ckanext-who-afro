@@ -15,7 +15,8 @@
 {% endblock %}
 
 {% block promoted_toolbar %}
-<div class="countries dataset promoted-background promoted-breadcrumbs">
+<div role="main" class="countries">
+  <div class="promoted-background">
     {% snippet 'package/snippets/promoted_plus.html' %}
     <div class="container">
       <div class="promoted promoted-home col-xs-12 col-sm-10 col-md-8 col-lg-6">
@@ -40,15 +41,9 @@
             </li>
           </ul>
         </div>
-        <div class="content_action">
-            {% block content_action %}{% endblock %}
-        </div>
-        <ul class="nav nav-tabs">
-          {{ h.build_nav('countries.country_uhc', _('Universal Health Care'), country_id=iso2_code) }}
-          {{ h.build_nav('countries.country_hse', _('Health security'), country_id=iso2_code) }}
-          {{ h.build_nav('countries.country_hpop', _('Healthier populations'), country_id=iso2_code) }}
-        </ul>
+      </div>
     </div>
+  </div>
 </div>
 {% endblock %}
 

@@ -2457,17 +2457,17 @@ div.main.search .wrapper > div.primary > .module > .pagination-wrapper > ul.pagi
 }
 
 /* Countries */
-.countries.promoted-background .page-title > span {
+.countries > .promoted-background .page-title > span {
     padding-left: 12px;
 }
 
-.countries.promoted-background ul.country-data {
+.countries > .promoted-background ul.country-data {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.countries.promoted-background ul.country-data > li {
+.countries > .promoted-background ul.country-data > li {
     display: inline-flex;
     width: 90%;
     font-weight: 400;
