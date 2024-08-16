@@ -75,6 +75,9 @@ def country(country_id=None, dashboard_id='uhc'):
         'demographic_growth_perc': country_data.get('demographic_growth_perc', default_val),
         'population_size': country_data.get('population_size', default_val),
         'dashboard': _extract_src(dashboard, default_val),
+        'uhc_dashboard': _extract_src(country_data['uhc_dashboard'], default_val),
+        'hse_dashboard': _extract_src(country_data['hse_dashboard'], default_val),
+        'hpop_dashboard': _extract_src(country_data['hpop_dashboard'], default_val),
     }
     return toolkit.render(
         "countries/country.html",
