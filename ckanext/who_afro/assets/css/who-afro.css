@@ -2477,12 +2477,16 @@ div.main.search .wrapper > div.primary > .module > .pagination-wrapper > ul.pagi
     border-bottom: 1px solid var(--who-blue-65-percent);
 }
 
-.countries.promoted-background ul.country-data > li:last-child {
+.countries > .promoted-background ul.country-data > li:last-child {
     border-bottom: 0;
 }
 
-.countries.promoted-background ul.country-data > li > span.country-data-value {
+.countries > .promoted-background ul.country-data > li > span.country-data-value {
     margin-left: auto;
+}
+
+.countries .contries-powerbi {
+    margin: 44px 0 64px;
 }
 
 /* dev banner */
