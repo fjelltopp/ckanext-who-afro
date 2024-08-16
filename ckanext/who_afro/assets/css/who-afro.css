@@ -2473,7 +2473,7 @@ div.main.search .wrapper > div.primary > .module > .pagination-wrapper > ul.pagi
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    padding-bottom: 8px;
+    padding: 6px 0 8px;
     border-bottom: 1px solid var(--who-blue-65-percent);
 }
 
