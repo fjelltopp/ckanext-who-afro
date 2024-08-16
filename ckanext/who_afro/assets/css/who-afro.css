@@ -2457,6 +2457,15 @@ div.main.search .wrapper > div.primary > .module > .pagination-wrapper > ul.pagi
 }
 
 /* Countries */
+div.countries {
+    min-height: auto;
+}
+
+div.main.countries {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
 .countries > .promoted-background .page-title > span {
     padding-left: 12px;
 }
@@ -2486,7 +2495,21 @@ div.main.search .wrapper > div.primary > .module > .pagination-wrapper > ul.pagi
 }
 
 .countries .contries-powerbi {
-    margin: 44px 0 64px;
+    margin: 54px 0 64px;
+    padding: 0;
+}
+
+.countries .contries-powerbi div[class^="col-lg"],
+.countries .contries-powerbi div[class^="col-md"] {
+    padding: 0;
+}
+
+.countries .contries-powerbi div[class^="col-"] {
+    margin-bottom: 44px;
+}
+
+.countries .contries-powerbi div[class^="col-"]:last-child {
+    margin-bottom: 0;
 }
 
 /* dev banner */
