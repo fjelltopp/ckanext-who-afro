@@ -2466,6 +2466,10 @@ div.main.countries {
     padding-top: 0;
 }
 
+.countries > .promoted-background .page-title > img {
+    border-radius: 50%;
+}
+
 .countries > .promoted-background .page-title > span {
     padding-left: 12px;
 }
