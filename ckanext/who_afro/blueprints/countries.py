@@ -78,6 +78,7 @@ def country(country_id=None, dashboard_id='uhc'):
         'uhc_dashboard': _extract_src(country_data['uhc_dashboard'], default_val),
         'hse_dashboard': _extract_src(country_data['hse_dashboard'], default_val),
         'hpop_dashboard': _extract_src(country_data['hpop_dashboard'], default_val),
+        'ccs': country_data.get('ccs', default_val),
     }
     return toolkit.render(
         "countries/country.html",
