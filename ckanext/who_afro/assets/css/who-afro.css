@@ -2466,6 +2466,10 @@ div.main.countries {
     padding-top: 0;
 }
 
+.countries > .promoted-background .container {
+    position: relative;
+}
+
 .countries > .promoted-background .page-title > img {
     border-radius: 50%;
 }
