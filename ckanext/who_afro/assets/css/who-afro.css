@@ -2498,6 +2498,11 @@ div.main.countries {
     margin-left: auto;
 }
 
+.countries > .promoted-background ul.country-data > li > a.country-data-ccs {
+    margin-left: auto;
+    color: #FFFFFF;
+}
+
 .countries .contries-powerbi {
     margin: 54px 0 64px;
     padding: 0;
