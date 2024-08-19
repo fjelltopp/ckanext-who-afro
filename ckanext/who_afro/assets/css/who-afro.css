@@ -3424,12 +3424,10 @@ ul.icon-list li {
     break-inside: avoid;
 }
 
-ul.icon-list li .views-field-field-icon {
+ul.icon-list li .views-field-icon {
     float: left;
     width: 20%;
     margin-right: 5%;
-    width: 15%;
-    margin-right: 3%;
 }
 
 ul.icon-list li .views-field-title {
@@ -3437,11 +3435,51 @@ ul.icon-list li .views-field-title {
     width: 75%;
 }
 
-ul.icon-list li .views-field-field-icon img {
+ul.icon-list li .views-field-icon img {
     border: none !important;
     border-radius: 50%;
     height: 50px;
     width: 50px;
+}
+
+ul.icon-description-list {
+    -moz-column-count: 1;
+    column-count: 1;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 70px;
+}
+
+ul.icon-description-list li {
+    margin-bottom: 10px;
+    min-height: 70px;
+    display: flex;
+    page-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    break-inside: avoid;
+    align-items: center;
+}
+
+ul.icon-description-list li .views-field-icon {
+    float: left;
+    margin-right: 3%;
+    width: 7%;
+}
+
+ul.icon-description-list li .views-field-title {
+    float: left;
+    width: 30%;
+    padding-right: 2em;
+    font-weight: 700;
+}
+
+ul.icon-description-list li .views-field-description {
+    float: left;
+    width: 60%;
+}
+
+ul.icon-description-list li .views-field-icon img {
+    height: 50px;
 }
 
 .other-insights-btn{
