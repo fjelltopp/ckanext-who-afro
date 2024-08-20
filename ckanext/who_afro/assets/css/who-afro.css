@@ -3442,43 +3442,18 @@ ul.icon-list li .views-field-icon img {
     width: 50px;
 }
 
-ul.icon-description-list {
-    -moz-column-count: 1;
-    column-count: 1;
-    list-style: none;
-    padding-left: 0;
-    margin-top: 70px;
+div.sources-page > div.container {
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 
-ul.icon-description-list li {
-    margin-bottom: 10px;
-    min-height: 70px;
-    display: flex;
-    page-break-inside: avoid;
-    -moz-column-break-inside: avoid;
-    break-inside: avoid;
-    align-items: center;
+div.sources-page > div.container div.row {
+    padding-left: 0px;
+    margin-top: 20px;
+    margin-top: 10px;
 }
 
-ul.icon-description-list li .views-field-icon {
-    float: left;
-    margin-right: 3%;
-    width: 7%;
-}
-
-ul.icon-description-list li .views-field-title {
-    float: left;
-    width: 30%;
-    padding-right: 2em;
-    font-weight: 700;
-}
-
-ul.icon-description-list li .views-field-description {
-    float: left;
-    width: 60%;
-}
-
-ul.icon-description-list li .views-field-icon img {
+div.sources-page > div.container div.row div.col-1 a img {
     height: 50px;
 }
 
