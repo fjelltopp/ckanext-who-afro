@@ -38,7 +38,9 @@
                         {% block footer_links %}
                             <li><a class="footer-link" href="{{ h.url_for('/about') }}">{{ _('About') }}</a></li>
                             <li><a class="footer-link" href="{{ h.url_for('/organization') }}">{{ _('Organizations') }}</a></li>
-                            <li><a class="footer-link" href="{{ h.url_for('/user/login') }}">{{ _('Account login') }}</a></li>
+                            {% if not g.userobj %}
+                                <li><a class="footer-link" href="{{ h.url_for('/user/login') }}">{{ _('Account login') }}</a></li>
+                            {% endif %}
                             <li><a class="footer-link" href="{{ h.url_for('/terms/') }}" target="_blank">{{ _('Terms and conditions') }}</a><br />
                             <li><a class="footer-link" href="http://docs.ckan.org/en/2.10/api/" target="_blank">{{ _('API Docs') }}</a></li>
                             <li>
