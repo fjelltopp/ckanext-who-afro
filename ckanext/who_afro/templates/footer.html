@@ -36,6 +36,7 @@
                 <div class="desc-large">
                     <ul class="list-unstyled">
                         {% block footer_links %}
+                            <li><a class="footer-link" href="{{ h.url_for('/about') }}">{{ _('About') }}</a></li>
                             <li><a class="footer-link" href="{{ h.url_for('/organization') }}">{{ _('Organizations') }}</a></li>
                             <li><a class="footer-link" href="{{ h.url_for('/user/login') }}">{{ _('Account login') }}</a></li>
                             <li><a class="footer-link" href="{{ h.url_for('/terms/') }}" target="_blank">{{ _('Terms and conditions') }}</a><br />
