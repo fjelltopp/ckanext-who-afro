@@ -66,7 +66,6 @@
     <div>
       <h3>{{ _('Really by:') }}</h3>
       <div class="form-group control-order-by">
-        <!-- <label for="field-order-by">{{ _('Order by') }}</label> -->
         <select id="field-order-by" name="sort" class="form-control form-select" onchange="setSort(this.value);">
           {% for label, value in sorting %}
             {% if label and value %}
