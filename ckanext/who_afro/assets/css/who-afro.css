@@ -3450,12 +3450,14 @@ div.sources-page > div.container {
 div.sources-page > div.container div.row {
     padding-left: 0px;
     margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 }
 
-div.sources-page > div.container div.row div.col-1 a img {
-    height: 50px;
+.sources-page .sources img{
+    width: 100%;
+    margin-bottom: 1rem;
 }
+
 
 .other-insights-btn{
     margin-top: 20px;
@@ -3513,23 +3515,31 @@ div.sources-page > div.container div.row div.col-1 a img {
 
 .promoted-background .nav-tabs li{
     display: inline-block;
-    padding: 10px 40px;
+    padding: 10px;
     background: var(--who-blue-ten-percent);
     border-radius: 4px 4px 0 0;
     margin-right: 2px;
     border-bottom: 1px solid var(--primary-navy);
     text-align: center;
+    border-top: 4px solid var(--who-blue-65-percent);
 }
 
+.dataset.promoted-background .nav-tabs li{
+    width: 25%;
+}
+
+@media (max-width: 575px) {
+    .dataset.promoted-background .nav-tabs li{
+    width: 32%;
+}
+
+}
 .promoted-background .nav-tabs li.active{
     background: #fff;
     border-top: var(--secondary-who-blue) 4px solid;
     border-bottom: 1px solid #FFF;
 }
 
-.dataset.promoted-background .nav-tabs li{
-    width: 25%;
-}
 
 .dataset.wrapper{
     border: none;
