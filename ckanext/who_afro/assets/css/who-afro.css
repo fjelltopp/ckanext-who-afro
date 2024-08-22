@@ -551,6 +551,8 @@ div[role=main]{
 .promoted, .promoted-home {
     font-style: normal;
     font-size:  18px;
+    z-index: 2;
+    position: relative;
 }
 
 .promoted-background > .container {
@@ -3494,7 +3496,12 @@ div.sources-page > div.container div.row {
     padding: 0px;
 }
 
-.promoted-breadcrumbs .toolbar{
+.dataset .toolbar{
+    margin: 0px;
+    padding: 0px;
+}
+
+.dataset.promoted-background .promoted{
     width: 75%;
     margin-bottom: 0px;
     background: rgba(23,27,56,0);
@@ -3502,10 +3509,16 @@ div.sources-page > div.container div.row {
 }
 
 @media (max-width: 627px) {
-.promoted-breadcrumbs .toolbar {
-    width: 95%;
+.dataset.promoted-background > .container,
+.dataset.promoted-background > .container .toolbar > .container{
+    padding-left: 0px;
+}
+.dataset.promoted-background .promoted{
+    width: 100%;
   }
 }
+
+
 
 .promoted .headline a{
     color: white;
