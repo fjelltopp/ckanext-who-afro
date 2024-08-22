@@ -553,13 +553,27 @@ div[role=main]{
     font-size:  18px;
 }
 
+.promoted-background > .container {
+    background: linear-gradient(90deg, rgba(23,27,56,1) 0%, rgba(23,27,48,0.8547794117647058) 65%, rgba(23,27,56,0) 100%);
+    position: relative;
+    z-index: 2;
+}
+
+.homepage .promoted-background > .container,
+.search.promoted-background > .container
+ {
+    background: transparent;
+    position: relative;
+    z-index: 2;
+}
+
 .promoted-home .promoted-container {
-    margin: 64px 0;
+    padding: 64px 0;
 }
 
 @media only screen and (max-width: 991px) {
     .promoted-home .promoted-container {
-        margin: 2rem 0;
+        padding: 2rem 0;
     }
 }
 
@@ -3424,12 +3438,10 @@ ul.icon-list li {
     break-inside: avoid;
 }
 
-ul.icon-list li .views-field-field-icon {
+ul.icon-list li .views-field-icon {
     float: left;
     width: 20%;
     margin-right: 5%;
-    width: 15%;
-    margin-right: 3%;
 }
 
 ul.icon-list li .views-field-title {
@@ -3437,12 +3449,29 @@ ul.icon-list li .views-field-title {
     width: 75%;
 }
 
-ul.icon-list li .views-field-field-icon img {
+ul.icon-list li .views-field-icon img {
     border: none !important;
     border-radius: 50%;
     height: 50px;
     width: 50px;
 }
+
+div.sources-page > div.container {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+div.sources-page > div.container div.row {
+    padding-left: 0px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.sources-page .sources img{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
 
 .other-insights-btn{
     margin-top: 20px;
@@ -3500,23 +3529,31 @@ ul.icon-list li .views-field-field-icon img {
 
 .promoted-background .nav-tabs li{
     display: inline-block;
-    padding: 10px 40px;
+    padding: 10px;
     background: var(--who-blue-ten-percent);
     border-radius: 4px 4px 0 0;
     margin-right: 2px;
     border-bottom: 1px solid var(--primary-navy);
     text-align: center;
+    border-top: 4px solid var(--who-blue-65-percent);
 }
 
+.dataset.promoted-background .nav-tabs li{
+    width: 25%;
+}
+
+@media (max-width: 575px) {
+    .dataset.promoted-background .nav-tabs li{
+    width: 32%;
+}
+
+}
 .promoted-background .nav-tabs li.active{
     background: #fff;
     border-top: var(--secondary-who-blue) 4px solid;
     border-bottom: 1px solid #FFF;
 }
 
-.dataset.promoted-background .nav-tabs li{
-    width: 25%;
-}
 
 .dataset.wrapper{
     border: none;

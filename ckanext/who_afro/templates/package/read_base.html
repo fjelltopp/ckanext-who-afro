@@ -5,11 +5,11 @@
   {%- if h.dataset_has_overview(pkg) -%}
     {{ h.build_nav('overview.overview', _('Overview'),  dataset_id=pkg.name) }}
     {{ h.build_nav(dataset_type ~ '.read', _('Dataset'),  id=pkg.name) }}
-    {{ h.build_nav('activity.package_activity', _('Activity Stream'), id=pkg.id if is_activity_archive else pkg.name) }}
+    {{ h.build_nav('activity.package_activity', _('Activity'), id=pkg.id if is_activity_archive else pkg.name) }}
   {%- else -%}
     {{ h.build_nav(dataset_type ~ '.read', _('Dataset'),  id=pkg.name) }}
     {{ h.build_nav(dataset_type ~ '.groups', h.humanize_entity_type('group', default_group_type, 'content tab') or _('Groups'), id=pkg.name) }}
-    {{ h.build_nav('activity.package_activity', _('Activity Stream'), id=pkg.id if is_activity_archive else pkg.name) }}
+    {{ h.build_nav('activity.package_activity', _('Activity'), id=pkg.id if is_activity_archive else pkg.name) }}
   {%- endif -%}
 {% endblock %}
 
