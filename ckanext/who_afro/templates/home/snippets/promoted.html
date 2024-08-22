@@ -1,6 +1,7 @@
 {% set tags = h.get_facet_items_dict('tags', c.search_facets, limit=3) %}
 {% set placeholder = _('E.g. environment') %}
 {% set stats = h.get_site_statistics() %}
+{% set intro = g.site_intro_text %}
 
 <div class="promoted promoted-home col-xs-12 col-sm-12 col-lg-12" >
     <div class="promoted-container row">
@@ -14,7 +15,11 @@
                 </p>
                 <h1 class="headline">{{_('A regional ecosystem for health and health-related data')}}</h1>
                 <p class="description">
-                    {{_('This regional health data hub is a platform to store datasets and share information with internal and external partners. Our goal is to establish a source of truth to enable staff, researchers and the public to access relevant data quickly.')}}
+                    {% if intro %}
+                        {{ h.render_markdown(intro) }}
+                    {% else %}
+                        {{_('The Regional Health Data Hub is a secured cloud-based platform designed to strengthen health information systems by integrating existing data sources into a central data lake for better standardization, cross analysis and evidence generation.')}}
+                    {% endif %}
                     <a href="{{ h.url_for('home.about') }}">{{ _('Learn more') }}</a>
                 </p>
             </div>

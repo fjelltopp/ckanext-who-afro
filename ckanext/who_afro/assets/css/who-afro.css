@@ -434,7 +434,7 @@ div[role=main]{
 {
     font-style: normal;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 30px;
     color: var(--primary-navy);
     flex: none;
@@ -551,6 +551,8 @@ div[role=main]{
 .promoted, .promoted-home {
     font-style: normal;
     font-size:  18px;
+    z-index: 2;
+    position: relative;
 }
 
 .promoted-background > .container {
@@ -1253,7 +1255,8 @@ a.tag:hover  {
     background-color: rgba(25, 54, 108, 1);
     border-radius: 4px;
     padding: 36px;
-
+    z-index: 2;
+    position: relative;
 }
 
 .highlight-box > * {
@@ -1400,8 +1403,16 @@ a.tag:hover  {
     padding-bottom: 32px;
 }
 
+.site-footer .footer-links ul li {
+    margin-bottom: 15px;
+    background: #171b38b3;
+    padding: 5px;
+    position: relative;
+    z-index: 2;
+}
 
-.footer-links img {
+
+.site-footer .footer-links img {
     width:  100%;
     margin-bottom: 30px;
 }
@@ -1447,7 +1458,7 @@ a.tag:hover  {
     }
 }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 1199px) {
     .desc-wide {
         display: none;
     }
@@ -2155,8 +2166,11 @@ footer.site-footer .data-hub-stats > .row:last-child {
 }
 
 footer.site-footer .data-hub-stats > .row > .insight-small-rect {
-    background-color: transparent;
+    background-color: var(--primary-navy);
+    position: relative;
+    z-index: 2;
     border: 1px solid white;
+
 }
 
 footer.site-footer .data-hub-stats > .row > .insight-small-rect > p {
@@ -3482,7 +3496,12 @@ div.sources-page > div.container div.row {
     padding: 0px;
 }
 
-.promoted-breadcrumbs .toolbar{
+.dataset .toolbar{
+    margin: 0px;
+    padding: 0px;
+}
+
+.dataset.promoted-background .promoted{
     width: 75%;
     margin-bottom: 0px;
     background: rgba(23,27,56,0);
@@ -3490,10 +3509,16 @@ div.sources-page > div.container div.row {
 }
 
 @media (max-width: 627px) {
-.promoted-breadcrumbs .toolbar {
-    width: 95%;
+.dataset.promoted-background > .container,
+.dataset.promoted-background > .container .toolbar > .container{
+    padding-left: 0px;
+}
+.dataset.promoted-background .promoted{
+    width: 100%;
   }
 }
+
+
 
 .promoted .headline a{
     color: white;
