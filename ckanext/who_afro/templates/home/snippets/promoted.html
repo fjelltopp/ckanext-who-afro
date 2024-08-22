@@ -18,7 +18,7 @@
                     {% if intro %}
                         {{ h.render_markdown(intro) }}
                     {% else %}
-                        {{_('The Regional Health Data Hub is a secured cloud-based platform designed to strengthen health information systems by integrating multiple existing data sources into a central data lake for better standardization, cross analysis and to support evidence generation.')}}
+                        {{_('The Regional Health Data Hub is a secured cloud-based platform designed to strengthen health information systems by integrating existing data sources into a central data lake for better standardization, cross analysis and evidence generation.')}}
                     {% endif %}
                     <a href="{{ h.url_for('home.about') }}">{{ _('Learn more') }}</a>
                 </p>
