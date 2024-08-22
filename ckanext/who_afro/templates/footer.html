@@ -6,7 +6,6 @@
     {% else %}
         {% snippet 'home/snippets/footer_background.html', loggedin="loggedin" %}
     {% endif %}
-    
     <div class="row footer-search-section">
         <div class="col-lg-6 col-sm-9 col-xs-12">
             <h2>{{ _('Search all datasets') }}</h2>
@@ -31,18 +30,17 @@
     </div>
 
     <div class="row">
-        <div class="col-xs-12 col-sm-9 col-lg-12 footer-links">
+        <div class="col-xs-12 col-sm-12 footer-links">
             {% block footer_nav %}
                 <div class="desc-large">
                     <ul class="list-unstyled">
                         {% block footer_links %}
                             <li><a class="footer-link" href="{{ h.url_for('/about') }}">{{ _('About') }}</a></li>
+                            <li><a class="footer-link" href="https://data.who.int/redirect-pages/footer/learn-more/data-principles">{{ _('WHO data principles') }}</a></li>
+                            <li><a class="footer-link" href="https://data.who.int/redirect-pages/footer/learn-more/who-data-policy">{{ _('WHO data policy') }}</a></li>
                             <li><a class="footer-link" href="{{ h.url_for('/organization') }}">{{ _('Organizations') }}</a></li>
-                            {% if not g.userobj %}
-                                <li><a class="footer-link" href="{{ h.url_for('/user/login') }}">{{ _('Account login') }}</a></li>
-                            {% endif %}
                             <li><a class="footer-link" href="{{ h.url_for('/terms/') }}" target="_blank">{{ _('Terms and conditions') }}</a><br />
-                            <li><a class="footer-link" href="http://docs.ckan.org/en/2.10/api/" target="_blank">{{ _('API Docs') }}</a></li>
+                            <li><a class="footer-link" href="http://docs.ckan.org/en/2.10/api/" target="_blank">{{ _('API docs') }}</a></li>
                             <li>
                             <span class="desc desc-wide">{% trans %} &copy; WHO 2024. An open source <a class="hide-text" target="_blank" href="https://ckan.org/">
                         CKAN</a> project, built by <a class="hide-text" target="_blank" href="https://fjelltopp.org">Fjelltopp</a>{% endtrans %}</span>
@@ -54,10 +52,12 @@
                 </div>
 
                 <div class="desc-mobile">
+                    <p><a class="footer-link" href="{{ h.url_for('/about') }}">{{ _('About') }}</a></p>
+                    <p><a class="footer-link" href="https://data.who.int/redirect-pages/footer/learn-more/data-principles">{{ _('WHO data principles') }}</a></p>
+                    <p><a class="footer-link" href="https://data.who.int/redirect-pages/footer/learn-more/who-data-policy">{{ _('WHO data policy') }}</a></p>
                     <p><a class="footer-link" href="{{ h.url_for('/organization') }}">{{ _('Organizations') }}</a></p>
-                    <p><a class="footer-link" href="{{ h.url_for('/user/login') }}">{{ _('Account login') }}</a></p>
                     <p><a class="footer-link" href="{{ h.url_for('/terms/') }}" target="_blank">{{ _('Terms and conditions') }}</a><br />
-                    <p><a class="footer-link" href="http://docs.ckan.org/en/2.10/api/" target="_blank">{{ _('API Docs') }}</a></p>
+                    <p><a class="footer-link" href="http://docs.ckan.org/en/2.10/api/" target="_blank">{{ _('API docs') }}</a></p>
                     <p class="desc desc-mobile">{% trans %}© WHO 2024. An open source <a class="hide-text" target="_blank" href="https://ckan.org/">
                     CKAN</a> project, built by <a class="hide-text" target="_blank" href="https://fjelltopp.org">Fjelltopp</a>{% endtrans %}</p>
                 </div>
