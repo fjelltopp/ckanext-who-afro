@@ -9,6 +9,7 @@
     {% else %}
         {% set facet = '[ { "id": "TOTAL", "label": "Total", "color": "#171B38" } ]' %}
     {% endif %}
+    <p>{{ indicator_details }}</p>
     <div id="who-afro-js"
          data-datastore-path="{{ h.url_for('api.action', ver=3, logic_function='datastore_search') }}"
          data-resource-id="{{ resource_id }}"
