@@ -17,7 +17,7 @@
          data-round-to-decimal-places="2"
          data-labels='{ "segment": "{{ indicator_details.facet_label }}", "amount": "{{ pkg.title }}", "noRowsWarning": "No data to display" }'
          data-sexes='{{ facet }}'
-         data-api-fields='{ "value": "{{ indicator_details.value_field }}", "country": "{{ indicator_details.geo_field }}", "segment": {{ indicator_details.facet_field }}, "time_axis": "{{ indicator_details.time_field }}" }'>
+         data-api-fields='{ "value": "{{ indicator_details.value_field }}", "country": "{{ indicator_details.geo_field }}", "segment": "{{ indicator_details.facet_field }}", "time_axis": "{{ indicator_details.time_field }}" }'>
     </div>
     {% set url = h.url_for(pkg.type ~ '_resource.read', id=pkg.name, resource_id=resource_id) %}
     <div class="overview-data-link small">
