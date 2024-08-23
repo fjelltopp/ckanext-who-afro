@@ -731,9 +731,6 @@ select.form-control{
     margin-bottom: 4px;
 }
 
-.search-section div.search-options {
-}
-
 .search-options ul {
     list-style-type: none;
     padding: 0;
@@ -3461,8 +3458,8 @@ ul.icon-list li .views-field-icon {
 }
 
 ul.icon-list li .views-field-title {
-    float: left;
     width: 75%;
+    align-self: center;
 }
 
 ul.icon-list li .views-field-icon img {
