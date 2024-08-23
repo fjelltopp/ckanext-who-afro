@@ -570,7 +570,9 @@ div[role=main]{
 }
 
 .promoted-home .promoted-container {
-    padding: 64px 0;
+    position: relative;
+    margin: 64px 0;
+    z-index: 2;
 }
 
 @media only screen and (max-width: 991px) {
@@ -727,9 +729,6 @@ select.form-control{
     font-weight: 700;
     line-height: 24px;
     margin-bottom: 4px;
-}
-
-.search-section div.search-options {
 }
 
 .search-options ul {
@@ -2242,7 +2241,7 @@ div.main.search .wrapper > aside.secondary > .filters h3 {
 }
 
 div.main.search .wrapper > aside.secondary > .filters h3:first-child {
-    margin-bottom: 1rem;
+    margin-bottom: 0.45rem;
 }
 
 div.main.search .wrapper > aside.secondary > .filters #field-order-by {
@@ -2322,12 +2321,20 @@ div.main.search .wrapper > aside.secondary section.module .nav-facet{
 
 div.main.search .wrapper > aside.secondary section.module > div > nav > input.facets-search {
     display: inline-flex;
-    width: 90%;
-    height: 48px;
-    margin: 10px;
-    padding: 0 15px;
+    width: 89%;
+    height: 40px;
+    margin: 5px 10px 10px 15px;
+    padding: 0 10px;
     border-radius: 4px;
     border: 1px solid var(--who-blue-65-percent);
+}
+
+@media (max-width: 992px) {
+    div.main.search .wrapper > aside.secondary section.module > div > nav > input.facets-search {
+        width: 85%;
+        margin: 5px;
+        margin-left: 15px;
+    }
 }
 
 div.main.search .wrapper > aside.secondary section.module > div > nav > button.btn-search {
@@ -2343,6 +2350,12 @@ div.main.search .wrapper > aside.secondary section.module > div > nav > button.b
     transition: color 0.2s ease-in;
 }
 
+@media (max-width: 992px) {
+    div.main.search .wrapper > aside.secondary section.module > div > nav > button.btn-search {
+        margin-left: -35px;
+    }
+}
+
 div.main.search .wrapper > aside.secondary section.module > div > nav .nav-item {
     padding: 0;
     border-bottom: 0;
@@ -2354,17 +2367,23 @@ div.main.search .wrapper > aside.secondary section.module > div > nav .nav-item 
     margin: 0;
 }
 
+div.main.search .wrapper > aside.secondary section.module > div > nav .nav-item > a:hover {
+    border-radius: 4px;
+}
+
 div.main.search .wrapper > aside.secondary section.module > div > nav .nav-item > a > span.item-label {
     font-weight: 700;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 16px;
     color: var(--secondary-who-blue);
+    align-self: center;
 }
 
 div.main.search .wrapper > aside.secondary section.module > div > nav .nav-item > a > span.badge {
     margin-left: auto;
     padding: 0.45em 0.65em;
     background-color: var(--original-navy);
+    align-self: center;
 }
 
 div.main.search .wrapper > aside.secondary section.module > div > h2.module-heading > i.fa-angle-down {
@@ -2388,8 +2407,8 @@ div.main.search .wrapper > div.primary > .module > .module-content {
 
 @media (max-width: 992px) {
     div.main.search .wrapper > div.primary > .module > .module-content {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
     }
 }
 
@@ -2494,6 +2513,10 @@ div.main.countries {
     padding-top: 0;
 }
 
+.countries > #content {
+    /* padding: 0 15px; */
+}
+
 .countries > .promoted-background .container {
     position: relative;
 }
@@ -2536,8 +2559,24 @@ div.main.countries {
 }
 
 .countries .contries-powerbi {
-    margin: 54px 0 64px;
+    margin: 55px 0 65px;
     padding: 0;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 961px) {
+    .countries .contries-powerbi {
+        margin: 35px 0 45px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+    .countries .contries-powerbi {
+        margin: 25px 0 35px;
+    }
+}
+
+.countries .contries-powerbi .row {
+    margin: calc(-1 * var(--bs-gutter-y)) auto;
 }
 
 .countries .contries-powerbi div[class^="col-lg"],
@@ -2551,6 +2590,34 @@ div.main.countries {
 
 .countries .contries-powerbi div[class^="col-"]:last-child {
     margin-bottom: 0;
+}
+
+.countries .contries-powerbi iframe {
+    height: 1740px;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 961px) {
+    .countries .contries-powerbi iframe {
+        height: 1150px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+    .countries .contries-powerbi iframe {
+        height: 650px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+.countries ul.icon-list li {
+    min-height: auto;
+}
+
+.countries ul.icon-list li .views-field-title {
+    align-self: center;
 }
 
 /* dev banner */
@@ -3454,13 +3521,13 @@ ul.icon-list li {
 
 ul.icon-list li .views-field-icon {
     float: left;
-    width: 20%;
+    width: 50px;
     margin-right: 5%;
 }
 
 ul.icon-list li .views-field-title {
-    float: left;
     width: 75%;
+    align-self: center;
 }
 
 ul.icon-list li .views-field-icon img {
@@ -3547,20 +3614,22 @@ div.sources-page > div.container div.row {
 
 .promoted-background .nav-tabs{
     position: relative;
-    display: block;
+    display: flex;
     border-bottom: none;
     padding: 0px 20px;
 }
 
 .promoted-background .nav-tabs li{
-    display: inline-block;
-    padding: 10px;
+    display: inline-flex;
+    padding: 10px 40px;
     background: var(--who-blue-ten-percent);
     border-radius: 4px 4px 0 0;
     margin-right: 2px;
     border-bottom: 1px solid var(--primary-navy);
     text-align: center;
     border-top: 4px solid var(--who-blue-65-percent);
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .dataset.promoted-background .nav-tabs li{
@@ -3579,6 +3648,10 @@ div.sources-page > div.container div.row {
     border-bottom: 1px solid #FFF;
 }
 
+
+.promoted-background .nav-tabs li > a:hover {
+    text-decoration: none;
+}
 
 .dataset.wrapper{
     border: none;
