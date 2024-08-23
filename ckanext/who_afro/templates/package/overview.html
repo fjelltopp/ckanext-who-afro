@@ -15,9 +15,9 @@
          data-resource-id="{{ resource_id }}"
          data-resource-title="{{ pkg.title }}"
          data-round-to-decimal-places="2"
-         data-labels='{ "segment": "{{ indicator_details.facet_label }}", "amount": "{{ pkg.title }}", "noRowsWarning": "No data to display" }'
+         data-labels='{ "segment": "Sex", "amount": "{{ pkg.title }}", "noRowsWarning": "No data to display" }'
          data-sexes='[ { "id": "TOTAL", "label": "Total", "color": "#171B38" }, { "id": "FEMALE", "label": "Female", "color": "#009ADE" }, { "id": "MALE", "label": "Male", "color": "#80BC00" } ]'
-         data-api-fields='{ "value": "{{ indicator_details.value_field }}", "country": "GEO_NAME_SHORT", "segment": "{{ indicator_details.facet_field }}", "time_axis": "DIM_TIME" }'>
+         data-api-fields='{ "value": "{{ indicator_details.value_field }}", "country": "GEO_NAME_SHORT", "segment": "DIM_SEX", "time_axis": "DIM_TIME" }'>
     </div>
     {% set url = h.url_for(pkg.type ~ '_resource.read', id=pkg.name, resource_id=resource_id) %}
     <div class="overview-data-link small">
