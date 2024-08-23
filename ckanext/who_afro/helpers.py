@@ -1,7 +1,10 @@
+import logging
 import ckan.model as model
 from ckan.common import c, request, is_flask_request, g
 from datetime import datetime, timedelta
 from ckan.plugins import toolkit
+
+log = logging.getLogger(__name__)
 
 
 def get_user_obj(field=""):
@@ -206,17 +209,33 @@ def dataset_has_overview(pkg_dict):
     return pkg_dict.get('type', '') in ['indicator']
 
 
-def get_indicator_name(resource_id):
+def get_indicator_details(resource_id):
+    datastore_info = {}
     try:
         datastore_info = toolkit.get_action('datastore_info')({}, {'id': resource_id})
     except toolkit.ObjectNotFound:
-        return "Nothing found in the datastore for this indicator."
-    
+        log.warning("No datastore found for resource %s" % resource_id)
+
+    value_field = ""
     for field in datastore_info.get('fields', []):
         if field['id'].endswith('_N') and field['type'] == 'numeric':
-            indicator_field = field['id']
-            break
-    else:
-        return "No indicator value found within the dataset"
+            value_field = field['id']
+    if not value_field:
+        log.warning("No indicator value found for resource %s" % resource_id)
 
-    return indicator_field
+    facet_field = ""
+    facet_label = ""
+    for field in datastore_info.get('fields', []):
+        if field['id'].endswith('DIM_SEX') and field['type'] == 'text':
+            facet_field = "DIM_SEX"
+            facet_label = "Sex"
+    if not facet_field:
+        log.warning("No facet field found for resource %s" % resource_id)
+
+    return {
+        "facet_label": facet_label,
+        "facet_field": facet_field,
+        "value_field": value_field,
+        "geo_field": "GEO_NAME_SHORT",
+        "time_field": "DIM_TIME"
+    }

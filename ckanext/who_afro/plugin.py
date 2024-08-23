@@ -47,7 +47,7 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultTranslation):
             'get_activity_stream_limit': who_afro_helpers.get_activity_stream_limit,
             'get_license': who_afro_helpers.get_license,
             'dataset_has_overview': who_afro_helpers.dataset_has_overview,
-            'get_indicator_name': who_afro_helpers.get_indicator_name,
+            'get_indicator_details': who_afro_helpers.get_indicator_details,
         }
 
     # IConfigurer
