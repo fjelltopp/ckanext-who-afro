@@ -2493,6 +2493,10 @@ div.main.countries {
     padding-top: 0;
 }
 
+.countries > #content {
+    /* padding: 0 15px; */
+}
+
 .countries > .promoted-background .container {
     position: relative;
 }
@@ -2535,8 +2539,24 @@ div.main.countries {
 }
 
 .countries .contries-powerbi {
-    margin: 54px 0 64px;
+    margin: 55px 0 65px;
     padding: 0;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 961px) {
+    .countries .contries-powerbi {
+        margin: 35px 0 45px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+    .countries .contries-powerbi {
+        margin: 25px 0 35px;
+    }
+}
+
+.countries .contries-powerbi .row {
+    margin: calc(-1 * var(--bs-gutter-y)) auto;
 }
 
 .countries .contries-powerbi div[class^="col-lg"],
@@ -2550,6 +2570,26 @@ div.main.countries {
 
 .countries .contries-powerbi div[class^="col-"]:last-child {
     margin-bottom: 0;
+}
+
+.countries .contries-powerbi iframe {
+    height: 1800px;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 961px) {
+    .countries .contries-powerbi iframe {
+        height: 1150px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+    .countries .contries-powerbi iframe {
+        height: 650px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
 }
 
 /* dev banner */
