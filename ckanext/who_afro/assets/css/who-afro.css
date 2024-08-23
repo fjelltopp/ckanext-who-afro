@@ -3649,6 +3649,10 @@ div.sources-page > div.container div.row {
 }
 
 
+.promoted-background .nav-tabs li > a:hover {
+    text-decoration: none;
+}
+
 .dataset.wrapper{
     border: none;
     box-shadow: none;
