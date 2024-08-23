@@ -2241,7 +2241,7 @@ div.main.search .wrapper > aside.secondary > .filters h3 {
 }
 
 div.main.search .wrapper > aside.secondary > .filters h3:first-child {
-    margin-bottom: 1rem;
+    margin-bottom: 0.45rem;
 }
 
 div.main.search .wrapper > aside.secondary > .filters #field-order-by {
@@ -2321,10 +2321,10 @@ div.main.search .wrapper > aside.secondary section.module .nav-facet{
 
 div.main.search .wrapper > aside.secondary section.module > div > nav > input.facets-search {
     display: inline-flex;
-    width: 90%;
-    height: 48px;
-    margin: 10px;
-    padding: 0 15px;
+    width: 89%;
+    height: 40px;
+    margin: 5px 10px 10px 15px;
+    padding: 0 10px;
     border-radius: 4px;
     border: 1px solid var(--who-blue-65-percent);
 }
@@ -2353,11 +2353,16 @@ div.main.search .wrapper > aside.secondary section.module > div > nav .nav-item 
     margin: 0;
 }
 
+div.main.search .wrapper > aside.secondary section.module > div > nav .nav-item > a:hover {
+    border-radius: 4px;
+}
+
 div.main.search .wrapper > aside.secondary section.module > div > nav .nav-item > a > span.item-label {
     font-weight: 700;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 16px;
     color: var(--secondary-who-blue);
+    align-self: center;
 }
 
 div.main.search .wrapper > aside.secondary section.module > div > nav .nav-item > a > span.badge {
