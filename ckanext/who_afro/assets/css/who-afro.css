@@ -2329,6 +2329,14 @@ div.main.search .wrapper > aside.secondary section.module > div > nav > input.fa
     border: 1px solid var(--who-blue-65-percent);
 }
 
+@media (max-width: 992px) {
+    div.main.search .wrapper > aside.secondary section.module > div > nav > input.facets-search {
+        width: 85%;
+        margin: 5px;
+        margin-left: 15px;
+    }
+}
+
 div.main.search .wrapper > aside.secondary section.module > div > nav > button.btn-search {
     display: inline-flex;
     align-items: center;
@@ -2340,6 +2348,12 @@ div.main.search .wrapper > aside.secondary section.module > div > nav > button.b
     border: none;
     color: var(--primary-navy);
     transition: color 0.2s ease-in;
+}
+
+@media (max-width: 992px) {
+    div.main.search .wrapper > aside.secondary section.module > div > nav > button.btn-search {
+        margin-left: -35px;
+    }
 }
 
 div.main.search .wrapper > aside.secondary section.module > div > nav .nav-item {
@@ -2369,6 +2383,7 @@ div.main.search .wrapper > aside.secondary section.module > div > nav .nav-item 
     margin-left: auto;
     padding: 0.45em 0.65em;
     background-color: var(--original-navy);
+    align-self: center;
 }
 
 div.main.search .wrapper > aside.secondary section.module > div > h2.module-heading > i.fa-angle-down {
