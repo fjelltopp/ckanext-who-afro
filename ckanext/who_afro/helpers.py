@@ -223,6 +223,8 @@ def get_indicator_details(resource_id):
     if not value_field:
         log.warning("No indicator value found for resource %s" % resource_id)
 
+    facet_field = ""
+    facet_label = ""
     for field in datastore_info.get('fields', []):
         if field['id'].endswith('DIM_SEX') and field['type'] == 'text':
             facet_field = "DIM_SEX"
