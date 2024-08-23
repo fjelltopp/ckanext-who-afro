@@ -2407,8 +2407,8 @@ div.main.search .wrapper > div.primary > .module > .module-content {
 
 @media (max-width: 992px) {
     div.main.search .wrapper > div.primary > .module > .module-content {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
     }
 }
 
