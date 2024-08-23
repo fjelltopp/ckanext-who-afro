@@ -1,25 +1,29 @@
-{% extends 'package/read_base.html' %}
+{% extends "package/read_base.html" %}
 
 {% block primary_content %}
     {% asset 'who-afro/who-afro-dashboard-css' %}
     {% set resource_id = pkg.resources[0].id %}
-    {% set indicator_field = h.get_indicator_name(resource_id) %}
+    {% set indicator_details = h.get_indicator_details(resource_id) %}
+    {% if disaggregation_field=="DIM_SEX" %}
+        {% set facet = "[ { "id": "TOTAL", "label": "Total", "color": "#171B38" }, { "id": "FEMALE", "label": "Female", "color": "#009ADE" }, { "id": "MALE", "label": "Male", "color": "#80BC00" } ]" %}
+    {% else %}
+        {% set facet = "[ { "id": "TOTAL", "label": "Total", "color": "#171B38" } ]" %}
     <div id="who-afro-js"
-         data-datastore-path="{{h.url_for('api.action', ver=3, logic_function='datastore_search')}}"
+         data-datastore-path="{{ h.url_for('api.action', ver=3, logic_function='datastore_search') }}"
          data-resource-id="{{ resource_id }}"
          data-resource-title="{{ pkg.title }}"
          data-round-to-decimal-places="2"
-         data-labels='{ "segment": "Sex", "amount": "{{ pkg.title }}", "noRowsWarning": "No data to display" }'
-         data-sexes='[ { "id": "TOTAL", "label": "Total", "color": "#171B38" }, { "id": "FEMALE", "label": "Female", "color": "#009ADE" }, { "id": "MALE", "label": "Male", "color": "#80BC00" } ]'
-         data-api-fields='{ "value": "{{ indicator_field }}", "country": "GEO_NAME_SHORT", "segment": "DIM_SEX", "time_axis": "DIM_TIME" }'>
+         data-labels='{ "segment": "{{ indicator_details.facet_label }}", "amount": "{{ pkg.title }}", "noRowsWarning": "No data to display" }'
+         data-sexes='{{ facet }}'
+         data-api-fields='{ "value": "{{ indicator_details.value_field }}", "country": "{{ indicator_details.geo_field }}", "segment": {{ disaggregation_field }}, "time_axis": "{{ indicator_details.time_field }}" }'>
     </div>
     {% set url = h.url_for(pkg.type ~ '_resource.read', id=pkg.name, resource_id=resource_id) %}
     <div class="overview-data-link small">
         <a target="_blank"
-           href="{{url}}">
-          {{_('Preview / Download Dataset')}}
+           href="{{ url }}">
+          {{ _('Preview / Download Dataset') }}
         </a>
     </div>
     {% asset 'who-afro/who-afro-dashboard-js' %}
     {%- snippet "scheming/package/snippets/access_use.html", pkg_dict=pkg_dict -%}
-{% endblock %}
+{% endblock primary_content %}
