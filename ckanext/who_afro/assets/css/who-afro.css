@@ -570,7 +570,9 @@ div[role=main]{
 }
 
 .promoted-home .promoted-container {
-    padding: 64px 0;
+    position: relative;
+    margin: 64px 0;
+    z-index: 2;
 }
 
 @media only screen and (max-width: 991px) {
