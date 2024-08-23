@@ -3606,20 +3606,30 @@ div.sources-page > div.container div.row {
 
 .promoted-background .nav-tabs{
     position: relative;
-    display: block;
+    display: flex;
     border-bottom: none;
     padding: 0px 20px;
 }
 
 .promoted-background .nav-tabs li{
+<<<<<<< HEAD
     display: inline-block;
     padding: 10px;
+=======
+    display: inline-flex;
+    padding: 10px 40px;
+>>>>>>> d4a4329 (Make sure nav tabs indicator details page are properly aligned across devices.)
     background: var(--who-blue-ten-percent);
     border-radius: 4px 4px 0 0;
     margin-right: 2px;
     border-bottom: 1px solid var(--primary-navy);
     text-align: center;
+<<<<<<< HEAD
     border-top: 4px solid var(--who-blue-65-percent);
+=======
+    justify-content: center;
+    align-items: flex-end;
+>>>>>>> d4a4329 (Make sure nav tabs indicator details page are properly aligned across devices.)
 }
 
 .dataset.promoted-background .nav-tabs li{
