@@ -2553,6 +2553,14 @@ div.main.countries {
     margin-bottom: 0;
 }
 
+.countries ul.icon-list li {
+    min-height: auto;
+}
+
+.countries ul.icon-list li .views-field-title {
+    align-self: center;
+}
+
 /* dev banner */
 .dev-banner-container {
     display: none;
@@ -3454,7 +3462,7 @@ ul.icon-list li {
 
 ul.icon-list li .views-field-icon {
     float: left;
-    width: 20%;
+    width: 50px;
     margin-right: 5%;
 }
 
