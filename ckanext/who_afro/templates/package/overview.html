@@ -5,9 +5,9 @@
     {% set resource_id = pkg.resources[0].id %}
     {% set indicator_details = h.get_indicator_details(resource_id) %}
     {% if disaggregation_field=="DIM_SEX" %}
-        {% set facet = "[ { "id": "TOTAL", "label": "Total", "color": "#171B38" }, { "id": "FEMALE", "label": "Female", "color": "#009ADE" }, { "id": "MALE", "label": "Male", "color": "#80BC00" } ]" %}
+        {% set facet = '[ { "id": "TOTAL", "label": "Total", "color": "#171B38" }, { "id": "FEMALE", "label": "Female", "color": "#009ADE" }, { "id": "MALE", "label": "Male", "color": "#80BC00" } ]' %}
     {% else %}
-        {% set facet = "[ { "id": "TOTAL", "label": "Total", "color": "#171B38" } ]" %}
+        {% set facet = '[ { "id": "TOTAL", "label": "Total", "color": "#171B38" } ]' %}
     {% endif %}
     <div id="who-afro-js"
          data-datastore-path="{{ h.url_for('api.action', ver=3, logic_function='datastore_search') }}"
