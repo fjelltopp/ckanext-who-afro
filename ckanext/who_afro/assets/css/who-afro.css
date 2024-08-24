@@ -433,8 +433,8 @@ div[role=main]{
 .masthead .main-navbar .navbar-nav > li > a
 {
     font-style: normal;
-    font-weight: 700;
-    font-size: 15px;
+    font-weight: 600;
+    font-size: 20px;
     line-height: 30px;
     color: var(--primary-navy);
     flex: none;
