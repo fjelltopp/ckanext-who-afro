@@ -833,8 +833,17 @@ select.form-control{
     background-color: white;
     padding: 16px;
     border-radius: 8px;
+    height: 100%;
     min-height: 297px;
     margin-bottom: 48px;
+}
+
+.insight-square a {
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
@@ -851,8 +860,8 @@ select.form-control{
     font-size: 14px;
 }
 
-.insight-square p a span, .insight-rect p a span:last-child {
-    float: right;
+.insight-square p span, .insight-rect p span:last-child {
+    margin-left: 2em;
     color: var(--secondary-who-blue);
 }
 
