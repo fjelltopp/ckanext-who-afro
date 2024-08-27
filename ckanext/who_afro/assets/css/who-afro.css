@@ -586,6 +586,10 @@ div[role=main]{
     padding-bottom: 64px;
 }
 
+.promoted .container > .description > p > a {
+    color: white;
+}
+
 .promoted-left {
     margin-top: 5%;
     padding-left: 0;
@@ -3481,7 +3485,7 @@ div.main.countries {
     }
 
     .masthead .main-navbar ul li.active a {
-        padding-bottom: 47px !important;
+        padding-bottom: 43px !important;
         border-bottom: var(--secondary-who-blue) 4px solid;
         border-radius: 0;
         z-index: 0;
@@ -3520,7 +3524,7 @@ ul.icon-list {
 }
 
 ul.icon-list li {
-    margin-bottom: 10px;
+    margin-bottom: 40px;
     min-height: 70px;
     display: flex;
     page-break-inside: avoid;
