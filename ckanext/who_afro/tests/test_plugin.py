@@ -3,7 +3,7 @@ import pytest
 from ckan.tests import factories
 import ckan.tests.helpers as helpers
 from ckan.tests.helpers import call_action
-# from ckanext.who_afro.plugin import WHOAFROPlugin
+from ckanext.who_afro.plugin import WHOAFROPlugin
 from ckanext.who_afro.tests import get_context
 
 
@@ -120,4 +120,3 @@ class TestWHOAFROPluginBlueprints:
             res,
             country
         )
-    
