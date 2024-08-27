@@ -3484,7 +3484,7 @@ div.main.countries {
     }
 
     .masthead .main-navbar ul li.active a {
-        padding-bottom: 47px !important;
+        padding-bottom: 43px !important;
         border-bottom: var(--secondary-who-blue) 4px solid;
         border-radius: 0;
         z-index: 0;
