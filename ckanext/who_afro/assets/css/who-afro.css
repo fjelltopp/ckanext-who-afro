@@ -3524,7 +3524,7 @@ ul.icon-list {
 }
 
 ul.icon-list li {
-    margin-bottom: 10px;
+    margin-bottom: 40px;
     min-height: 70px;
     display: flex;
     page-break-inside: avoid;
