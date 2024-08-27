@@ -1,8 +1,9 @@
 import pytest
 
 from ckan.tests import factories
+import ckan.tests.helpers as helpers
 from ckan.tests.helpers import call_action
-from ckanext.who_afro.plugin import WHOAFROPlugin
+# from ckanext.who_afro.plugin import WHOAFROPlugin
 from ckanext.who_afro.tests import get_context
 
 
@@ -81,3 +82,42 @@ class TestWHOAFROPlugin:
             input_data
         )
         assert result == expected_data
+
+
+@pytest.mark.ckan_config("ckan.plugins", "who_afro")
+@pytest.mark.usefixtures("with_plugins")
+class TestWHOAFROPluginBlueprints:
+    def test_terms_blueprint(self, app):
+        res = app.get('/terms/')
+        assert helpers.body_contains(
+            res,
+            "The designations and the presentation of the materials used across the data hub websites"
+        )
+    
+    def test_sources_blueprint(self, app):
+        res = app.get('/sources/')
+        assert helpers.body_contains(
+            res,
+            "WHO Global Health Data Hub"
+        )
+        assert helpers.body_contains(
+            res,
+            "WHO global data health repository with health-related statistics from all member states"
+        )
+    
+    @pytest.mark.parametrize('country', [
+        "Algeria", "Angola", "Benin", "Botswana", "Burkina Faso", "Burundi", "Cabo Verde",
+        "Central African Republic", "Cameroon", "Congo", "Cote d'Ivoire", "Democratic Republic of Congo",
+        "Eritrea", "Ethiopia", "Gabon", "Ghana", "Guinea", "Gambia", "Equatorial Guinea", "Guinea-Bissau",
+        "Kenya", "Comoros", "Liberia", "Lesotho", "Madagascar", "Mali", "Mauritania", "Mauritius", "Malawi",
+        "Mozambique", "Namibia", "Niger", "Nigeria", "Rwanda", "Seychelles", "Sierra Leone", "Senegal",
+        "South Sudan", "Sao Tome and Principe", "Eswatini", "Chad", "Togo", "United Republic of Tanzania",
+        "Uganda", "South Africa", "Zambia", "Zimbabwe"
+    ])
+    def test_countries_blueprint(self, app, country):
+        res = app.get('/countries/')
+        assert helpers.body_contains(
+            res,
+            country
+        )
+    
