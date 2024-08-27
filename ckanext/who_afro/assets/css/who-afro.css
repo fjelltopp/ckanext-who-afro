@@ -581,12 +581,13 @@ div[role=main]{
     }
 }
 
-.promoted-home .promoted-container > .description > p > a {
-    color: white;
-}
 .promoted .container {
     padding-top: 64px;
     padding-bottom: 64px;
+}
+
+.promoted .container > .description > p > a {
+    color: white;
 }
 
 .promoted-left {
