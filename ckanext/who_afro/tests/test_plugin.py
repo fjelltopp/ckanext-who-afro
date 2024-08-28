@@ -125,6 +125,7 @@ class TestWHOAFROPluginBlueprints:
         ("DZ", "Algeria"), ("AO", "Angola"), ("BJ", "Benin"), ("BW", "Botswana"),
         ("BF", "Burkina Faso"), ("BI", "Burundi"), ("CV", "Cabo Verde"),
         ("CF", "Central African Republic"), ("CM", "Cameroon"), ("CG", "Congo"),
+        # It's a bit complicated to compare countries which names contain accented characters
         # ("CI", "Côte d'Ivoire"),
         ("CD", "Democratic Republic of the Congo"),
         ("ER", "Eritrea"), ("ET", "Ethiopia"), ("GA", "Gabon"), ("GH", "Ghana"),
