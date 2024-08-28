@@ -114,9 +114,33 @@ class TestWHOAFROPluginBlueprints:
         "South Sudan", "Sao Tome and Principe", "Eswatini", "Chad", "Togo", "United Republic of Tanzania",
         "Uganda", "South Africa", "Zambia", "Zimbabwe"
     ])
-    def test_countries_blueprint(self, app, country):
+    def test_featured_countries_blueprint(self, app, country):
         res = app.get('/countries/')
         assert helpers.body_contains(
             res,
             country
+        )
+    
+    @pytest.mark.parametrize('country_data', [
+        ("DZ", "Algeria"), ("AO", "Angola"), ("BJ", "Benin"), ("BW", "Botswana"),
+        ("BF", "Burkina Faso"), ("BI", "Burundi"), ("CV", "Cabo Verde"),
+        ("CF", "Central African Republic"), ("CM", "Cameroon"), ("CG", "Congo"),
+        # ("CI", "Côte d'Ivoire"),
+        ("CD", "Democratic Republic of the Congo"),
+        ("ER", "Eritrea"), ("ET", "Ethiopia"), ("GA", "Gabon"), ("GH", "Ghana"),
+        ("GN", "Guinea"), ("GM", "Gambia"), ("GQ", "Equatorial Guinea"),
+        ("GW", "Guinea-Bissau"), ("KE", "Kenya"), ("KM", "Comoros"), ("LR", "Liberia"),
+        ("LS", "Lesotho"), ("MG", "Madagascar"), ("ML", "Mali"), ("MR", "Mauritania"),
+        ("MU", "Mauritius"), ("MW", "Malawi"), ("MZ", "Mozambique"), ("NA", "Namibia"),
+        ("NE", "Niger"), ("NG", "Nigeria"), ("RW", "Rwanda"), ("SC", "Seychelles"),
+        ("SL", "Sierra Leone"), ("SN", "Senegal"), ("SS", "South Sudan"),
+        ("ST", "Sao Tome and Principe"), ("SZ", "Eswatini"), ("TD", "Chad"), ("TG", "Togo"),
+        ("TZ", "United Republic of Tanzania"), ("UG", "Uganda"), ("ZA", "South Africa"),
+        ("ZM", "Zambia"), ("ZW", "Zimbabwe")
+    ])
+    def test_country_blueprint(self, app, country_data):
+        res = app.get('/countries/%s' % country_data[0])
+        assert helpers.body_contains(
+            res,
+            country_data[1]
         )
