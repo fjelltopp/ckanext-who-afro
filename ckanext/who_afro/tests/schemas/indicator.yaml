@@ -1,0 +1,21 @@
+scheming_version: 2
+dataset_type: indicator
+name: Indicator
+about: A test schema to test indicators
+about_url: http://github.com/ckan/ckanext-scheming
+
+
+dataset_fields:
+
+- field_name: name
+  label: URL
+  preset: dataset_slug
+  required: true
+  form_placeholder: eg. my-dataset
+  display_group: Overview
+
+
+resource_fields:
+
+- field_name: name
+  label: Name
