@@ -84,7 +84,7 @@ class TestWHOAFROPlugin:
         assert result == expected_data
 
 
-@pytest.mark.ckan_config("ckan.plugins", ["who_afro", "scheming_datasets", "activity", "blob_storage", "googleanalytics"])
+@pytest.mark.ckan_config("ckan.plugins", ["who_afro", "scheming_datasets", "activity", "googleanalytics"])
 @pytest.mark.usefixtures("with_plugins", "non_clean_db", "app")
 class TestWHOAFROPluginBlueprints:
     def test_terms_blueprint(self, app):
@@ -187,9 +187,9 @@ class TestWHOAFROPluginBlueprints:
         
         # FIXME: the following app.get call fails because the test infrastructure
         # can't find the `get_package_stats` plugin and needs to be fixed.
-        # res = app.get('/overview/%s' % dataset["id"])
-        # assert res.status_code == 200
-        # assert helpers.body_contains(
-        #     res,
-        #     "Dataset does not have an overview page"
-        # )
+        res = app.get('/overview/%s' % dataset["id"])
+        assert res.status_code == 200
+        assert helpers.body_contains(
+            res,
+            "Dataset does not have an overview page"
+        )
