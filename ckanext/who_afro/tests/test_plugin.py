@@ -84,7 +84,7 @@ class TestWHOAFROPlugin:
         assert result == expected_data
 
 
-@pytest.mark.ckan_config("ckan.plugins", ["who_afro", "scheming_datasets", "activity", "googleanalytics"])
+@pytest.mark.ckan_config("ckan.plugins", ["who_afro", "scheming_datasets", "activity", "datastore", "googleanalytics"])
 @pytest.mark.usefixtures("with_plugins", "non_clean_db", "app")
 class TestWHOAFROPluginBlueprints:
     def test_terms_blueprint(self, app):
@@ -178,15 +178,23 @@ class TestWHOAFROPluginBlueprints:
             country_data[1]
         )
     
+    # The config below fails to apply for two reasons:
+    # - The test infra keeps taking values stored in environment variables (see ckan/ckan/config/environment.py)
+    # - Both the `datastore` and `datastore_ro` don't have access complete access to the `datastore_test` database
+    # To actually make it work, one needs to set the `CKAN_DATASTORE_WRITE_URL` and `CKAN_DATASTORE_READ_URL`
+    # environment variables.
+    @pytest.mark.ckan_config("ckan.datastore.write_url", "postgresql://datastore:123456789@192.168.49.2/datastore_test")
+    @pytest.mark.ckan_config("ckan.datastore.read_url", "postgresql://datastore_ro:123456789@192.168.49.2/datastore_test")
     def test_overview(self, app):
         user = factories.Sysadmin()
         context = {"user": user["name"], "ignore_auth": False}
         stub = factories.Dataset.stub()
         
         dataset = helpers.call_action("package_create", context=context, id=stub.name, name=stub.name, type="indicator")
+        resource = factories.Resource(package_id=stub.name)
         
-        # FIXME: the following app.get call fails because the test infrastructure
-        # can't find the `get_package_stats` plugin and needs to be fixed.
+        # FIXME: the following app.get call fails because we don't have access to all the relations
+        # in the `datastore_test` database.
         res = app.get('/overview/%s' % dataset["id"])
         assert res.status_code == 200
         assert helpers.body_contains(
