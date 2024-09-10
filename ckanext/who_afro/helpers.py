@@ -1,6 +1,6 @@
 import logging
 import ckan.model as model
-from ckan.common import c, request, is_flask_request, g
+from ckan.common import request, g
 from datetime import datetime, timedelta
 from ckan.plugins import toolkit
 
@@ -36,9 +36,6 @@ def get_facet_items_dict(
     exclude_active -- only return unselected facets.
 
     '''
-    if search_facets is None:
-        search_facets = getattr(c, u'search_facets', None)
-
     if not search_facets \
        or not isinstance(search_facets, dict) \
        or not search_facets.get(facet, {}).get('items'):
@@ -46,15 +43,11 @@ def get_facet_items_dict(
 
     facets = []
 
-    for facet_item in search_facets.get(facet)['items']:
-
+    for facet_item in search_facets[facet]['items']:
         if not len(facet_item['name'].strip()):
             continue
 
-        if is_flask_request():
-            params_items = request.params.items(multi=True)
-        else:
-            params_items = request.params.items()
+        params_items = request.params.items(multi=True)
 
         if not (facet, facet_item['name']) in params_items:
             facets.append(dict(active=False, **facet_item))
@@ -63,13 +56,11 @@ def get_facet_items_dict(
 
     # Replace CKAN default sort method
     facets = _facet_sort_function(facet, facets)
+    if hasattr(g, 'search_facets_limits'):
+        if g.search_facets_limits and limit is None:
+            limit = g.search_facets_limits.get(facet)
 
-    if hasattr(c, 'search_facets_limits'):
-
-        if c.search_facets_limits and limit is None:
-            limit = c.search_facets_limits.get(facet)
-
-    # zero treated as infinite for hysterical raisins
+    # Zero treated as infinite for hysterical raisins
     if limit is not None and limit > 0:
         return facets[:limit]
 
