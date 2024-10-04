@@ -30,7 +30,7 @@
     <form {% if form_id %}id="{{ form_id }}" {% endif %}class="search-form{% if no_bottom_border %} no-bottom-border{% endif %}"  method="get" data-module="select-switch">
         <div class="input-group">
           <input aria-label="{% block header_site_search_label %}{{ placeholder }}{% endblock %}" id="field-giant-search" type="text" class="form-control input-lg" name="q" value="{{ query }}" autocomplete="off" placeholder="{{ placeholder }}">
-          <input type="hidden" name="groups" value="indicators">
+          <input type="hidden" name="groups" value="{{ group_dict.name }}">
 
           <span class="input-group-btn">
             <button class="btn btn-default btn-lg lens-btn" type="submit" value="search" aria-label="{{_('Submit')}}">
