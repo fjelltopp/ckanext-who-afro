@@ -2214,6 +2214,7 @@ div.main.countries .wrapper{
 
 div.main.search .wrapper::before {
     border: none;
+    z-index: 0;
 }
 
 div.main.search .row > .big-search-form {
