@@ -1,0 +1,4 @@
+{% block all_user_agents %}
+Allow: /
+Disallow: /*
+{% endblock all_user_agents %}
