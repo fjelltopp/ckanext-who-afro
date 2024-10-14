@@ -1,4 +1,6 @@
-{% block all_user_agents %}
+{% ckan_extends %}
+
+{% block all_user_agents -%}
 Allow: /
 Disallow: /*
-{% endblock all_user_agents %}
+{%- endblock all_user_agents %}
