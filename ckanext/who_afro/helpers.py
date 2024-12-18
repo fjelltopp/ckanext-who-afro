@@ -218,7 +218,7 @@ def get_indicator_value_field(datastore_info, resource_id):
         elif field["id"].endswith("_N") and field["type"] == "numeric":
             value_field = field["id"]
     if not value_field:
-        log.warning("No indicator value found for resource %s" % resource_id)
+        log.warning(f"No indicator value found for resource {resource_id}")
 
     return value_field
 
@@ -233,7 +233,7 @@ def get_indicator_time_field(datastore_info, resource_id):
         time_field = ""
 
     if not time_field:
-        log.warning("No time values found for resource %s" % resource_id)
+        log.warning(f"No time values found for resource {resource_id}")
 
     return time_field
 
@@ -252,7 +252,7 @@ def get_indicator_geo_field(datastore_info, resource_id):
         geo_field = ""
 
     if not geo_field:
-        log.warning("No geo field found for resource %s" % resource_id)
+        log.warning(f"No geo field found for resource {resource_id}")
 
     return geo_field
 
@@ -266,7 +266,7 @@ def get_indicator_facet_field(datastore_info, resource_id):
             facet_field = "DIM_SEX"
             facet_label = "Sex"
     if not facet_field:
-        log.warning("No facet field found for resource %s" % resource_id)
+        log.warning(f"No facet field found for resource {resource_id}")
 
     return facet_field, facet_label
 
@@ -276,7 +276,7 @@ def get_indicator_details(resource_id):
     try:
         datastore_info = toolkit.get_action("datastore_info")({}, {"id": resource_id})
     except toolkit.ObjectNotFound:
-        log.warning("No datastore found for resource %s" % resource_id)
+        log.warning(f"No datastore found for resource {resource_id}")
 
     value_field = get_indicator_value_field(datastore_info, resource_id)
     time_field = get_indicator_time_field(datastore_info, resource_id)
