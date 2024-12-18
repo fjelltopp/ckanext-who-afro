@@ -14,7 +14,7 @@
          data-resource-id="{{ resource_id }}"
          data-resource-title="{{ pkg.title }}"
          data-round-to-decimal-places="2"
-         data-labels='{ "segment": "{{ indicator_details.facet_label }}", "amount": "{{ pkg.title }}", "noRowsWarning": "No data to display" }'
+         data-labels='{ "segment": "{{ indicator_details.facet_label }}", "amount": "{{ pkg.title }}", "noDataYearWarning": {{ _("No data to display for this year") }}, "noDataCountryWarning": {{ _("No time series data for this country") }} }'
          data-sexes='{{ facet }}'
          data-api-fields='{ "value": "{{ indicator_details.value_field }}", "country": "{{ indicator_details.geo_field }}", "segment": "{{ indicator_details.facet_field }}", "time_axis": "{{ indicator_details.time_field }}" }'>
     </div>
