@@ -217,7 +217,6 @@ def get_indicator_value_field(datastore_info, resource_id):
             break
         elif field["id"].endswith("_N") and field["type"] == "numeric":
             value_field = field["id"]
-            break
     if not value_field:
         log.warning("No indicator value found for resource %s" % resource_id)
 
@@ -225,15 +224,14 @@ def get_indicator_value_field(datastore_info, resource_id):
 
 
 def get_indicator_time_field(datastore_info, resource_id):
-    time_field = ""
+    field_ids = [field["id"] for field in datastore_info.get("fields", [])]
+    if "TimeDim" in field_ids:
+        time_field = "TimeDim"
+    elif "DIM_TIME" in field_ids:
+        time_field = "DIM_TIME"
+    else:
+        time_field = ""
 
-    for field in datastore_info.get("fields", []):
-        if field["id"] == "TimeDim" and field["type"] == "numeric":
-            time_field = field["id"]
-            break
-        elif field["id"] == "DIM_TIME" and field["type"] == "numeric":
-            time_field = field["id"]
-            break
     if not time_field:
         log.warning("No time values found for resource %s" % resource_id)
 
@@ -241,22 +239,18 @@ def get_indicator_time_field(datastore_info, resource_id):
 
 
 def get_indicator_geo_field(datastore_info, resource_id):
-    geo_field = ""
+    field_ids = [field["id"] for field in datastore_info.get("fields", [])]
+    if "SpatialDimLong" in field_ids:
+        geo_field = "SpatialDimLong"
+    elif "GEO_NAME_LONG" in field_ids:
+        geo_field = "GEO_NAME_LONG"
+    elif "SpatialDim" in field_ids:
+        geo_field = "SpatialDim"
+    elif "GEO_NAME_SHORT" in field_ids:
+        geo_field = "GEO_NAME_SHORT"
+    else:
+        geo_field = ""
 
-    # TODO replace with match when we upgrade to Python 3.10 or higher
-    for field in datastore_info.get("fields", []):
-        if field["id"] == "SpatialDimLong":
-            geo_field = field["id"]
-            break
-        elif field["id"] == "GEO_NAME_LONG":
-            geo_field = field["id"]
-            break
-        elif field["id"] == "SpatialDim":
-            geo_field = field["id"]
-            break
-        elif field["id"] == "GEO_NAME_SHORT":
-            geo_field = field["id"]
-            break
     if not geo_field:
         log.warning("No geo field found for resource %s" % resource_id)
 
