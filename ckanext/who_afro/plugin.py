@@ -159,35 +159,35 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultTranslation):
         @app.after_request
         def apply_owasp(response):
             response.headers["Strict-Transport-Security"] = config.get(
-                "ckanext.who_romania.strict_transport_security",
+                "ckanext.who_afro.strict_transport_security",
                 "max-age=31536000; preload",
             )
             response.headers["X-Content-Type-Options"] = config.get(
-                "ckanext.who_romania.content_type_options", "nosniff"
+                "ckanext.who_afro.content_type_options", "nosniff"
             )
             response.headers["X-Permitted-Cross-Domain-Policies"] = config.get(
-                "ckanext.who_romania.cross_domain_policies",
+                "ckanext.who_afro.cross_domain_policies",
                 "none",  # not sure about this one
             )
             response.headers["Referrer-Policy"] = config.get(
-                "ckanext.who_romania.referrer_policy",
+                "ckanext.who_afro.referrer_policy",
                 "no-referrer-when-downgrade",  # this is default when not set
             )
             response.headers["Cache-Control"] = config.get(
-                "ckanext.who_romania.cache_control",
+                "ckanext.who_afro.cache_control",
                 "",
             )
             response.headers["Cross-Origin-Opener-Policy"] = config.get(
-                "ckanext.who_romania.coop", "same-site"
+                "ckanext.who_afro.coop", "same-site"
             )
             response.headers["Cross-Origin-Embedder-Policy"] = config.get(
-                "ckanext.who_romania.coep", "unsafe-none"
+                "ckanext.who_afro.coep", "unsafe-none"
             )
             response.headers["Cross-Origin-Resource-Policy"] = config.get(
-                "ckanext.who_romania.corp", "cross-origin"
+                "ckanext.who_afro.corp", "cross-origin"
             )
             response.headers["Content-Security-Policy"] = config.get(
-                "ckanext.who_romania.content_security_policy", ""
+                "ckanext.who_afro.content_security_policy", ""
             )
             if ("Location" in response.headers) and (
                 "logged_out_redirect" in response.headers["Location"]
