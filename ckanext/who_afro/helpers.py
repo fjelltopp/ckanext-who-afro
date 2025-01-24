@@ -290,3 +290,7 @@ def get_indicator_details(resource_id):
         "geo_field": geo_field,
         "time_field": time_field,
     }
+
+
+def get_login_view():
+    return toolkit.config.get("ckanext.who_afro.login_view", "user.login")

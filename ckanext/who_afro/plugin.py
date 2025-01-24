@@ -48,6 +48,7 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultTranslation):
             'get_license': who_afro_helpers.get_license,
             'dataset_has_overview': who_afro_helpers.dataset_has_overview,
             'get_indicator_details': who_afro_helpers.get_indicator_details,
+            'get_login_view': who_afro_helpers.get_login_view,
         }
 
     # IConfigurer
