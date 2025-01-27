@@ -39,7 +39,7 @@
     {% if c.userobj %}
         {{ h.build_nav('activity.dashboard', _('My account'))}}
     {% else %}
-        {{ h.build_nav('user.login', _('Log in'))}}
+        {{ h.build_nav(h.get_login_view(), _('Log in'))}}
     {% endif %}
 
 {% endblock %}
